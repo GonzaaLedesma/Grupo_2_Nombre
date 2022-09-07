@@ -7,7 +7,7 @@ Lo que vendemos:
 
 A quienes apuntamos:
     - Apuntamos a todo publico.
-    - Con un munimo de edad requerido por el eventos o conciertos.
+    - Con un minimo de edad requerido por el eventos o conciertos.
 
 Descripción de los integrantes:
     Matías Lanese:
