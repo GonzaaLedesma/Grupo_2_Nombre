@@ -1,13 +1,12 @@
 # Grupo_2_Nombre
 
 Lo que vendemos:
-    - Ofrecemos la venta de entradas hacia a eventos y/o conciertos.
-    - Estas entradas seran tickets digitales, contendras datos del eventos o conciertos y un "codigo" para ingresar.
+    - Ofrecemos la venta de entradas a eventos y/o conciertos en vivo.
+    - Estas entradas seran tickets digitales, contendras datos del eventos o conciertos y un "codigo Qr" para ingresar.
     - Los datos del codigo seran almacenados en la cuenta del usuario.
 
 A quienes apuntamos:
-    - Apuntamos a todo publico.
-    - Con un minimo de edad requerido por el eventos o conciertos.
+    - Varia segun la region y el tipo de eventoy/o concierto. Usuarios q deseen disfrutar experiencias en vivo de una manera (sinonimo de actualizada).
 
 Descripción de los integrantes:
     Matías Lanese:
