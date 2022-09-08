@@ -1,4 +1,4 @@
-# Grupo_2_Nombre
+# Grupo_2_Ticket_House
 
 Lo que vendemos:
     - Ofrecemos la venta de entradas a eventos y/o conciertos en vivo.
