@@ -25,7 +25,7 @@ Descripción de los integrantes:
 
     Josue Ferreira:
 
-    Gonzalo Ledesma:Tengo 21 años, soy de Villa Carlos Paz, Cordoba. Me gusta pasar tiempo con mis amigos, trabajo en una empreza familiar. Me toco el rol del back end y estaba ansioso de empezar el proyecto
+    Gonzalo Ledesma:Tengo 21 años, soy de Villa Carlos Paz, Cordoba. Me gusta pasar tiempo con mis amigos, trabajo en una empreza familiar. Me toco el rol del back end y estaba ansioso de empezar el proyecto.
 
     Damián Paul Espina:
 
