@@ -9,7 +9,9 @@ A quienes apuntamos:
     - Varia segun la region y el tipo de eventoy/o concierto. Usuarios q deseen disfrutar experiencias en vivo de una manera (sinonimo de actualizada).
 
 Descripción de los integrantes:
-    Matías Lanese:
+    
+    Matías Lanese: Tengo 25 años, soy de Roldán, Santa Fe. Me gusta hacer actividad física (todo tipo de deportes), trabajo en una empresa familiar.
+    Me toco el rol de líder, espero poder realizarlo correctamente y estoy muy entusiasmado con el proyecto y el curso en general.
 
     Josue Ferreira:
 
