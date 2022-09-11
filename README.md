@@ -23,7 +23,8 @@ Descripción de los integrantes:
     Matías Lanese: Tengo 25 años, soy de Roldán, Santa Fe. Me gusta hacer actividad física (todo tipo de deportes), trabajo en una empresa familiar.
     Me toco el rol de líder, espero poder realizarlo correctamente y estoy muy entusiasmado con el proyecto y el curso en general.
 
-    Josue Ferreira:
+    Josue Ferreira: Tengo 20 años, soy de Libertad-Merlo, Buenos Aires. Me gusta los videojuegos, entrenar y la programación.
+    Me toco el rol de Frontend, espero poder cumplir con mi parte y aportar en el resto de roles si es necesario.
 
     Gonzalo Ledesma:Tengo 21 años, soy de Villa Carlos Paz, Cordoba. Me gusta pasar tiempo con mis amigos, trabajo en una empreza familiar. Me toco el rol del back end y estaba ansioso de empezar el proyecto.
 
