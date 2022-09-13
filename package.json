@@ -1,0 +1,23 @@
+{
+  "name": "grupo_2_ticket_house",
+  "version": "1.0.0",
+  "description": "- Ofrecemos la venta de entradas a eventos y/o conciertos en vivo.\r - Estas entradas seran tickets digitales, contendras datos del eventos o conciertos y un \"codigo Qr\" para ingresar.\r - Los datos seran almacenados en la cuenta del usuario.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GonzaaLedesma/Grupo_2_ticket_house.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GonzaaLedesma/Grupo_2_ticket_house/issues"
+  },
+  "homepage": "https://github.com/GonzaaLedesma/Grupo_2_ticket_house#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
