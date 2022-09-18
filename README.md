@@ -28,3 +28,6 @@
  - Gonzalo Ledesma: Tengo 21 años, soy de Villa Carlos Paz, Cordoba. Me gusta pasar tiempo con mis amigos, trabajo en una empreza familiar. Me toco el rol del back end y estaba ansioso de empezar el proyecto.
  - Damián Paul Espina:
  - Tomas Otero: Tengo 20 años, vivo en Villa Urquiza. Practico Taekwondo y me gusta el fulvo. No me toco ningun rol pero estoy para todo en el proyecto y poder aportar en todo lo posible.
+
+## Tipografia:
+- Roboto Condensed.
