@@ -19,12 +19,14 @@
     width: 25vw;
     height: 5vh;
   }
- .ButtonBox{
-    padding:0.25vh;
-    padding-top: 6px;
-    padding-right: 1px;
+  .ButtonBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50vw;
+
 }
+
 #button1{
     width: 30vw;
 }
@@ -51,10 +53,11 @@
     display: block;
   }
   #iconsFooter{
-    display: block;
-    text-align: center;
+    display: flex;
     color: white;
+    justify-content: space-around;
     font-size: 4vw;
+    padding: 5px 25% 0 25%;
   }
   #helpList{
     list-style: none;
