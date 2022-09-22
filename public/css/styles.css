@@ -1,8 +1,8 @@
 * {
-    font-family: "Roboto Condensed", sans-serif;
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    /* margin: 0px;
+    padding: 0px; */
   }
   p {
     font-size: 12px;
@@ -10,34 +10,36 @@
   /* ---------------------Main----------------- */
   .responsiveNav{
     display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 90vw;
-    height: 30%;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.336)
   }
   #logotipo{
     display: flex;
-    margin-top: 10px;
-    padding-right: 5px;
-    width: 15vw;
+    padding: 5px;
+    width: 25vw;
+    height: 5vh;
   }
-  .userIcons{
-    display: flex;
-    justify-content: flex-end;
-  }
+ .ButtonBox{
+    padding:0.25vh;
+    padding-top: 6px;
+    padding-right: 1px;
+    width: 50vw;
+}
+#button1{
+    width: 30vw;
+}
   .searchBar{
     display: flex;
+    width: 90vw;
+    margin: auto;
+    padding: 5px;
   }
   .search{
-    border: 1px solid #000;
+    border: 1px solid rgb(39, 39, 39);
     text-align: center;
     font-size: 17px;
     border-radius: 4px;
-    width: 40vw;
-    height: 4vh;
+    width: 90vw;
+    height: 3vh;
   }
-  #searchIcon{
-    border: 1px solid #000;
-    border-radius: 4px;
-    width: 3.5vw;
-  }
+  
