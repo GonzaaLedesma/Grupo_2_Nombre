@@ -1,9 +1,6 @@
 * {
+  font-family: "Roboto Condensed", sans-serif;
     box-sizing: border-box;
-    font-family: "Roboto Condensed", sans-serif;
-    background-image: url(/imagenes/fondo-semitono-azul-rosa_53876-144365.webp);
-    /* margin: 0px;
-    padding: 0px; */
   }
   p {
     font-size: 12px;
@@ -12,30 +9,32 @@
   .responsiveNav{
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.089)
   }
   #logotipo{
     display: flex;
-    /* padding: 5px; */
+    margin: auto;
     width: 30vw;
-    /* height: 5vh; */
   }
   .ButtonBox{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50vw;
-
-}
-
-#button1{
-    width: 30vw;
-}
+    margin: auto;
+    list-style: none;
+  }
+  .ButtonBox li{
+    margin: 0 5vw ;
+  }
+  .ButtonBox button{
+    border:solid 1px cornflowerblue ;
+  }
   .searchBar{
     display: flex;
     width: 90vw;
     margin: auto;
     padding: 5px;
+  }
+  .searchBar button{
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 4px;
   }
   .search{
     border: 1px solid rgb(39, 39, 39);
@@ -43,11 +42,11 @@
     font-size: 17px;
     border-radius: 4px;
     width: 90vw;
-    height: 3vh;
   }
   /* --------------------footer---------------- */
   footer{
-    background-color: rgb(0, 0, 0)
+
+    background-color: rgba(0, 0, 0, 0.795)
   }
   #footerBox{
     display: block;

@@ -1,0 +1,22 @@
+/* ------------------MAIN----------------- */
+.contenedorCategoria{
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.11);
+}
+.tituloInferior{
+    text-align: center;
+    color: rgb(21, 21, 252);
+}
+.contenedorCajas{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px 10px 0px 10px;
+    padding-bottom: 10px;
+}
+
+.botonCaja{
+    border: solid 1px cornflowerblue;
+    border-radius: 5px;
+    color: cornflowerblue;
+}
