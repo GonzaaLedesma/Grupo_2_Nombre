@@ -13,7 +13,9 @@
   #logotipo{
     display: flex;
     margin: auto;
-    width: 30vw;
+    width: 130px;
+    height: 40px;
+
   }
   .ButtonBox{
     display: flex;
