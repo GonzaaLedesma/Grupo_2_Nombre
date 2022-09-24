@@ -1,8 +1,16 @@
 /* ------------------MAIN----------------- */
+.countainerSlider{
+    /* max-width: 90%; */
+    margin: 0 auto;
+}
+.tituloSuperior{
+    text-align: center;
+}
 .tituloInferior{
     text-align: center;
-    color: rgb(21, 21, 252);
+    padding-top:10px;
 }
+
 .contenedorCajas{
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +21,8 @@
 
 .botonCaja{
     border-radius: 5px;
-    color: blue;
-    width: 50%;
+    width: 100px;
+    height: 80px;
+    /* padding: 5px; */
+    /* margin: 10 px; */
 }

@@ -1,21 +1,35 @@
 * {
-  font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     box-sizing: border-box;
   }
   p {
     font-size: 12px;
   }
+  /* ------Global------ */
+  
+  header{
+    height: 11vh;
+    padding: 5px;
+  }
+  main{
+    margin-top:5% ;
+    height: 79vh;
+    max-height: 75%;
+    overflow-y: scroll;
+  }
+  footer{
+    height: 10vh;
+  }
   /* ---------------------Header----------------- */
   .responsiveNav{
     display: flex;
+    width: 100%;
     justify-content: space-between;
   }
   #logotipo{
     display: flex;
     margin: auto;
-    width: 130px;
-    height: 40px;
-
+    width: 35vw;
   }
   .ButtonBox{
     display: flex;
@@ -23,16 +37,13 @@
     list-style: none;
   }
   .ButtonBox li{
-    margin: 0 5vw ;
-  }
-  .ButtonBox button{
-    border:solid 1px cornflowerblue ;
+    margin: 0 3vw ;
   }
   .searchBar{
     display: flex;
-    width: 90vw;
+    justify-content: center;
     margin: auto;
-    padding: 5px;
+    padding: 15px 0 0 0;
   }
   .searchBar button{
     border: 1px solid rgb(39, 39, 39);
@@ -41,13 +52,12 @@
   .search{
     border: 1px solid rgb(39, 39, 39);
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     border-radius: 4px;
-    width: 90vw;
+    width: 80vw;
   }
   /* --------------------footer---------------- */
   footer{
-
     background-color: rgba(0, 0, 0, 0.795)
   }
   #footerBox{
@@ -57,8 +67,8 @@
     display: flex;
     color: white;
     justify-content: space-around;
-    font-size: 4vw;
-    padding: 5px 25% 0 25%;
+    font-size: 30px;
+    padding: 5px 30% 0 30%;
   }
   #helpList{
     list-style: none;
@@ -67,9 +77,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     color: white;
-    padding: 10px;  
-    margin-top:1px ;
+    padding: 5px 15% 0 15%; 
+    margin-bottom:0 !important;
   }
   .itemFooter{
     padding: 2px;
   }
+  
