@@ -15,7 +15,6 @@
     margin-top:5% ;
     height: 79vh;
     max-height: 75%;
-    overflow-y: scroll;
   }
   footer{
     height: 10vh;
@@ -83,4 +82,8 @@
   .itemFooter{
     padding: 2px;
   }
-  
+  @media (min-width: 769px) {
+    #logotipo{
+      width: 15vw;
+    }
+  } 
