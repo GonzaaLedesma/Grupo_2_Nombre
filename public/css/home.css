@@ -26,3 +26,8 @@
     /* padding: 5px; */
     /* margin: 10 px; */
 }
+@media (min-width: 769px) {
+    .countainerSlider{
+    max-width: 86%;
+    }
+  } 

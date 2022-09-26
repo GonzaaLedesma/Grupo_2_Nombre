@@ -6,7 +6,7 @@
     font-size: 12px;
   }
   /* ------Global------ */
-  
+/*   
   header{
     height: 10vh;
     padding: 5px;
@@ -18,7 +18,7 @@
   }
   footer{
     height: 12vh;
-  }
+  } */
   /* ---------------------Header----------------- */
   .responsiveNav{
     display: flex;
@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    padding: 15px 0 0 0;
+    padding: 15px 0 10px 0;
   }
   .searchBar button{
     border: 1px solid rgb(39, 39, 39);
@@ -84,6 +84,6 @@
   }
   @media (min-width: 769px) {
     #logotipo{
-      width: 15vw;
+      width: 10vw;
     }
   } 
