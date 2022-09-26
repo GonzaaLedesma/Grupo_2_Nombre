@@ -8,16 +8,16 @@
   /* ------Global------ */
   
   header{
-    height: 11vh;
+    height: 10vh;
     padding: 5px;
   }
   main{
     margin-top:5% ;
-    height: 79vh;
+    height: 80vh;
     max-height: 75%;
   }
   footer{
-    height: 10vh;
+    height: 12vh;
   }
   /* ---------------------Header----------------- */
   .responsiveNav{
