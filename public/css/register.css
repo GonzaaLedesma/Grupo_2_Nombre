@@ -54,14 +54,14 @@ main{
     cursor: pointer;
 }
 
-.header{
+header{
     background: blue;
     margin: 0px;
 }
 
 .logo{
-    width: 70px;
-    height: 30px;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    margin: auto;
+    width: 150px;
+    padding: 5px;
 }

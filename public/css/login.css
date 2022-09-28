@@ -54,7 +54,7 @@ main{
     cursor: pointer;
 }
 
-.header{
+header{
     background: blue;
     margin: 0;
     padding: 0;
@@ -92,7 +92,7 @@ main{
     display: flex;
     margin: auto;
     width: 150px;
-    height: 40px;
+    padding: 5px;
 }
 .recuperar-contraseña{
     color: lightblue;
