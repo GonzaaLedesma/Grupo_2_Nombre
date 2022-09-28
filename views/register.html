@@ -10,19 +10,39 @@
     <title>Register</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#"><img class="logo" src="/imagenes/Ticket_House_var1.svg" alt="logo" /></a>
+    <header>
+        <a href="/"><img class="logo" src="/imagenes/Ticket_House_var1.svg" alt="logo" /></a>
     </header>
     <main class="main">
         <form action="" class="form-box">
             <h1 class="form-title">Register</h1>
-            <input type="text" placeholder="Username">
-            <input type="text" placeholder="Mail">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Repeat Password">
-            <button type="submit">
-                Register
-            </button>
+            <div>
+                <label for="nombre"></label>
+                <input required type="text"  name="nombre" id="nombreCompleto" placeholder="Nombre y apellido" minlength="8">
+            </div>
+            <div>
+                <label for="nombre"></label> 
+                <input required type="text"  name="SubNombre" id="Usuario" placeholder="Nombre de Usuario" minlength="8">
+                <samp class="feedback"></samp>
+            </div>
+            <div>
+                <label for="nombre"></label>
+                <input required type="text"  name="mail" id="email" placeholder="E-mail">
+                <samp class="feedback"></samp>
+            </div>
+            <div>
+                <label for="contrasenia"></label>
+                <input required type="password" name="contrasenia" placeholder="Contraseña">
+                <samp class="feedback"></samp>
+            </div>
+            <div>
+                <label for="contrasenia"></label>
+                <input required type="password" name="contrasenia" placeholder="Repetir la contraseña">
+                <samp class="feedback"></samp>
+            </div>
+            <div>
+                <button type="submit"><a href="/">Enviar</a></button>
+            </div>
         </form>
     </main>
     <footer>
