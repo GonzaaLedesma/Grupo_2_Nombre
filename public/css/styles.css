@@ -23,12 +23,16 @@
   .responsiveNav{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin:10px 0 10px 0;
+  }
+  #logotipo2{
+    display: none;
   }
   #logotipo{
     display: flex;
     margin: auto;
-    width: 35vw;
+    width: 200px;
   }
   .ButtonBox{
     display: flex;
@@ -43,7 +47,11 @@
     justify-content: center;
     margin: auto;
     padding: 15px 0 10px 0;
+    
   }
+  .searchBarMin{
+    display: none;
+    } 
   .searchBar button{
     border: 1px solid rgb(39, 39, 39);
     border-radius: 4px;
@@ -53,7 +61,6 @@
     text-align: center;
     font-size: 15px;
     border-radius: 4px;
-    width: 80vw;
   }
   /* --------------------footer---------------- */
   footer{
@@ -82,8 +89,36 @@
   .itemFooter{
     padding: 2px;
   }
-  @media (min-width: 769px) {
-    #logotipo{
-      width: 10vw;
+
+  @media (min-width: 1000px){
+    .search{
+      width: 25vw;
     }
-  } 
+  }
+  @media (max-width: 851px) {
+    .searchBar{
+      display: none;
+    }
+    .searchBarMin{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 15px 0 10px 0;
+    } 
+    .search{
+      width: 80vw;
+    }
+  }
+  @media (max-width: 590px) {
+    .responsiveNav{
+      margin: auto;
+    }
+    #logotipo{
+      display: none;
+    }
+    #logotipo2{
+      display: flex;
+      margin: auto;
+      width: 200px;
+  }
+}
