@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/Detalleproducto.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c16fe966cc.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <title>|Ticket House|</title>
-</head>
-<body>
+    <title>Detalles del producto</title>
+  </head>
+  <body>
     <header>
         <!-- comienza nav -->
         <a href="/"><img id="logotipo2" src="/imagenes/Ticket_House_var2.svg" alt="logo"></a>
@@ -40,32 +37,45 @@
         <!-- termina el nav -->
     </header>
     <main>
-        <!--Carrusel Bootstrap comienzo -->
-        <h3 class="tituloSuperior">Novedades</h3>
-        <div id="carouselExampleSlidesOnly" class="carousel slide countainerSlider" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/imagenes/HP-banner.jpg" class="d-block w-100" alt="banner1">
-              </div>
-              <div class="carousel-item">
-                <img src="/imagenes/banner3.jpg" class="d-block w-100" alt="banner2">
-              </div>
-              <div class="carousel-item">
-                <img src="/imagenes/HP-banner.jpg" class="d-block w-100" alt="banner3">
-              </div>
+        <h2 class="nombreEvento1">Weezer - Walt Disney Concert Hall</h2>
+        <div class="cajaDetalles">
+                <div class="cajaImagen">
+                    <img class="imgTicket" src="/imagenes/ticket.jpg" alt="ticket">
+                    <div class="cajaDescripcionBanda">
+                    <p class="descripcionBanda"> Weezer es una banda estadounidense de rock alternativo y power pop
+                    formada en Los Ángeles, California en 1992. La banda ha lanzado
+                    nueve álbumes y vendido más de 10 millones de álbumes en los EE.
+                    UU.</p>
+                </div>
             </div>
-          </div>
-           <!--Carrusel Bootstrap fin -->
-          <section class="contenedorCategoria">
-            <div><h4 class="tituloInferior">EVENTOS</h4></div>
-            <div class="contenedorCajas">
-                <button class="botonCaja">ACTUALES</button>
-                <button class="botonCaja">NUEVOS</button>
-                <button class="botonCaja">PROXIMOS</button>
-                <button class="botonCaja">PASADOS</button>
-                <button class="botonCaja">PATROSINIO</button>
+            <div class="cajaDescripcion">
+            <div>
+                <h2 class="nombreEvento2">Weezer - Walt Disney Concert Hall</h2>
+                <div class="cajaDatos">
+                    <h3>Datos del Evento</h3>
+                    <p>Ubicacion: Walt Disney Concert Hall.</p>
+                    <p>Dia: 22 de Ocutubre</p>
+                    <p>Participacion especial: OneRepublic, Halsey, Alanis Morissette, y Garbage.</p>
+                </div>
+                <div class="subDescripcion">
+                    <p>Los legendarios rockeros Weezer reimaginan su último álbum más los
+                    clásicos con la Orquesta Filarmónica de Los Ángeles. Grabado y
+                    capturado en el imponente Disney Hall. Disponible para VOD ahora.</p> 
+                </div>
+                <div class="cajaPago">
+                    <div class="subCaja">
+                        <div class="cajaCantidad"></div>
+                        <h4>Cantidad</h4>
+                    </div>
+                    <div class="subCaja">
+                        <div class="cajaTotal"></div>
+                        <h4>Total</h4>
+                    </div>
+                </div>
+                <button class="botonPago" type="submit"><a href="/">Continuar a metodo de pago</a></button>
             </div>
-          </section>
+        </div>
+      </div>
     </main>
     <footer>
         <!-- footer -->
@@ -92,5 +102,5 @@
             </ul>
         </div>
     </footer>
-</body>
+  </body>
 </html>
