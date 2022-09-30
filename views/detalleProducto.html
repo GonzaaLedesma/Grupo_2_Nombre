@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c16fe966cc.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
     <title>Detalles del producto</title>
   </head>
   <body>
@@ -26,7 +37,7 @@
             </div>
                 <ul class="ButtonBox">
                     <li><button ><i class="fa-solid fa-user"></i></button></li>
-                    <li><button ><i class="fa-solid fa-cart-shopping"></i></button></li>
+                    <li><button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="fa-solid fa-cart-shopping"></i></button></li>
                 </ul>
         </section>
             <div class="searchBarMin">    
@@ -101,5 +112,35 @@
             </ul>
         </div>
     </footer>
+    <!-- ----------SideBar----- -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="listaTitulo">
+          Lista de productos
+        </div>
+        <div class="cajaProductos">
+            <h4 id="segundoTitulos">Productos</h4>
+            <div class="producPrueba"><h5>Prueba de Producto $$$$$ Dia:Tal</h5></div>
+            <div class="producPrueba"><h5>Prueba de Producto $$$$$ Dia:Tal</h5></div>
+            <div class="producPrueba"><h5>Prueba de Producto $$$$$ Dia:Tal</h5></div>
+            <button class="botonAdd"><a href="/Catalogo"><i class="fa-solid fa-plus"></i></a></button>
+        </div>
+        <div class="botonCompra">
+            <button ><a href="/">Comprar</a></button>
+        </div>
   </body>
 </html>

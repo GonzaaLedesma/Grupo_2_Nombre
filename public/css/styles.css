@@ -91,7 +91,43 @@
   .itemFooter{
     padding: 2px;
   }
-
+  /* -----------------------SideBar-------------------------------- */
+.offcanvas-title{
+  margin: auto;
+}
+.listaTitulo{
+  display: flex;
+  justify-content: center;
+}
+#segundoTitulos{
+  margin: 5px;
+  text-align: center;
+}
+.cajaProductos{
+  border: solid 1px black;
+  height: 70%;
+  margin: 5px 5px 5px 5px;
+}
+.botonAdd{
+  margin: 10px 5px 5px 10px;
+}
+.producPrueba{
+  margin: 3px;
+  padding: 2px;
+  border: solid 1px black;
+}
+.botonCompra{
+  display: flex;
+  justify-content: center;
+}
+.botonCompra button{
+  width: 100px;
+}
+.botonCompra button a{
+  text-decoration: none;
+  color: blue;
+}
+/* -----------------------SideBar Fin-------------------------------- */
   @media (min-width: 1000px){
     .search{
       width: 30vw;

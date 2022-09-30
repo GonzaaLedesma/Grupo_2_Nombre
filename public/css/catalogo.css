@@ -6,16 +6,40 @@
     color: rgb(0, 20, 255);
     transition: all 1s;
 }
-.cajaCategoria{
+/* .cajaCategoria{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     padding: 20px;
-    justify-content: space-around;
+    
+    overflow-x: scroll;
 }
 .card{
     width: 20%;
     transition: all 0.5s;
-}
+    margin-right: 35px;
+} */
+.cajaCategoria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+  }
+  
+  .card {
+    padding: .5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #333;
+    color: #d9d9d9;
+    scroll-snap-align: center;
+    min-width: 400px !important;
+  }
 .card-title{
     text-align: center;
 }
@@ -31,17 +55,17 @@
 .card-body a{
     display: flex;
     justify-content: center;
+    /* background-color: white;
+    color: blue;
+    border: none; */
+    transition: all 0.5s;
+}
+/* -----Hover---- */
+.card:hover .card-body a{
     background-color: white;
     color: blue;
     border: none;
-    transition: all 0.5s;
 }
-
-
-
-
-
-/* -----Hover---- */
 .titulosCategoria:hover{
     background-color: blue;
     color: white;
@@ -50,3 +74,10 @@
 .card:hover{
     box-shadow: 0px 0px 15px rgb(100, 100, 100);
 }
+/* ----------- */
+@media (max-width: 880px) {
+    .cajaCategoria ::-webkit-scrollbar{
+        overflow-x: visible;
+    }
+    
+  } 
