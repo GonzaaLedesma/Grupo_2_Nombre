@@ -65,3 +65,9 @@ header{
     width: 150px;
     padding: 5px;
 }
+/* ---Correcion--- */
+footer{
+    position: absolute;
+    bottom: -8px; 
+  }
+/* ---Correcion--- */

@@ -67,8 +67,6 @@
   footer{
     background-color: rgba(0, 0, 0, 0.795);
     width: 100%;
-    /* position: absolute;
-    bottom: -8px; */
   }
   #footerBox{
     display: block;

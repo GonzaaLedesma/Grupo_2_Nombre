@@ -110,6 +110,12 @@
     margin-bottom: 5px;
     padding: 5px;
 }
+/* ---Correcion--- */
+footer{
+    position: absolute;
+    bottom: -8px; 
+  }
+/* ---Correcion--- */
 @media (min-width: 1100px) {
     .cajaDetalles{
         display: flex;
@@ -139,6 +145,7 @@
         width: 50%;
     }
   } 
+  
   @media (min-width: 1550px){
     .imgTicket{
         width: 70%;
