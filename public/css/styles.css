@@ -6,8 +6,8 @@
     font-size: 12px;
   }
   /* ------Global------ */
-/*   
-  header{
+  
+  /* header{
     height: 10vh;
     padding: 5px;
   }
@@ -17,8 +17,8 @@
     max-height: 75%;
   }
   footer{
-    height: 12vh;
-  } */
+    height: 12vh; */
+  
   /* ---------------------Header----------------- */
   .responsiveNav{
     display: flex;
@@ -65,7 +65,10 @@
   }
   /* --------------------footer---------------- */
   footer{
-    background-color: rgba(0, 0, 0, 0.795)
+    background-color: rgba(0, 0, 0, 0.795);
+    width: 100%;
+    /* position: absolute;
+    bottom: -8px; */
   }
   #footerBox{
     display: block;
