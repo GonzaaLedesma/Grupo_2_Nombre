@@ -97,10 +97,10 @@
 }
 
 /* ---Correcion--- */
-footer{
+/* footer{
     position: absolute;
     bottom: -8px; 
-  }
+  } */
 /* ---Correcion--- */
 @media (min-width: 1100px) {
     .cajaDetalles{
