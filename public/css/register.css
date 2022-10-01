@@ -11,11 +11,14 @@ main{
     justify-content: center;
     align-items: center;
     background: lightblue;
+    height: 86.6%;
+    margin: auto;
 }
 
 .form-box{
     width: 75%;
     padding: 10px;
+    height: 100%;
     background: #191919;
     text-align: center;
 }
@@ -66,6 +69,10 @@ header{
     padding: 5px;
 }
 /* ---Correcion--- */
+.botonSumit a{
+    text-decoration: none;
+    color: white;
+}
 /* footer{
     position: absolute;
     bottom: -8px; 

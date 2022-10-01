@@ -9,7 +9,7 @@
 }
 .cajaCategoria {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     flex-wrap: nowrap;
     margin: 8px;
     padding: 0;
