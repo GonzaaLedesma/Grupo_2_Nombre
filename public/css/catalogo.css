@@ -3,27 +3,15 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    margin-top: 15px;
     color: rgb(0, 20, 255);
     transition: all 1s;
 }
-/* .cajaCategoria{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 20px;
-    
-    overflow-x: scroll;
-}
-.card{
-    width: 20%;
-    transition: all 0.5s;
-    margin-right: 35px;
-} */
 .cajaCategoria {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    margin: 0;
+    margin: 8px;
     padding: 0;
     background-color: #f0f0f0;
     scroll-snap-type: x mandatory;
@@ -33,12 +21,13 @@
   
   .card {
     padding: .5rem;
+    margin: 10px;
     font-size: 1.2rem;
     text-align: center;
     background-color: #333;
-    color: #d9d9d9;
     scroll-snap-align: center;
-    min-width: 400px !important;
+    min-width: 300px !important;
+    transition: all 0.5s;
   }
 .card-title{
     text-align: center;
@@ -75,9 +64,8 @@
     box-shadow: 0px 0px 15px rgb(100, 100, 100);
 }
 /* ----------- */
-@media (max-width: 880px) {
-    .cajaCategoria ::-webkit-scrollbar{
-        overflow-x: visible;
+@media (max-width: 715px) {
+    .card{
+        min-width: 200px !important;
     }
-    
   } 
