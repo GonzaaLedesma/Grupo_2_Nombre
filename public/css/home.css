@@ -12,7 +12,7 @@
 
 .contenedorCajas{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     margin: auto;
     margin-top: 10px;
     padding-bottom: 10px; 
@@ -31,6 +31,7 @@
     scroll-snap-align: center;
     min-width: 250px !important;
     transition: all 0.5s;
+    max-width: 310px;
 }
 .botonCaja{
     margin: auto;
@@ -69,6 +70,12 @@
 .tarjetaCategoria:hover .descripcionCateg p{
     font-size: 20px;
     text-align: center;
+}
+
+@media (min-width: 1505px){
+    .contenedorCajas{    
+    justify-content: space-around;
+    }
 }
 @media (min-width: 1300px){
     .countainerSlider{
