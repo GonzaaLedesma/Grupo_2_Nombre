@@ -53,12 +53,13 @@
 .descripcionCateg img {
   margin-top: 10px;
   width: 100%;
-  height: 110px;
+  height: 121px;
   border-radius: 10px;
   transition: 1s;
 }
 .descripcionCateg p {
   color: #f0f0f0;
+  margin-bottom: 0;
   transition: all 1s;
 }
 

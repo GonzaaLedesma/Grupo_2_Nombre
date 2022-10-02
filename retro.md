@@ -1,0 +1,12 @@
+# Grupo_2_Ticket_House
+
+## Retrospectiva grupal:
+- En primer lugar lo que haciamos bien en el primer sprint era tener una buena comunicacion pero teniamos poca participacion sobre la idea final. En segundo lugar en este sprint deberiamos mejorar nuestra comunicacion para que sea como antes, hubo ausencia por parte de algunos integrantes, y en linea general la participacion sigue igual. Por ultimo mirando al lado del avance del proyecto va muy bien, tenemos q seguir con el ritmo y mejorar nuestro apartado visual para el futuro.
+
+## Retrospectiva individual:
+
+- Matías Lanese: 
+- Josue Ferreira: 
+- Gonzalo Ledesma: Mis cosas a mejorar son tener una mejor organizacion y desarrollo de codigo para que mis compañeros tengan mas facilidad de lectura a la hora de actualizar el codigo.
+- Damián Paul Espina:
+- Tomas Otero: 

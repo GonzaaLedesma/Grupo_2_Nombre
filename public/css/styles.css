@@ -21,6 +21,31 @@
     height: 12vh; */
   
   /* ---------------------Header----------------- */
+  .ButtonBox button{
+    border: solid 1px rgb(35, 35, 252);;
+    border-radius: 5px;
+    color: rgba(0, 0, 255, 0.822);
+    transition: 450ms;
+  }
+  .ButtonBox button i{
+    color: rgba(0, 0, 255, 0.822);;
+    transition: 450ms;
+  } 
+  .correccionPos i{
+    position: relative;
+    left: -2px;
+    top: 1px;
+  }
+  /* ----------Hover---------- */
+  .ButtonBox Button:hover {
+    color: white;
+    background-color: rgba(0, 0, 255, 0.822);;
+  }
+  .ButtonBox button:hover  i{
+    color: white;
+    background-color: rgba(0, 0, 255, 0.822);;
+  }
+  /* ----------Hover Fin------ */
   .responsiveNav{
     display: flex;
     width: 100%;
