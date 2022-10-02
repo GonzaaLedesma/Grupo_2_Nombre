@@ -7,6 +7,6 @@
 
 - Matías Lanese: 
 - Josue Ferreira: 
-- Gonzalo Ledesma: Mis cosas a mejorar son tener una mejor organizacion y desarrollo de codigo para que mis compañeros tengan mas facilidad de lectura a la hora de actualizar el codigo.
+- Gonzalo Ledesma: Tengo que mejorar en tener una mejor organizacion y desarrollo de codigo para que mis compañeros tengan mas facilidad de lectura a la hora de actualizar el codigo.
 - Damián Paul Espina:
 - Tomas Otero: 
