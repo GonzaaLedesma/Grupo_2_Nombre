@@ -5,7 +5,7 @@
 
 ## Retrospectiva individual:
 
-- Matías Lanese: 
+- Matías Lanese: Tengo que tener mas organizacion para la realizar lo necesario y poder ayudar a mis compañeros con lo que el proyecto necesita, si no el proyecto no va a ser realizado con los objetivos que nos planteamos.
 - Josue Ferreira: 
 - Gonzalo Ledesma: Tengo que mejorar en tener una mejor organizacion y desarrollo de codigo para que mis compañeros tengan mas facilidad de lectura a la hora de actualizar el codigo.
 - Damián Paul Espina:
