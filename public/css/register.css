@@ -10,7 +10,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: lightblue;
+    /* background: lightblue; */
     height: 86.6%;
     margin: auto;
 }

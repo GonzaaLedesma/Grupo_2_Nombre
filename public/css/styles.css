@@ -1,7 +1,7 @@
 * {
     font-family: "Roboto Condensed", sans-serif;
     box-sizing: border-box;
-    background-color: rgb(243, 243, 243);
+    /* background-color: rgb(243, 243, 243); */
   }
   p {
     font-size: 12px;
@@ -113,7 +113,7 @@
   }
   #iconsFooter{
     display: flex;
-    /* color: white; */
+    color: white;
     justify-content: space-around;
     font-size: 30px;
     padding: 5px 30% 0 30%;
@@ -124,7 +124,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* color: white; */
+    color: white;
     padding: 5px 15% 0 15%; 
     margin-bottom:0 !important;
   }
