@@ -12,7 +12,8 @@
     /* justify-content: space-around; */
     flex-wrap: nowrap;
     margin: 8px;
-    padding: 0;
+    margin-right: 5px;
+    padding: 5px;
     background-color: #f0f0f0;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;

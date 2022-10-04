@@ -148,7 +148,8 @@
     }
     .bannerFooter img{
         margin: auto;
-        border-radius: 10px;
+        padding: 10px;
+        border-radius: 50px;
         width: 85%;
         height: 28vh;
     }
