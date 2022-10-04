@@ -10,11 +10,19 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* background: lightblue; */
+    background: lightblue;
     height: 86.6%;
     margin: auto;
 }
-
+.correcionCajasForm{
+    width: 100%;
+}
+.correcionCajasForm input{
+    width: 40%;
+}
+.cajaSend button{
+    width: 30%;
+}
 .form-box{
     width: 75%;
     padding: 10px;
@@ -39,7 +47,7 @@ main{
     border: 2px solid #3742fa;
     text-align: center;
     border-radius: 24px;
-    width: 150px;
+    /* width: 150px; */
     outline: none;
     color: #ffffff;
     transition: 0.25s;
@@ -47,7 +55,7 @@ main{
 
 .form-box input[type="text"]:focus,
 .form-box input[type="password"]:focus{
-    width: 200px;
+    width: 50%;
     border-color: #ffffff;
 }
 
