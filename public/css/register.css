@@ -38,7 +38,8 @@ main{
 
 .form-box input[type="text"],
 .form-box input[type="password"],
-.form-box button[type="submit"]{
+.form-box button[type="submit"],
+.form-box input[type="email"]{
     border: 0;
     background: none;
     display: block;
