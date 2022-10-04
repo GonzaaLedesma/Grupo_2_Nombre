@@ -22,28 +22,29 @@
   
   /* ---------------------Header----------------- */
   .ButtonBox button{
-    border: solid 1px rgb(35, 35, 252);;
+    border: solid 1px rgb(35, 35, 252);
     border-radius: 5px;
-    color: rgba(0, 0, 255, 0.822);
+    color: rgb(35, 35, 252);
     transition: 450ms;
   }
   .ButtonBox button i{
-    color: rgba(0, 0, 255, 0.822);;
+    color: rgb(35, 35, 252);
     transition: 450ms;
   } 
   .correccionPos i{
     position: relative;
     left: -2px;
     top: 1px;
+    transition: 450ms;
   }
   /* ----------Hover---------- */
   .ButtonBox Button:hover {
     color: white;
-    background-color: rgba(0, 0, 255, 0.822);;
+    background-color: rgb(35, 35, 252);
   }
   .ButtonBox button:hover  i{
     color: white;
-    background-color: rgba(0, 0, 255, 0.822);;
+    background-color: rgb(35, 35, 252);
   }
   /* ----------Hover Fin------ */
   .responsiveNav{
