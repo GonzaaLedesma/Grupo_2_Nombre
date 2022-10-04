@@ -119,6 +119,10 @@
     font-size: 30px;
     padding: 5px 30% 0 30%;
   }
+  #iconsFooter i{
+    margin-left: 4px;
+    margin-right:4px ;
+  }
   #helpList{
     list-style: none;
     display: flex;
