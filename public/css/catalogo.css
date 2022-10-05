@@ -9,7 +9,7 @@
 }
 .cajaCategoria {
     display: flex;
-    /* justify-content: space-around; */
+    /* justify-content: space-between; */
     flex-wrap: nowrap;
     margin: 8px;
     margin-right: 5px;
@@ -42,13 +42,17 @@
     font-size: 15px;
 }
 .card-body a{
-    display: flex;
-    justify-content: center;
+    display: block;
     /* background-color: white;
     color: blue;
     border: none; */
     transition: all 0.5s;
+    width: 100%;
 }
+/* .posicionBoton{
+    display: flex;
+    justify-content: flex-end;
+} */
 /* -----Hover---- */
 .card:hover .card-body a{
     background-color: white;
