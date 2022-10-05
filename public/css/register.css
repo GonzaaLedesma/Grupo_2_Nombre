@@ -1,7 +1,9 @@
 body, html{
     height: 100%;
 }
-
+header{
+    background: rgb(211, 211, 211);
+}
 main{
     margin: 0;
     padding: 0;
@@ -10,7 +12,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: lightblue;
+    background: rgb(211, 211, 211);
     height: 86.6%;
     margin: auto;
 }
@@ -29,6 +31,8 @@ main{
     height: 100%;
     background: #191919;
     text-align: center;
+    border-radius: 20px;
+
 }
 
 .form-title{
@@ -67,10 +71,10 @@ main{
     cursor: pointer;
 }
 
-header{
+/* header{
     background: blue;
     margin: 0px;
-}
+} */
 
 .logo{
     display: flex;
