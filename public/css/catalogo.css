@@ -41,6 +41,13 @@
 .card-date{
     font-size: 15px;
 }
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    /* margin-top: auto; */
+}
 .card-body a{
     display: block;
     /* background-color: white;
@@ -48,6 +55,7 @@
     border: none; */
     transition: all 0.5s;
     width: 100%;
+    margin-top: auto;
 }
 /* .posicionBoton{
     display: flex;
