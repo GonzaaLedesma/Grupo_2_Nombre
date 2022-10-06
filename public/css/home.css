@@ -1,4 +1,7 @@
 /* ------------------MAIN----------------- */
+body{
+  background-color: #c7c7c7;
+}
 .countainerSlider {
   margin: 0 auto;
 }
@@ -98,11 +101,11 @@
     justify-content: space-around;
   }
 }
-@media (min-width: 1300px) {
+/* @media (min-width: 1300px) {
   .countainerSlider {
     width: 90%;
   }
-}
+} */
 @media (max-width: 775px) {
   /* ---Correcion--- */
   /* footer{
