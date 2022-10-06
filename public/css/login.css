@@ -3,9 +3,11 @@ body, html{
 }
 
 header{
-    background: rgb(211, 211, 211);
+    background: rgb(227 227 227);
 }
-
+header button{
+    align-items: center;
+}
 main{
     margin: 0;
     padding: 0;
@@ -14,7 +16,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: rgb(211, 211, 211);;
+    background: rgb(227 227 227);;
     height: 86.6%;
     margin: auto;
 }

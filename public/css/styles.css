@@ -21,6 +21,14 @@
     height: 12vh; */
   
   /* ---------------------Header----------------- */
+  header a{
+    text-decoration: none;
+    color:blue
+  }
+  button:hover a{
+    color: white;
+  }
+
   .ButtonBox button{
     border: solid 1px rgb(35, 35, 252);
     border-radius: 5px;
