@@ -59,7 +59,7 @@
     display: flex;
     width: 100%;
     /* justify-content: space-around; */
-    margin:10px 0 10px 0;
+    margin:10px 0 0px 0;
   }
   .correcionNav{
     display: flex;
@@ -237,6 +237,7 @@
   @media (max-width: 696px) {
     .correcionNav{
       margin: auto;
+      margin-bottom: 10px;
     }
     .botonBarMin{
       margin: 0;
