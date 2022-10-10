@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/catalogo.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/catalogo.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
@@ -42,13 +42,15 @@
             <li><button>Paginas <i class="fa-solid fa-caret-down"></i></button></li>
             <li><button>Ayuda <i class="fa-solid fa-info"></i></i></i></button></li>
           </ul>
+          <form action="" method="POST">
           <div class="searchBar">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
             <input class="search" type="text" placeholder="Buscar tus Artistas" />
           </div>
+        </form>
           <ul class="ButtonBox">
             <li>
-              <button><a href="/login"> Perfil</a> <i class="fa-solid fa-user"></i></button>
+              <button><a href="/usuario/login">Perfil</a> <i class="fa-solid fa-user"></i></button>
             </li>
             <li>
               <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -58,10 +60,12 @@
           </ul>
         </div>
       </section>
+      <form action="" method="POST">
       <div class="searchBarMin">
         <button class="botonBarMin"><i class="fa-solid fa-magnifying-glass"></i></button>
         <input class="search" type="text" placeholder="Buscar tus Artistas" />
       </div>
+    </form>
       <!-- termina el nav -->
     </header>
     <main>
@@ -81,7 +85,7 @@
             <p class="card-text">Participacion: OneRepublic, Halsey y mas</p>
             <p class="card-text card-date">22 de Octubre</p>
             <!-- <div class="posicionBoton"> -->
-              <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+              <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
             <!-- </div> -->
           </div>
         </div>
@@ -97,7 +101,7 @@
             <p class="card-text">Strahov en Praga</p>
             <p class="card-text">Participacion: Guns N ‘Roses, U2 y Bon Jovi</p>
             <p class="card-text card-date">12 de Octubre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -112,7 +116,7 @@
             <p class="card-text"> Ohio en Columbus</p>
             <p class="card-text">Participacion: George Strait y Beyonce</p>
             <p class="card-text card-date">30 de Octubre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -127,7 +131,7 @@
             <p class="card-text">Beijing</p>
             <p class="card-text">Participacion: Ed Sheeran</p>
             <p class="card-text card-date">24 de Octubre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -142,7 +146,7 @@
             <p class="card-text"> Belo Horizonte, Brasil</p>
             <p class="card-text">Participacion: Kiss, Beyonce y John Mayer</p>
             <p class="card-text card-date">25 de Octubre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -157,7 +161,7 @@
             <p class="card-text">Sydney, Australia</p>
             <p class="card-text">Participacion: Katy Perry y Jay Chou </p>
             <p class="card-text card-date">30 de Octubre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
       </div>
@@ -176,7 +180,7 @@
             <p class="card-text">Londres, Inglaterra</p>
             <p class="card-text">Parte de su gira mundia</p>
             <p class="card-text card-date">11 de Noviembre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -191,7 +195,7 @@
             <p class="card-text">Bukit Jalil</p>
             <p class="card-text">Participacion: Ed Sheeran y Paramore</p>
             <p class="card-text card-date">21 de Noviembre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -205,7 +209,7 @@
             <p class="card-text">---------</p>
             <p class="card-text">------------------</p>
             <p class="card-text card-date">-------</p>
-            <!-- <a href="/detalles" class="btn btn-primary">Ir a detalles</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a> -->
           </div>
         </div>
         <div class="card">
@@ -219,7 +223,7 @@
             <p class="card-text">---------</p>
             <p class="card-text">------------------</p>
             <p class="card-text card-date">-------</p>
-            <!-- <a href="/detalles" class="btn btn-primary">Ir a detalles</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a> -->
           </div>
         </div>
       </div>
@@ -238,7 +242,7 @@
             <p class="card-text">Austin, Tx, Us</p>
             <p class="card-text">Circuit of the Americas</p>
             <p class="card-text card-date">21, 22 y 23 de Diciembre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -253,7 +257,7 @@
             <p class="card-text">Río de Janeiro, Brasil</p>
             <p class="card-text">Participacion: Frank Sinatra y Foo Fighters</p>
             <p class="card-text card-date">19, 20 y 21 de Diciembre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -268,7 +272,7 @@
             <p class="card-text">Tilburg, Netherlands</p>
             <p class="card-text">Capacidad: 2,200 personas</p>
             <p class="card-text card-date">12 de diciembre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
         <div class="card">
@@ -283,7 +287,7 @@
             <p class="card-text">Inglaterra. Manchester</p>
             <p class="card-text">Participacion: Take That y Britney Spears</p>
             <p class="card-text card-date">28 de diciembre</p>
-            <a href="/detalles" class="btn btn-primary">Ir a detalles</a>
+            <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a>
           </div>
         </div>
       </div>
@@ -302,7 +306,7 @@
             <p class="card-text"> Seúl, Corea del Sur</p>
             <!-- <p class="card-text">Circuit of the Americas</p> -->
             <p class="card-text card-date">26 de Septiembre</p>
-            <!-- <a href="/detalles" class="btn btn-primary">Ir a detalles</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a> -->
           </div>
         </div>
         <div class="card">
@@ -317,7 +321,7 @@
             <p class="card-text">George, Washington</p>
             <!-- <p class="card-text">Circuit of the Americas</p> -->
             <p class="card-text card-date">21 de Septiembre</p>
-            <!-- <a href="/detalles" class="btn btn-primary">Ir a detalles</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a> -->
           </div>
         </div>
         <div class="card">
@@ -332,7 +336,7 @@
             <p class="card-text">Bucarest, Rumania</p>
             <!-- <p class="card-text">Circuit of the Americas</p> -->
             <p class="card-text card-date">19 de Septiembre</p>
-            <!-- <a href="/Detalles" class="btn btn-primary">Ir a detalles</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a> -->
           </div>
         </div>
         <div class="card">
@@ -347,7 +351,7 @@
             <p class="card-text">Paris, Francia</p>
             <!-- <p class="card-text">Circuit of the Americas</p> -->
             <p class="card-text card-date">13 de Septiembre</p>
-            <!-- <a href="/Detalles" class="btn btn-primary">Ir a detalles</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a> -->
           </div>
         </div>
         <div class="card">
@@ -362,7 +366,7 @@
             <p class="card-text">Estocolmo, Suecia</p>
             <!-- <p class="card-text">Circuit of the Americas</p> -->
             <p class="card-text card-date">1 de Septiembre</p>
-            <!-- <a href="/detalles" class="btn btn-primary">Ir a detalles</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Ir a detalles</a> -->
           </div>
         </div>
       </div>
@@ -380,7 +384,7 @@
             <!-- <p class="card-text">Austin, Tx, Us</p> -->
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>
-            <!-- <a href="/Detalles" class="btn btn-primary">Go somewhere</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
         <div class="card">
@@ -394,7 +398,7 @@
             <!-- <p class="card-text">Austin, Tx, Us</p> -->
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>
-            <!-- <a href="/Detalles" class="btn btn-primary">Go somewhere</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
         <div class="card">
@@ -408,7 +412,7 @@
             <!-- <p class="card-text">Austin, Tx, Us</p> -->
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>
-            <!-- <a href="/Detalles" class="btn btn-primary">Go somewhere</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
         <div class="card">
@@ -422,7 +426,7 @@
             <!-- <p class="card-text">Austin, Tx, Us</p> -->
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>
-            <!-- <a href="/Detalles" class="btn btn-primary">Go somewhere</a> -->
+            <!-- <a href="/producto/detalles" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
       </div>
@@ -476,7 +480,7 @@
             <div class="producPrueba"><h5>Prueba de Producto $$$$$ Dia:Tal</h5></div>
             <div class="producPrueba"><h5>Prueba de Producto $$$$$ Dia:Tal</h5></div>
             <div class="producPrueba"><h5>Prueba de Producto $$$$$ Dia:Tal</h5></div>
-            <button class="botonAdd"><a href="/Catalogo"><i class="fa-solid fa-plus"></i></a></button>
+            <button class="botonAdd"><a href="/producto/catalogo"><i class="fa-solid fa-plus"></i></a></button>
         </div>
         <div class="botonCompra">
             <button ><a href="/">Comprar</a></button>

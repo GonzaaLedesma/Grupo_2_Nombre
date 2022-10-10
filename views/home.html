@@ -45,13 +45,15 @@
             <li><button> Paginas<i class="fa-solid fa-caret-down"></i></button></li>
             <li><button> Ayuda<i class="fa-solid fa-info"></i></i></i></button></li>
           </ul>
-          <div class="searchBar">
-            <button class="correccionPos"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input class="search" type="text" placeholder="Buscar tus Artistas" />
-          </div>
+          <form action="" method="POST">
+            <div class="searchBar">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              <input class="search" type="text" placeholder="Buscar tus Artistas" />
+            </div>
+          </form>
           <ul class="ButtonBox">
             <li>
-              <button><a href="/login"> Perfil</a><i class="fa-solid fa-user"></i></button>
+              <button><a href="/usuario/login"> Perfil</a><i class="fa-solid fa-user"></i></button>
             </li>
             <li>
               <button class="correccionPos" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -61,10 +63,12 @@
           </ul>
         </div>
       </section>
-      <div class="searchBarMin">
-        <button class="botonBarMin"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <input class="search" type="text" placeholder="Buscar tus Artistas" />
-      </div>
+      <form action="" method="POST">
+        <div class="searchBarMin">
+          <button class="botonBarMin"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <input class="search" type="text" placeholder="Buscar tus Artistas" />
+        </div>
+      </form>
       <!-- termina el nav -->
     </header>
     <main>
@@ -104,7 +108,7 @@
         <div><h4 class="tituloInferior">EVENTOS</h4></div>
         <div class="contenedorCajas">
           <div class="tarjetaCategoria">
-            <button class="botonCaja"><a href="/catalogo">ACTUALES</a></button>
+            <button class="botonCaja"><a href="/producto/catalogo">ACTUALES</a></button>
             <div class="descripcionCateg">
               <img
                 src="/imagenes/Home-Categorias/Actuales.jpeg"
@@ -114,14 +118,14 @@
             </div>
           </div>
           <div class="tarjetaCategoria">
-            <button class="botonCaja"><a href="/catalogo">NUEVOS</a></button>
+            <button class="botonCaja"><a href="/producto/catalogo">NUEVOS</a></button>
             <div class="descripcionCateg">
               <img src="/imagenes/Home-Categorias/Nuevos.jpg" alt="NUEVOS" />
               <p>Estan dando de que hablar, ¿Serán los proximos numeros 1?</p>
             </div>
           </div>
           <div class="tarjetaCategoria">
-            <button class="botonCaja"><a href="/catalogo">PROXIMOS</a></button>
+            <button class="botonCaja"><a href="/producto/catalogo">PROXIMOS</a></button>
             <div class="descripcionCateg">
               <img
                 src="/imagenes/Home-Categorias/Proximos.jpg"
@@ -131,21 +135,16 @@
             </div>
           </div>
           <div class="tarjetaCategoria">
-            <button class="botonCaja"><a href="/Catalogo">PASADOS</a></button>
+            <button class="botonCaja"><a href="/producto/catalogo">PASADOS</a></button>
             <div class="descripcionCateg">
               <img src="/imagenes/Home-Categorias/Pasados.jpg" alt="PASADOS" />
               <p>Los que pasaron, ya son historia. No vuelvas a arrepentirte, conseguí tu entrada antes que se agote.</p>
             </div>
           </div>
           <div class="tarjetaCategoria">
-            <button class="botonCaja">
-              <a href="/catalogo">SPONSOR</a>
-            </button>
+            <button class="botonCaja"><a href="/producto/catalogo">SPONSOR</a></button>
             <div class="descripcionCateg">
-              <img
-                src="/imagenes/Home-Categorias/Patrosinio.jpg"
-                alt="PATROSINIO"
-              />
+              <img src="/imagenes/Home-Categorias/Patrosinio.jpg" alt="PATROSINIO"/>
               <p>Nuestros sponsor, los que ayudan a darte la mejor experiencia.</p>
             </div>
           </div>
