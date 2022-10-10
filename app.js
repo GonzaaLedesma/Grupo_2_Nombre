@@ -19,9 +19,9 @@ app.get('/login',(req,res)=>{
 app.get('/register',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/register.html'))
 })
-app.get('/Detalles',(req,res)=>{
+app.get('/detalles',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/detalleProducto.html'))
 })
-app.get('/Catalogo',(req,res)=>{
+app.get('/catalogo',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/catalogo.html'))
 })
