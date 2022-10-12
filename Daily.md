@@ -1,5 +1,6 @@
 # Grupo_2_Ticket_House
 
+## Sprint 2
 ## Viernes 23:
   - vimos los bocetos y repartimos tareas.
   - Estructuramos trello y definimos los dias de trabajo y tiempos.
@@ -16,3 +17,10 @@
   - Testeamos la pagina.
   - Arreglamos errores.
   - Ayudamos un poco a entender el codigo.
+  
+## Sprint 3
+## miercoles 12:
+  - Solucionamos los problemas complejos.
+  - Hicimos en conjuto un live share gran parte del sprint 3.
+  - Resolvimos pasos 1, 2, 3, 4, 6.
+  - Pusimos en marcha el paso 5 y 7.

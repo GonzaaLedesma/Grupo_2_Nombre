@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+    <main class="mainRegister">
+        <form action="" class="form-box">
+            <h1 class="form-title">Register</h1>
+            <div class="correcionCajasForm">
+                <label for="nombre"></label>
+                <input required type="text"  name="nombre" id="nombreCompleto" placeholder="Nombre y apellido" minlength="8">
+            </div>
+            <div class="correcionCajasForm">
+                <label for="nombre"></label> 
+                <input required type="text"  name="SubNombre" id="Usuario" placeholder="Nombre de Usuario" minlength="8">
+                <samp class="feedback"></samp>
+            </div>
+            <div class="correcionCajasForm">
+                <label for="nombre"></label>
+                <input required type="email"  name="mail" id="email" placeholder="E-mail">
+                <samp class="feedback"></samp>
+            </div>
+            <div class="correcionCajasForm"> 
+                <label for="contrasenia"></label>
+                <input required type="password" name="contrasenia" placeholder="Contraseña">
+                <samp class="feedback"></samp>
+            </div>
+            <div class="correcionCajasForm">
+                <label for="contrasenia"></label>
+                <input required type="password" name="contrasenia" placeholder="Repetir la contraseña">
+                <samp class="feedback"></samp>
+            </div>
+            <div class="cajaSend">
+                <button class="botonSumit" type="submit"><a href="/">Enviar</a></button>
+            </div>
+        </form>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

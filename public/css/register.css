@@ -1,13 +1,4 @@
-body, html{
-    height: 100%;
-}
-header{
-    background: rgb(227 227 227);
-}
-header button{
-    align-items: center;
-}
-main{
+.mainRegister{
     margin: 0;
     padding: 0;
     display: flex;
@@ -55,7 +46,6 @@ main{
     border: 2px solid #3742fa;
     text-align: center;
     border-radius: 24px;
-    /* width: 150px; */
     outline: none;
     color: #ffffff;
     transition: 0.25s;
@@ -68,17 +58,6 @@ main{
     border-color: #ffffff;
 }
 
-.form-box button[type="submit"]{
-    border: 0;
-    background: #3742fa;
-    cursor: pointer;
-}
-
-/* header{
-    background: blue;
-    margin: 0px;
-} */
-
 .logo{
     display: flex;
     margin: auto;
@@ -86,12 +65,13 @@ main{
     padding: 5px;
 }
 /* ---Correcion--- */
+.form-box button[type="submit"]{
+    border: 0;
+    background: #3742fa;
+    cursor: pointer;
+}
+
 .botonSumit a{
     text-decoration: none;
     color: white;
 }
-/* footer{
-    position: absolute;
-    bottom: -8px; 
-  } */
-/* ---Correcion--- */

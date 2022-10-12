@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+    <main class="mainLogin">
+        <form action="" class="form-box">
+            <h1 class="form-title">Ingresar</h1>
+            <div class="correcionCajasForm">
+                <label for="nombre"></label> 
+                <input required type="text"  name="nombre" id="nombreCompleto" placeholder="Nombre de Usuario">
+                <samp class="feedback"></samp>
+            </div>
+            <div class="correcionCajasForm">    
+                <label for="contrasenia"></label>
+                <input required type="password" name="contrasenia" placeholder="Contraseña">
+                <samp class="feedback"></samp>
+            </div>
+            <div>
+                <input type="checkbox" placeholder="Remember Me">
+                <h4>Remember Me</h4>
+            </div>
+            <div>
+                <a href="#" class="recuperar-contraseña">¿Olvidaste tu Contraseña?</a>
+            </div>
+            <div class="cajaSend">
+                <button class="buttonFix" type="submit"><a href="/">Enviar</a></button>
+            </div>
+        </form>
+    </main>
+    <!-- footer -->
+    <%- include('./partials/footer') %>
+</body>
+</html>
