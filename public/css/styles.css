@@ -1,25 +1,10 @@
 * {
     font-family: "Roboto Condensed", sans-serif;
     box-sizing: border-box;
-    /* background-color: rgb(243, 243, 243); */
   }
   p {
     font-size: 12px;
   }
-  /* ------Global------ */
-  
-  /* header{
-    height: 10vh;
-    padding: 5px;
-  }
-  main{
-    margin-top:5% ;
-    height: 80vh;
-    max-height: 75%;
-  }
-  footer{
-    height: 12vh; */
-  
   /* ---------------------Header----------------- */
   header a{
     text-decoration: none;
@@ -58,7 +43,6 @@
   .responsiveNav{
     display: flex;
     width: 100%;
-    /* justify-content: space-around; */
     margin:10px 0 0px 0;
   }
   .correcionNav{
@@ -97,7 +81,11 @@
     justify-content: center;
     margin: auto;
     padding: 15px 0 10px 0;
-    
+  }
+  .searchBar i{
+    position: relative;
+    right: 2px;
+    top: 2px;
   }
   .searchBarMin{
     display: none;
@@ -213,15 +201,16 @@
     margin: auto;
     padding: 15px 0 10px 0;
     } 
+    .searchBarMin i{
+      position: relative;
+      right: 2px;
+      top: 2px;
+    }
     .search{
       width: 70vw;
-      /* position: relative;
-      right: 16px; */
+  
     }
-    /* .searchBarMin button{
-      position: relative;
-      right: 16px;
-    } */
+   
     .ButtonBox{
       padding: 0;
     }
@@ -237,14 +226,12 @@
   @media (max-width: 696px) {
     .correcionNav{
       margin: auto;
-      /* margin-bottom: 10px; */
     }
     .botonBarMin{
       margin: 0;
     }
     header button{
       margin-top: 8px;
-      /* padding-left: 0px; */
     }
     .responsiveNav{
       margin: auto;

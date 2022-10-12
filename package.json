@@ -4,7 +4,8 @@
   "description": "- Ofrecemos la venta de entradas a eventos y/o conciertos en vivo.\r - Estas entradas seran tickets digitales, contendras datos del eventos o conciertos y un \"codigo Qr\" para ingresar.\r - Los datos seran almacenados en la cuenta del usuario.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
