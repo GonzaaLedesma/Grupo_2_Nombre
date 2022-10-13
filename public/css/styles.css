@@ -33,6 +33,15 @@
     top: 1px;
     transition: 450ms;
   }
+  .dropdown-menu{
+    width: 20vh;
+    list-style: disc outside !important;
+    background-color: #2c3238 !important;
+    color: white !important;
+  }
+  .dropdown-menu a{
+    color: white;
+  }
   /* ----------Hover---------- */
   .header button:hover a{
     color:rgb(173, 173, 0);
@@ -45,6 +54,10 @@
   }
   .ButtonBox button:hover  i{
     color:rgb(173, 173, 0);
+  }
+  .dropdown-menu a:hover{
+    background-color: #2c3238 !important;
+    color:rgb(173, 173, 0) !important;
   }
   /* ----------Hover Fin------ */
   .responsiveNav{

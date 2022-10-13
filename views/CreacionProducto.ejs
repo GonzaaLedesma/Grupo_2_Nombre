@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+    <main class="">
+        <form action="" class="form-box">
+            <h1 class="form-title">Creacion De Evento</h1>
+            <div class="">
+                <label for="Nuevo-Nombre"></label>
+                <input required type="text"  name="nombre" id="nombreEvento" placeholder="Evento">
+            </div>
+            <div class="">
+                <label for="Descripcion-Evento">Descripcion de Evento</label>
+                <textarea></textarea>
+            </div>
+            <div class="">
+                <label for="Imagen-Evento"></label>
+                <input required type="image"  name="image" id="image" >
+                <!-- <samp class="feedback"></samp> -->
+            </div>
+            <div class=""> 
+                <label for="Dia"></label>
+                <input required type="date" name="Dia" >
+                <!-- <samp class="feedback"></samp> -->
+            </div>
+            <div class="">
+                <button class="botonSumit" type="submit"><a href="/">Enviar</a></button>
+            </div>
+        </form>
+    </main>
+    <%- include('./partials/footer') %>
+     <!-- ----------SideBar----- -->
+     <%- include('./partials/carrito') %>
+</body>
+</html>

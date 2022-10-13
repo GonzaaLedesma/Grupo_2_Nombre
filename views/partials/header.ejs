@@ -9,7 +9,16 @@
       /></a>
       <div class="correcionNav">
           <ul class="ButtonBox">
-          <li><button> Paginas<i class="fa-solid fa-caret-down"></i></button></li>
+          <li>
+            <!-- <button> Paginas<i class="fa-solid fa-caret-down"></i></button> -->
+            <div class="dropdown">
+              <button  type="button" data-bs-toggle="dropdown" aria-expanded="false">Paginas<i class="fa-solid fa-caret-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/">Home</a></li>
+                <li><a class="dropdown-item" href="/producto/catalogo">Catalogo</a></li>
+              </ul>
+          </div>
+          </li>
           <li><button> Ayuda<i class="fa-solid fa-info"></i></i></i></button></li>
         </ul>
         <form action="" method="POST">
@@ -20,7 +29,15 @@
         </form>
         <ul class="ButtonBox">
           <li>
-            <button><a href="/usuario/login">Perfil</a><i class="fa-solid fa-user"></i></button>
+            <!-- <button><a href="/usuario/login">Perfil</a><i class="fa-solid fa-user"></i></button> -->
+            <div class="dropdown">
+              <button  type="button" data-bs-toggle="dropdown" aria-expanded="false">Perfil<i class="fa-solid fa-user"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Tu Perfil</a></li>
+                <li><a class="dropdown-item" href="/usuario/register">Crea Tu Cuenta</a></li>
+                <li><a class="dropdown-item" href="/usuario/login">Iniciar Sesión</a></li>
+              </ul>
+          </div>
           </li>
           <li>
             <button class="correccionPos" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
