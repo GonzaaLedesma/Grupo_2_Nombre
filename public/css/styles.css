@@ -6,22 +6,25 @@
     font-size: 12px;
   }
   /* ---------------------Header----------------- */
+  header{
+    background-color: #1c2631;
+  }
   header a{
     text-decoration: none;
-    color:blue
-  }
-  button:hover a{
     color: white;
+    background-color: #242c35;
   }
-
+  
   .ButtonBox button{
-    border: solid 1px rgb(35, 35, 252);
+    border: solid 1px rgb(173, 173, 0);
+    background-color: #242c35;
     border-radius: 5px;
-    color: rgb(35, 35, 252);
+    color: white;
     transition: 450ms;
   }
   .ButtonBox button i{
-    color: rgb(35, 35, 252);
+    color: white;
+    background-color: #242c35;
     transition: 450ms;
   } 
   .correccionPos i{
@@ -31,19 +34,23 @@
     transition: 450ms;
   }
   /* ----------Hover---------- */
+  .header button:hover a{
+    color:rgb(173, 173, 0);
+  }
+  .ButtonBox button:hover a{
+    color:rgb(173, 173, 0);
+  }
   .ButtonBox Button:hover {
-    color: white;
-    background-color: rgb(35, 35, 252);
+    color:rgb(173, 173, 0);
   }
   .ButtonBox button:hover  i{
-    color: white;
-    background-color: rgb(35, 35, 252);
+    color:rgb(173, 173, 0);
   }
   /* ----------Hover Fin------ */
   .responsiveNav{
     display: flex;
     width: 100%;
-    margin:10px 0 0px 0;
+    /* margin:10px 0 0px 0; */
   }
   .correcionNav{
     display: flex;
@@ -65,8 +72,9 @@
   #logotipo{
     display: flex;
     margin: auto;
-    margin-left: 15px;
+    padding-left: 5px;
     width: 200px;
+    background-color: #1c2631;
   }
   .ButtonBox{
     display: flex;
@@ -91,19 +99,22 @@
     display: none;
     } 
   .searchBar button{
-    border: 1px solid rgb(39, 39, 39);
+    border: 1px solid rgb(173, 173, 0);
+    color: #242c35;;
     border-radius: 4px;
   }
   .search{
-    border: 1px solid rgb(39, 39, 39);
+    border: 1px solid rgb(173, 173, 0);
     text-align: center;
     font-size: 15px;
     border-radius: 4px;
   }
   /* --------------------footer---------------- */
   footer{
-    background-color: rgba(0, 0, 0, 0.795);
+    background-color: #1c2631;
     width: 100%;
+    position: relative;
+    top: 40px;
   }
   #footerBox{
     display: block;
@@ -203,8 +214,13 @@
     } 
     .searchBarMin i{
       position: relative;
-      right: 2px;
-      top: 2px;
+      right: 1px;
+      top: 1px;
+    }
+    .searchBarMin button{
+      border: 1px solid rgb(173, 173, 0);
+      color: #242c35;;
+      border-radius: 4px;
     }
     .search{
       width: 70vw;

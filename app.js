@@ -20,10 +20,3 @@ app.use('/usuario', rutasUsuario);
 app.use('/producto', rutasProductos);
 
 app.set('view engine', 'ejs');
-// app.set('views', './users');
-// app.set('views', './products');
-
-// //app.set('views', './src/views');
-// app.set('views', './views/users');
-
-

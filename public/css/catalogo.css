@@ -1,20 +1,25 @@
 /* -----------Main---------- */
+body{
+    background-color: #242c35 !important;
+  }
 .titulosCategoria{
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-top: 15px;
-    color: rgb(0, 20, 255);
-    transition: all 1s;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color:rgb(190, 190, 0);
+  background-color: #242c35;
+  border-top: solid 1px  rgb(19, 19, 19);
+  /* border-bottom: solid 1px rgb(190, 190, 0); */
+  border-bottom: solid 1px rgb(19, 19, 19);
+  transition: all 450ms;
 }
 .cajaCategoria {
     display: flex;
-    /* justify-content: space-between; */
     flex-wrap: nowrap;
     margin: 8px;
     margin-right: 5px;
     padding: 5px;
-    background-color: #f0f0f0;
+    /* background-color: #242c35; */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     overflow-x: scroll;
@@ -24,56 +29,61 @@
     margin: 10px;
     font-size: 1.2rem;
     text-align: center;
-    background-color: #333;
+    /* border: solid 2px rgb(190, 190, 0) !important; */
+    border: solid 1px black !important;
+    background-color: #242c35 !important;
     scroll-snap-align: center;
     min-width: 300px !important;
     transition: all 0.5s;
   }
 .card-title{
     text-align: center;
+    color: white;
 }
 .card-text{
     text-align: center;
     font-size: 13px;
     margin-bottom: 3px;
-    /* margin-left: 20px; */
+    color: white;
 }
 .card-date{
     font-size: 15px;
+    color: white;
 }
 .card-body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
-    /* margin-top: auto; */
+   
 }
 .card-body a{
     display: block;
-    /* background-color: white;
-    color: blue;
-    border: none; */
     transition: all 0.5s;
     width: 100%;
     margin-top: auto;
+    background-color: #242c35;
+    border: solid 1px white;
 }
-/* .posicionBoton{
-    display: flex;
-    justify-content: flex-end;
-} */
+.SponsorHREF a{
+    text-decoration: none;
+    background-color: #cbcbca !important;
+    border: none;
+}
+
 /* -----Hover---- */
 .card:hover .card-body a{
-    background-color: white;
-    color: blue;
-    /* border: none; */
+    background-color:  #1c2631;
+    border: solid 1px rgb(190, 190, 0);
+    color: rgb(190, 190, 0);
+    
 }
 .titulosCategoria:hover{
-    background-color: blue;
-    color: white;
-    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(100, 100, 100);
+
 }
 .card:hover{
-    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+    box-shadow: 0px 0px 25px rgb(100, 100, 100);
 }
 /* ----------- */
 @media (max-width: 715px) {

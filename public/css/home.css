@@ -1,24 +1,32 @@
 /* ------------------MAIN----------------- */
 body{
-  background-color: #c7c7c7;
+  background-color: #242c35 !important;
 }
 .countainerSlider {
   margin: 0 auto;
 }
 .tituloSuperior {
   text-align: center;
-  margin-top: 15px;
-  padding-bottom: 3px;
-  color: rgb(0, 20, 255);
-  transition: all 1s;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color:rgb(190, 190, 0);
+  background-color: #242c35;
+  border-top: solid 2px  rgb(19, 19, 19);
+  /* border-bottom: solid 1px rgb(190, 190, 0); */
+  border-bottom: solid 2px rgb(19, 19, 19);
+  transition: all 450ms;
 }
 .tituloInferior {
   text-align: center;
-  padding-bottom: 3px;
+  margin-top: 5px;
+  padding-bottom: 5px;
   padding-top: 5px;
-  margin-top: 15px;
-  color: rgb(0, 20, 255);
-  transition: all 1s;
+  color:rgb(190, 190, 0);
+  background-color: #242c35;
+  border-top: solid 2px  rgb(19, 19, 19);
+  /* border-bottom: solid 1px rgb(190, 190, 0); */
+  border-bottom: solid 2px rgb(19, 19, 19);
+  transition: all 450ms;
 }
 
 .contenedorCajas {
@@ -26,26 +34,29 @@ body{
   margin: auto;
   margin-top: 10px;
   padding-bottom: 10px;
-  background-color: #f0f0f0;
+  background-color: #1c2631;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
-.tarjetaCategoria {
+.tarjetaCategoriaHome {
   padding: 0.5rem;
   margin: 10px;
   font-size: 1.2rem;
   text-align: center;
   border-radius: 10px;
-  border: solid 1px rgb(161, 161, 161);
+  border: solid 1px rgb(190, 190, 0);
   scroll-snap-align: center;
   min-width: 250px !important;
   transition: all 0.5s;
   max-width: 310px;
 }
-.botonCaja {
+.botonCajaCateg {
   margin: auto;
-  border-radius: 5px;
+  border-radius: 15px;
+  border: solid 1px rgb(190, 190, 0);
+  background-color: #1c2631;
+  color: white;
   width: 100px;
   height: 60px;
 }
@@ -61,66 +72,46 @@ body{
   transition: 1s;
 }
 .descripcionCateg p {
-  color: #f0f0f0;
+  color: #1c2631;
   margin-bottom: 0;
   transition: all 1s;
 }
 
-.tarjetaCategoria a {
-  color: black;
+.tarjetaCategoriaHome a {
+  background-color: #1c2631;;
   text-decoration: none;
 }
 /* ------Hover------ */
-.tituloInferior:hover{
-  background-color: blue;
-  color: white;
-  border: none;
-}
 .tituloSuperior:hover{
-  background-color: blue;
-  color:white;
-  border: none;
-}
-.tarjetaCategoria:hover {
   box-shadow: 0px 0px 15px rgb(100, 100, 100);
 }
-.tarjetaCategoria:hover img {
-  height: 0;
-}
-.tarjetaCategoria a:hover {
-  color: blue;
-}
-.tarjetaCategoria:hover .descripcionCateg p {
-  font-size: 20px;
-  color: black;
-  text-align: center;
+.tituloInferior:hover{
+  box-shadow: 0px 0px 15px rgb(100, 100, 100);
 }
 
+.botonCajaCateg:hover{
+  color:rgb(190, 190, 0);
+}
+
+.tarjetaCategoriaHome:hover {
+  box-shadow: 0px 0px 15px rgb(100, 100, 100);
+}
+.tarjetaCategoriaHome:hover img {
+  height: 0;
+}
+.tarjetaCategoriaHome a:hover {
+  color: blue;
+}
+.tarjetaCategoriaHome:hover .descripcionCateg p {
+  font-size: 20px;
+  color: rgb(190, 190, 0);
+  text-align: center;
+}
+/* ------Hover fin------ */
 @media (min-width: 1505px) {
   .contenedorCajas {
     justify-content: space-around;
   }
-}
-/* @media (min-width: 1300px) {
-  .countainerSlider {
-    width: 90%;
-  }
-} */
-@media (max-width: 775px) {
-  /* ---Correcion--- */
-  /* footer{
-    position: absolute;
-    bottom: -8px; 
-  } */
-  /* ---Correcion--- */
-}
-@media (max-height: 775px) {
-  /* ---Correcion--- */
-  /* footer{
-    position: absolute;
-    bottom: -8px; 
-  } */
-  /* ---Correcion--- */
 }
 @media (max-width: 500px) {
   .contenedorCajas {

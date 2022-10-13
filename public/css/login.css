@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: rgb(227 227 227);;
+    background-color: #242c35;
     height: 86.6%;
     margin: auto;
 }
@@ -16,14 +16,10 @@
 .correcionCajasForm input{
     width: 40%;
 }
-.cajaSend button{
-    width: 30%;
-}
-
-.form-box{
-    width: 75%;
+.form-boxLogin{
+    width: 70%;
     padding: 10px;
-    height: 100%;
+    height: 85vh;
     background: #191919;
     text-align: center;
     border-radius: 20px;
@@ -34,37 +30,37 @@
     font-weight: 500;
 }
 
-.form-box input[type="text"],
-.form-box input[type="password"],
-.form-box button[type="submit"]{
+.form-boxLogin input[type="text"],
+.form-boxLogin input[type="password"],
+.form-boxLogin button[type="submit"]{
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     padding: 14px 10px;
-    border: 2px solid #3742fa;
+    border: 2px solid rgb(173, 173, 0);
     text-align: center;
     border-radius: 24px;
-    /* width: 150px; */
+    width: 70%;
     outline: none;
     color: #ffffff;
     transition: 0.25s;
 }
 
-.form-box input[type="text"]:focus,
-.form-box input[type="password"]:focus{
+.form-boxLogin input[type="text"]:focus,
+.form-boxLogin input[type="password"]:focus{
     width: 50%;
     border-color: #ffffff;
 }
 
-.form-box button[type="submit"]{
+.form-boxLogin button[type="submit"]{
     border: 0;
     background: #3742fa;
     cursor: pointer;
 }
 
 
-.form-box input[type="checkbox"]{
+.form-boxLogin input[type="checkbox"]{
     border: 0;
     display: inline-block;
     margin: 20px auto;
@@ -73,7 +69,7 @@
     background: none;
 }
 
-.form-box a{
+.form-boxLogin a{
     border: 0;
     background: none;
     display: block;
@@ -82,7 +78,7 @@
     text-align: center;
 }
 
-.form-box h4{
+.form-boxLogin h4{
     border: 0;
     display: inline-block;
     margin: 20px auto;
@@ -99,20 +95,16 @@
     padding: 5px;
 }
 .recuperar-contraseña{
-    color: lightblue;
+    color: rgb(224, 230, 173);
 }
-/* ---Correcion--- */
-.buttonFix{
-    height: 50px;
+.cajaSendLogin{
+    margin: auto;
+    width: 40%;
 }
-.buttonFix a{
-    color: white;
-    margin: 0px;
+.cajaSendLogin .botonSumit{
+    height: 5vh ;
+}
+.cajaSendLogin a{
     position: relative;
-    top: -10px;
+    top: -35px
 }
-@media (max-width: 694px) {
-    main{
-        height: 84.4%;
-    }
-  } 
