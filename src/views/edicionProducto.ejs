@@ -17,20 +17,29 @@
             <div class="">
                 <label for="Imagen-Evento"></label>
                 <input required type="image"  name="image" id="image" >
-                <!-- <samp class="feedback"></samp> -->
             </div>
             <div class=""> 
                 <label for="Dia"></label>
                 <input required type="date" name="Dia" >
-                <!-- <samp class="feedback"></samp> -->
+            </div>
+            <div class=""> 
+                <label for="Dato-Importante"></label>
+                <input required type="text" name="dato" >
+            </div>
+            <div class=""> 
+                <label for="Precio"></label>
+                <input required type="number" name="price" >
             </div>
             <div class="">
-                <button class="botonSumit" type="submit"><a href="/">Enviar</a></button>
+                <button type="submit"><a href="/">Enviar</a></button>
+            </div>
+            <div>
+                <button  type="reset"><p>Borrar</p></button>
             </div>
         </form>
     </main>
     <%- include('./partials/footer') %>
      <!-- ----------SideBar----- -->
-     <%- include('./partials/carrito') %>
+    <%- include('./partials/carrito') %>
 </body>
 </html>

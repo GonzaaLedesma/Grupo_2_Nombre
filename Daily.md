@@ -19,8 +19,18 @@
   - Ayudamos un poco a entender el codigo.
   
 ## Sprint 3
+
+
 ## miercoles 12:
   - Solucionamos los problemas complejos.
   - Hicimos en conjuto un live share gran parte del sprint 3.
   - Resolvimos pasos 1, 2, 3, 4, 6.
   - Pusimos en marcha el paso 5 y 7.
+
+## jueves 13:
+  - Realizamos otro live share.
+  - Hicimos consultas por errores del paso 5.
+  - Completamos el paso 7.
+  - Testeamos la pagina.
+  - Arreglamos errores.
+  - Cambiamos el diseño por uno mas agradable a nuestro criterio.
