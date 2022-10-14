@@ -2,10 +2,10 @@ const express = require('express');
 
 const productosController = {
     catalogo : (req,res)=>{
-        return res.render("catalogo")
+        return res.render("products/catalogo")
     },
     detalles : (req,res)=>{
-        return res.render("detalleProducto")
+        return res.render("products/detalleProducto")
     }
 }
 

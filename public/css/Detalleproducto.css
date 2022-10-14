@@ -94,12 +94,15 @@ h4{
     margin: auto;
     margin-bottom: 5px;
     padding: 5px;
-    border: solid 1px blue;
+    border: solid 1px rgb(173, 173, 0);
+    background-color: #242c35;
     transition: 450ms;
+    border-radius: 10px;
+
 }
 .botonPago a{
     text-decoration: none;
-    color: blue;
+    color: white;
 }
 .bannerFooter{
     display: none;
@@ -108,10 +111,10 @@ h4{
     display: flex;
     justify-content: center;
     margin: 10px 0 10px 0;
-    color: white;
+    color: rgb(228, 228, 228);
 }
 .botonPago:hover{
-    background-color: blue;
+    background-color: #1c2631;
 }
 .botonPago:hover a{
     color: white;
