@@ -3,38 +3,44 @@
   <%- include('./partials/head') %>
 <body>
   <%- include('./partials/header') %>
-    <main class="">
-        <form action="" class="form-box">
-            <h1 class="form-title">Creacion De Evento</h1>
-            <div class="">
-                <label for="Nuevo-Nombre"></label>
+    <main class="mainRegister">
+        <form class="formularioAdmin" action="" class="form-box">
+            <h1 class="form-title">Edicion de Evento</h1>
+            <div class="cajaAdmin">
+                <label for="Cambio-Evento"></label>
+                <input required type="text"  name="Cambio-Evento" id="Cambio-Evento" placeholder="Inserte el nombre del evento a cambiar">
+            </div>
+            <div class="cajaAdmin">
+                <label for="Cambio-Nuevo-Nombre"></label>
                 <input required type="text"  name="nombre" id="nombreEvento" placeholder="Evento">
             </div>
-            <div class="">
-                <label for="Descripcion-Evento">Descripcion de Evento</label>
-                <textarea></textarea>
+            <div class="cajaAdmin">
+                <label for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
+                <textarea class="textArea" placeholder="Descripcion breve del Evento y sobre el evento principal"></textarea>
             </div>
-            <div class="">
-                <label for="Imagen-Evento"></label>
-                <input required type="image"  name="image" id="image" >
+            <div class="cajaAdmin">
+                <label for="Cambio-ImgEvento">
+                    <div class="label">Seleccione Foto de Evento</div>
+                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" accept=".jpg"></div>
+                </label>
             </div>
-            <div class=""> 
-                <label for="Dia"></label>
+            <div class="cajaAdmin"> 
+                <label for="Cambio-Dia"></label>
                 <input required type="date" name="Dia" >
             </div>
-            <div class=""> 
-                <label for="Dato-Importante"></label>
-                <input required type="text" name="dato" >
+            <div class="cajaAdmin"> 
+                <label for="Cambio-Dato-Importante"></label>
+                <input required type="text" name="dato" placeholder="Dato Importante">
             </div>
-            <div class=""> 
-                <label for="Precio"></label>
-                <input required type="number" name="price" >
+            <div class="cajaAdmin"> 
+                <label for="Cambio-Precio"></label>
+                <input required type="number" name="price" placeholder="Inserte Un Precio $$$">
             </div>
-            <div class="">
+            <div class="cajaAdminSend">
                 <button type="submit"><a href="/">Enviar</a></button>
             </div>
-            <div>
-                <button  type="reset"><p>Borrar</p></button>
+            <div class="cajaAdminSend">
+                <button type="reset"><h6>Borrar</h6></button>
             </div>
         </form>
     </main>

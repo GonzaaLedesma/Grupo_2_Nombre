@@ -11,13 +11,13 @@
                 <input required type="text"  name="nombre" id="nombreEvento" placeholder="Evento">
             </div>
             <div class="cajaAdmin">
-                <label for="Descripcion-Evento">Descripcion de Evento</label>
-                <textarea></textarea>
+                <label for="Descripcion-Evento">Descripcion del Evento</label>
+                <textarea class="textArea" placeholder="Descripcion breve del Evento y sobre el evento principal"></textarea>
             </div>
             <div class="cajaAdmin">
                 <label for="ImgEvento">
                     <div class="label">Seleccione Foto de Evento</div>
-                    <div class="foto"><input type="file" name="fotoEvento" accept=".jpg"></div>
+                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" accept=".jpg"></div>
                 </label>
             </div>
             <div class="cajaAdmin"> 
@@ -32,11 +32,11 @@
                 <label for="Precio"></label>
                 <input required type="number" name="price" placeholder="Inserte Un Precio $$$">
             </div>
-            <div class="cajaAdmin">
+            <div class="cajaAdminSend">
                 <button type="submit"><a href="/">Enviar</a></button>
             </div>
-            <div class="cajaAdmin">
-                <button type="reset"><p>Borrar</p></button>
+            <div class="cajaAdminSend">
+                <button type="reset"><h6>Borrar</h6></button>
             </div>
         </form>
     </main>

@@ -1,12 +1,17 @@
 .formularioAdmin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+    width: 75%;
+    padding: 10px;
+    height: 100%;
+    background: #191919;
+    text-align: center;
+    border-radius: 20px;
 }
 .cajaAdmin{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .cajaAdmin label{
@@ -14,12 +19,25 @@
     text-align: center;
 }
 
-
+.textArea{
+    width: 50%;
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(173, 173, 0);
+    background: #191919;
+    border-radius: 5px;
+}
+.fotoEventoAdmin{
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(173, 173, 0);
+    background: #191919;
+    /* border-radius: 24px; */
+}
 .cajaAdmin input[type="text"],
 .cajaAdmin input[type="number"],
-.cajaAdmin input[type="date"],
-.cajaAdmin button[type="submit"],
-.cajaAdmin button[type="reset"]{
+.cajaAdmin input[type="date"]
+{
     border: 0;
     background: none;
     display: block;
@@ -41,5 +59,27 @@
     border-color: #ffffff;
 }
 
-
-
+.cajaAdminSend button{
+    border: 0;
+    background: #3742fa;
+    cursor: pointer;
+    margin: auto;
+    width: 40%;
+    border-radius: 20px;
+    margin: 10px;
+    height: 40px;
+}
+.cajaAdminSend a{
+    text-decoration: none;
+    color: white;
+    font-size: 15;
+}
+.cajaAdminSend h6{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 2px;
+}
+.cajaAdminSend:hover a{
+ color: white;
+}
