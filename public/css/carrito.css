@@ -1,0 +1,112 @@
+.correccionTamanioCarrito{
+    height: 83vh;
+}
+.tituloCarritoPrimero{
+    color: white;
+    text-align: center;
+    margin: 5px;
+    /* border-bottom:solid 0.5px rgb(190, 190, 0); */
+}
+.tituloCarritoSegundo{
+    color: white;
+    text-align: center;
+    margin: 5px;
+    border-bottom:solid 0.5px rgb(190, 190, 0);
+}
+.CarritoProductoPrincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3b4046;
+    margin: 5px 0px 5px 0px;
+}
+.ticketIcon i{
+    font-size: 50px;
+    color:rgb(190, 190, 0);
+}
+.CarritoProductoPrincipal p{
+    color:rgb(190, 190, 0);
+    font-size: 25px;
+    margin-top: 1rem;
+    width: 20vw;
+    text-align: center;
+}
+.CarritoProducto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3b4046;
+    margin: 5px 0px 5px 0px;
+}
+.CarritoProducto p{
+    margin-top: 1rem;
+    color: white;
+    font-size: 18px;
+    width: 20vw;
+    text-align: center;
+}
+.divCarrito{
+    border-left:solid 2px rgb(190, 190, 0);
+    border-right:solid 2px rgb(190, 190, 0);
+}
+.botomBarCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.botonAddCarrito{
+    border:solid 1px rgb(190, 190, 0);
+    background-color: #242c35;
+}
+.botonAddCarrito a{
+    color: white;
+    transition: 450ms;
+}
+.botonCompraCarrito{
+    border:solid 1px rgb(190, 190, 0);
+    background-color: #242c35; 
+    position: relative;
+    top: 15px;   
+}
+.botonCompraCarrito a{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
+.botonBorrarCarrito{
+    border:solid 1px rgb(190, 190, 0);
+    background-color: #242c35;    
+}
+.botonBorrarCarrito i{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
+
+/* ----------hover--------- */
+.botonAddCarrito:hover a{
+    color: rgb(190, 190, 0);
+}
+.botonCompraCarrito:hover a{
+    color: rgb(190, 190, 0);
+}
+.botonBorrarCarrito:hover i{
+    color: rgb(190, 190, 0);
+}
+/* ------------ */
+@media (max-width: 450px){
+
+    .ticketIcon i{
+        font-size: 30px;
+    }
+    .CarritoProductoPrincipal p{
+        font-size: 18px;
+    }
+    .CarritoProducto p{
+        font-size: 14px;
+    }
+
+}

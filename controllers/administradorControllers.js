@@ -2,10 +2,10 @@ const express = require('express');
 
 const administradorController = {
     creacion : (req,res)=>{
-        return res.render("creacionProducto");
+        return res.render("administrador/creacionProducto");
     },
     edicion : (req,res)=>{
-        return res.render("edicionProducto");
+        return res.render("administrador/edicionProducto");
     }
 }
 

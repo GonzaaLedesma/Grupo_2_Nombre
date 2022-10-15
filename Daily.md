@@ -34,3 +34,11 @@
   - Testeamos la pagina.
   - Arreglamos errores.
   - Cambiamos el diseño por uno mas agradable a nuestro criterio.
+
+## sabado 15:
+  - Seguimos trabajando con la modalidad Live Share.
+  - Creamos la vista del carrito.
+  - Terminamos el ruteo de las paginas para que sea funcional con la organizacion de carpetas, (paso 5).
+  - Corregimos problemas.
+  - Revisamos por completo el sprint 3.
+  - Realizamos un testeo de la pagina por completo, en busca de errores y posibles mejoras.

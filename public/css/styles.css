@@ -42,24 +42,7 @@
   .dropdown-menu a{
     color: white;
   }
-  /* ----------Hover---------- */
-  .header button:hover a{
-    color:rgb(173, 173, 0);
-  }
-  .ButtonBox button:hover a{
-    color:rgb(173, 173, 0);
-  }
-  .ButtonBox Button:hover {
-    color:rgb(173, 173, 0);
-  }
-  .ButtonBox button:hover  i{
-    color:rgb(173, 173, 0);
-  }
-  .dropdown-menu a:hover{
-    background-color: #2c3238 !important;
-    color:rgb(173, 173, 0) !important;
-  }
-  /* ----------Hover Fin------ */
+ 
   .responsiveNav{
     display: flex;
     width: 100%;
@@ -113,14 +96,19 @@
     } 
   .searchBar button{
     border: 1px solid rgb(173, 173, 0);
-    color: #242c35;;
+    color: white;
+    background-color: #1c2631;
     border-radius: 4px;
+    transition: 450ms;
+
   }
   .search{
     border: 1px solid rgb(173, 173, 0);
     text-align: center;
     font-size: 15px;
     border-radius: 4px;
+    background-color: #1c2631;
+    color: white;
   }
   /* --------------------footer---------------- */
   footer{
@@ -156,60 +144,30 @@
   .itemFooter{
     padding: 2px;
   }
-  /* -----------------------SideBar-------------------------------- */
-.offcanvas-title{
-  margin: auto;
+ /* ----------Hover---------- */
+ .header button:hover a{
+  color:rgb(173, 173, 0);
 }
-.listaTitulo{
-  display: flex;
-  justify-content: center;
+.ButtonBox button:hover a{
+  color:rgb(173, 173, 0);
 }
-#segundoTitulos{
-  margin: 5px;
-  text-align: center;
+.ButtonBox Button:hover {
+  color:rgb(173, 173, 0);
 }
-.cajaProductos{
-  border: solid 1px rgb(78, 78, 78);
-  border-radius: 15px;
-  height: 70%;
-  margin: 5px 5px 5px 5px;
+.ButtonBox button:hover  i{
+  color:rgb(173, 173, 0);
 }
-.botonAdd{
-  margin: 10px 5px 5px 10px;
+.dropdown-menu a:hover{
+  background-color: #2c3238 !important;
+  color:rgb(173, 173, 0) !important;
 }
-.producPrueba{
-  margin: 3px;
-  padding: 2px;
-  border: solid 1px rgb(78, 78, 78);
-  border-radius: 5px;
+.searchBar button:hover{
+  color:rgb(173, 173, 0);
 }
-.producPrueba h5{
-  margin-top: 3px;
+.searchBarMin button:hover{
+  color:rgb(173, 173, 0);
 }
-.botonCompra{
-  display: flex;
-  justify-content: center;
-}
-.botonCompra button{
-  width: 100px;
-}
-.botonCompra button{
-  border: solid 1px blue;
-  border-radius:10px ;
-  transition: 450ms;
-}
-.botonCompra button a{
-  text-decoration: none;
-  color: blue;
-  transition: 450ms;
-}
-.botonCompra button:hover{
-  background-color: blue;
-}
-.botonCompra button:hover a{
-  color: white;
-}
-/* -----------------------SideBar Fin-------------------------------- */
+/* ----------Hover Fin------ */
   @media (min-width: 1200px){
     .search{
       width: 30vw;
@@ -232,8 +190,10 @@
     }
     .searchBarMin button{
       border: 1px solid rgb(173, 173, 0);
-      color: #242c35;;
+      color: white;
+      background-color: #1c2631;
       border-radius: 4px;
+      transition: 450ms;
     }
     .search{
       width: 70vw;

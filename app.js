@@ -26,6 +26,4 @@ app.set('view engine', 'ejs');
 
 app.set('views', './src/views');
 
-// app.set('products', './src/views/products');
 
-// app.set('users', './src/views/users');
