@@ -9,7 +9,6 @@ body{
   color:rgb(190, 190, 0);
   background-color: #242c35;
   border-top: solid 1px  rgb(19, 19, 19);
-  /* border-bottom: solid 1px rgb(190, 190, 0); */
   border-bottom: solid 1px rgb(19, 19, 19);
   transition: all 450ms;
 }
@@ -19,9 +18,11 @@ body{
     margin: 8px;
     margin-right: 5px;
     padding: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
   .card {
     padding: .5rem;
