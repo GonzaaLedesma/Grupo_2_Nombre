@@ -42,3 +42,10 @@
   - Corregimos problemas.
   - Revisamos por completo el sprint 3.
   - Realizamos un testeo de la pagina por completo, en busca de errores y posibles mejoras.
+
+## domingo 16:
+  - Realizamos una llamada.
+  - Revisamos al detalle el sprint 3.
+  - Charlamos un poco de lo que se viene y compartimos ideas.
+  - Implementamos vision sobre mejoria para la pagina.
+  
