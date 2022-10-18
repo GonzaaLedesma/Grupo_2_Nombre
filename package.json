@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/GonzaaLedesma/Grupo_2_ticket_house#readme",
   "dependencies": {
-    "bootstrap": "^5.2.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1"
   }
