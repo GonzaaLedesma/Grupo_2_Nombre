@@ -1,5 +1,5 @@
 const express = require('express');
-
+// let actuales =
 const productosController = {
     catalogo : (req,res)=>{
         return res.render("products/catalogo");

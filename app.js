@@ -1,9 +1,9 @@
 const express =require ('express');
 const path = require('path')
-const rutasUsuario = require('./routes/usuario')
-const rutasProductos = require('./routes/producto')
-const rutasMain = require('./routes/main')
-const rutasAdministrador = require('./routes/administrador')
+const rutasUsuario = require('./src/routes/usuario')
+const rutasProductos = require('./src/routes/producto')
+const rutasMain = require('./src/routes/main')
+const rutasAdministrador = require('./src/routes/administrador')
 const app = express();
 
 const publicPath = path.resolve(__dirname, './public')

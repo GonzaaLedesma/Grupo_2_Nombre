@@ -48,4 +48,11 @@
   - Revisamos al detalle el sprint 3.
   - Charlamos un poco de lo que se viene y compartimos ideas.
   - Implementamos vision sobre mejoria para la pagina.
-  
+
+ ## Miercoles 19:
+
+  - Resolvimos problemas de carpetas.
+  - Ajustamos los parametros del formulario de creacion y edicion (agregamos imputs).
+  - Resolvimos errores de vistas.
+  - Revisamos la pagina en busca de errores.
+ 

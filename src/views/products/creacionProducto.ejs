@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head') %>
+<body>
+  <%- include('../partials/header') %>
+    <main class="mainRegister">
+        <form class="formularioAdmin" action="" class="form-box">
+            <h1 class="form-title">Creacion De Evento</h1>
+            <div class="cajaAdmin">
+                <label for="Nuevo-Nombre"></label>
+                <input required type="text"  name="nombre" id="nombreEvento" placeholder="Nombre del Evento">
+            </div>
+            <div class="cajaAdmin"> 
+                <label for="Dia"></label>
+                <input required type="date" name="Dia" >
+            </div>
+            <div class="cajaAdmin"> 
+                <label for="Ubicacion"></label>
+                <input required type="text" name="Ubicacion" placeholder="Ubicacion">
+            </div>
+            <div class="cajaAdmin"> 
+                <label for="sede"></label>
+                <input required type="text" name="sede" placeholder="sede">
+            </div>
+            <div class="cajaAdmin"> 
+                <label for="Dato-Participacion"></label>
+                <input required type="text" name="Participacion" placeholder="Participacion especial">
+            </div>
+            <div class="cajaAdmin"> 
+                <label for="Dato-Capacidad"></label>
+                <input required type="text" name="Capacidad" placeholder="Capacidad de la sede">
+            </div>
+            <div class="cajaAdmin"> 
+                <label for="Precio"></label>
+                <input required type="number" name="price" placeholder="Inserte Un Precio $$$">
+            </div>
+            <div class="cajaAdmin"> 
+                <label for="Horario"></label>
+                <input required type="number" name="Horario" placeholder="Inserte un horario">
+            </div>
+            <div class="cajaAdmin">
+                <label for="Descripcion-Evento">Descripcion del Evento</label>
+                <textarea class="textArea" placeholder="Descripcion breve del evento y sobre el show principal"></textarea>
+            </div>
+            <div class="cajaAdmin">
+                <label for="ImgEvento">
+                    <div class="label">Seleccione Foto de Evento</div>
+                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" accept=".jpg"></div>
+                </label>
+            </div>
+            <div class="cajaAdminSend">
+                <button type="submit"><a href="/">Enviar</a></button>
+            </div>
+            <div class="cajaAdminSend">
+                <button type="reset"><h6>Borrar</h6></button>
+            </div>
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
