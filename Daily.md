@@ -55,4 +55,16 @@
   - Ajustamos los parametros del formulario de creacion y edicion (agregamos imputs).
   - Resolvimos errores de vistas.
   - Revisamos la pagina en busca de errores.
+
+
+## sprint 4:
+
+
+## Miercoles 26:
+
+ - Realizamos una llamada en discord.
+ - Hicimos un live share.
+ - Actualizamos el trello.
+ - Iniciamos el sprint 4.
+ - Compartimos las tareas para el desarrollo del sprint.
  
