@@ -9,10 +9,25 @@
         "Capacidad":0,
         "Price":0,
         "Horario":0,
-        "Categoria":"-------",
+        "Categoria":"-",
         "Descripcion":"-------",
         "Biografia":" -------",
-        "fotoEvento":"-"
+        "fotoEvento":"not-Img.jpg"
+    },
+    {
+        "id":101,
+        "Nombre":"-------",
+        "Dia":"-------",
+        "Ubicacion":"-------",
+        "Sede":"---------",
+        "Participacion":"------------------",
+        "Capacidad":0,
+        "Price":0,
+        "Horario":0,
+        "Categoria":"-",
+        "Descripcion":"-------",
+        "Biografia":" -------",
+        "fotoEvento":"not-Img.jpg"
     },
     {
         "id":1,
@@ -27,7 +42,7 @@
         "Categoria":"Actuales",
         "Descripcion":"Los legendarios rockeros Weezer reimaginan su último álbum más los clásicos con la Orquesta Filarmónica de Los Ángeles. Grabado y capturado en el imponente Disney Hall. Disponible para VOD ahora.",
         "Biografia":"Weezer es una banda estadounidense de rock alternativo y power pop formada en Los Ángeles, California en 1992. La banda ha lanzado nueve álbumes y vendido más de 10 millones de álbumes en los EE. UU.",
-        "fotoEvento":"-"
+        "fotoEvento":"Weezer.jpg"
     },
     {
         "id":2,
@@ -42,7 +57,7 @@
         "Categoria":"Actuales",
         "Descripcion":"La banda de rock estadounidense Foo Fighters ofreció el primero de dos conciertos en homenaje a su difunto baterista Taylor Hawkins.",
         "Biografia":"La banda Foo Fighters se formó en 1994 en Seattle, EEUU. Es una banda de rock alternativo fundada por el ex-batería de Nirvana: Dave Grohl. El grupo actualmente está formado por Pat Smear, Nate Mendel, Taylor Hawkins, Chris Shiflett y Rami Jaffee.",
-        "fotoEvento":"-"
+        "fotoEvento":"FooFighters.jpg"
     },
     
     {
@@ -58,7 +73,7 @@
         "Categoria":"Actuales",
         "Descripcion":"Después de un mes de descanso en donde pudo recuperar su voz presenta sus mejores hits! That Sound, Hypersonic Missiles, Play God, Dead Boys",
         "Biografia":"Samuel Thomas Fender, conocido artísticamente como Sam Fender, es un cantante, compositor, músico y actor inglés. Luego de haber tenido una corta carrera como actor, probó suerte como cantante, lanzando varios sencillos de manera independiente, hasta que en 2018 finalmente firmó con la discográfica Polydor Records.",
-        "fotoEvento":"-"
+        "fotoEvento":"SamFender.jpg"
     },
     
     {
@@ -74,7 +89,7 @@
         "Categoria":"Actuales",
         "Descripcion":"The Story So Far se presenta con nuevos estilos hardcore punk y punk rock y su nuevo albun 'Proper Dose'",
         "Biografia":"The Story So Far es una banda pop punk estadounidense de Walnut Creek, California, formada en 2007. Actualmente han firmado con Pure Noise Records y han lanzado 4 álbumes de estudio.",
-        "fotoEvento":"-"
+        "fotoEvento":"TheStorySoFar.jpg"
     },
     
     {
@@ -90,7 +105,7 @@
         "Categoria":"Actuales",
         "Descripcion":"Después del rotundo éxito de sus dos primeros sencillos, 'Apologize' y 'Stop and Stare', la banda presentara su nuevo album 'Human' los temas publicados hasta el momento han tenido una gran acogida.",
         "Biografia":"El grupo de Colorado Springs, fundado por Ryan Tedder y Zach Filkins, vio la luz en 2002 convirtiéndose entonces en una de las revelaciones del pop rock indie americano.",
-        "fotoEvento":"-"
+        "fotoEvento":"One-Republic.jpg"
     },
     
     {
@@ -106,7 +121,7 @@
         "Categoria":"Actuales",
         "Descripcion":"Despues de 200 shows en más de 30 países llega 'Jordi' lanzado este anio siendo uno de sus ultimos hist exitoso y presentando 'Girls Like You'. ",
         "Biografia":"Maroon 5 surgió entre 1994 y 1995 en Los Ángeles, California cuando sus integrantes aún estaban en el colegio. Su primer álbum no tuvo mucho éxito, así que se separaron de la discográfica y continuaron con sus estudios universitarios hasta el 2001.",
-        "fotoEvento":"-"
+        "fotoEvento":"Marron-5.jpg"
     },
     {
         "id":7,
@@ -121,7 +136,7 @@
         "Categoria":"Nuevos",
         "Descripcion":"Sexta gira de conciertos del artista franco-canadiense Avril Lavigne. La gira es para la promoción de su sexto álbum de estudio, Head Above Water lanzado en febrero de este anio.",
         "Biografia":"Avril Lavigne (1984) es una cantante, compositora y actriz canadiense. Su nombre completo es Avril Ramona Lavigne. Nació el 27 de septiembre de 1984 en Canadá. Avril Lavigne comenzó su carrera musical en 1999.",
-        "fotoEvento":"-"
+        "fotoEvento":"AvrilLavigne.jpg"
     },
     
     {
@@ -137,7 +152,7 @@
         "Categoria":"Nuevos",
         "Descripcion":"MGK abrira el concierto cantando “born with horns”, junto con una sorpresa al inicio del concierto. Es la primera vez que la cantara en vivo. Esa noche, Kelly cantara un total de 33 temas.",
         "Biografia":"Colson Baker​​​, más conocido por su nombre artístico Machine Gun Kelly o simplemente Kells, es un músico, rapero, cantante y actor estadounidense. Su nombre artístico fue dado por su flujo lírico de tiro rápido y es una referencia al famoso criminal Machine Gun Kelly.",
-        "fotoEvento":"-"
+        "fotoEvento":"MGK.jpg"
     },
     {
         "id":9,
@@ -152,7 +167,7 @@
         "Categoria":"Proximamente",
         "Descripcion":"Se embarcan en una gira de conciertos en Estados Unidos, Japón y parte de Europa para promocionar estos nuevos álbumes.",
         "Biografia":"Green Day es una banda estadounidense de rock integrada por Billie Joe Armstrong, Mike Dirnt y Tré Cool. El grupo originario de Berkeley, California, se gestó prematuramente en 1986 bajo el nombre de Sweet Children, con el baterista John Kiffmeyer",
-        "fotoEvento":"-"
+        "fotoEvento":"GreenDay.jpg"
     },
     {
         "id":10,
@@ -162,12 +177,12 @@
         "Sede":"(Estadio Maracaná)",
         "Participacion":"Frank Sinatra y Foo Fighters",
         "Capacidad":80101,
-        "Price":8000,
+        "Price":7000,
         "Horario":19,
         "Categoria":"Proximamente",
-        "Descripcion":"",
-        "Biografia":"",
-        "fotoEvento":"-"
+        "Descripcion":"El 11 de enero de 2022 Paramore dio a conocer que llevan dos meses grabando su sexto álbum y este lo presentaran en Diciembre.",
+        "Biografia":"Paramore es una banda estadounidense de pop rock y rock alternativo, integrada por Hayley Williams (voz), Taylor York (guitarra) y Zac Farro (batería). Fue formada en Franklin, Tennessee, en 2004.",
+        "fotoEvento":"Paramore.jpg"
     },
     {
         "id":11,
@@ -177,12 +192,12 @@
         "Sede":"(Veemarktstraat)",
         "Participacion":"Britney Spears y Foo Fighters",
         "Capacidad":2200,
-        "Price":8000,
+        "Price":18000,
         "Horario":19,
         "Categoria":"Proximamente",
         "Descripcion":"el grupo programa la salida de su primer álbum, titulado 'In Our Bones', para el 12 de diciembre junto con sus sencillos mas conocidos 'Legends Never Die' y 'Wildfire'",
         "Biografia":"Against the Current, también abreviado con las siglas ATC, es un grupo de pop rock y rock alternativo neoyorquino, formado en 2011. La banda esta conformada por: Chrissy Costanza en la voz principal, Dan Gow como voz secundaria y guitarrista, y Will Ferri en la batería.",
-        "fotoEvento":"-"
+        "fotoEvento":"AgainstTheCurrent.jpg"
     },
     {
         "id":12,
@@ -192,12 +207,12 @@
         "Sede":"(Manchester Arena)",
         "Participacion":"(Take That y Britney Spears",
         "Capacidad":55000,
-        "Price":8000,
+        "Price":5000,
         "Horario":19,
         "Categoria":"Proximamente",
         "Descripcion":"El grupo anunció el título de su segundo trabajo (The Ride) a través de Instagram y Twitter el 23 de marzo de este anio y lo presentara en diciembre junto con sencillos como 'Soundcheck' y 'Longshot'. ",
         "Biografia":"Catfish and the Bottlemen es una banda de rock galesa formada en 2007 por el actual vocalista y guitarrista de la misma en Llandudno en Gales del Norte. El nombre de la banda tiene su origen en la infancia de McCann (ya que pasó los dos primeros años de su vida viajando por Australia)",
-        "fotoEvento":"-"
+        "fotoEvento":"CatfishandTheBottlemen.jpg"
     },
     {
         "id":13,
@@ -212,7 +227,7 @@
         "Categoria":"Pasados",
         "Descripcion":"---",
         "Biografia":"---",
-        "fotoEvento":"-"
+        "fotoEvento":"BMTH.jpg"
     },
     {
         "id":14,
@@ -227,7 +242,7 @@
         "Categoria":"Pasados",
         "Descripcion":"---",
         "Biografia":"---",
-        "fotoEvento":"-"
+        "fotoEvento":"ArcticMonkeys.jpg"
     },
     {
         "id":15,
@@ -242,7 +257,7 @@
         "Categoria":"Pasados",
         "Descripcion":"---",
         "Biografia":"---",
-        "fotoEvento":"-"
+        "fotoEvento":"Ed-Sheeran.jpg"
     },
     {
         "id":16,
@@ -257,7 +272,7 @@
         "Categoria":"Pasados",
         "Descripcion":"---",
         "Biografia":"---",
-        "fotoEvento":"-"
+        "fotoEvento":"TOP.jpg"
     },
     {
         "id":17,
@@ -272,7 +287,7 @@
         "Categoria":"Pasados",
         "Descripcion":"---",
         "Biografia":"---",
-        "fotoEvento":"-"
+        "fotoEvento":"Coldplay.jpg"
     }
     
 ]

@@ -1,8 +1,13 @@
 const express = require('express');
-// let actuales =
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const productosController = {
     catalogo : (req,res)=>{
-        return res.render("products/catalogo");
+        return res.render("products/catalogo", {products});
     },
     detalles : (req,res)=>{
         return res.render("products/detalleProducto");
