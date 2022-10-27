@@ -75,3 +75,4 @@
  - Empezamos a hacer los JSONS (Productos y Usuarios).
  - Definimos todos los campos necesarios.
  - Repasamos los temas principales.
+ - Hicimos el catalgo dinamico.
