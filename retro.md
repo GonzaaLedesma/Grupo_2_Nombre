@@ -27,4 +27,11 @@
 - Gonzalo Ledesma: En este sprint me senti capaz de resolver cualquier problema senti un buen ritmo de trabajo y pude ver los errores con mejor claridad, siento que no deberia estar siempre encima del trabajo porque a veces me siento superado por lo que puede llegar a ser en un fututo tengo en mente muchos de los punto a mejorar y quiero que este sea mucho mejor de lo q es  hoy por eso insisti tanto en ese cambio de apariencia. Estoy conforme con nuestro proyecto.
 
 - Tomas Otero: Organizar el tiempo, mantenerme al tanto.
--
+
+## retro sprint 4:
+
+## Retrospectiva grupal:
+
+## Retrospectiva individual:
+
+

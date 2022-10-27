@@ -68,3 +68,10 @@
  - Iniciamos el sprint 4.
  - Compartimos las tareas para el desarrollo del sprint.
  
+ ## Jueves 27:
+
+ - Realizamos una llamada en discord.
+ - Hicimos un live share.
+ - Empezamos a hacer los JSONS (Productos y Usuarios).
+ - Definimos todos los campos necesarios.
+ - Repasamos los temas principales.
