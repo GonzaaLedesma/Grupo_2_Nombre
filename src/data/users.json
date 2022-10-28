@@ -13,7 +13,7 @@
         "Subombre":"Pili",
         "Email":"pili@gmail.com",
         "Contrasenia":"pili45",
-        "Imagen":"-",
+        "Imagen":"-"
     },
     {
         "id": 3,
@@ -22,7 +22,7 @@
         "Email":"fer@gmail.com",
         "Contrasenia":"fernanda88",
         "Imagen":"-"
-    }
+    },
     {
         "id": 4,
         "Nombre":"Agustin Fernandez",
