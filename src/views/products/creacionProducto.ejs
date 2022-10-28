@@ -4,11 +4,11 @@
 <body>
   <%- include('../partials/header') %>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="" class="form-box">
+        <form class="formularioAdmin" action="/administrador" method="POST" class="form-box">
             <h1 class="form-title">Creacion De Evento</h1>
             <div class="cajaAdmin">
                 <label for="Nuevo-Nombre"></label>
-                <input required type="text"  name="Nombre" id="nombreEvento" placeholder="Nombre del Evento">
+                <input required type="text"  name="Nombre"  placeholder="Nombre del Evento">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Dia"></label>
@@ -57,7 +57,8 @@
                 </label>
             </div>
             <div class="cajaAdminSend">
-                <button type="submit"><a href="/">Enviar</a></button>
+                <button type="submit">Enviar</button>
+                <!-- <button type="submit"><a href="/">Enviar</a></button> -->
             </div>
             <div class="cajaAdminSend">
                 <button type="reset"><h6>Borrar</h6></button>

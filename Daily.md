@@ -76,3 +76,10 @@
  - Definimos todos los campos necesarios.
  - Repasamos los temas principales.
  - Hicimos el catalgo dinamico.
+
+ ## Viernes 28:
+ - Realizamos una llamada en discord.
+ - Hicimos un live share.
+ - Realizamos correcciones.
+ - Comenzamos con el ruteo CRUD.
+ - En conjunto resolvimos errores.

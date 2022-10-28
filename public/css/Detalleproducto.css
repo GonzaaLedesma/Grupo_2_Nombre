@@ -80,11 +80,13 @@ body{
     border: solid 1px white;
     width: 30px;
     height:30px;
+    margin-right:5px;
 }
 .cajaTotal{
     border: solid 1px white;
     width: 60px;
     height:30px;
+    margin-right:5px;
 }
 h4{
     color: white;

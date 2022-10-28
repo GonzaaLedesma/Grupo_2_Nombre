@@ -4,33 +4,28 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <h2 class="nombreEvento1">Weezer - Walt Disney Concert Hall</h2>
+        <h2 class="nombreEvento1"><%= detalle.Nombre %> </h2>
         <div class="cajaDetalles">
                 <div class="cajaImagen">
                     <img class="imgTicket" src="/imagenes/detallesProducto/ticket.jpg" alt="ticket">
                     <div class="cajaDescripcionBanda">
-                    <p class="descripcionBanda"> Weezer es una banda estadounidense de rock alternativo y power pop
-                    formada en Los Ángeles, California en 1992. La banda ha lanzado
-                    nueve álbumes y vendido más de 10 millones de álbumes en los EE.
-                    UU.</p>
+                    <p class="descripcionBanda"><%= detalle.Biografia %></p>
                 </div>
             </div>
             <div class="cajaDescripcion">
             <div>
-                <h2 class="nombreEvento2">Weezer - Walt Disney Concert Hall</h2>
+                <h2 class="nombreEvento2"><%= detalle.Nombre %></h2>
                 <div class="cajaDatos">
                     <h3>Datos del Evento</h3>
-                    <p>Ubicacion: Los Angeles.</p>
-                    <p>Sede: Walt Disney Concert Hall.</p>
-                    <p>Dia: 22 de Ocutubre</p>
-                    <p>Precio: 5.000$</p>
-                    <p>Horario: 19hs</p>
-                    <p>Participacion especial: OneRepublic, Halsey, Alanis Morissette, y Garbage.</p>
+                    <p>Ubicacion: <%= detalle.Ubicacion %>.</p>
+                    <p>Sede: <%= detalle.Sede %>.</p>
+                    <p>Dia: <%= detalle.Dia %>.</p>
+                    <p>Precio: <%= detalle.Price %>$.</p>
+                    <p>Horario: <%= detalle.Horario %>hs.</p>
+                    <p>Participacion <%= detalle.Participacion %>.</p>
                 </div>
                 <div class="subDescripcion">
-                    <p>Los legendarios rockeros Weezer reimaginan su último álbum más los
-                    clásicos con la Orquesta Filarmónica de Los Ángeles. Grabado y
-                    capturado en el imponente Disney Hall. Disponible para VOD ahora.</p> 
+                    <p><%= detalle.Descripcion %></p> 
                 </div>
                 <div class="cajaPago">
                     <div class="subCaja">
