@@ -10,7 +10,7 @@
         <% products.filter(product => product.Categoria == 'Actuales').forEach(product => { %>
         <div class="card">
           <img
-            src="/imagenes/catalogo/<%= product.fotoEvento%>"
+            src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
             class="card-img-top"
             alt="ImgBand"
           />
@@ -20,7 +20,7 @@
             <p class="card-text"><%= product.Ubicacion%></p>
             <p class="card-text">Participacion: <%= product.Participacion%></p>
             <p class="card-text card-date"><%= product.Dia%></p>
-            <a href="/producto/detalles/<%= product.id %>" class="btn btn-primary"
+            <a href="/producto/detalles/<%= product.id%>" class="btn btn-primary"
               >Ir a detalles</a
             >
           </div>
@@ -33,7 +33,7 @@
         <% products.filter(product => product.Categoria == 'Nuevos').forEach(product => { %>
           <div class="card">
             <img
-              src="/imagenes/catalogo/<%= product.fotoEvento%>"
+              src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
               class="card-img-top"
               alt="ImgBand"
             />
@@ -52,7 +52,7 @@
           <% products.filter(product => product.Categoria == '-').forEach(product => { %>
             <div class="card">
               <img
-                src="/imagenes/catalogo/<%= product.fotoEvento%>"
+                src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
                 class="card-img-top"
                 alt="ImgBand"
               />
@@ -72,7 +72,7 @@
         <% products.filter(product => product.Categoria == 'Proximamente').forEach(product => { %>
         <div class="card">
           <img
-            src="/imagenes/catalogo/<%= product.fotoEvento%>"
+            src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
             class="card-img-top"
             alt="ImgBand"
           />
@@ -95,7 +95,7 @@
         <% products.filter(product => product.Categoria == 'Pasados').forEach(product => { %>
         <div class="card">
           <img
-            src="/imagenes/catalogo/<%= product.fotoEvento%>"
+            src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
             class="card-img-top"
             alt="ImgBand"
           />

@@ -7,6 +7,10 @@ const rutasAdministrador = require('./src/routes/administrador')
 const app = express();
 const methodOverride = require ('method-override'); //--metodo para put y delete(npm install method-override)
 
+app.use(express.urlencoded({extended:false}));
+
+app.use(express.json());
+
 const publicPath = path.resolve(__dirname, './public')
 
 app.use(express.static(publicPath));

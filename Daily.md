@@ -83,3 +83,7 @@
  - Realizamos correcciones.
  - Comenzamos con el ruteo CRUD.
  - En conjunto resolvimos errores.
+ <!-- nos volvimos a juntar -->
+ - Corregimos errores de Creacion.
+ - instalamos multer.
+ - Aplicamos multer.

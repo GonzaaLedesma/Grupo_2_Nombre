@@ -4,61 +4,60 @@
 <body>
   <%- include('../partials/header') %>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="/administrador" method="POST" class="form-box">
+        <form class="formularioAdmin" action="/administrador" method="POST" enctype="multipart/form-data" class="form-box">
             <h1 class="form-title">Creacion De Evento</h1>
             <div class="cajaAdmin">
-                <label for="Nuevo-Nombre"></label>
-                <input required type="text"  name="Nombre"  placeholder="Nombre del Evento">
+                <label for="Nombre"></label>
+                <input required type="text"  name="Nombre"  id="Nombre" placeholder="Nombre del Evento">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Dia"></label>
-                <input required type="date" name="Dia" >
+                <input required type="date" name="Dia" id="Dia" >
             </div>
             <div class="cajaAdmin"> 
                 <label for="Ubicacion"></label>
-                <input required type="text" name="Ubicacion" placeholder="Ubicacion">
+                <input required type="text" name="Ubicacion" id="Ubicacion" placeholder="Ubicacion">
             </div>
             <div class="cajaAdmin"> 
-                <label for="sede"></label>
-                <input required type="text" name="Sede" placeholder="sede">
+                <label for="Sede"></label>
+                <input required type="text" name="Sede" id="Sede" placeholder="sede">
             </div>
             <div class="cajaAdmin"> 
-                <label for="Dato-Participacion"></label>
-                <input required type="text" name="Participacion" placeholder="Participacion especial">
+                <label for="Participacion"></label>
+                <input required type="text" name="Participacion" id="Participacion" placeholder="Participacion especial">
             </div>
             <div class="cajaAdmin"> 
-                <label for="Dato-Capacidad"></label>
-                <input required type="text" name="Capacidad" placeholder="Capacidad de la sede">
+                <label for="Capacidad"></label>
+                <input required type="text" name="Capacidad" id="Capacidad" placeholder="Capacidad de la sede">
             </div>
             <div class="cajaAdmin"> 
-                <label for="Precio"></label>
-                <input required type="number" name="Price" placeholder="Inserte Un Precio $$$">
+                <label for="Price"></label>
+                <input required type="number" name="Price" id="Price" placeholder="Inserte Un Precio $$$">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Horario"></label>
-                <input required type="number" name="Horario" placeholder="Inserte un horario">
+                <input required type="number" name="Horario" id="Horario" placeholder="Inserte un horario">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Categoria"></label>
-                <input required type="text" name="Categoria" placeholder="Categoria (Actuales/Nuevos/Proximos)">
+                <input required type="text" name="Categoria" id="Categoria" placeholder="Categoria (Actuales/Nuevos/Proximos)">
             </div>
             <div class="cajaAdmin">
                 <label for="Descripcion-Evento">Descripcion del Evento</label>
-                <textarea class="textArea" name="Descripcion" placeholder="Descripcion breve del evento y sobre el show principal"></textarea>
+                <textarea class="textArea" name="Descripcion" id="Descripcion" placeholder="Descripcion breve del evento y sobre el show principal"></textarea>
             </div>
             <div class="cajaAdmin">
-                <label for="Biografia-Evento">Biografia Breve</label>
-                <textarea class="textArea" name="Biografia" placeholder="Descripcion breve de la biografia de la banda/evento"></textarea>
+                <label for="Biografia">Biografia Breve</label>
+                <textarea class="textArea" name="Biografia" id="Biografia" placeholder="Descripcion breve de la biografia de la banda/evento"></textarea>
             </div>
             <div class="cajaAdmin">
-                <label for="ImgEvento">
+                <label for="fotoEvento">
                     <div class="label">Seleccione Foto de Evento</div>
-                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" accept=".jpg"></div>
+                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" id="fotoEvento" accept=".jpg"></div>
                 </label>
             </div>
             <div class="cajaAdminSend">
                 <button type="submit">Enviar</button>
-                <!-- <button type="submit"><a href="/">Enviar</a></button> -->
             </div>
             <div class="cajaAdminSend">
                 <button type="reset"><h6>Borrar</h6></button>
