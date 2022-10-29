@@ -13,20 +13,22 @@ const administradorController = {
          res.render("products/edicionProducto");
     },
     creacionPost : (req,res)=>{
+        const fotoEvento = req.file;
+        const {Nombre,Dia,Ubicacion,Sede,Participacion,Capacidad,Price,Horario,Categoria,Descripcion,Biografia} = req.body
         let newProduct = {
             id : Date.now(),
-            Nombre : req.body.Nombre,
-            Dia : req.body.Dia,
-            Ubicacion : req.body.Ubicacion,
-            Sede : req.body.Sede,
-            Participacion : req.body.Participacion,
-            Capacidad : Number(req.body.Capacidad),
-            Price : Number(req.body.Price),
-            Horario : Number(req.body.Horario),
-            Categoria : req.body.Categoria,
-            Descripcion : req.body.Descripcion,
-            Biografia : req.body.Biografia,
-            fotoEvento : req.body.fotoEvento
+            Nombre : Nombre,
+            Dia : Dia,
+            Ubicacion : Ubicacion,
+            Sede :Sede,
+            Participacion : Participacion,
+            Capacidad : Number(Capacidad),
+            Price : Number(Price),
+            Horario : Number(Horario),
+            Categoria : Categoria,
+            Descripcion : Descripcion,
+            Biografia : Biografia,
+            fotoEvento : fotoEvento.filename
         } 
         
         products.push(newProduct);
@@ -34,27 +36,29 @@ const administradorController = {
         
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
         
-        res.redirect('/producto/catalogo');
+        res.redirect('/');
    },
     edicionPut : (req,res)=>{
-        /*let Administrador: req.params.administradorController;
+        /*const productsId: req.params.id;
+        // const {Nombre,Dia,Ubicacion,Sede,Participacion,Capacidad,Price,Horario,Categoria,Descripcion,Biografia,fotoEvento} = req.body
+        // products.forEach((products)=>{
+        //  if(products.id == productsId){
+                products.Nombre : Nombre,
+                products.Dia : Dia,
+                products.Ubicacion : Ubicacion,
+                products.Sede : Sede,
+                products.Participacion : Participacion,
+                products.Capacidad : Capacidad,
+                products.Price : Price,
+                products.Horario : Horario,
+                products.Categoria : Categoria,
+                products.Descripcion : Descripcion,
+                products.Biografia : Biografia,
+                products.fotoEvento : fotoEvento
+        }
+        })
         
-        
-        let productos [{
-          "id":1,
-            "Nombre":"The Weezer",
-            "Dia":"22 de Octubre",
-            "Ubicacion":"Los Angeles",
-            "Sede":"(Disney Concert Hall)",
-            "Participacion":" OneRepublic, Halsey y mas",
-            "Capacidad":500000,
-            "Price":7000,
-            "Horario":19,
-            "Categoria":"Actuales",
-            "Descripcion":"Los legendarios rockeros Weezer reimaginan su último álbum más los clásicos con la Orquesta Filarmónica de Los Ángeles. Grabado y capturado en el imponente Disney Hall. Disponible para VOD ahora.",
-            "Biografia":"Weezer es una banda estadounidense de rock alternativo y power pop formada en Los Ángeles, California en 1992. La banda ha lanzado nueve álbumes y vendido más de 10 millones de álbumes en los EE. UU.",
-            "fotoEvento":"Weezer.jpg"
-        }]
+      
         let productosToEdit = productos[Administrador]
          res.render ('productosToEdit', {productoaToEdit : productosToEdit})
         */

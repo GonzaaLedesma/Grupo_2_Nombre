@@ -7,10 +7,10 @@ const path = require('path');
 // Multer code
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../imagenes/Catalogo'));
+        cb(null, path.join(__dirname, '../../public/imagenes/Catalogo'));
     },
     filename: (req, file, cb) => {
-        // console.log(file);
+        console.log(file);
         const newFilename = 'group-' + Date.now() + path.extname(file.originalname);
         cb(null, newFilename);
     }
