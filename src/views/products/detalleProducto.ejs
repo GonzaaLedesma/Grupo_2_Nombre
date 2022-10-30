@@ -30,7 +30,6 @@
                 <div class="cajaPago">
                     <div class="subCaja">
                         <div class="cajaCantidad">
-                            <!-- <input type="number"> -->
                         </div>
                         <h4>Cantidad</h4>
                     </div>
@@ -43,6 +42,11 @@
                     <label class="positionCondiciones"><input type="checkbox" name="terminos" value="terminos">He leido y acepto los "<a href="/">Terminos y Condiciones</a>"</label>
                 </div>
                 <button class="botonPago" type="submit"><a href="/">Continuar a metodo de pago</a></button>
+                <div >
+                    <form action="/administrador?_method=DELETE" method="POST">
+                        <button class="botonBorrarCarrito"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

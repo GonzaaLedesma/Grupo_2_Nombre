@@ -24,7 +24,7 @@ router.post('/', upload.single('fotoEvento'), administradorController.creacionPo
 
 // Update
 router.get('/edicion/:id', administradorController.edicion);
-router.put('/:id', administradorController.edicionPut);
+router.put('/', administradorController.edicionPut);
 
 // Delete
 router.delete('/:id', administradorController.destroy); 

@@ -87,3 +87,11 @@
  - Corregimos errores de Creacion.
  - instalamos multer.
  - Aplicamos multer.
+
+ ## Domingo 30:
+ - Realizamos una llamada en discord.
+ - Continuamos con forma de trabajo en live share.
+ - Resolvimos CRUD de creacion.
+ - Comenzamos con CRUD de edicion y delete.
+ - Sacamos dudas generales.
+ 

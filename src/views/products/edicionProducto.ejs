@@ -4,64 +4,60 @@
 <body>
   <%- include('../partials/header') %>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="" class="form-box">
+        <form class="formularioAdmin" action="/administrador?_method=PUT" class="form-box" enctype="multipart/form-data" method="POST">
             <h1 class="form-title">Edicion de Evento</h1>
             <div class="cajaAdmin">
-                <label for="Cambio-Evento"></label>
-                <input required type="text"  name="Cambio-Evento" id="Cambio-Evento" placeholder="Inserte el nombre del evento a cambiar">
+                <label  for="Cambio-Evento">Evento</label>
+                <input required type="text"  name="Cambio-Evento" id="Cambio-Evento" value="<%= editarProducto.Nombre %> ">
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-Dia">Dia</label>
+                <input required type="text" name="Dia" value="<%= editarProducto.Dia %> " >
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-Ubicacion">Ubicacion</label>
+                <input required type="text" name="Ubicacion" value="<%= editarProducto.Ubicacion %> ">
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-sede">Sede</label>
+                <input required type="text" name="Sede" value="<%= editarProducto.Sede %> ">
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Dato-Participacion">Participacion</label>
+                <input required type="text" name="Participacion" value="<%= editarProducto.Participacion %>">
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-Dato-Capacidad">Capacidad</label>
+                <input required type="text" name="Capacidad" value="<%= editarProducto.Capacidad %> ">
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-Precio">Precio</label>
+                <input required type="number" name="Price" value="<%= editarProducto.Price %>">
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-Horario">Horario</label>
+                <input required type="text" name="Horario" value="<%= editarProducto.Horario %> ">
+            </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-Categoria">Categoria</label>
+                <input required type="text" name="Categoria" value="<%= editarProducto.Categoria %> ">
             </div>
             <div class="cajaAdmin">
-                <label for="Cambio-Nuevo-Nombre"></label>
-                <input required type="text"  name="nombre" id="nombreEvento" placeholder="Dato-Nombre del Evento">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Cambio-Dia"></label>
-                <input required type="date" name="Dia" >
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Cambio-Ubicacion"></label>
-                <input required type="text" name="Ubicacion" placeholder="Dato-Ubicacion">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Cambio-sede"></label>
-                <input required type="text" name="sede" placeholder="Dato-sede">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Dato-Participacion"></label>
-                <input required type="text" name="Participacion" placeholder="Dato-Participacion especial">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Cambio-Dato-Capacidad"></label>
-                <input required type="text" name="Capacidad" placeholder="Dato-Capacidad de la sede">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Cambio-Precio"></label>
-                <input required type="number" name="price" placeholder="Dato-Precio $$$">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Cambio-Horario"></label>
-                <input required type="number" name="Horario" placeholder="Dato-horario">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Cambio-Categoria"></label>
-                <input required type="text" name="categoria" placeholder="Categoria (Actuales/Nuevos/Proximos/Pasados)">
+                <label  for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
+                <textarea class="textArea" name="Descripcion" value="<%= editarProducto.Descripcion %>"></textarea>
             </div>
             <div class="cajaAdmin">
-                <label for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
-                <textarea class="textArea" name="Descripcion" placeholder="Descripcion breve del Evento y sobre el evento principal"></textarea>
+                <label   for="Cambio-Biografia-Evento">Biografia Breve</label>
+                <textarea class="textArea" name="Biografia" value="<%= editarProducto.Biografia %>"></textarea>
             </div>
             <div class="cajaAdmin">
-                <label for="Cambio-Biografia-Evento">Biografia Breve</label>
-                <textarea class="textArea" name="Biografia" placeholder="Descripcion breve de la biografia de la banda/evento"></textarea>
-            </div>
-            <div class="cajaAdmin">
-                <label for="Cambio-ImgEvento">
+                <label  for="Cambio-ImgEvento">
                     <div class="label">Seleccione Foto de Evento</div>
-                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" accept=".jpg"></div>
+                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" value="<%= editarProducto.fotoEvento %>" accept=".jpg"></div>
                 </label>
             </div>
             <div class="cajaAdminSend">
-                <button type="submit"><a href="/">Enviar</a></button>
+                <button type="submit" value="Editar">Enviar</button>
             </div>
             <div class="cajaAdminSend">
                 <button type="reset"><h6>Borrar</h6></button>

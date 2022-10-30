@@ -6,6 +6,7 @@
     text-align: center;
     border-radius: 20px;
 }
+
 .cajaAdmin{
     display: flex;
     flex-direction: column;
@@ -15,7 +16,7 @@
 }
 
 .cajaAdmin label{
-    color: white;
+    color: rgb(173, 173, 0);;
     text-align: center;
 }
 

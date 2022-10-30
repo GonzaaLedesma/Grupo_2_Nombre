@@ -5,7 +5,7 @@ const rutasProductos = require('./src/routes/producto')
 const rutasMain = require('./src/routes/main')
 const rutasAdministrador = require('./src/routes/administrador')
 const app = express();
-const methodOverride = require ('method-override'); //--metodo para put y delete(npm install method-override)
+const methodOverride = require('method-override');
 
 app.use(express.urlencoded({extended:false}));
 
@@ -32,5 +32,4 @@ app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
 app.use(methodOverride('_method'));
-
 

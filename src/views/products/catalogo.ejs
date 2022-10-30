@@ -8,7 +8,6 @@
       <h2 class="titulosCategoria">ACTUALES</h2>
       <div class="cajaCategoria">
         <% products.filter(product => product.Categoria == 'Actuales').forEach(product => { %>
-          <%console.log("here",product)%>
         <div class="card">
           <img
             src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
