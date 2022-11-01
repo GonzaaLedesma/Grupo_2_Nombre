@@ -28,8 +28,7 @@ router.put('/:id', upload.single('fotoEvento'),administradorController.edicionPu
 
 // Delete
 router.delete('/:id', upload.single('fotoEvento'),administradorController.destroy); 
-// router.delete('/:id', function (req, res) {
-//     res.send("soy delete")}); 
+ 
 
 module.exports = router;
 

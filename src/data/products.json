@@ -105,6 +105,21 @@
   "fotoEvento": "One-Republic.jpg"
  },
  {
+  "id": 6,
+  "Nombre": "Maroon 5",
+  "Dia": "30 de Octubre",
+  "Ubicacion": "Sydney, Australia",
+  "Sede": "(Qudos Bank Arena)",
+  "Participacion": "Katy Perry y Jay Chou",
+  "Capacidad": 50000,
+  "Price": 25000,
+  "Horario": 15,
+  "Categoria": "Actuales",
+  "Descripcion": "Despues de 200 shows en más de 30 países llega 'Jordi' lanzado este anio siendo uno de sus ultimos hist exitoso y presentando 'Girls Like You'. ",
+  "Biografia": "Maroon 5 surgió entre 1994 y 1995 en Los Ángeles, California cuando sus integrantes aún estaban en el colegio. Su primer álbum no tuvo mucho éxito, así que se separaron de la discográfica y continuaron con sus estudios universitarios hasta el 2001.",
+  "fotoEvento": "Marron-5.jpg"
+ },
+ {
   "id": 7,
   "Nombre": "Avril Lavigne",
   "Dia": "21 de Noviembre",
@@ -253,20 +268,5 @@
   "Descripcion": "---",
   "Biografia": "---",
   "fotoEvento": "TOP.jpg"
- },
- {
-  "id": 17,
-  "Nombre": "Coldplay",
-  "Dia": "1 de Septiembre",
-  "Ubicacion": "Estocolmo, Suecia",
-  "Sede": "(Friends Arena)",
-  "Participacion": "---",
-  "Capacidad": 0,
-  "Price": 0,
-  "Horario": 0,
-  "Categoria": "Pasados",
-  "Descripcion": "---",
-  "Biografia": "---",
-  "fotoEvento": "Coldplay.jpg"
  }
 ]

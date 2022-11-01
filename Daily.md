@@ -94,3 +94,12 @@
  - Resolvimos CRUD de creacion.
  - Comenzamos con CRUD de edicion y delete.
  - Sacamos dudas generales.
+
+ ## Martes 1:
+
+- Nos comunicamos por discord.
+- Resolvimos el problema de metodo-override.
+- Explicamos lo que hicimos.
+- Hicimos un chequeo de los problemas a resolver que quedan por delante.
+- Encaramos la parte final del sprint 4.
+- Terminamos con CRUD de edicion y delete.
