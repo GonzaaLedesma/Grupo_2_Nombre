@@ -7,10 +7,10 @@ const path = require('path');
 // Multer code
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/imagenes/Catalogo'));
+        cb(null, path.join(__dirname, '../../public/imagenes/catalogo'));
     },
     filename: (req, file, cb) => {
-        console.log(file);
+        // console.log(file);
         const newFilename = 'group-' + Date.now() + path.extname(file.originalname);
         cb(null, newFilename);
     }
@@ -24,10 +24,14 @@ router.post('/', upload.single('fotoEvento'), administradorController.creacionPo
 
 // Update
 router.get('/edicion/:id', administradorController.edicion);
-router.put('/', administradorController.edicionPut);
+// router.put('/:id', upload.single('fotoEvento'),administradorController.edicionPut);
+router.put('/:id', function (req, res) {
+    res.send("soy put")}); 
 
 // Delete
-router.delete('/:id', administradorController.destroy); 
+// router.delete('/:id', upload.single('fotoEvento'),administradorController.destroy); 
+router.delete('/:id', function (req, res) {
+    res.send("soy delete")}); 
 
 module.exports = router;
 

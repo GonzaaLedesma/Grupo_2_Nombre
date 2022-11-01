@@ -4,11 +4,11 @@
 <body>
   <%- include('../partials/header') %>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="/administrador?_method=PUT" class="form-box" enctype="multipart/form-data" method="POST">
+        <form class="formularioAdmin" action="/administrador/<%= editarProducto.id %>?_method=PUT" class="form-box" enctype="multipart/form-data" method="POST">
             <h1 class="form-title">Edicion de Evento</h1>
             <div class="cajaAdmin">
                 <label  for="Cambio-Evento">Evento</label>
-                <input required type="text"  name="Cambio-Evento" id="Cambio-Evento" value="<%= editarProducto.Nombre %> ">
+                <input required type="text"  name="Nombre"  value="<%= editarProducto.Nombre %> ">
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Dia">Dia</label>

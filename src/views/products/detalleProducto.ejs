@@ -43,8 +43,9 @@
                 </div>
                 <button class="botonPago" type="submit"><a href="/">Continuar a metodo de pago</a></button>
                 <div >
-                    <form action="/administrador?_method=DELETE" method="POST">
-                        <button class="botonBorrarCarrito"><i class="fa-solid fa-trash"></i></button>
+                    <form action="/administrador/<%= detalle.id %>?_method=DELETE" method="POST" >
+                        <input type="submit" value="Eliminar"> 
+                        <!-- <button class="botonBorrarCarrito"><i class="fa-solid fa-trash"></i></button> -->
                     </form>
                 </div>
             </div>

@@ -94,4 +94,3 @@
  - Resolvimos CRUD de creacion.
  - Comenzamos con CRUD de edicion y delete.
  - Sacamos dudas generales.
- 
