@@ -4,8 +4,8 @@ const rutasUsuario = require('./src/routes/usuario')
 const rutasProductos = require('./src/routes/producto')
 const rutasMain = require('./src/routes/main')
 const rutasAdministrador = require('./src/routes/administrador')
-const app = express();
 const methodOverride = require('method-override');
+const app = express();
 
 app.use(express.urlencoded({extended:false}));
 

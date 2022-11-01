@@ -24,14 +24,12 @@ router.post('/', upload.single('fotoEvento'), administradorController.creacionPo
 
 // Update
 router.get('/edicion/:id', administradorController.edicion);
-// router.put('/:id', upload.single('fotoEvento'),administradorController.edicionPut);
-router.put('/:id', function (req, res) {
-    res.send("soy put")}); 
+router.put('/:id', upload.single('fotoEvento'),administradorController.edicionPut);
 
 // Delete
-// router.delete('/:id', upload.single('fotoEvento'),administradorController.destroy); 
-router.delete('/:id', function (req, res) {
-    res.send("soy delete")}); 
+router.delete('/:id', upload.single('fotoEvento'),administradorController.destroy); 
+// router.delete('/:id', function (req, res) {
+//     res.send("soy delete")}); 
 
 module.exports = router;
 
