@@ -44,16 +44,16 @@
             </div>
             <div class="cajaAdmin">
                 <label  for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
-                <textarea class="textArea" name="Descripcion" value="<%= editarProducto.Descripcion %>"></textarea>
+                <textarea class="textArea" name="Descripcion" ><%= editarProducto.Descripcion %></textarea>
             </div>
             <div class="cajaAdmin">
                 <label   for="Cambio-Biografia-Evento">Biografia Breve</label>
-                <textarea class="textArea" name="Biografia" value="<%= editarProducto.Biografia %>"></textarea>
+                <textarea class="textArea" name="Biografia" ><%= editarProducto.Biografia %></textarea>
             </div>
             <div class="cajaAdmin">
                 <label  for="Cambio-ImgEvento">
                     <div class="label">Seleccione Foto de Evento</div>
-                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" value="<%= editarProducto.fotoEvento %>" accept=".jpg"></div>
+                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento"  accept=".jpg"></div>
                 </label>
             </div>
             <div class="cajaAdminSend">

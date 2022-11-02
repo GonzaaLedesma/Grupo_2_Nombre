@@ -42,9 +42,10 @@
                     <label class="positionCondiciones"><input type="checkbox" name="terminos" value="terminos">He leido y acepto los "<a href="/">Terminos y Condiciones</a>"</label>
                 </div>
                 <button class="botonPago" type="submit"><a href="/">Continuar a metodo de pago</a></button>
-                <div >
+                <div class="botonBarAdmin">
+                    <button class="botonFunctionAdmin"><a href="/administrador/edicion/<%= detalle.id %>">Editar</a></button>
                     <form action="/administrador/<%= detalle.id %>?_method=DELETE" method="POST" >
-                        <button class="botonBorrarCarrito"><i class="fa-solid fa-trash"></i></button>
+                        <button class="botonFunctionAdmin"><i class="fa-solid fa-trash"></i></button>
                     </form>
                 </div>
             </div>

@@ -15,21 +15,6 @@
   "fotoEvento": "not-Img.jpg"
  },
  {
-  "id": 101,
-  "Nombre": "-------",
-  "Dia": "-------",
-  "Ubicacion": "-------",
-  "Sede": "---------",
-  "Participacion": "------------------",
-  "Capacidad": 0,
-  "Price": 0,
-  "Horario": 0,
-  "Categoria": "-",
-  "Descripcion": "-------",
-  "Biografia": " -------",
-  "fotoEvento": "not-Img.jpg"
- },
- {
   "id": 1,
   "Nombre": "The Weezer",
   "Dia": "22 de Octubre",
@@ -268,5 +253,20 @@
   "Descripcion": "---",
   "Biografia": "---",
   "fotoEvento": "TOP.jpg"
+ },
+ {
+  "id": 101,
+  "Nombre": "-------",
+  "Dia": "-------",
+  "Ubicacion": "-------",
+  "Sede": "---------",
+  "Participacion": "------------------",
+  "Capacidad": 0,
+  "Price": 0,
+  "Horario": 0,
+  "Categoria": "-",
+  "Descripcion": "-------",
+  "Biografia": " -------",
+  "fotoEvento": "not-Img.jpg"
  }
 ]
