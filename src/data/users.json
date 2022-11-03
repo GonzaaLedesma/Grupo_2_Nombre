@@ -1,76 +1,76 @@
 [
     {
         "id": 1,
-        "Nombre":"Ronald Guerrero",
-        "Subombre":"Roni",
-        "Email":"Roni@gmail.com",
-        "Contrasenia":"Ronald23",
-        "Imagen":"-"
+        "nombre":"Ronald Guerrero",
+        "subombre":"Roni",
+        "email":"Roni@gmail.com",
+        "contrasenia":"Ronald23",
+        "imagen":"-"
     },
     {
         "id": 2,
-        "Nombre":"Pili Caldero",
-        "Subombre":"Pili",
-        "Email":"pili@gmail.com",
-        "Contrasenia":"pili45",
-        "Imagen":"-"
+        "nombre":"Pili Caldero",
+        "subombre":"Pili",
+        "email":"pili@gmail.com",
+        "contrasenia":"pili45",
+        "imagen":"-"
     },
     {
         "id": 3,
-        "Nombre":"fernanda guzman",
-        "Subombre":"fer",
-        "Email":"fer@gmail.com",
-        "Contrasenia":"fernanda88",
-        "Imagen":"-"
+        "nombre":"fernanda guzman",
+        "subombre":"fer",
+        "email":"fer@gmail.com",
+        "contrasenia":"fernanda88",
+        "imagen":"-"
     },
     {
         "id": 4,
-        "Nombre":"Agustin Fernandez",
-        "Subombre":"Poma",
-        "Email":"agustin@gmail.com",
-        "Contrasenia":"poma69",
-        "Imagen":"-"
+        "nombre":"Agustin Fernandez",
+        "subombre":"Poma",
+        "email":"agustin@gmail.com",
+        "contrasenia":"poma69",
+        "imagen":"-"
     },
     {
         "id": 5,
-        "Nombre":"Gabriel Gartenszten",
-        "Subombre":"Gabriel",
-        "Email":"gabriel@gmail.com",
-        "Contrasenia":"Gabriel45"
+        "nombre":"Gabriel Gartenszten",
+        "subombre":"Gabriel",
+        "email":"gabriel@gmail.com",
+        "contrasenia":"Gabriel45"
     },
     {
         "id": 6,
-        "Nombre":"Santiago Herazo",
-        "Subombre":"Santi",
-        "Email":"santiago@gmail.com",
-        "Contrasenia":"Santi433"
+        "nombre":"Santiago Herazo",
+        "subombre":"Santi",
+        "email":"santiago@gmail.com",
+        "contrasenia":"Santi433"
     },
     {
         "id": 7,
-        "Nombre":"Nicolas Morandin",
-        "Subombre":"Nico",
-        "Email":"Nico@gmail.com",
-        "Contrasenia":"Nico233"
+        "nombre":"Nicolas Morandin",
+        "subombre":"Nico",
+        "email":"Nico@gmail.com",
+        "contrasenia":"Nico233"
     },
     {
         "id": 8,
-        "Nombre":"Osquir Gemelier",
-        "Subombre":"Os",
-        "Email":"Osquin@gmail.com",
-        "Contrasenia":"Osquir344"
+        "nombre":"Osquir Gemelier",
+        "subombre":"Os",
+        "email":"Osquin@gmail.com",
+        "contrasenia":"Osquir344"
     },
     {
         "id": 9,
-        "Nombre":"Alfredo Armas",
-        "Subombre":"Alfa",
-        "Email":"Alfa@gmail.com",
-        "Contrasenia":"Alfa69"
+        "nombre":"Alfredo Armas",
+        "subombre":"Alfa",
+        "email":"Alfa@gmail.com",
+        "contrasenia":"Alfa69"
     },
     {
         "id": 10,
-        "Nombre":"Luis Angel",
-        "Subombre":"Luis",
-        "Email":"Luis@gmail.com",
-        "Contrasenia":"Luis679"
+        "nombre":"Luis Angel",
+        "subombre":"Luis",
+        "email":"Luis@gmail.com",
+        "contrasenia":"Luis679"
     }
 ]

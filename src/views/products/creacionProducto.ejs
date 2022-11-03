@@ -8,47 +8,55 @@
             <h1 class="form-title">Creacion De Evento</h1>
             <div class="cajaAdmin">
                 <label for="Nombre"></label>
-                <input required type="text"  name="Nombre"  id="Nombre" placeholder="Nombre del Evento">
+                <input required type="text"  name="nombre"  id="Nombre" placeholder="Nombre del Evento">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Dia"></label>
-                <input required type="date" name="Dia" id="Dia" >
+                <input required type="date" name="dia" id="Dia" >
             </div>
             <div class="cajaAdmin"> 
                 <label for="Ubicacion"></label>
-                <input required type="text" name="Ubicacion" id="Ubicacion" placeholder="Ubicacion">
+                <input required type="text" name="ubicacion" id="Ubicacion" placeholder="Ubicacion">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Sede"></label>
-                <input required type="text" name="Sede" id="Sede" placeholder="sede">
+                <input required type="text" name="sede" id="Sede" placeholder="Sede">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Participacion"></label>
-                <input required type="text" name="Participacion" id="Participacion" placeholder="Participacion especial">
+                <input required type="text" name="participacion" id="Participacion" placeholder="Participacion especial">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Capacidad"></label>
-                <input required type="text" name="Capacidad" id="Capacidad" placeholder="Capacidad de la sede">
+                <input required type="text" name="capacidad" id="Capacidad" placeholder="Capacidad de la sede">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Price"></label>
-                <input required type="number" name="Price" id="Price" placeholder="Inserte Un Precio $$$">
+                <input required type="number" name="price" id="Price" placeholder="Inserte Un Precio $$$">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Horario"></label>
-                <input required type="number" name="Horario" id="Horario" placeholder="Inserte un horario">
+                <input required type="number" name="horario" id="Horario" placeholder="Inserte un horario">
             </div>
-            <div class="cajaAdmin"> 
+            <!-- <div class="cajaAdmin"> 
                 <label for="Categoria"></label>
-                <input required type="text" name="Categoria" id="Categoria" placeholder="Categoria (Actuales/Nuevos/Proximos)">
+                <input required type="text" name="categoria"  placeholder="Categoria (Actuales/Nuevos/Proximos)">
+            </div> -->
+            <div class="cajaAdmin"> 
+                <label  for="Categoria">Categoria</label>
+                <select class="opcionesCategoria" required name="categoria" id="Categoria">
+                    <option  value="Actuales">Actuales</option> 
+                    <option  value="Nuevos">Nuevos</option> 
+                    <option  value="Proximos">Proximos</option> 
+                </select>
             </div>
             <div class="cajaAdmin">
                 <label for="Descripcion-Evento">Descripcion del Evento</label>
-                <textarea class="textArea" name="Descripcion" id="Descripcion" placeholder="Descripcion breve del evento y sobre el show principal"></textarea>
+                <textarea class="textArea" name="descripcion" id="Descripcion" placeholder="Descripcion breve del evento y sobre el show principal"></textarea>
             </div>
             <div class="cajaAdmin">
                 <label for="Biografia">Biografia Breve</label>
-                <textarea class="textArea" name="Biografia" id="Biografia" placeholder="Descripcion breve de la biografia de la banda/evento"></textarea>
+                <textarea class="textArea" name="biografia" id="Biografia" placeholder="Descripcion breve de la biografia de la banda/evento"></textarea>
             </div>
             <div class="cajaAdmin">
                 <label for="fotoEvento">

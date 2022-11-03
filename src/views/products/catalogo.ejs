@@ -10,7 +10,7 @@
       </div>
       <h2 class="titulosCategoria">ACTUALES</h2>
       <div class="cajaCategoria">
-        <% products.filter(product => product.Categoria == 'Actuales').forEach(product => { %>
+        <% products.filter(product => product.categoria == 'Actuales').forEach(product => { %>
         <div class="card">
           <img
             src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
@@ -18,11 +18,11 @@
             alt="ImgBand"
           />
           <div class="card-body">
-            <h5 class="card-title"><%= product.Nombre%></h5>
-            <p class="card-text"><%= product.Sede%></p>
-            <p class="card-text"><%= product.Ubicacion%></p>
-            <p class="card-text">Participacion: <%= product.Participacion%></p>
-            <p class="card-text card-date"><%= product.Dia%></p>
+            <h5 class="card-title"><%= product.nombre%></h5>
+            <p class="card-text"><%= product.sede%></p>
+            <p class="card-text"><%= product.ubicacion%></p>
+            <p class="card-text">Participacion: <%= product.participacion%></p>
+            <p class="card-text card-date"><%= product.dia%></p>
             <a href="/producto/detalles/<%= product.id%>" class="btn btn-primary"
               >Ir a detalles</a
             >
@@ -33,7 +33,7 @@
       <!-------------------------SEGUNDO----------- -->
       <h2 class="titulosCategoria">NUEVOS</h2>
       <div class="cajaCategoria">
-        <% products.filter(product => product.Categoria == 'Nuevos').forEach(product => { %>
+        <% products.filter(product => product.categoria == 'Nuevos').forEach(product => { %>
           <div class="card">
             <img
               src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
@@ -41,18 +41,18 @@
               alt="ImgBand"
             />
             <div class="card-body">
-              <h5 class="card-title"><%= product.Nombre%></h5>
-              <p class="card-text"><%= product.Sede%></p>
-              <p class="card-text"><%= product.Ubicacion%></p>
-              <p class="card-text">Participacion: <%= product.Participacion%></p>
-              <p class="card-text card-date"><%= product.Dia%></p>
+              <h5 class="card-title"><%= product.nombre%></h5>
+              <p class="card-text"><%= product.sede%></p>
+              <p class="card-text"><%= product.ubicacion%></p>
+              <p class="card-text">Participacion: <%= product.participacion%></p>
+              <p class="card-text card-date"><%= product.dia%></p>
               <a href="/producto/detalles/<%= product.id %>" class="btn btn-primary"
                 >Ir a detalles</a
               >
             </div>
           </div>
           <% }) %>
-          <% products.filter(product => product.Categoria == '-').forEach(product => { %>
+          <% products.filter(product => product.categoria == '-').forEach(product => { %>
             <div class="card">
               <img
                 src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
@@ -60,11 +60,11 @@
                 alt="ImgBand"
               />
               <div class="card-body">
-                <h5 class="card-title"><%= product.Nombre%></h5>
-                <p class="card-text"><%= product.Sede%></p>
-                <p class="card-text"><%= product.Ubicacion%></p>
-                <p class="card-text"><%= product.Participacion%></p>
-                <p class="card-text card-date"><%= product.Dia%></p>
+                <h5 class="card-title"><%= product.nombre%></h5>
+                <p class="card-text"><%= product.sede%></p>
+                <p class="card-text"><%= product.ubicacion%></p>
+                <p class="card-text"><%= product.participacion%></p>
+                <p class="card-text card-date"><%= product.dia%></p>
               </div>
             </div>
             <% }) %>
@@ -72,7 +72,7 @@
       <!-------------------------TERCERO----------- -->
       <h2 class="titulosCategoria">PROXIMAMENTE</h2>
       <div class="cajaCategoria">
-        <% products.filter(product => product.Categoria == 'Proximamente').forEach(product => { %>
+        <% products.filter(product => product.categoria == 'Proximos').forEach(product => { %>
         <div class="card">
           <img
             src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
@@ -80,11 +80,11 @@
             alt="ImgBand"
           />
           <div class="card-body">
-            <h5 class="card-title"><%= product.Nombre%></h5>
-            <p class="card-text"><%= product.Sede%></p>
-            <p class="card-text"><%= product.Ubicacion%></p>
-            <p class="card-text">Participacion: <%= product.Participacion%></p>
-            <p class="card-text card-date"><%= product.Dia%></p>
+            <h5 class="card-title"><%= product.nombre%></h5>
+            <p class="card-text"><%= product.sede%></p>
+            <p class="card-text"><%= product.ubicacion%></p>
+            <p class="card-text">Participacion: <%= product.participacion%></p>
+            <p class="card-text card-date"><%= product.dia%></p>
             <a href="/producto/detalles/<%= product.id %>" class="btn btn-primary"
               >Ir a detalles</a
             >
@@ -95,7 +95,7 @@
       <!-------------------------CUARTO----------- -->
       <h2 class="titulosCategoria">PASADOS</h2>
       <div class="cajaCategoria">
-        <% products.filter(product => product.Categoria == 'Pasados').forEach(product => { %>
+        <% products.filter(product => product.categoria == 'Pasados').forEach(product => { %>
         <div class="card">
           <img
             src="/imagenes/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
@@ -103,10 +103,10 @@
             alt="ImgBand"
           />
           <div class="card-body">
-            <h5 class="card-title"><%= product.Nombre%></h5>
-            <p class="card-text"><%= product.Sede%></p>
-            <p class="card-text"><%= product.Ubicacion%></p>
-            <p class="card-text card-date"><%= product.Dia%></p>
+            <h5 class="card-title"><%= product.nombre%></h5>
+            <p class="card-text"><%= product.sede%></p>
+            <p class="card-text"><%= product.ubicacion%></p>
+            <p class="card-text card-date"><%= product.dia%></p>
           </div>
         </div>
         <% }) %>

@@ -31,7 +31,12 @@
 ## retro sprint 4:
 
 ## Retrospectiva grupal:
+- Fue un sprint mas complejo, donde hubo algunos problemas que costaron mas la resolusion pero se llego a la solucion. Hubo mas participacion de todos los integrantes y mejor comunicacion, mas prediposcision. Nos sentimos comodos con la utilizacion del live share para trabajar, junto con discord y trello para saber que falta hacer asi poder rapidamente ayudar o entrar en tema. Continuamos teniendo un ritmo adecuado, llegando en tiempo y forma a la realizacion de los sprint, con ello agregar que no hay que perderlo.
 
 ## Retrospectiva individual:
+
+- Matías Lanese: Me siento que mas comodo y organizado, el equipo viene fluyendo mejor y eso me alegra. En lo personal, creo en seguir aprendiendo y mejorando para el bien del proyecto, fue un tema mas complejo pero creo que en conjunto de mis compañeros logramos sacarlo adelante. Senti que mi participacion fue de importancia, espero poder ser util en lo que resta del proyecto.
+
+- Gonzalo Ledesma:
 
 

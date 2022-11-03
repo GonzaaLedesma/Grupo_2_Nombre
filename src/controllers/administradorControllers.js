@@ -18,25 +18,24 @@ const administradorController = {
     },
     creacionPost : (req,res)=>{
         const fotoEvento = req.file;
-        const {Nombre,Dia,Ubicacion,Sede,Participacion,Capacidad,Price,Horario,Categoria,Descripcion,Biografia} = req.body
+        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body
         let newProduct = {
             id : Date.now(),
-            Nombre : Nombre,
-            Dia : Dia,
-            Ubicacion : Ubicacion,
-            Sede :Sede,
-            Participacion : Participacion,
-            Capacidad : Number(Capacidad),
-            Price : Number(Price),
-            Horario : Number(Horario),
-            Categoria : Categoria,
-            Descripcion : Descripcion,
-            Biografia : Biografia,
+            nombre : nombre,
+            dia : dia,
+            ubicacion : ubicacion,
+            sede : sede,
+            participacion : participacion,
+            capacidad : Number(capacidad),
+            price : Number(price),
+            horario : Number(horario),
+            categoria : categoria,
+            descripcion : descripcion,
+            biografia : biografia,
             fotoEvento : fotoEvento.filename
         } 
         
         products.push(newProduct);
-        // console.log(newProduct);
         
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
         
@@ -44,21 +43,21 @@ const administradorController = {
    },
     edicionPut : (req,res)=>{
         const productsId = req.params.id;
-        const {Nombre,Dia,Ubicacion,Sede,Participacion,Capacidad,Price,Horario,Categoria,Descripcion,Biografia} = req.body;
+        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body;
         // const fotoEvento = req.file;
         products.forEach((products)=>{
           if(products.id == productsId){
-                products.Nombre = Nombre,
-                products.Dia = Dia,
-                products.Ubicacion = Ubicacion,
-                products.Sede = Sede,
-                products.Participacion = Participacion,
-                products.Capacidad = Capacidad,
-                products.Price = Price,
-                products.Horario = Horario,
-                products.Categoria = Categoria,
-                products.Descripcion = Descripcion,
-                products.Biografia = Biografia
+                products.nombre = nombre,
+                products.dia = dia,
+                products.ubicacion = ubicacion,
+                products.sede = sede,
+                products.participacion = participacion,
+                products.capacidad = capacidad,
+                products.price = price,
+                products.horario = horario,
+                products.categoria = categoria,
+                products.descripcion = descripcion,
+                products.biografia = biografia
                 // products.fotoEvento = fotoEvento
         }
         })

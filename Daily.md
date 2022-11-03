@@ -103,3 +103,13 @@
 - Hicimos un chequeo de los problemas a resolver que quedan por delante.
 - Encaramos la parte final del sprint 4.
 - Terminamos con CRUD de edicion y delete.
+
+## Jueves 3:
+- Hicimos una llamada en discord.
+- Realizamos trabajo en live share.
+- Resolvimos ciertos problemas.
+- Mejoramos el codigo.
+- Terminamos el sprint.
+- Testeamos la pagina en busca de errores.
+- Realizamos el retro.
+- Actualizamos el daily.

@@ -19,6 +19,18 @@
     color: rgb(173, 173, 0);;
     text-align: center;
 }
+.opcionesCategoria{
+    text-align: center;
+    width: 50%;
+    border-radius: 7px;
+    background: #191919;
+    border: 2px solid rgb(173, 173, 0);
+    height: 50px;
+    color: gray;
+}
+.opcion{
+    margin: auto;
+}
 
 .textArea{
     width: 50%;
