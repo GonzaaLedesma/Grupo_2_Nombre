@@ -92,12 +92,14 @@ body{
 .botonCreacion:hover a{
     color: rgb(190, 190, 0);
 }
-
+.card:hover{
+    border: solid 1px gray !important ;
+}
 .card:hover .card-body a{
     background-color:  #1c2631;
     border: solid 1px rgb(190, 190, 0);
     color: rgb(190, 190, 0);
-    
+    border: solid 1px gray ;
 }
 .titulosCategoria:hover{
     box-shadow: 10px 10px 15px rgb(100, 100, 100);

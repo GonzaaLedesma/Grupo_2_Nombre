@@ -7,6 +7,7 @@ body{
 }
 .tituloSuperior {
   text-align: center;
+  margin-top: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   color:rgb(190, 190, 0);
@@ -60,6 +61,7 @@ body{
   color: white;
   width: 100px;
   height: 60px;
+  transition: 450ms;
 }
 .descripcionCateg {
   margin: auto;
@@ -84,10 +86,12 @@ body{
 }
 /* ------Hover------ */
 .tituloSuperior:hover{
-  box-shadow: 0px 0px 15px rgb(100, 100, 100);
+  box-shadow: 10px 0px 15px rgb(100, 100, 100);
+  border: solid 2px gray ;
 }
 .tituloInferior:hover{
   box-shadow: 0px 0px 15px rgb(100, 100, 100);
+  border: solid 2px gray ;
 }
 
 .botonCajaCateg:hover{
