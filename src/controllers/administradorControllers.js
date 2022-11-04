@@ -12,9 +12,10 @@ const administradorController = {
     },
     edicion : (req,res)=>{
         const productsId = req.params.id;
-        let editarProducto = products[productsId]
+        let editarProducto = products.filter((product)=> product.id == productsId )
 
-         res.render("products/edicionProducto", {editarProducto});
+        // console.log({editarProducto, productsId});
+         res.render("products/edicionProducto", {editarProducto:editarProducto[0]});
     },
     creacionPost : (req,res)=>{
         const fotoEvento = req.file;
@@ -44,7 +45,7 @@ const administradorController = {
     edicionPut : (req,res)=>{
         const productsId = req.params.id;
         const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body;
-        // const fotoEvento = req.file;
+        const fotoEvento = req.file;
         products.forEach((products)=>{
           if(products.id == productsId){
                 products.nombre = nombre,
@@ -58,7 +59,7 @@ const administradorController = {
                 products.categoria = categoria,
                 products.descripcion = descripcion,
                 products.biografia = biografia
-                // products.fotoEvento = fotoEvento
+                products.fotoEvento = fotoEvento.filename
         }
         })
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
