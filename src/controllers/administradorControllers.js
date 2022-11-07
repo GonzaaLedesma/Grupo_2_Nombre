@@ -4,7 +4,6 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-// console.log(products);
 
 const administradorController = {
     creacion : (req,res)=>{
@@ -14,7 +13,6 @@ const administradorController = {
         const productsId = req.params.id;
         let editarProducto = products.filter((product)=> product.id == productsId )
 
-        // console.log({editarProducto, productsId});
          res.render("products/edicionProducto", {editarProducto:editarProducto[0]});
     },
     creacionPost : (req,res)=>{

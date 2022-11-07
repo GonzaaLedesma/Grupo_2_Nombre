@@ -1,9 +1,9 @@
 const express =require ('express');
-const path = require('path')
-const rutasUsuario = require('./src/routes/usuario')
-const rutasProductos = require('./src/routes/producto')
-const rutasMain = require('./src/routes/main')
-const rutasAdministrador = require('./src/routes/administrador')
+const path = require('path');
+const rutasUsuario = require('./src/routes/usuario');
+const rutasProductos = require('./src/routes/producto');
+const rutasMain = require('./src/routes/main');
+const rutasAdministrador = require('./src/routes/administrador');
 const methodOverride = require('method-override');
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 app.use(express.json());
 
-const publicPath = path.resolve(__dirname, './public')
+const publicPath = path.resolve(__dirname, './public');
 
 app.use(express.static(publicPath));
 

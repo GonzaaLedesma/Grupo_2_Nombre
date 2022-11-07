@@ -37,6 +37,6 @@
 
 - Matías Lanese: Me siento que mas comodo y organizado, el equipo viene fluyendo mejor y eso me alegra. En lo personal, creo en seguir aprendiendo y mejorando para el bien del proyecto, fue un tema mas complejo pero creo que en conjunto de mis compañeros logramos sacarlo adelante. Senti que mi participacion fue de importancia, espero poder ser util en lo que resta del proyecto.
 
-- Gonzalo Ledesma:
+- Gonzalo Ledesma: Junto con la participacion del grupo fue agradable y sencilla la resolucion de los temas, aparte de terminar con mucho tiempo pudimos resolver errores puntuales de la pagina. Siento que los nuevos temas estan siendo cada vez mas dificiles y la necesidad de estudiar en profundidad algunos punto la noto cada vez mas.
 
 
