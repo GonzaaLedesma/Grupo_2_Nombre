@@ -20,6 +20,29 @@
                 <input required type="email"  name="Mail" id="email" placeholder="E-mail">
                 <samp class="feedback"></samp>
             </div>
+            <div class="correcionCajasForm">
+                <label for="pais"></label>
+                <input required type="text"  name="pais"  placeholder="Pais">
+            </div>
+            <div class="correcionCajasForm">
+                <label class="tituloRegisterCaja" for="gustosUsuario">Tus Gustos</label>
+                <label class="checkBoxs"> <input type="checkbox" name="gustosUsuario" value="Rock">Rock</label>
+                <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="Pop">Pop </label>
+                <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="Metal">Metal </label>
+                <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="Trap">Trap</label>
+                <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="Reaggeaton">Reaggeaton</label>
+                <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="Electronica">Electronica</label>
+            </div>
+            <div class="correcionCajasForm"> 
+                <label class="tituloRegisterCaja" for="genero">Genero</label>
+                <select class="opcionesCategoria" required name="genero">
+                    <option>Seleccione</option> 
+                    <option  value="Masculino">Masculino</option> 
+                    <option  value="Femenino">Femenino</option> 
+                    <option  value="Helicoptero Apache">Helicoptero Apache</option> 
+                    <option  value="Otros">Otros</option> 
+                </select>
+            </div>
             <div class="correcionCajasForm"> 
                 <label for="contrasenia"></label>
                 <input required type="password" name="Contrasenia" placeholder="Contraseña">
@@ -28,6 +51,11 @@
             <div class="correcionCajasForm">
                 <label for="contrasenia"></label>
                 <input required type="password" name="Contrasenia" placeholder="Repetir la contraseña">
+                <samp class="feedback"></samp>
+            </div>
+            <div class="correcionCajasForm">
+                <label for="infoUsuario"></label>
+                <textarea class="textArea" name="infoUsuario" placeholder="Cuentanos sobre ti"></textarea>
                 <samp class="feedback"></samp>
             </div>
             <div class="cajaAdmin">

@@ -16,7 +16,18 @@
 .correcionCajasForm input{
     width: 40%;
 }
-
+.tituloRegisterCaja{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.checkBoxs{
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .form-box{
     width: 75%;
     padding: 10px;

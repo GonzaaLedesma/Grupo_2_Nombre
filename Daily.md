@@ -113,3 +113,12 @@
 - Testeamos la pagina en busca de errores.
 - Realizamos el retro.
 - Actualizamos el daily.
+
+## Miercoles 9:
+
+- Realizamos trabajo en live share.
+- Agregamos la vista de perfil.
+- Revisamos el codigo.
+- Corregimos errores.
+- Leimos y analizamos el siguiente sprint.
+- Sacamos dudas generales.

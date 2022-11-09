@@ -18,7 +18,7 @@ const administradorController = {
     creacionPost : (req,res)=>{
         const fotoEvento = req.file;
         const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body
-        let  = {
+        let  newProduct = {
             id : Date.now(),
             nombre : nombre,
             dia : dia,
@@ -38,7 +38,8 @@ const administradorController = {
         
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
         
-        res.redirect('/');
+        res.redirect('/producto/catalogo');
+        // res.redirect('/');
    },
     edicionPut : (req,res)=>{
         const productsId = req.params.id;
@@ -51,9 +52,9 @@ const administradorController = {
                 products.ubicacion = ubicacion,
                 products.sede = sede,
                 products.participacion = participacion,
-                products.capacidad = capacidad,
-                products.price = price,
-                products.horario = horario,
+                products.capacidad = Number(capacidad),
+                products.price = Number(price),
+                products.horario = Number(horario),
                 products.categoria = categoria,
                 products.descripcion = descripcion,
                 products.biografia = biografia
