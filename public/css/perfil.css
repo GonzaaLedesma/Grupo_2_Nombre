@@ -1,0 +1,97 @@
+.mainPerfil{
+    margin: auto;
+    margin-top: 40px;
+    background-color: #1f2730;
+    border-radius: 20px;
+    width: 90%;
+    height: 90vh;
+}
+.contenedorInfo{
+    display: flex;
+    justify-content: space-around;
+}
+.nombrePerfil{
+    margin-top: 20px;
+    text-align: center;
+    color: gold;
+}
+.usuarioPerfil{
+    text-align: center;
+    color: rgb(233, 233, 0);
+}
+.correcionPerfil{
+    margin-top: 40px;
+}
+.textPerfil{
+    text-align: center;
+    color: white;
+}
+.imgPerfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 90px;
+    border: solid 1px rgb(173, 173, 0);
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+}
+.imgPerfil i{
+    color: rgb(233, 233, 0);
+    font-size: 90px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+}
+.contenedorInfoFooter{
+    display: flex;
+    margin-top: 5px;
+}
+.listaPerfil ul li{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.infoBasica h3{
+    text-align: center;
+    color: rgb(233, 233, 0);
+}
+.infoBasica h5{
+    text-align: center;
+    color: rgb(173, 173, 0);
+}
+.textP{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+@media (min-width: 1015px) {
+    .mainPerfil{
+        margin: auto;
+        margin-top: 40px;
+        background-color: #1f2730;
+        width: 65%;
+        height: 85vh;
+    }
+  }
+  @media (min-width: 1615px){
+    .contenedorInfo{
+        justify-content:space-evenly;
+    }
+    .nombrePerfil{
+        font-size: 30px;
+    }
+    .usuarioPerfil{
+        font-size: 27px;
+    }
+    .imgPerfil{
+        width: 250px;
+        height: 250px;
+        border-radius: 130px;
+    }
+    .imgPerfil i{
+        font-size: 150px;
+    }
+    .listaPerfil ul li{
+       margin-left: 20px;
+    }
+  }

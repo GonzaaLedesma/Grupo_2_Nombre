@@ -18,7 +18,7 @@ const administradorController = {
     creacionPost : (req,res)=>{
         const fotoEvento = req.file;
         const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body
-        let newProduct = {
+        let  = {
             id : Date.now(),
             nombre : nombre,
             dia : dia,
