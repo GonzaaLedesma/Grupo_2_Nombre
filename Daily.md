@@ -122,3 +122,4 @@
 - Corregimos errores.
 - Leimos y analizamos el siguiente sprint.
 - Sacamos dudas generales.
+- Comenzamos el sprint 5.
