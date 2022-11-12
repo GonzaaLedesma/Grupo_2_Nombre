@@ -38,7 +38,7 @@ const administradorController = {
         
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
         
-        res.redirect('/producto/catalogo');
+        res.render('./products/catalogo', {products});
         // res.redirect('/');
    },
     edicionPut : (req,res)=>{

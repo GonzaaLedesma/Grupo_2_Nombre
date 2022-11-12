@@ -14,7 +14,7 @@
     width: 100%;
 }
 .correcionCajasForm input{
-    width: 40%;
+    width: 70%;
 }
 .tituloRegisterCaja{
     margin-top: 5px;
@@ -41,11 +41,7 @@
     color: #ffffff;
     font-weight: 500;
 }
-
-.form-box input[type="text"],
-.form-box input[type="password"],
-.form-box button[type="submit"],
-.form-box input[type="email"]{
+.cajaRegisterInput{
     border: 0;
     background: none;
     display: block;
@@ -54,7 +50,6 @@
     border: 2px solid rgb(173, 173, 0);
     text-align: center;
     border-radius: 24px;
-    width: 70%;
     outline: none;
     color: #ffffff;
     transition: 0.25s;
@@ -75,9 +70,13 @@
 }
 /* ---Correcion--- */
 .form-box button[type="submit"]{
+    width: 40%;
     border: 0;
     background: #3742fa;
     cursor: pointer;
+    border-radius: 24px;
+    height: 30px;
+    margin-top: 15px;
 }
 .botonSumit a{
     text-decoration: none;
@@ -88,3 +87,39 @@
     margin: auto;
     width: 40%;
 }
+.errorInput{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 14px 10px;
+    border: 2px solid #D6000B ;
+    text-align: center;
+    border-radius: 24px;
+    width: 70%;
+    outline: none;
+    color: #ffffff;
+    transition: 0.25s;
+}
+.errorInputOptions{
+    text-align: center;
+    width: 50%;
+    border-radius: 7px;
+    background: #191919;
+    border: 2px solid #D6000B; 
+    height: 50px;
+    color: gray;
+}
+.errorInputText{
+    width: 50%;
+    text-align: center;
+    color: white;
+    border: 2px solid #D6000B; 
+    background: #191919;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.errorTxt{
+   color: #D6000B; 
+}
+  /* #D6000B */

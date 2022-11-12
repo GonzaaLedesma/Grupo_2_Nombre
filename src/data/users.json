@@ -1,76 +1,122 @@
 [
     {
         "id": 1,
-        "nombre":"Ronald Guerrero",
-        "subombre":"Roni",
-        "email":"Roni@gmail.com",
-        "contrasenia":"Ronald23",
-        "imagen":"-"
+        "nombre": "Gonzalo Ledesma",
+        "nombreUsuario": "Gonza",
+        "email": "gonza@admin.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "gonza123",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 2,
-        "nombre":"Pili Caldero",
-        "subombre":"Pili",
-        "email":"pili@gmail.com",
-        "contrasenia":"pili45",
-        "imagen":"-"
+        "nombre": "Pili Caldero",
+        "nombreUsuario": "Pili",
+        "email": "pili@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "femenino",
+        "contrasenia": "pili45",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 3,
-        "nombre":"fernanda guzman",
-        "subombre":"fer",
-        "email":"fer@gmail.com",
-        "contrasenia":"fernanda88",
-        "imagen":"-"
+        "nombre": "fernanda guzman",
+        "subombre": "fer",
+        "email": "fer@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "fernanda88",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 4,
-        "nombre":"Agustin Fernandez",
-        "subombre":"Poma",
-        "email":"agustin@gmail.com",
-        "contrasenia":"poma69",
-        "imagen":"-"
+        "nombre": "Agustin Fernandez",
+        "nombreUsuario": "Poma",
+        "email": "agustin@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "poma69",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 5,
-        "nombre":"Gabriel Gartenszten",
-        "subombre":"Gabriel",
-        "email":"gabriel@gmail.com",
-        "contrasenia":"Gabriel45"
+        "nombre": "Gabriel Gartenszten",
+        "nombreUsuario": "Gabriel",
+        "email": "gabriel@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "Gabriel45",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 6,
-        "nombre":"Santiago Herazo",
-        "subombre":"Santi",
-        "email":"santiago@gmail.com",
-        "contrasenia":"Santi433"
+        "nombre": "Santiago Herazo",
+        "nombreUsuario": "Santi",
+        "email": "santiago@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "Santi433",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 7,
-        "nombre":"Nicolas Morandin",
-        "subombre":"Nico",
-        "email":"Nico@gmail.com",
-        "contrasenia":"Nico233"
+        "nombre": "Nicolas Morandin",
+        "nombreUsuario": "Nico",
+        "email": "Nico@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "Nico233",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 8,
-        "nombre":"Osquir Gemelier",
-        "subombre":"Os",
-        "email":"Osquin@gmail.com",
-        "contrasenia":"Osquir344"
+        "nombre": "Osquir Gemelier",
+        "nombreUsuario": "Os",
+        "email": "Osquin@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "Osquir344",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 9,
-        "nombre":"Alfredo Armas",
-        "subombre":"Alfa",
-        "email":"Alfa@gmail.com",
-        "contrasenia":"Alfa69"
+        "nombre": "Alfredo Armas",
+        "nombreUsuario": "Alfa",
+        "email": "Alfa@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "Alfa69",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     },
     {
         "id": 10,
-        "nombre":"Luis Angel",
-        "subombre":"Luis",
-        "email":"Luis@gmail.com",
-        "contrasenia":"Luis679"
+        "nombre": "Luis Angel",
+        "nombreUsuario": "Luis",
+        "email": "Luis@gmail.com",
+        "pais": "Argentina",
+        "gustosUsuario": "rock",
+        "genero": "masculino",
+        "contrasenia": "Luis679",
+        "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "imagen": "-"
     }
 ]
