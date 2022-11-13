@@ -70,56 +70,54 @@
 }
 /* ---Correcion--- */
 .form-box button[type="submit"]{
-    width: 40%;
+    width: 60%;
     border: 0;
     background: #3742fa;
     cursor: pointer;
     border-radius: 24px;
-    height: 30px;
+    height: 45px;
     margin-top: 15px;
-}
-.botonSumit a{
-    text-decoration: none;
     color: white;
 }
+
 
 .cajaSendRegister{
     margin: auto;
     width: 40%;
 }
-.errorInput{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    padding: 14px 10px;
-    border: 2px solid #D6000B ;
-    text-align: center;
-    border-radius: 24px;
-    width: 70%;
-    outline: none;
-    color: #ffffff;
-    transition: 0.25s;
-}
-.errorInputOptions{
+.opcionesRegister{
     text-align: center;
     width: 50%;
     border-radius: 7px;
     background: #191919;
-    border: 2px solid #D6000B; 
+    border: 2px solid rgb(173, 173, 0);
     height: 50px;
     color: gray;
 }
-.errorInputText{
+.textAreaRegister{
     width: 50%;
     text-align: center;
     color: white;
-    border: 2px solid #D6000B; 
+    border: 2px solid rgb(173, 173, 0);
     background: #191919;
     border-radius: 5px;
     margin-top: 15px;
 }
+.imagenPerfilRegister{
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(173, 173, 0);
+    background: #191919;
+}
 .errorTxt{
    color: #D6000B; 
 }
+.errorBorder{
+    border: 2px solid #D6000B; 
+}
   /* #D6000B */
+  @media ( max-width: 800px) {
+    .imagenPerfilRegister{
+        width: 80%;
+    }
+  }

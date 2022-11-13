@@ -6,7 +6,7 @@ const rutasMain = require('./src/routes/main');
 const rutasAdministrador = require('./src/routes/administrador');
 const methodOverride = require('method-override');
 const app = express();
-// const session = require ('express-session');
+const session = require ('express-session');
 
 app.use(express.urlencoded({extended:false}));
 
@@ -17,7 +17,11 @@ const publicPath = path.resolve(__dirname, './public');
 
 app.use(express.static(publicPath));
 
-//app.use(session({secret: "tiket secreto"})); 
+app.use(session({
+    secret: "tiket secreto",
+    resave: false,
+    saveUninitialized: false,
+})); 
 
 app.listen(3000,()=>{
     console.log("Servidor en puerto 3000");

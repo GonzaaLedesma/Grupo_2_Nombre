@@ -31,6 +31,7 @@
 }
 
 .form-boxLogin input[type="text"],
+.form-boxLogin input[type="email"],
 .form-boxLogin input[type="password"],
 .form-boxLogin button[type="submit"]{
     border: 0;

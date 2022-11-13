@@ -1,134 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
   <%- include('../partials/head') %>
-<body>
-  <%- include('../partials/header') %>
+  <body>
+    <%- include('../partials/header') %>
     <main class="mainRegister">
-        <form action="/usuario/" method="POST" class="form-box" enctype="multipart/form-data">
-            <h1 class="form-title">Registro</h1>
-            <div class="correcionCajasForm">
-                <label for="nombre"></label>
-                <input class="cajaRegisterInput <%= locals.errors && errors.nombre ? 'errorInput' : null %>" 
-                type="text"  name="nombre"  placeholder="Nombre y apellido" 
+      <form
+        action="/usuario/register"
+        method="POST"
+        class="form-box"
+        enctype="multipart/form-data"
+      >
+        <h1 class="form-title">Registro</h1>
+        <div class="correcionCajasForm">
+            <label for="nombre"></label>
+            <input
+                class="cajaRegisterInput <%= locals.errors && errors.nombre ? 'errorBorder' : null %>"
+                type="text"
+                name="nombre"
+                placeholder="Nombre y apellido"
                 value="<%= locals.oldData ? oldData.nombre : null %>"
-                >
-                <% if (locals.errors && errors.nombre) { %>
-                    <div class="errorTxt">
-                        <%= errors.nombre.msg %> 
-                    </div>
-                <% } %>
-            </div>
-            <div class="correcionCajasForm ">
-                <label for="nombreUsuario"></label> 
-                <input class="cajaRegisterInput <%= locals.errors && errors.nombreUsuario ? 'errorInput' : null %>" 
-                type="text"  name="nombreUsuario"  placeholder="Nombre de Usuario" 
+            />
+            <% if (locals.errors && errors.nombre) { %>
+            <div class="errorTxt"><%= errors.nombre.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label for="nombreUsuario"></label>
+            <input
+                class="cajaRegisterInput <%= locals.errors && errors.nombreUsuario ? 'errorBorder' : null %>"
+                type="text"
+                name="nombreUsuario"
+                placeholder="Nombre de Usuario"
                 value="<%= locals.oldData ? oldData.nombreUsuario : null %>"
-                >
-                <% if (locals.errors && errors.nombreUsuario) { %>
-                    <div class="errorTxt">
-                        <%= errors.nombreUsuario.msg %> 
-                    </div>
-                <% } %>           
-            </div>
-            <div class="correcionCajasForm">
-                <label for="nombre"></label>
-                <input class="cajaRegisterInput <%= locals.errors && errors.email ? 'errorInput' : null %>" 
-                type="email"  name="email"  placeholder="E-mail"
+            />
+            <% if (locals.errors && errors.nombreUsuario) { %>
+            <div class="errorTxt"><%= errors.nombreUsuario.msg %></div>
+          <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label for="nombre"></label>
+            <input
+                class="cajaRegisterInput <%= locals.errors && errors.email ? 'errorBorder' : null %>"
+                type="email"
+                name="email"
+                placeholder="E-mail"
                 value="<%= locals.oldData ? oldData.email : null %>"
-                >
-                <% if (locals.errors && errors.email) { %>
-                    <div class="errorTxt">
-                        <%= errors.email.msg %> 
-                    </div>
-                <% } %>    
-            </div>
-            <div class="correcionCajasForm">
-                <label for="pais"></label>
-                <input class="cajaRegisterInput <%= locals.errors && errors.pais ? 'errorInput' : null %>" 
-                type="text"  name="pais"  placeholder="Pais en el que resides"
+            />
+            <% if (locals.errors && errors.email) { %>
+            <div class="errorTxt"><%= errors.email.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label for="pais"></label>
+            <input
+                class="cajaRegisterInput <%= locals.errors && errors.pais ? 'errorBorder' : null %>"
+                type="text"
+                name="pais"
+                placeholder="Pais en el que resides"
                 value="<%= locals.oldData ? oldData.pais : null %>"
-                >
-                <% if (locals.errors && errors.pais) { %>
-                    <div class="errorTxt">
-                        <%= errors.pais.msg %> 
-                    </div>
-                <% } %>  
-            </div>
-            <div class="correcionCajasForm"> 
-                <label for="contrasenia"></label>
-                <input class="cajaRegisterInput  <%= locals.errors && errors.contrasenia ? 'errorInput' : null %>"
-                 type="password" name="contrasenia" placeholder="Contraseña">
-                <% if (locals.errors && errors.contrasenia) { %>
-                    <div class="errorTxt">
-                        <%= errors.contrasenia.msg %> 
-                    </div>
-                <% } %> 
-            </div>
-            <div class="correcionCajasForm">
-                    <label class="tituloRegisterCaja" for="gustosUsuario">Tus Gustos</label>
-                    <label class="checkBoxs"> <input type="checkbox" name="gustosUsuario" value="rock">Rock</label>
-                    <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="pop">Pop </label>
-                    <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="metal">Metal </label>
-                    <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="trap">Trap</label>
-                    <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="reaggeaton">Reaggeaton</label>
-                    <label class="checkBoxs"><input type="checkbox" name="gustosUsuario" value="electronica">Electronica</label>
-                <% if (locals.errors && errors.gustosUsuario) { %>
-                        <div class="errorTxt">
-                            <%= errors.gustosUsuario.msg %> 
-                        </div>
-                <% } %> 
-            </div>
-            <div class="correcionCajasForm"> 
-                <!-- revisar -->
-                <label class="tituloRegisterCaja" for="genero">Genero</label>
-                <select class="opcionesCategoria  <%= locals.errors && errors.genero ? 'errorInputOptions' : null %>"  
-                    name="genero"
-                    >
-                    <option  value="">Seleccione</option> 
-                    <option  value="masculino">Masculino</option> 
-                    <option  value="femenino">Femenino</option> 
-                    <option  value="helicoptero Apache">Helicoptero Apache</option> 
-                    <option  value="otros">Otros</option> 
-                </select>
-                <% if (locals.errors && errors.genero) { %>
-                    <div class="errorTxt">
-                        <%= errors.genero.msg %> 
-                    </div>
-                <% } %> 
-            </div>
-            <div class="correcionCajasForm">
-                <label for="infoUsuario"></label>
-                <!-- revisar placeholder -->
-                <textarea class="textAreaRegister <%= locals.errors && errors.infoUsuario ? 'errorInputOptions' : null %>" 
-                name="infoUsuario" placeholder="Cuentanos sobre ti"
+            />
+            <% if (locals.errors && errors.pais) { %>
+            <div class="errorTxt"><%= errors.pais.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label for="contrasenia"></label>
+            <input
+                class="cajaRegisterInput <%= locals.errors && errors.contrasenia ? 'errorBorder' : null %>"
+                type="password"
+                name="contrasenia"
+                placeholder="Contraseña"
+            />
+            <% if (locals.errors && errors.contrasenia) { %>
+            <div class="errorTxt"><%= errors.contrasenia.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label class="tituloRegisterCaja" for="gustosUsuario"
+                >Tus Gustos</label
+            >
+            <label class="checkBoxs">
+                <input
+                type="checkbox"
+                name="gustosUsuario"
+                value="rock"
+                />Rock</label
+            >
+            <label class="checkBoxs"
+                ><input type="checkbox" name="gustosUsuario" value="pop" />Pop
+            </label>
+            <label class="checkBoxs"
+                ><input type="checkbox" name="gustosUsuario" value="metal" />Metal
+            </label>
+            <label class="checkBoxs"
+                ><input
+                type="checkbox"
+                name="gustosUsuario"
+                value="trap"
+                />Trap</label
+            >
+            <label class="checkBoxs"
+                ><input
+                type="checkbox"
+                name="gustosUsuario"
+                value="reaggeaton"
+                />Reaggeaton</label
+            >
+            <label class="checkBoxs"
+                ><input
+                type="checkbox"
+                name="gustosUsuario"
+                value="electronica"
+                />Electronica</label
+            >
+            <% if (locals.errors && errors.gustosUsuario) { %>
+            <div class="errorTxt"><%= errors.gustosUsuario.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label class="tituloRegisterCaja" for="genero">Genero</label>
+            <select
+                class="opcionesRegister <%= locals.errors && errors.genero ? 'errorBorder' : null %>"
+                name="genero"
+            >
+                <option value="">Seleccione</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="helicoptero Apache">Helicoptero Apache</option>
+                <option value="otros">Otros</option>
+            </select>
+            <% if (locals.errors && errors.genero) { %>
+            <div class="errorTxt"><%= errors.genero.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label for="infoUsuario" class="tituloRegisterCaja"></label>
+            <textarea
+                class="textAreaRegister <%= locals.errors && errors.infoUsuario ? 'errorBorder' : null %>"
+                name="infoUsuario"
+                placeholder="Cuentanos sobre ti"
                 value="<%= locals.oldData ? oldData.infoUsuario : null %>"
-                >
-                </textarea>
-                <% if (locals.errors && errors.infoUsuario) { %>
-                    <div class="text-danger">
-                        <%= errors.infoUsuario.msg %>
-                    </div>
+            ></textarea>
+            <% if (locals.errors && errors.infoUsuario) { %>
+            <div class="errorTxt"><%= errors.infoUsuario.msg %></div>
+            <% } %>
+        </div>
+        <div class="cajaAdmin">
+            <label for="ImgEvento">
+                <div class="label">Seleccione una foto de Perfil</div>
+                <div>
+                <input
+                    class="imagenPerfilRegister <%= locals.errors && errors.imagen ? 'errorBorder' : null %>"
+                    type="file"
+                    name="imagen"
+                />
+                </div>
+                <% if (locals.errors && errors.imagen) { %>
+                <div class="errorTxt"><%= errors.imagen.msg %></div>
                 <% } %>
-            </div>
-            <div class="cajaAdmin">
-                <!-- revisar -->
-                <label for="ImgEvento">
-                    <div class="label">Seleccione Foto de Perfil</div>
-                    <div class="fotoEventoAdmin <%= locals.errors && errors.imagen ? 'is-invalid' : null %>">
-                        <input type="file" name="imagen">
-                    </div>
-                    <% if (locals.errors && errors.imagen) { %>
-                        <div class="text-danger">
-                            <%= errors.imagen.msg %>
-                        </div>
-                    <% } %>
-                </label>
-            </div>
-            <div class="cajaSendRegister">
-                <button class="botonSumit" type="submit">Enviar</button>
-            </div>
-        </form>
+            </label>
+        </div>
+        <div class="cajaSendRegister">
+          <button class="botonSumit" type="submit">Enviar</button>
+        </div>
+      </form>
     </main>
     <%- include('../partials/footer') %>
-</body>
+  </body>
 </html>

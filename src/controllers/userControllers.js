@@ -20,6 +20,7 @@ const userController = {
 		}
 
         return res.send("Tas registrado")
+        // return res.send(resultValidation.errors)
     },
     perfil : (req,res)=>{
         return res.render("users/perfil")
