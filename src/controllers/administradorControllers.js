@@ -43,8 +43,8 @@ const administradorController = {
    },
     edicionPut : (req,res)=>{
         const productsId = req.params.id;
+        // const fotoEvento = req.file;
         const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body;
-        const fotoEvento = req.file;
         products.forEach((products)=>{
           if(products.id == productsId){
                 products.nombre = nombre,
@@ -58,12 +58,12 @@ const administradorController = {
                 products.categoria = categoria,
                 products.descripcion = descripcion,
                 products.biografia = biografia
-                products.fotoEvento = fotoEvento.filename
+                // products.fotoEvento = fotoEvento.filename
         }
         })
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
 
-        res.redirect('/')
+        res.render('./products/catalogo', {products});
     
     },
     destroy : (req, res) => {

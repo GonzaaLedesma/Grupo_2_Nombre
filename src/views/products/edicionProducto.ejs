@@ -4,7 +4,7 @@
 <body>
   <%- include('../partials/header') %>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="/administrador/<%= editarProducto.id %>?_method=PUT" class="form-box" enctype="multipart/form-data" method="POST">
+        <form class="formularioAdmin" action="/administrador/<%= editarProducto.id %>?_method=PUT" class="form-box" method="POST">
             <h1 class="form-title">Edicion de <%= editarProducto.nombre %></h1>
             <div class="cajaAdmin">
                 <label  for="Cambio-Evento">Evento</label>
@@ -50,12 +50,12 @@
                 <label   for="Cambio-Biografia-Evento">Biografia Breve</label>
                 <textarea class="textArea" name="biografia" ><%= editarProducto.biografia %></textarea>
             </div>
-            <div class="cajaAdmin">
+            <!-- <div class="cajaAdmin">
                 <label  for="Cambio-ImgEvento">
                     <div class="label">Seleccione Foto de Evento</div>
-                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento"  accept=".jpg"></div>
+                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento"  accept=".jpg" value="<%= editarProducto.fotoEvento %>"></div>
                 </label>
-            </div>
+            </div> -->
             <div class="cajaAdminSend">
                 <button type="submit" value="editar">Enviar</button>
             </div>
