@@ -17,7 +17,7 @@
  {
   "id": 1,
   "nombre": "The Weezer",
-  "dia": "22 de Octubre",
+  "dia": "22/10/2022",
   "ubicacion": "Los Angeles",
   "sede": "(Disney Concert Hall)",
   "participacion": " OneRepublic, Halsey y mas",
@@ -32,7 +32,7 @@
  {
   "id": 2,
   "nombre": "Foo Fighters",
-  "dia": "12 de Octubre",
+  "dia": "12/10/2022",
   "ubicacion": "Strahov en Praga",
   "sede": "(Gran Estadio Strahov)",
   "participacion": " Guns N ‘Roses, U2 y Bon Jovi",
@@ -47,7 +47,7 @@
  {
   "id": 3,
   "nombre": "Sam Fender",
-  "dia": "30 de Octubre",
+  "dia": "30/10/2022",
   "ubicacion": "Ohio en Columbus",
   "sede": "(Estadio de Ohio)",
   "participacion": " George Strait y Beyonce",
@@ -62,7 +62,7 @@
  {
   "id": 4,
   "nombre": "The Story So Far",
-  "dia": "24 de Octubre",
+  "dia": "24/10/2022",
   "ubicacion": "Beijing",
   "sede": "(Estadio Nacional de Beijing)",
   "participacion": " Ed Sheeran",
@@ -77,7 +77,7 @@
  {
   "id": 5,
   "nombre": "One Republic",
-  "dia": "25 de Octubre",
+  "dia": "25/10/2022",
   "ubicacion": "Belo Horizonte, Brasil",
   "sede": "(Mineirão)",
   "participacion": "Kiss, Beyonce y John Mayer",
@@ -92,7 +92,7 @@
  {
   "id": 6,
   "nombre": "Maroon 5",
-  "dia": "30 de Octubre",
+  "dia": "30/10/2022",
   "ubicacion": "Sydney, Australia",
   "sede": "(Qudos Bank Arena)",
   "participacion": "Katy Perry y Jay Chou",
@@ -107,7 +107,7 @@
  {
   "id": 7,
   "nombre": "Avril Lavigne",
-  "dia": "21 de Noviembre",
+  "dia": "21/11/2022",
   "ubicacion": "Bukit Jalil",
   "sede": "(Estadio Nacional Bukit Jalil)",
   "participacion": "Head Above Water Tour",
@@ -122,7 +122,7 @@
  {
   "id": 8,
   "nombre": "Machine Gun Kelly",
-  "dia": "11 de Noviembre",
+  "dia": "11/11/2022",
   "ubicacion": "Londres, Inglaterra",
   "sede": "(Estadio de Wembley)",
   "participacion": "Parte de su gira mundia",
@@ -137,7 +137,7 @@
  {
   "id": 9,
   "nombre": "Green Day",
-  "dia": "21, 22 y 23 de Diciembre",
+  "dia": "21/12/2022",
   "ubicacion": "Austin, Tx, Us",
   "sede": "(Estadio Hollywood)",
   "participacion": "Circuit of the Americas Tour",
@@ -152,7 +152,7 @@
  {
   "id": 10,
   "nombre": "Paramore",
-  "dia": "19, 20 y 21 de Diciembre",
+  "dia": "19/12/2022",
   "ubicacion": "Río de Janeiro, Brasil",
   "sede": "(Estadio Maracaná)",
   "participacion": "Frank Sinatra y Foo Fighters",
@@ -167,7 +167,7 @@
  {
   "id": 11,
   "nombre": "Against The Current",
-  "dia": "12 de diciembre",
+  "dia": "12/12/2022",
   "ubicacion": "Tilburg, Netherlands",
   "sede": "(Veemarktstraat)",
   "participacion": "Britney Spears y Foo Fighters",
@@ -182,7 +182,7 @@
  {
   "id": 12,
   "nombre": "Catfish and The Bottlemen",
-  "dia": "28 de diciembre",
+  "dia": "28/12/2022",
   "ubicacion": "Inglaterra. Manchester",
   "sede": "(Manchester Arena)",
   "participacion": "(Take That y Britney Spears",
@@ -197,7 +197,7 @@
  {
   "id": 13,
   "nombre": "Bring Me The Horizon",
-  "dia": "26 de Septiembre",
+  "dia": "26/09/2022",
   "ubicacion": "Seúl, Corea del Sur",
   "sede": "(Olímpico de Seúl)",
   "participacion": "---",
@@ -212,7 +212,7 @@
  {
   "id": 14,
   "nombre": "Arctic Monkeys",
-  "dia": "21 de Septiembre",
+  "dia": "21/09/2022",
   "ubicacion": "George, Washington",
   "sede": "(Anfiteatro Gorge)",
   "participacion": "---",
@@ -227,7 +227,7 @@
  {
   "id": 15,
   "nombre": "Ed Sheeran",
-  "dia": "19 de Septiembre",
+  "dia": "19/09/2022",
   "ubicacion": "Bucarest, Rumania",
   "sede": "(Romexpo)",
   "participacion": "---",
@@ -242,7 +242,7 @@
  {
   "id": 16,
   "nombre": "Twenty One Pilots",
-  "dia": "13 de Septiembre",
+  "dia": "13/09/2022",
   "ubicacion": "Paris, Francia",
   "sede": "(Paris La Défense Arena)",
   "participacion": "---",
