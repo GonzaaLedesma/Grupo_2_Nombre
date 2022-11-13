@@ -4,7 +4,7 @@
 <body>
   <%- include('../partials/header') %>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="/administrador/<%= editarProducto.id %>?_method=PUT" class="form-box" method="POST">
+        <form class="formularioAdmin" action="/administrador/<%= editarProducto.id %>?_method=PUT" class="form-box" method="POST" enctype="multipart/form-data">
             <h1 class="form-title">Edicion de <%= editarProducto.nombre %></h1>
             <div class="cajaAdmin">
                 <label  for="Cambio-Evento">Evento</label>
@@ -39,9 +39,9 @@
                 <input required type="text" name="horario" value="<%= editarProducto.horario %>">
             </div>
             <div class="cajaAdmin"> 
-                <label  for="Cambio-Categoria">Categoria anterior:(<%= editarProducto.categoria %>)</label>
+                <label  for="Cambio-Categoria">Categoria</label>
                 <select class="opcionesCategoria" required name="categoria" id="categoria">
-                    <option>Seleccione</option> 
+                    <option value="<%= editarProducto.categoria %>"><%= editarProducto.categoria %></option> 
                     <option  value="Actuales">Actuales</option> 
                     <option  value="Nuevos">Nuevos</option> 
                     <option  value="Proximos">Proximos</option> 
@@ -55,12 +55,12 @@
                 <label   for="Cambio-Biografia-Evento">Biografia Breve</label>
                 <textarea class="textArea" name="biografia" ><%= editarProducto.biografia %></textarea>
             </div>
-            <!-- <div class="cajaAdmin">
+            <div class="cajaAdmin">
                 <label  for="Cambio-ImgEvento">
                     <div class="label">Seleccione Foto de Evento</div>
                     <div class="fotoEventoAdmin"><input type="file" name="fotoEvento"  accept=".jpg"></div>
-                </label> agregar el enctype si se aniade esto////////////////
-            </div> -->
+                </label> 
+            </div>
             <div class="cajaAdminSend">
                 <button type="submit" value="editar">Enviar</button>
             </div>
