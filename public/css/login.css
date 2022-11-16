@@ -30,10 +30,7 @@
     font-weight: 500;
 }
 
-.form-boxLogin input[type="text"],
-.form-boxLogin input[type="email"],
-.form-boxLogin input[type="password"],
-.form-boxLogin button[type="submit"]{
+.formsBoxLogin{
     border: 0;
     background: none;
     display: block;
@@ -88,6 +85,12 @@
     background: none;
     color: #ffffff;
 }
+.errorTxtLogin{
+    color: #D6000B; 
+ }
+ .errorBorderLogin{
+     border: 2px solid #D6000B; 
+ }
 
 .logo{
     display: flex;

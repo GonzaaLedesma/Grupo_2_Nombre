@@ -38,8 +38,8 @@ const administradorController = {
         
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
         
-        res.render('./products/catalogo', {products});
-        // res.redirect('/');
+        // error de rericcion
+        res.render('./products/catalogo', {products}); 
    },
     edicionPut : (req,res)=>{
         const productsId = req.params.id;

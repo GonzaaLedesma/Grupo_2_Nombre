@@ -114,6 +114,10 @@
 - Realizamos el retro.
 - Actualizamos el daily.
 
+
+## sprint 5
+
+
 ## Miercoles 9:
 
 - Realizamos trabajo en live share.
@@ -123,3 +127,30 @@
 - Leimos y analizamos el siguiente sprint.
 - Sacamos dudas generales.
 - Comenzamos el sprint 5.
+
+## viernes 11:
+
+- Realizamos un live share
+- Corregimos error del formulario de edicion.
+- Corregimos errores de redirecciones.
+- Agreamos express-validator.
+- Agregamos instancias de errores con express-validator
+- Actualizamos el codigo, para que este mas completo y legible.
+
+## Sabado 12:
+
+- Realizamos una llamada en discord.
+- Agregamos express-session al trabajo.
+- Agregamos Cookie-Parser al trabajo.
+- Implementamos los middelwares.
+- Pasamos los metodos a archivos de middelwares js.
+- Comenzamos con los modules de User.
+
+# Miercoles 16:
+
+- Realizamos una llamada en discord.
+- Agregamos bcryptjs al trabajo.
+- Finalizamos con los modules de usuario.
+- Modularizamos hacia userControllers.
+- Los metodos de login y register son funcionales.
+- Se puso al dia a todo el equipo para que estemos en sintonia.
