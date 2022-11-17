@@ -154,3 +154,13 @@
 - Modularizamos hacia userControllers.
 - Los metodos de login y register son funcionales.
 - Se puso al dia a todo el equipo para que estemos en sintonia.
+
+# Jueves 17:
+
+- Realizamos una llamada en discord.
+- Resolvimos dudas de base de datos.
+- Empezamos las tablas de nuestro proyecto.
+- Realizamos un live share.
+- Continuamos con el sprint 5.
+- Agregamos nuevos middlewares.
+- Implemantamos un logout.

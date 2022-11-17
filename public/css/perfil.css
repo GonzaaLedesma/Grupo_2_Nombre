@@ -8,7 +8,14 @@
 }
 .contenedorInfo{
     display: flex;
-    justify-content: space-around;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+.infoNombre{
+    margin: auto;
+    padding-right: 30px;
 }
 .nombrePerfil{
     margin-top: 20px;
@@ -27,29 +34,23 @@
     color: white;
 }
 .imgPerfil{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 90px;
-    border: solid 1px rgb(173, 173, 0);
-    width: 150px;
-    height: 150px;
-    margin: 5px;
+    margin: auto;
 }
-.imgPerfil i{
-    color: rgb(233, 233, 0);
-    font-size: 90px;
-    padding-bottom: 10px;
-    padding-left: 3px;
+.imgPerfil img{
+    width: 40vw;
+    height: 15vh;
+    border-radius: 300px;
+    margin: auto;
 }
 .contenedorInfoFooter{
     display: flex;
     margin-top: 5px;
 }
-.listaPerfil ul li{
-    color: white;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+.infoBasica{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 .infoBasica h3{
     text-align: center;
@@ -64,14 +65,29 @@
     text-align: center;
     font-size: 16px;
 }
+.textInfoPerfil{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+@media (min-width: 600px){
+    .imgPerfil img{
+        height: 20vh;
 
-@media (min-width: 1015px) {
+    }
+}
+@media (min-width: 815px) {
     .mainPerfil{
         margin: auto;
         margin-top: 40px;
         background-color: #1f2730;
-        width: 65%;
-        height: 85vh;
+        width: 70%;
+        height: 90vh;
+    }
+    .imgPerfil img{
+        width: 400px;
+        height: 250px;
+        border-radius: 300px;
     }
   }
   @media (min-width: 1615px){
@@ -94,5 +110,8 @@
     }
     .listaPerfil ul li{
        margin-left: 20px;
+    }
+    .textInfoPerfil{
+        width: 60vw;
     }
   }

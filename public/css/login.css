@@ -1,6 +1,7 @@
 .mainLogin{
     margin: 0;
     padding: 0;
+    padding-top: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -46,6 +47,7 @@
 }
 
 .form-boxLogin input[type="text"]:focus,
+.form-boxLogin input[type="email"]:focus,
 .form-boxLogin input[type="password"]:focus{
     width: 50%;
     border-color: #ffffff;

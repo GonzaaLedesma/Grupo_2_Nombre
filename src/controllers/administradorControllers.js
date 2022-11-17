@@ -59,7 +59,7 @@ const administradorController = {
                 products.descripcion = descripcion,
                 products.biografia = biografia
                 products.fotoEvento = fotoEvento.filename
-        }
+            }
         })
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
 

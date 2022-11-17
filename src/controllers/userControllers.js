@@ -43,41 +43,49 @@ const userController = {
     return res.render("users/login");
   },
   loginProcess: (req, res) => {
-    let login = usuario.findField("email", req.body.email);
+    let loginUser = usuario.findField("email", req.body.email);
 
-    if(login) {
-        let passwordCompare = bcryptjs.compareSync(req.body.contrasenia, login.contrasenia);
-        if (passwordCompare) {
-            delete login.contrasenia;
-            req.session.logged = login;
+    if (loginUser) {
+      let passwordCompare = bcryptjs.compareSync(
+        req.body.contrasenia,
+        loginUser.contrasenia
+      );
+      if (passwordCompare) {
+        delete loginUser.contrasenia;
+        req.session.logged = loginUser;
 
-            if(req.body.remember) {
-                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-            }
+        if (req.body.remember) {
+          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+        }
 
-            return res.redirect("perfil");
-        } 
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'Las credenciales son inválidas'
-                }
-            }
-        });
+        return res.redirect("perfil");
+      }
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "Las credenciales son inválidas",
+          },
+        },
+      });
     }
 
-    return res.render('users/login', {
-        errors: {
-            email: {
-                msg: 'No se encuentra este email en nuestra base de datos'
-            }
-        }
+    return res.render("users/login", {
+      errors: {
+        email: {
+          msg: "No se encuentra este email en nuestra base de datos",
+        },
+      },
     });
-    
   },
   perfil: (req, res) => {
-    return res.render("users/perfil");
+    console.log(req.session);
+    return res.render("users/perfil", {usuarioLogeado: req.session.logged});
   },
+  logout:(req, res)=>{
+    res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+  }
 };
 
 module.exports = userController;
