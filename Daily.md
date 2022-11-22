@@ -164,3 +164,19 @@
 - Continuamos con el sprint 5.
 - Agregamos nuevos middlewares.
 - Implemantamos un logout.
+
+# Lunes 21:
+
+- Realizamos una llamada en discord.
+- Seguimos utilizando live share como metodo de trabajo.
+- Corregimos errores del formulario de registro.
+- Comenzamos a hacer la coockie de "Recuerdame"
+- Creamos la vista de ayuda.
+- Continuamos con el sprint 5.
+
+# Martes 22:
+
+- Realizamos una llamada en discord.
+- Revisamos el codigo.
+- Corregimos errores.
+

@@ -7,15 +7,13 @@ const rutasProductos = require("./src/routes/producto");
 const rutasMain = require("./src/routes/main");
 const rutasAdministrador = require("./src/routes/administrador");
 const session = require("express-session");
-const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
-
-app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride("_method"));
-app.use(express.json());
+const cookies = require('cookie-parser');
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
+app.use(express.json());
 
+const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
 app.use(
   session({
     secret: "tiket secreto",
@@ -24,7 +22,13 @@ app.use(
   })
 );
 
+app.use(cookies());
+
 app.use(loggedMiddleware);
+
+app.use(express.urlencoded({ extended: false }));
+
+app.use(methodOverride("_method"));
 
 app.listen(3000, () => {
   console.log("Servidor en puerto 3000");

@@ -6,13 +6,19 @@
     <main class="mainLogin">
       <form action="/usuario/login" method="POST" class="form-boxLogin">
         <h1 class="form-title">Ingresar</h1>
-        <br>
+        <br />
         <% if (locals.errors && errors.email) { %>
         <div class="errorTxtLogin"><%= errors.email.msg %></div>
         <% } %>
         <div class="correcionCajasForm">
           <label for="email"></label>
-          <input required class="formsBoxLogin <%= locals.errors && errors.email ? 'errorBorderLogin' : null %>" type="email" name="email" placeholder="Su email" />
+          <input
+            required
+            class="formsBoxLogin <%= locals.errors && errors.email ? 'errorBorderLogin' : null %>"
+            type="email"
+            name="email"
+            placeholder="Su email"
+          />
         </div>
         <div class="correcionCajasForm">
           <label for="contrasenia"></label>
@@ -25,7 +31,7 @@
           />
         </div>
         <div>
-          <input type="checkbox" placeholder="rememberMe" />
+          <input type="checkbox" name="recuerdame"/>
           <h4>Recuerdame</h4>
         </div>
         <div>

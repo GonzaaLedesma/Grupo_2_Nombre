@@ -54,8 +54,8 @@ const userController = {
         delete loginUser.contrasenia;
         req.session.logged = loginUser;
 
-        if (req.body.remember) {
-          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+       if (req.body.recuerdame) {
+          res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
         }
 
         return res.redirect("perfil");
@@ -68,7 +68,6 @@ const userController = {
         },
       });
     }
-
     return res.render("users/login", {
       errors: {
         email: {
@@ -78,14 +77,13 @@ const userController = {
     });
   },
   perfil: (req, res) => {
-    console.log(req.session);
-    return res.render("users/perfil", {usuarioLogeado: req.session.logged});
+    return res.render("users/perfil", { usuarioLogeado: req.session.logged });
   },
-  logout:(req, res)=>{
-    res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
-  }
+  logout: (req, res) => {
+    res.clearCookie("datosEmail");
+    req.session.destroy();
+    return res.redirect("/");
+  },
 };
 
 module.exports = userController;

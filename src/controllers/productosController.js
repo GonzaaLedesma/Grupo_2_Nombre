@@ -15,7 +15,10 @@ const productosController = {
     },
     carrito : (req,res)=>{
         return res.render("products/carrito");
-    }
+    },
+    ayuda : (req,res)=>{
+        return res.render("products/ayuda");
+    },
 }
 
 module.exports = productosController;

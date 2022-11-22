@@ -1,0 +1,23 @@
+.ayudaMain{
+    display: flex;
+    background-color: #222e3b;
+    width: 95%;
+    height: 85%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 40px;
+    border: 0.5px solid rgb(255, 222, 33);
+}
+.tituloAyuda{
+    text-align: center;
+    color: gold;
+    border-bottom: 1px solid gold;
+}
+.preguntasAyuda{
+    text-align: center;
+    color: rgb(231, 210, 86);
+}
+.respuestasAyuda{
+    text-align: center;
+    color: white;
+}

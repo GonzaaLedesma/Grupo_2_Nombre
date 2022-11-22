@@ -5,6 +5,7 @@
     border-radius: 20px;
     width: 90%;
     height: 90vh;
+    border: 0.5px solid gold;
 }
 .contenedorInfo{
     display: flex;
@@ -39,8 +40,10 @@
 .imgPerfil img{
     width: 40vw;
     height: 15vh;
+    padding: 5px ;
     border-radius: 300px;
     margin: auto;
+    border: 0.5px solid gold;
 }
 .contenedorInfoFooter{
     display: flex;
@@ -72,16 +75,16 @@
 }
 @media (min-width: 600px){
     .imgPerfil img{
-        height: 20vh;
+        height: 23vh;
 
     }
 }
-@media (min-width: 815px) {
+@media (min-width: 915px) {
     .mainPerfil{
         margin: auto;
         margin-top: 40px;
         background-color: #1f2730;
-        width: 70%;
+        width: 55%;
         height: 90vh;
     }
     .imgPerfil img{
@@ -89,6 +92,7 @@
         height: 250px;
         border-radius: 300px;
     }
+    
   }
   @media (min-width: 1615px){
     .contenedorInfo{
@@ -112,6 +116,6 @@
        margin-left: 20px;
     }
     .textInfoPerfil{
-        width: 60vw;
+        width: 50vw;
     }
   }

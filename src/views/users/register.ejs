@@ -38,7 +38,7 @@
           <% } %>
         </div>
         <div class="correcionCajasForm">
-            <label for="nombre"></label>
+            <label for="email"></label>
             <input
                 class="cajaRegisterInput <%= locals.errors && errors.email ? 'errorBorder' : null %>"
                 type="email"
@@ -83,34 +83,48 @@
                 <input
                 type="checkbox"
                 name="gustosUsuario"
-                value="rock"
+                value=" rock"
+                <%= locals.oldData && oldData.gustosUsuario  == "rock" ? "checked" : null %>
                 />Rock</label
             >
             <label class="checkBoxs"
-                ><input type="checkbox" name="gustosUsuario" value="pop" />Pop
+                ><input 
+                type="checkbox" 
+                name="gustosUsuario" 
+                value=" pop"
+                <%= locals.oldData && oldData.gustosUsuario  == "pop" ? "checked" : null %>
+                 />Pop
             </label>
             <label class="checkBoxs"
-                ><input type="checkbox" name="gustosUsuario" value="metal" />Metal
+                ><input 
+                type="checkbox" 
+                name="gustosUsuario" 
+                value=" metal"
+                <%= locals.oldData && oldData.gustosUsuario == "metal"  ? "checked" : null %>
+                />Metal
             </label>
             <label class="checkBoxs"
                 ><input
                 type="checkbox"
                 name="gustosUsuario"
-                value="trap"
+                value=" trap"
+                <%= locals.oldData && oldData.gustosUsuario  == "trap" ? "checked" : null %>
                 />Trap</label
             >
             <label class="checkBoxs"
                 ><input
                 type="checkbox"
                 name="gustosUsuario"
-                value="reaggeaton"
+                value=" reaggeaton"
+                <%= locals.oldData && oldData.gustosUsuario  == "reaggeaton" ? "checked" : null %>
                 />Reaggeaton</label
             >
             <label class="checkBoxs"
                 ><input
                 type="checkbox"
                 name="gustosUsuario"
-                value="electronica"
+                value=" electronica "
+                <%= locals.oldData && oldData.gustosUsuario == "electronica" ? "checked" : null %>
                 />Electronica</label
             >
             <% if (locals.errors && errors.gustosUsuario) { %>
@@ -124,23 +138,21 @@
                 name="genero"
             >
                 <option value="">Seleccione</option>
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-                <option value="helicoptero Apache">Helicoptero Apache</option>
-                <option value="otros">Otros</option>
+                <option value="masculino" <%= locals.oldData && oldData.genero  == "masculino" ?'selected' : null %> >Masculino</option>
+                <option value="femenino" <%= locals.oldData && oldData.genero  == "femenino" ?'selected' : null %>>Femenino</option>
+                <option value="helicoptero Apache" <%= locals.oldData && oldData.genero == "helicoptero Apache" ? 'selected' : null %>>Helicoptero Apache</option>
+                <option value="otros" <%= locals.oldData && oldData.genero == "otro" ? 'selected' : null %>>Otros</option>
             </select>
             <% if (locals.errors && errors.genero) { %>
             <div class="errorTxt"><%= errors.genero.msg %></div>
             <% } %>
         </div>
         <div class="correcionCajasForm">
-            <label for="infoUsuario" class="tituloRegisterCaja"></label>
+            <label for="infoUsuario" class="tituloRegisterCaja">Cuentanos sobre ti</label>
             <textarea
                 class="textAreaRegister <%= locals.errors && errors.infoUsuario ? 'errorBorder' : null %>"
                 name="infoUsuario"
-                placeholder="Cuentanos sobre ti"
-                value="<%= locals.oldData ? oldData.infoUsuario : null %>"
-            ></textarea>
+                ><%= locals.oldData ? oldData.infoUsuario  : null %></textarea>
             <% if (locals.errors && errors.infoUsuario) { %>
             <div class="errorTxt"><%= errors.infoUsuario.msg %></div>
             <% } %>
@@ -161,6 +173,7 @@
             </label>
         </div>
         <div class="cajaSendRegister">
+            <% console.log(locals.oldData) %> 
           <button class="botonSumit" type="submit">Enviar</button>
         </div>
       </form>
