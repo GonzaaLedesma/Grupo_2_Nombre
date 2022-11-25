@@ -37,6 +37,7 @@ body{
 .nombreEvento1{
     text-align: center;
     color: white;
+    margin-top: 10px;
 }
 .nombreEvento2{
     display: none;

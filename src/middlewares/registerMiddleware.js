@@ -14,7 +14,7 @@ const validator = [
 	body('pais').notEmpty().withMessage('Tienes que elegir un país'),
 	body('imagen').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', '.png', '.gif', '.webp'];
 		
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');

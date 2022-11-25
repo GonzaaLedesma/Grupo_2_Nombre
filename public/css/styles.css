@@ -46,7 +46,6 @@
   .responsiveNav{
     display: flex;
     width: 100%;
-    /* margin:10px 0 0px 0; */
   }
   .correcionNav{
     display: flex;
@@ -151,6 +150,7 @@
     border-top: 1px solid rgb(173, 173, 0);
     border-bottom: 1px solid rgb(173, 173, 0);
   }
+
  /* ----------Hover---------- */
  .header button:hover a{
   color:rgb(173, 173, 0);
@@ -176,6 +176,7 @@
 }
 /* ----------Hover Fin------ */
   @media (min-width: 1200px){
+    
     .search{
       width: 30vw;
     }

@@ -29,6 +29,7 @@
     margin-right: 5px;
 }
 .form-box{
+    margin-top: 10px;
     width: 75%;
     padding: 10px;
     height: 100%;
@@ -68,6 +69,34 @@
     width: 150px;
     padding: 5px;
 }
+.divParaGradiant{
+    display: block;
+    margin: 10px;
+}
+.divParaGradiant::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 1%;
+    background:linear-gradient(
+      45deg, gold,blue,gold,blue,gold,blue,gold
+      );
+    background-size: 800%;
+    border-radius:10px ;
+    filter:blur(8px) ;
+    animation: glowing 80s linear infinite;
+  }
+  @keyframes glowing{
+    0%{
+      background-position: 0 0;
+    }
+    50%{
+      background-position: 250% 0;
+    }
+  }
 /* ---Correcion--- */
 .form-box button[type="submit"]{
     width: 60%;

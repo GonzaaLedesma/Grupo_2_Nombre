@@ -84,6 +84,55 @@ body {
   background-color: #1c2631;
   text-decoration: none;
 }
+  /* ------------Before--------- */
+  footer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 15%;
+    background:linear-gradient(
+      45deg, gold,blue,gold,blue,gold,blue,gold
+      );
+    background-size: 800%;
+    border-radius:10px ;
+    filter:blur(8px) ;
+    animation: glowing 80s linear infinite;
+  }
+  @keyframes glowing{
+    0%{
+      background-position: 0 0;
+    }
+    50%{
+      background-position: 250% 0;
+    }
+  }
+  header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 9%;
+    background:linear-gradient(
+      45deg, gold,blue,gold,blue,gold,blue,gold
+      );
+    background-size: 800%;
+    border-radius:10px ;
+    filter:blur(8px) ;
+    animation: glowing 80s linear infinite;
+  }
+  @keyframes glowing{
+    0%{
+      background-position: 0 0;
+    }
+    50%{
+      background-position: 250% 0;
+    }
+  }
 /* ------Hover------ */
 .tituloSuperior:hover {
   box-shadow: 10px 0px 15px rgb(100, 100, 100);
@@ -122,8 +171,14 @@ body {
   .contenedorCajas {
     height: 300px;
   }
+
   .tarjetaCategoria img {
     height: 15vh;
     margin-top: 15px;
+  }
+}
+@media (max-width: 1200px){
+  header::before{
+    height: 16%;
   }
 }

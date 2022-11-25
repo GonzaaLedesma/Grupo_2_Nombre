@@ -187,3 +187,10 @@
 - Hicimos nuevos middlewares de admin.
 - Agregamos vista desde admin( ver boton de edicion, creacion y delete).
 - Agregamos el form de edicion de perfil.
+
+# Viernes 25:
+
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Realizamos una nueva lista de usuarios
+- Agregamos colorsitos.
