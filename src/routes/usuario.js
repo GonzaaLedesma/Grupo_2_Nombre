@@ -9,7 +9,7 @@ const userController = require("../controllers/userControllers");
 const userMiddleware = require("../middlewares/userMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 const validator = require("../middlewares/registerMiddleware");
-const upload = require("../middlewares/multerMiddleware");
+const upload = require("../middlewares/multerUserMiddleware");
 
 
 // rutas
@@ -22,6 +22,10 @@ router.get('/register', userMiddleware, userController.register);
 router.post('/register', upload.single('imagen'), validator, userController.registerProcess);
 
 router.get('/perfil' ,authMiddleware ,userController.perfil);
+
+router.get('/perfil/edicion' ,authMiddleware ,userController.perfilEdicion);
+
+router.put('/perfil/edicion' ,upload.single('imagen') ,userController.perfilPut);
 
 router.get('/cerrarSesion', userController.logout);
 

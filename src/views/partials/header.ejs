@@ -33,6 +33,7 @@
               <ul class="dropdown-menu">
                 <% if(locals.userLogin) {%> 
                 <li><a class="dropdown-item" href="/usuario/perfil">Tu Perfil</a></li>
+                <li><a class="dropdown-item" href="/usuario/perfil/edicion">Editar Perfil</a></li>
                 <li><a class="dropdown-item" href="/usuario/cerrarSesion">Cerrar Sesión</a></li>
                 <% }else{ %> 
                 <li><a class="dropdown-item" href="/usuario/register">Crea Tu Cuenta</a></li>
@@ -54,4 +55,7 @@
       </div>
     </form>
     <!-- termina el nav -->
+    <% if(locals.userLogin) {%>
+    <h5 class="userInLogin">Hola <%= locals.logged.nombreUsuario  %> </h5>
+    <% } %> 
   </header>

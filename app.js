@@ -14,6 +14,7 @@ app.use(express.static(publicPath));
 app.use(express.json());
 
 const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
+const adminLoggedMiddleware = require("./src/middlewares/adminLoggedMiddleware");
 app.use(
   session({
     secret: "tiket secreto",
@@ -24,6 +25,7 @@ app.use(
 
 app.use(cookies());
 
+app.use(adminLoggedMiddleware);
 app.use(loggedMiddleware);
 
 app.use(express.urlencoded({ extended: false }));

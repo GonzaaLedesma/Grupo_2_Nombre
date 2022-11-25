@@ -117,7 +117,7 @@
   "genero": "masculino",
   "contrasenia": "Luis679",
   "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-  "imagen": "-"
+  "imagen": "User-1669335310280.jpg"
  },
  {
   "id": 1668609758386,
@@ -126,26 +126,29 @@
   "email": "le@gmail.com",
   "pais": "Argentina",
   "contrasenia": "$2a$10$tBE.BAIygMv9jCKQFU6rZuHaBH3dV8V5eAbLO6r.WeEBG3wbHwWdG",
-  "gustosUsuario": "rock",
   "genero": "masculino",
   "infoUsuario": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-  "imagen": "User-1668609758277.jpg"
+  "imagen": "User-1669335310280.jpg",
+  "gustosUsuario": [
+   " pop",
+   " metal"
+  ]
  },
  {
-  "id": 1669035666704,
-  "nombre": "Metallica",
-  "nombreUsuario": "sds",
-  "email": "gonzaa@admin.com",
+  "id": 1669302626724,
+  "nombre": "Tester Anonimo 2",
+  "nombreUsuario": "Tester 2",
+  "email": "test2@gmai.com",
   "pais": "Argentina, Cordoba",
-  "contrasenia": "$2a$10$D1X5xWtn849OyhGs7Xw6KeMvgjQPGr/1ppwLb6/8y6oOC.UDc9qJW",
+  "contrasenia": "$2a$10$Lav.i/wzBo3avvm9vh6uve5WlaSCoP.bHeWhlfPvDObkWiFUcuPV.",
   "gustosUsuario": [
    " rock",
    " pop",
-   " metal",
-   " trap"
+   " metal"
   ],
-  "genero": "helicoptero Apache",
-  "infoUsuario": "dsadsadsadas sadasdsada",
-  "imagen": "User-1669035666601.jpg"
+  "genero": "masculino",
+  "infoUsuario": "2313123  3123123213 123 123 12312321321 312213 12",
+  "tipoUsuario": true,
+  "imagen": "User-1669335310280.jpg"
  }
 ]

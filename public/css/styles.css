@@ -144,6 +144,13 @@
   .itemFooter{
     padding: 2px;
   }
+  .userInLogin{
+    margin: auto;
+    text-align: center;
+    color: gold;
+    border-top: 1px solid rgb(173, 173, 0);
+    border-bottom: 1px solid rgb(173, 173, 0);
+  }
  /* ----------Hover---------- */
  .header button:hover a{
   color:rgb(173, 173, 0);

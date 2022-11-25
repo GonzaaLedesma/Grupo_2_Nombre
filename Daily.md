@@ -180,3 +180,10 @@
 - Revisamos el codigo.
 - Corregimos errores.
 
+# Juevez 24:
+
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Hicimos nuevos middlewares de admin.
+- Agregamos vista desde admin( ver boton de edicion, creacion y delete).
+- Agregamos el form de edicion de perfil.

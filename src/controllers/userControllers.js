@@ -3,8 +3,15 @@ const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const usuario = require("../models/Users");
 
+const fs = require('fs');
+const path = require('path');
+
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 const userController = {
   register: (req, res) => {
+    console.log(userList)
     return res.render("users/register");
   },
   registerProcess: (req, res) => {
@@ -31,6 +38,7 @@ const userController = {
 
     let usarioCreado = {
       ...req.body,
+      tipoUsuario: false,
       contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
       imagen: req.file.filename,
     };
@@ -79,6 +87,29 @@ const userController = {
   perfil: (req, res) => {
     return res.render("users/perfil", { usuarioLogeado: req.session.logged });
   },
+  perfilEdicion:(req, res)=>{
+    return res.render("users/edicionPerfil", { datosUsuario: req.session.logged });
+  },
+  perfilPut:(req, res)=>{
+    let userFound = usuario.findField("email", req.body.email);
+    const imagen = req.file;
+		const {nombre,nombreUsuario,email,pais,gustosUsuario,genero,infoUsuario} = req.body;
+    userList.forEach((userFound)=>{
+      if(userFound.email == email){
+			userFound.nombre = nombre,
+			userFound.nombreUsuario = nombreUsuario,
+			userFound.email = email,
+			userFound.pais = pais,
+			userFound.gustosUsuario = gustosUsuario,
+			userFound.genero = genero,
+			userFound.infoUsuario = infoUsuario
+			userFound.imagen = imagen.filename
+		  }
+    })
+    fs.writeFileSync(usersFilePath,JSON.stringify(userList, null, ' '));
+
+    res.render("./users/perfil", { usuarioLogeado: req.session.logged });
+    },
   logout: (req, res) => {
     res.clearCookie("datosEmail");
     req.session.destroy();

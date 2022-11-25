@@ -5,9 +5,11 @@
     <%- include('../partials/header') %>
     <main>
       <!-------------------------PRIMERO----------- -->
+      <% if(locals.adminLogin) {%> 
       <div class="positionBoton">
         <button class="botonCreacion"><a href="/administrador/creacion">Crear evento <i class="fa-solid fa-upload"></i></a></button>
       </div>
+      <% } %> 
       <h2 class="titulosCategoria">ACTUALES</h2>
       <div class="cajaCategoria">
         <% products.filter(product => product.categoria == 'Actuales').forEach(product => { %>

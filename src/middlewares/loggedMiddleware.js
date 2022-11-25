@@ -6,8 +6,6 @@ function loggedMiddleware(req, res, next) {
 	let cookieDatos = req.cookies.datosEmail;
 	let usuarioCookie = usuario.findField('email', cookieDatos);
 	
-	// console.log(cookieDatos)
-
 	if(usuarioCookie){
 		res.locals.logged = usuarioCookie;
 	}
@@ -19,5 +17,6 @@ function loggedMiddleware(req, res, next) {
 	
 	next();
 }
+
 
 module.exports = loggedMiddleware;

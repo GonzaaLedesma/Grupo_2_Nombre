@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main class="mainRegister">
+      <form
+        action="/usuario/perfil/edicion?_method=PUT"
+        method="POST"
+        class="form-box"
+        enctype="multipart/form-data"
+      >
+        <h1 class="form-title">Edicion de Perfil</h1>
+        <div class="correcionCajasForm">
+          <label for="nombre"></label>
+          <input
+            class="cajaRegisterInput"
+            type="text"
+            name="nombre"
+            value="<%= datosUsuario.nombre  %>"
+          />
+        </div>
+        <div class="correcionCajasForm">
+          <label for="nombreUsuario"></label>
+          <input
+            class="cajaRegisterInput"
+            type="text"
+            name="nombreUsuario"
+            value="<%= datosUsuario.nombreUsuario  %>"
+          />
+        </div>
+        <div class="correcionCajasForm">
+          <label for="email"></label>
+          <input
+            class="cajaRegisterInput"
+            type="email"
+            name="email"
+            value="<%= datosUsuario.email  %>"
+          />
+        </div>
+        <div class="correcionCajasForm">
+          <label for="pais"></label>
+          <input
+            class="cajaRegisterInput"
+            type="text"
+            name="pais"
+            value="<%= datosUsuario.pais  %>"
+          />
+        </div>
+        <div class="correcionCajasForm">
+          <label class="tituloRegisterCaja" for="gustosUsuario"
+            >Nuevos Gustos</label
+          >
+          <label class="checkBoxs">
+            <input
+              type="checkbox"
+              name="gustosUsuario"
+              value=" rock"
+            />Rock</label
+          >
+          <label class="checkBoxs"
+            ><input type="checkbox" name="gustosUsuario" value=" pop" />Pop
+          </label>
+          <label class="checkBoxs"
+            ><input type="checkbox" name="gustosUsuario" value=" metal" />Metal
+          </label>
+          <label class="checkBoxs"
+            ><input
+              type="checkbox"
+              name="gustosUsuario"
+              value=" trap"
+            />Trap</label
+          >
+          <label class="checkBoxs"
+            ><input
+              type="checkbox"
+              name="gustosUsuario"
+              value=" reaggeaton"
+            />Reaggeaton</label
+          >
+          <label class="checkBoxs"
+            ><input
+              type="checkbox"
+              name="gustosUsuario"
+              value=" electronica "
+            />Electronica</label
+          >
+        </div>
+        <div class="correcionCajasForm">
+          <label class="tituloRegisterCaja" for="genero">Genero</label>
+          <select class="opcionesRegister" name="genero">
+            <option value="<%= datosUsuario.genero  %>">
+              <%= datosUsuario.genero %>
+            </option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="helicoptero Apache">Helicoptero Apache</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+        <div class="correcionCajasForm">
+          <label for="infoUsuario" class="tituloRegisterCaja"
+            >Cuentanos sobre ti</label
+          >
+          <textarea class="textAreaRegister" name="infoUsuario"><%= datosUsuario.infoUsuario  %></textarea
+          >
+        </div>
+        <div class="cajaAdmin">
+          <label for="ImgEvento">
+            <div class="label">Nueva foto de Perfil</div>
+            <div>
+              <input class="imagenPerfilRegister" type="file" name="imagen" />
+            </div>
+          </label>
+        </div>
+        <div class="cajaSendRegister">
+          <button class="botonSumit" type="submit">Enviar</button>
+        </div>
+      </form>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
