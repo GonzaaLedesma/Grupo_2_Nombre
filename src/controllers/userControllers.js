@@ -115,6 +115,9 @@ const userController = {
     req.session.destroy();
     return res.redirect("/");
   },
+  terminos: (req, res) => {
+    return res.render("users/terminosYCondiciones");
+  },
 };
 
 module.exports = userController;

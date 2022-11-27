@@ -20,4 +20,6 @@
 .respuestasAyuda{
     text-align: center;
     color: white;
+    width: 95%;
+    margin: auto;
 }

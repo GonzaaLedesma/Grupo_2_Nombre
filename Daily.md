@@ -197,4 +197,7 @@
 
 # Sabado 26:
 
+- Realizamos una llamada en discord.
+- Realizamos un live share.
 - Actualizacion de css.
+- Agreamos la vista de Terminos y condiciones.

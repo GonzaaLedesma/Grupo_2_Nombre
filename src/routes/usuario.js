@@ -29,4 +29,6 @@ router.put('/perfil/edicion' ,upload.single('imagen') ,userController.perfilPut)
 
 router.get('/cerrarSesion', userController.logout);
 
+router.get('/terminosYCondiciones', userController.terminos);
+
 module.exports = router;
