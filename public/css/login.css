@@ -1,5 +1,4 @@
 .mainLogin{
-    margin: 0;
     padding: 0;
     padding-top: 10px;
     display: flex;
@@ -10,6 +9,7 @@
     background-color: #242c35;
     height: 86.6%;
     margin: auto;
+    margin-top: -2px;
 }
 .correcionCajasForm{
     width: 100%;

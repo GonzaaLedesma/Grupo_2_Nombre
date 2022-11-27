@@ -20,9 +20,10 @@ body{
     } 
 .titulosCategoria{
   text-align: center;
+  margin-top: 7px;
   padding-bottom: 5px;
   padding-top: 5px;
-  color:rgb(190, 190, 0);
+  color:gold;
   background-color: #242c35;
   border-top: solid 1px  rgb(19, 19, 19);
   border-bottom: solid 1px rgb(19, 19, 19);
@@ -122,16 +123,15 @@ body{
 .card:hover .card-body a{
     background-color:  #1c2631;
     border: solid 1px rgb(190, 190, 0);
-    color: rgb(190, 190, 0);
-    border: solid 1px gray ;
+    color: gold;
+    border: solid 1px gold ;
 }
 .titulosCategoria:hover{
-    box-shadow: 10px 10px 15px rgb(100, 100, 100);
-
+    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
 }
-/* .card:hover{
-    box-shadow: 0px 0px 25px rgb(100, 100, 100);
-} */
+
 /* ----------- */
 @media (max-width: 715px) {
     .card{

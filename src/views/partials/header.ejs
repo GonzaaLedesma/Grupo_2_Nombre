@@ -18,7 +18,7 @@
               </ul>
           </div>
           </li>
-          <li><a href="/producto/ayuda"><button>Ayuda <i class="fa-solid fa-info"></i></button> </a></li>
+          <li><a href="/producto/ayuda"><button>Ayuda<i class="fa-solid fa-info"></i></button> </a></li>
         </ul>
         <form action="" method="POST">
           <div class="searchBar">
@@ -29,7 +29,11 @@
         <ul class="ButtonBox">
           <li>
             <div class="dropdown">
+              <% if(locals.userLogin) {%>
+                <button  type="button" data-bs-toggle="dropdown" aria-expanded="false"><%= locals.logged.nombreUsuario  %><i class="fa-solid fa-user"></i></button>
+                <% }else{ %> 
               <button  type="button" data-bs-toggle="dropdown" aria-expanded="false">Usuario<i class="fa-solid fa-user"></i></button>
+              <% } %> 
               <ul class="dropdown-menu">
                 <% if(locals.userLogin) {%> 
                 <li><a class="dropdown-item" href="/usuario/perfil">Tu Perfil</a></li>
@@ -55,7 +59,4 @@
       </div>
     </form>
     <!-- termina el nav -->
-    <% if(locals.userLogin) {%>
-    <h5 class="userInLogin">Hola <%= locals.logged.nombreUsuario  %> </h5>
-    <% } %> 
   </header>

@@ -192,5 +192,9 @@
 
 - Realizamos una llamada en discord.
 - Realizamos un live share.
-- Realizamos una nueva lista de usuarios
+- Realizamos una nueva lista de usuarios.(Las contrasenias son hola123)
 - Agregamos colorsitos.
+
+# Sabado 26:
+
+- Actualizacion de css.
