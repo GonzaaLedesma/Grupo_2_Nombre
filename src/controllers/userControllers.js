@@ -91,7 +91,7 @@ const userController = {
     return res.render("users/edicionPerfil", { datosUsuario: req.session.logged });
   },
   perfilPut:(req, res)=>{
-    let userFound = usuario.findField("email", req.body.email);
+    // let userFound = usuario.findField("email", req.body.email);
     const imagen = req.file;
 		const {nombre,nombreUsuario,email,pais,gustosUsuario,genero,infoUsuario} = req.body;
     userList.forEach((userFound)=>{
@@ -107,6 +107,9 @@ const userController = {
 		  }
     })
     fs.writeFileSync(usersFilePath,JSON.stringify(userList, null, ' '));
+
+    console.log("h",req.session.logged)
+    // res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
 
     res.render("./users/perfil", { usuarioLogeado: req.session.logged });
     },
