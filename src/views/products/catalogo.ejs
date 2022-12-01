@@ -4,12 +4,36 @@
   <body>
     <%- include('../partials/header') %>
     <main>
-      <!-------------------------PRIMERO----------- -->
       <% if(locals.adminLogin) {%> 
-      <div class="positionBoton">
-        <button class="botonCreacion"><a href="/administrador/creacion">Crear evento <i class="fa-solid fa-upload"></i></a></button>
-      </div>
-      <% } %> 
+        <div class="positionBoton">
+          <button class="botonCreacion"><a href="/administrador/creacion">Crear evento <i class="fa-solid fa-upload"></i></a></button>
+        </div>
+        <% } %> 
+      <% if(locals.userLogin) {%> 
+        <h2 class="titulosCategoria">SEGUN TUS GUSTOS</h2>
+        <div class="cajaCategoria">
+          <% products.filter(product => product.generoBanda == userdetail.gustosUsuario).forEach(product => { %>
+          <div class="card">
+            <img
+              src="/images/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
+              class="card-img-top"
+              alt="ImgBand"
+            />
+            <div class="card-body">
+              <h5 class="card-title"><%= product.nombre%></h5>
+              <p class="card-text"><%= product.sede%></p>
+              <p class="card-text"><%= product.ubicacion%></p>
+              <p class="card-text">Participacion: <%= product.participacion%></p>
+              <p class="card-text card-date"><%= product.dia%></p>
+              <a href="/producto/detalles/<%= product.id%>" class="btn btn-primary"
+                >Ir a detalles</a
+              >
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <% } %>
+      <!-------------------------PRIMERO----------- -->
       <h2 class="titulosCategoria">ACTUALES</h2>
       <div class="cajaCategoria">
         <% products.filter(product => product.categoria == 'Actuales').forEach(product => { %>

@@ -48,6 +48,18 @@
                     <option  value="Proximos">Proximos</option> 
                 </select>
             </div>
+            <div class="cajaAdmin"> 
+                <label  for="Cambio-generoBanda">Genero de la Banda</label>
+                <select class="opcionesCategoria" required name="generoBanda">
+                    <option value="<%= editarProducto.generoBanda %>"><%= editarProducto.generoBanda %></option> 
+                    <option value="rock">Rock</option>
+                    <option value="hard rock">Hard Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock alternativo">Rock Alternativo</option>
+                    <option value="pop rock">Pop Rock</option>
+                    <option value="pop punk">Pop Punk</option>
+                </select>
+            </div>
             <div class="cajaAdmin">
                 <label  for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
                 <textarea class="textArea" name="descripcion" ><%= editarProducto.descripcion %></textarea>

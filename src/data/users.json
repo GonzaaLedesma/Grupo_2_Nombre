@@ -6,11 +6,7 @@
   "email": "gonza@admin.com",
   "pais": "Argentina",
   "contrasenia": "$2a$10$KqimxNV3Mtr8ZFFaXajKSu.kPfSMQQoyR/LYsUEYWjCJqXqdcgdae",
-  "gustosUsuario": [
-   " rock",
-   " pop",
-   " metal"
-  ],
+  "gustosUsuario": "rock",
   "genero": "masculino",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": true,
@@ -23,11 +19,7 @@
   "email": "mati@admin.com",
   "pais": "Argentina",
   "contrasenia": "$2a$10$oDz3Y391EUb.kE2Mz1sq2Oxnun2UU63wOOeqnWhmekyh05vawy8I2",
-  "gustosUsuario": [
-   " rock",
-   " pop",
-   " metal"
-  ],
+  "gustosUsuario": "rock",
   "genero": "masculino",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": true,
@@ -40,14 +32,7 @@
   "email": "josue@admin.com",
   "pais": "Argentina",
   "contrasenia": "$2a$10$epSjkHxVwTNoCLjJFa9lA.csC6ZH.mvj5cveIhFcrF.uCkkAidu1O",
-  "gustosUsuario": [
-   " rock",
-   " pop",
-   " metal",
-   " trap",
-   " reaggeaton",
-   " electronica "
-  ],
+  "gustosUsuario": "rock",
   "genero": "masculino",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": true,
@@ -60,11 +45,7 @@
   "email": "tomi@admin.com",
   "pais": "Argentina",
   "contrasenia": "$2a$10$MNi6pZf6t/wosDySYO0sN.EvzfA96nV4BOa81GENstrKl6SlgBRn.",
-  "gustosUsuario": [
-   " trap",
-   " reaggeaton",
-   " electronica "
-  ],
+  "gustosUsuario": "rock",
   "genero": "masculino",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": true,
@@ -77,10 +58,7 @@
   "email": "juan@gmail.com",
   "pais": "Brazil",
   "contrasenia": "$2a$10$ykGE8ED7opKbbn5fpo77vuNRDAzAa8OZK2ONIppLBldSJfzH9sJjO",
-  "gustosUsuario": [
-   " rock",
-   " electronica "
-  ],
+  "gustosUsuario": "pop rock",
   "genero": "masculino",
   "infoUsuario": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": false,
@@ -93,11 +71,7 @@
   "email": "maria@gmail.com",
   "pais": "Qatar",
   "contrasenia": "$2a$10$zOOSZaHaguEYWwF3jntaJu/pcZiKExFbRFbBYL8yJ5LzvTub1P9nK",
-  "gustosUsuario": [
-   " rock",
-   " trap",
-   " reaggeaton"
-  ],
+  "gustosUsuario": "pop punk",
   "genero": "femenino",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": false,
@@ -110,12 +84,7 @@
   "email": "hernan@gmail.com",
   "pais": "Argentina",
   "contrasenia": "$2a$10$PJXoFsH8SQbhTFHsJeaclOyK7cEFxJBCwCCgbjVYYmhmqZIDBfn2y",
-  "gustosUsuario": [
-   " rock",
-   " metal",
-   " reaggeaton",
-   " electronica "
-  ],
+  "gustosUsuario": "rock alternativo",
   "genero": "otros",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": false,
@@ -128,11 +97,7 @@
   "email": "sandro@gmail.com",
   "pais": "Francia",
   "contrasenia": "$2a$10$B8OXxNFtuaioFl6G/LuvtOj6/JaFwm4JfNKQGYdxJ5jK4EAi82jna",
-  "gustosUsuario": [
-   " rock",
-   " trap",
-   " reaggeaton"
-  ],
+  "gustosUsuario": "Pop",
   "genero": "masculino",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": false,
@@ -145,11 +110,7 @@
   "email": "ana@gmail.com",
   "pais": "Brazil",
   "contrasenia": "$2a$10$tr07noJ5cCy.ONSnzmJai.JGzyofYfbfy7XalNzFDhFYHTT/NNJZO",
-  "gustosUsuario": [
-   " rock",
-   " metal",
-   " trap"
-  ],
+  "gustosUsuario": "hard rock",
   "genero": "femenino",
   "infoUsuario": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "tipoUsuario": false,

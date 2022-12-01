@@ -201,3 +201,12 @@
 - Realizamos un live share.
 - Actualizacion de css.
 - Agreamos la vista de Terminos y condiciones.
+
+## Jueves 1:
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Corregimos las hojas de css y las checkbox de los forms.
+- Agregamos un nuevo campo de prodcuto.
+- Interacciones para los usuarios segun sus gusto.
+- Correciones genereales de los formularios.
+- Comenzamos Sprint 6 (Armado de tablas).

@@ -41,3 +41,12 @@
 
 - Tomas Otero: Me organize mejor, estuve mas atento y participe mejor, me senti mas participativo tambien los chicos me ayudaron mas para estar mas al tanto de los temas y entender mejor. Este sprint lo senti mas dificil de lo normal pero los compañeros hicieron que sea mas sencillo. 
 
+## retro sprint 5:
+
+-
+
+-
+
+- Tomas Otero:
+
+-

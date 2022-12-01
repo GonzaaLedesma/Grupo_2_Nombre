@@ -17,7 +17,7 @@ const administradorController = {
     },
     creacionPost : (req,res)=>{
         const fotoEvento = req.file;
-        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body
+        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,generoBanda,descripcion,biografia} = req.body
         let  newProduct = {
             id : Date.now(),
             nombre : nombre,
@@ -29,6 +29,7 @@ const administradorController = {
             price : Number(price),
             horario : Number(horario),
             categoria : categoria,
+            generoBanda: generoBanda,
             descripcion : descripcion,
             biografia : biografia,
             fotoEvento : fotoEvento.filename
@@ -44,7 +45,7 @@ const administradorController = {
     edicionPut : (req,res)=>{
         const productsId = req.params.id;
         const fotoEvento = req.file;
-        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,descripcion,biografia} = req.body;
+        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,generoBanda,descripcion,biografia} = req.body;
         products.forEach((products)=>{
           if(products.id == productsId){
                 products.nombre = nombre,
@@ -56,6 +57,7 @@ const administradorController = {
                 products.price = Number(price),
                 products.horario = Number(horario),
                 products.categoria = categoria,
+                products.generoBanda = generoBanda,
                 products.descripcion = descripcion,
                 products.biografia = biografia
                 products.fotoEvento = fotoEvento.filename

@@ -182,6 +182,6 @@ body {
 }
 @media (max-width: 1200px){
   header::before{
-    height: 16%;
+    height: 14%;
   }
 }

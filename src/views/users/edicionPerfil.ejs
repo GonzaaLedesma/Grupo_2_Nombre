@@ -50,42 +50,19 @@
         </div>
         <div class="correcionCajasForm">
           <label class="tituloRegisterCaja" for="gustosUsuario"
-            >Nuevos Gustos</label
+            >Tu Gusto Favorito</label
           >
-          <label class="checkBoxs">
-            <input
-              type="checkbox"
-              name="gustosUsuario"
-              value=" rock"
-            />Rock</label
-          >
-          <label class="checkBoxs"
-            ><input type="checkbox" name="gustosUsuario" value=" pop" />Pop
-          </label>
-          <label class="checkBoxs"
-            ><input type="checkbox" name="gustosUsuario" value=" metal" />Metal
-          </label>
-          <label class="checkBoxs"
-            ><input
-              type="checkbox"
-              name="gustosUsuario"
-              value=" trap"
-            />Trap</label
-          >
-          <label class="checkBoxs"
-            ><input
-              type="checkbox"
-              name="gustosUsuario"
-              value=" reaggeaton"
-            />Reaggeaton</label
-          >
-          <label class="checkBoxs"
-            ><input
-              type="checkbox"
-              name="gustosUsuario"
-              value=" electronica "
-            />Electronica</label
-          >
+          <select class="opcionesRegister" name="gustosUsuario">
+            <option value="<%= datosUsuario.gustosUsuario  %>">
+              <%= datosUsuario.gustosUsuario %>
+            </option>
+            <option value="rock">Rock</option>
+            <option value="hard rock">Hard Rock</option>
+            <option value="pop">Pop</option>
+            <option value="rock alternativo">Rock Alternativo</option>
+            <option value="pop rock">Pop Rock</option>
+            <option value="pop punk">Pop Punk</option>
+          </select>
         </div>
         <div class="correcionCajasForm">
           <label class="tituloRegisterCaja" for="genero">Genero</label>
@@ -103,7 +80,8 @@
           <label for="infoUsuario" class="tituloRegisterCaja"
             >Cuentanos sobre ti</label
           >
-          <textarea class="textAreaRegister" name="infoUsuario"><%= datosUsuario.infoUsuario  %></textarea
+          <textarea class="textAreaRegister" name="infoUsuario">
+<%= datosUsuario.infoUsuario  %></textarea
           >
         </div>
         <div class="cajaAdmin">

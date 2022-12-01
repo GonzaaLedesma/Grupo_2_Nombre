@@ -95,12 +95,12 @@ body{
     width: 100%;
     height: 100%;
     background:linear-gradient(
-      45deg, blue,white,blue,white,blue,white,blue
+      50deg, blue,white,blue,white,blue,white,blue
       );
     background-size: 800%;
-    border-radius:10px ;
+    border-radius:9px ;
     filter:blur(8px) ;
-    animation: glowing 80s linear infinite;
+    animation: glowing 500s linear infinite;
   }
   @keyframes glowing{
     0%{

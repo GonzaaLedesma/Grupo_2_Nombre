@@ -77,60 +77,22 @@
             <% } %>
         </div>
         <div class="correcionCajasForm">
-            <label class="tituloRegisterCaja" for="gustosUsuario"
-                >Tus Gustos</label
-            >
-            <label class="checkBoxs">
-                <input
-                type="checkbox"
+            <label class="tituloRegisterCaja" for="genero">Gusto Favorito</label>
+            <select
+                class="opcionesRegister <%= locals.errors && errors.gustosUsuario ? 'errorBorder' : null %>"
                 name="gustosUsuario"
-                value=" rock"
-                <%= locals.oldData && oldData.gustosUsuario  == "rock" ? "checked" : null %>
-                />Rock</label
             >
-            <label class="checkBoxs"
-                ><input 
-                type="checkbox" 
-                name="gustosUsuario" 
-                value=" pop"
-                <%= locals.oldData && oldData.gustosUsuario  == "pop" ? "checked" : null %>
-                 />Pop
-            </label>
-            <label class="checkBoxs"
-                ><input 
-                type="checkbox" 
-                name="gustosUsuario" 
-                value=" metal"
-                <%= locals.oldData && oldData.gustosUsuario == "metal"  ? "checked" : null %>
-                />Metal
-            </label>
-            <label class="checkBoxs"
-                ><input
-                type="checkbox"
-                name="gustosUsuario"
-                value=" trap"
-                <%= locals.oldData && oldData.gustosUsuario  == "trap" ? "checked" : null %>
-                />Trap</label
-            >
-            <label class="checkBoxs"
-                ><input
-                type="checkbox"
-                name="gustosUsuario"
-                value=" reaggeaton"
-                <%= locals.oldData && oldData.gustosUsuario  == "reaggeaton" ? "checked" : null %>
-                />Reaggeaton</label
-            >
-            <label class="checkBoxs"
-                ><input
-                type="checkbox"
-                name="gustosUsuario"
-                value=" electronica "
-                <%= locals.oldData && oldData.gustosUsuario == "electronica" ? "checked" : null %>
-                />Electronica</label
-            >
+                <option value="">Seleccione</option>
+                <option value="rock" <%= locals.oldData && oldData.gustosUsuario  == "rock" ?'selected' : null %> >Rock</option>
+                <option value="hard rock" <%= locals.oldData && oldData.gustosUsuario  == "hard rock" ?'selected' : null %> >Hard Rock</option>
+                <option value="pop" <%= locals.oldData && oldData.gustosUsuario  == "pop" ?'selected' : null %>>Pop</option>
+                <option value="rock alternativo" <%= locals.oldData && oldData.gustosUsuario == "rock alternativo" ? 'selected' : null %>>Rock Alternativo</option>
+                <option value="pop rock" <%= locals.oldData && oldData.gustosUsuario == "pop rock" ? 'selected' : null %>>Pop Rock</option>
+                <option value="pop punk" <%= locals.oldData && oldData.gustosUsuario == "pop punk" ? 'selected' : null %>>Pop Punk</option>
+            </select>
             <% if (locals.errors && errors.gustosUsuario) { %>
-            <div class="errorTxt"><%= errors.gustosUsuario.msg %></div>
-            <% } %>
+                <div class="errorTxt"><%= errors.gustosUsuario.msg %></div>
+                <% } %>
         </div>
         <div class="correcionCajasForm">
             <label class="tituloRegisterCaja" for="genero">Genero</label>
