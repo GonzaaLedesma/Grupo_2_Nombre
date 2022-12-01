@@ -185,3 +185,8 @@ body {
     height: 14%;
   }
 }
+@media (max-width: 700px){
+  header::before{
+    height: 18%;
+  }
+}

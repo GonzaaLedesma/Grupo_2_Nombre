@@ -43,10 +43,10 @@
 
 ## retro sprint 5:
 
--
+- Matias Lanese: En el sprint cursado me senti muy bien, me siento comodo con el equipo, creo que encontramos el mismo ritmo todos. Quiero seguir asi y aportando con todo lo que pueda. Pudimos resolver todos los problemas que se nos plantearon.
 
--
+- Gonzalo Ledesma: Este sprint me senti bastante bien, fueron temas sencillos y pudimos resolver los temas bastante rapido, dando pie a avanzar en temas secundarios y/o pendientes que teniamos.
 
 - Tomas Otero:
 
--
+- Josue Ferreira: Me senti muy conforme trabajando con mis compañeros tratando de aportar en todos los campos posibles. Espero poder mantener este mismo ritmo y actitud para lo que resta del curso.

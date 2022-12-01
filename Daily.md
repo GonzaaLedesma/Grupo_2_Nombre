@@ -209,4 +209,4 @@
 - Agregamos un nuevo campo de prodcuto.
 - Interacciones para los usuarios segun sus gusto.
 - Correciones genereales de los formularios.
-- Comenzamos Sprint 6 (Armado de tablas).
+- Preparamos Sprint 6 (Armado de tablas y instalamos dependencias).

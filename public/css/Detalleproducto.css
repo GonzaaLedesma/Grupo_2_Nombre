@@ -37,7 +37,7 @@ body{
 .nombreEvento1{
     text-align: center;
     color: gold;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .nombreEvento2{
     display: none;
@@ -196,7 +196,7 @@ h4{
         width: 85%;
         height: 28vh;
         border: solid 1px white;
-        margin-top: 70px;
+        margin-top: 125px;
     }
   } 
   

@@ -103,7 +103,6 @@
                 <option value="">Seleccione</option>
                 <option value="masculino" <%= locals.oldData && oldData.genero  == "masculino" ?'selected' : null %> >Masculino</option>
                 <option value="femenino" <%= locals.oldData && oldData.genero  == "femenino" ?'selected' : null %>>Femenino</option>
-                <option value="helicoptero Apache" <%= locals.oldData && oldData.genero == "helicoptero Apache" ? 'selected' : null %>>Helicoptero Apache</option>
                 <option value="otros" <%= locals.oldData && oldData.genero == "otro" ? 'selected' : null %>>Otros</option>
             </select>
             <% if (locals.errors && errors.genero) { %>
