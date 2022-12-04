@@ -210,3 +210,8 @@
 - Interacciones para los usuarios segun sus gusto.
 - Correciones genereales de los formularios.
 - Preparamos Sprint 6 (Armado de tablas y instalamos dependencias).
+
+## Domingo 4:
+- Comenzamos con el armado de los modelos para las tablas.
+- Actualizamos el daily.
+- Pusheamos lo realizado.
