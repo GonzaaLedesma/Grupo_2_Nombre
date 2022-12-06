@@ -24,13 +24,6 @@ app.use(
   })
 );
 
-function updateSessionExpiration(req, res, next) {
-  req.session.touch();
-
-  next();
-}
-
-app.use(updateSessionExpiration);
 
 app.use(cookies());
 

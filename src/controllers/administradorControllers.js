@@ -39,7 +39,6 @@ const administradorController = {
         
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
         
-        // error de rericcion
         res.render('./products/catalogo', {products}); 
    },
     edicionPut : (req,res)=>{
@@ -63,9 +62,12 @@ const administradorController = {
                 products.fotoEvento = fotoEvento.filename
             }
         })
+        console.log("infoUser:AntesDeJSON", req.session.logged);
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
-
+        console.log("infoUser:DespuesDeJSON", req.session.logged);
+        
         res.render('./products/catalogo', {products});
+        console.log("infoUser:DespuesDeRENDER", req.session.logged);
     
     },
     destroy : (req, res) => {

@@ -65,7 +65,6 @@ const userController = {
        if (req.body.recuerdame) {
           res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 15 });
         }
-
         return res.redirect("perfil");
       }
       return res.render("users/login", {
