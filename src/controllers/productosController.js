@@ -7,17 +7,17 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productosController = {
     catalogo : (req,res)=>{
-        return res.render("products/catalogo", {products});
+        return res.render("products/catalogo", {products, titlePage:"- Catalogo"});
     },
     detalles : (req,res)=>{
         let detalle = products.find(products=> products.id == req.params.id)
-        res.render('products/detalleProducto',{detalle})
+        res.render('products/detalleProducto',{detalle, titlePage:"- Detalles"})
     },
     carrito : (req,res)=>{
-        return res.render("products/carrito");
+        return res.render("products/carrito",{titlePage:"- Carrito"});
     },
     ayuda : (req,res)=>{
-        return res.render("products/ayuda");
+        return res.render("products/ayuda", {titlePage:"- Ayuda"});
     },
 }
 

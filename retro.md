@@ -47,6 +47,6 @@
 
 - Gonzalo Ledesma: Este sprint me senti bastante bien, fueron temas sencillos y pudimos resolver los temas bastante rapido, dando pie a avanzar en temas secundarios y/o pendientes que teniamos.
 
-- Tomas Otero:
+- Tomas Otero: Fue un sprint facil, estuvimos todos a la par y esperar a tener el mismo ritmo en el siguiente.
 
 - Josue Ferreira: Me senti muy conforme trabajando con mis compañeros tratando de aportar en todos los campos posibles. Espero poder mantener este mismo ritmo y actitud para lo que resta del curso.

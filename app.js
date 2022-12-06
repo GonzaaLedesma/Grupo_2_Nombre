@@ -15,6 +15,7 @@ app.use(express.json());
 
 const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
 const adminLoggedMiddleware = require("./src/middlewares/adminLoggedMiddleware");
+
 app.use(
   session({
     secret: "tiket secreto",
@@ -22,6 +23,14 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+function updateSessionExpiration(req, res, next) {
+  req.session.touch();
+
+  next();
+}
+
+app.use(updateSessionExpiration);
 
 app.use(cookies());
 

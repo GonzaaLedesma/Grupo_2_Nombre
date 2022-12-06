@@ -7,13 +7,13 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const administradorController = {
     creacion : (req,res)=>{
-         res.render("products/creacionProducto");
+         res.render("products/creacionProducto", {titlePage:"- Creacion"});
     },
     edicion : (req,res)=>{
         const productsId = req.params.id;
         let editarProducto = products.filter((product)=> product.id == productsId )
 
-         res.render("products/edicionProducto", {editarProducto:editarProducto[0]});
+         res.render("products/edicionProducto", {editarProducto:editarProducto[0], titlePage:"- Edicion"});
     },
     creacionPost : (req,res)=>{
         const fotoEvento = req.file;

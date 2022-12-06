@@ -12,7 +12,7 @@ const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const userController = {
   register: (req, res) => {
     console.log(userList)
-    return res.render("users/register");
+    return res.render("users/register", {titlePage:"- Register"});
   },
   registerProcess: (req, res) => {
     const resultValidation = validationResult(req);
@@ -48,7 +48,7 @@ const userController = {
     return res.redirect("login");
   },
   login: (req, res) => {
-    return res.render("users/login");
+    return res.render("users/login", {titlePage:"- Login"});
   },
   loginProcess: (req, res) => {
     let loginUser = usuario.findField("email", req.body.email);
@@ -63,7 +63,7 @@ const userController = {
         req.session.logged = loginUser;
 
        if (req.body.recuerdame) {
-          res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
+          res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 15 });
         }
 
         return res.redirect("perfil");
@@ -85,15 +85,15 @@ const userController = {
     });
   },
   perfil: (req, res) => {
-    return res.render("users/perfil", { usuarioLogeado: req.session.logged });
+    return res.render("users/perfil", { usuarioLogeado: req.session.logged, titlePage:"- Perfil" });
   },
   perfilEdicion:(req, res)=>{
-    return res.render("users/edicionPerfil", { datosUsuario: req.session.logged });
+    return res.render("users/edicionPerfil", { datosUsuario: req.session.logged, titlePage:"- Edicion Perfil" });
   },
   perfilPut:(req, res)=>{
-    // let userFound = usuario.findField("email", req.body.email);
     const imagen = req.file;
 		const {nombre,nombreUsuario,email,pais,gustosUsuario,genero,infoUsuario} = req.body;
+    let newUser = {};
     userList.forEach((userFound)=>{
       if(userFound.email == email){
 			userFound.nombre = nombre,
@@ -104,22 +104,24 @@ const userController = {
 			userFound.genero = genero,
 			userFound.infoUsuario = infoUsuario
 			userFound.imagen = imagen.filename
-		  }
-    })
-    fs.writeFileSync(usersFilePath,JSON.stringify(userList, null, ' '));
+      newUser = userFound
+    }
+  })
+  fs.writeFileSync(usersFilePath,JSON.stringify(userList, null, ' '));
+  
+  req.session.logged = newUser;
+  this.logout
+  res.render("./users/login", { usuarioLogeado: req.session.logged, titlePage:"- Login"});
 
-    console.log("h",req.session.logged)
-    // res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
-
-    res.render("./users/perfil", { usuarioLogeado: req.session.logged });
     },
   logout: (req, res) => {
     res.clearCookie("datosEmail");
     req.session.destroy();
     return res.redirect("/");
   },
+
   terminos: (req, res) => {
-    return res.render("users/terminosYCondiciones");
+    return res.render("users/terminosYCondiciones", {titlePage:"- Terminos"});
   },
 };
 

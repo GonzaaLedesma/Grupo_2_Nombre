@@ -2,7 +2,7 @@ const express = require('express');
 
 const mainController = {
     index : (req,res)=>{
-        res.render("home")
+        res.render("home", {titlePage:"- Home"})
     }
 }
 
