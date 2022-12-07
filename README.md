@@ -31,3 +31,7 @@
 
 ## Trello:
 - https://trello.com/b/dxUBid4b/grupo2tickethouse
+
+## Contrasenias:
+
+- Todas son: hola123
