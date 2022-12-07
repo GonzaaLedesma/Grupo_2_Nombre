@@ -1,6 +1,6 @@
 const usuario = require("../models/Users");
 function loggedMiddleware(req, res, next) {
-  	console.log("infoUser:LoggedMIdlleware", req.session.logged);
+  	// console.log("infoUser:LoggedMIdlleware", req.session.logged);
     res.locals.userLogin = false;
 
     let cookieDatos = req.cookies.datosEmail;

@@ -40,6 +40,7 @@ const administradorController = {
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
         
         res.render('./products/catalogo', {products}); 
+        // res.redirect('products/catalogo'); 
    },
     edicionPut : (req,res)=>{
         const productsId = req.params.id;
@@ -62,12 +63,12 @@ const administradorController = {
                 products.fotoEvento = fotoEvento.filename
             }
         })
-        console.log("infoUser:AntesDeJSON", req.session.logged);
+        // console.log("infoUser:AntesDeJSON", req.session.logged);
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
-        console.log("infoUser:DespuesDeJSON", req.session.logged);
+        // console.log("infoUser:DespuesDeJSON", req.session.logged);
         
         res.render('./products/catalogo', {products});
-        console.log("infoUser:DespuesDeRENDER", req.session.logged);
+        // console.log("infoUser:DespuesDeRENDER", req.session.logged);
     
     },
     destroy : (req, res) => {

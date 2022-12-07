@@ -215,3 +215,8 @@
 - Comenzamos con el armado de los modelos para las tablas.
 - Actualizamos el daily.
 - Pusheamos lo realizado.
+
+## Miercoles 7:
+
+- Revisamos el codigo y nos dimos cuenta de un error de nodemon.
+- El error se va a resolver con la implementasion de Base de datos.

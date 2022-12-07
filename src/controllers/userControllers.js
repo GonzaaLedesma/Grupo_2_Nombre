@@ -11,7 +11,7 @@ const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
   register: (req, res) => {
-    console.log(userList)
+    // console.log(userList)
     return res.render("users/register", {titlePage:"- Register"});
   },
   registerProcess: (req, res) => {
