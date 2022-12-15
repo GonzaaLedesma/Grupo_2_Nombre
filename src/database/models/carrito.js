@@ -1,23 +1,15 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Carrito'
     let cols = {
-        id : {
-            type : dataTypes.INTEGER,
-            primaryKey : true,
-            autoIncrement : true
-        },
-        evento_id : {
-            type : dataTypes.INTEGER
-        },
-        cantidad : {
-            type : dataTypes.INTEGER
-        },
-        precio_id : {
-            type : dataTypes.INTEGER
-        },
-        fecha_id : {
-            type : dataTypes.DATE
-        }
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+          },
+          activo: {
+            type: dataTypes.BOOLEAN,
+            defaultValue: false
+          }
     };
     let config = {
         tableName: 'carrito',
@@ -25,6 +17,17 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Carrito = sequelize.define(alias, cols, config);
+
+    Carrito.associate = function(models){
+        Carrito.hasMany(models.Evento, {
+            as: "evento_carrito",
+            foreingKey: "evento_id",
+        }),
+        Carrito.hasMany(models.Usuario, {
+            as: "usuario_carrito",
+            foreingKey: "usuario_id",
+        })
+    };
 
     return Carrito;
 }
