@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
         }),
         Genero.belongsToMany(models.Evento, {
             as: "eventos",
-            through: "eveneto_genero",
+            through: "evento_genero",
             foreignKey: "genero_id",
             otherKey: "evento_id",
             timestamps: false
