@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement : true
         },
         nombre: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(100),
             allowNull: false
           }
     };
@@ -19,21 +19,21 @@ module.exports = (sequelize, dataTypes) => {
     const Genero = sequelize.define(alias, cols, config);
 
     Genero.associate = function(models){
-        Genero.belongsTo(models.Usuario, {
-            as:"genero_id_favorito",
-            foreingKey:"genero_id"
+        Genero.hasMany(models.Usuario, {
+            as:"generoId",
+            foreignKey:"genero_id_favorito"
         }),
         Genero.belongsToMany(models.Usuario, {
             as: "generos",
             through: "usuario_genero",
-            foreingKey: "genero_id",
+            foreignKey: "genero_id",
             otherKey: "usuario_id",
             timestamps: false
         }),
         Genero.belongsToMany(models.Evento, {
             as: "eventos",
             through: "eveneto_genero",
-            foreingKey: "genero_id",
+            foreignKey: "genero_id",
             otherKey: "evento_id",
             timestamps: false
         })

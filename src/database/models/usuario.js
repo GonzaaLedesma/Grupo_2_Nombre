@@ -26,10 +26,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(55),
             allowNull: false
           },
-          tipo_usuario: {
-            type: dataTypes.BOOLEAN,
-            defaultValue: false
-          },
           genero: {
             type: dataTypes.STRING(55),
             allowNull: false
@@ -46,30 +42,33 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
           },
-
+          genero_id_favorito: dataTypes.INTEGER
     };
     let config = {
-        tableName: 'usuarios',
         timestamps: false
     };
 
     const Usuario= sequelize.define(alias, cols, config);
 
     Usuario.associate = function(models){
-        Usuario.hasMany(models.Genero, {
-            as:"genero_id_favorito",
-            foreingKey:"genero_id"
-        }),
+        Usuario.belongsTo(models.Genero, {
+          as:"generoId",
+          foreignKey:"genero_id_favorito"
+      });
+        Usuario.hasMany(models.TipoUsuario, {
+          as:"usuario",
+          foreignKey:"usuario_id"
+      }),
         Usuario.belongsToMany(models.Genero, {
             as: "generos",
             through: "usuario_genero",
-            foreingKey: "usuario_id",
+            foreignKey: "usuario_id",
             otherKey: "genero_id",
             timestamps: false
         }),
-        Usuario.belongsTo(models.Carrito, {
+        Usuario.hasMany(models.Carrito, {
             as:"usuario_carrito",
-            foreingKey:"genero_id"
+            foreignKey:"genero_id"
         })
     };
 

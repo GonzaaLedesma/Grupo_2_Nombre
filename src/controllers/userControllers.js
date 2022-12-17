@@ -109,7 +109,7 @@ const userController = {
   fs.writeFileSync(usersFilePath,JSON.stringify(userList, null, ' '));
   
   req.session.logged = newUser;
-  this.logout
+
   res.render("./users/login", { usuarioLogeado: req.session.logged, titlePage:"- Login"});
 
     },

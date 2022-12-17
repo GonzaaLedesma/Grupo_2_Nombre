@@ -49,27 +49,32 @@ module.exports = (sequelize, dataTypes) => {
           foto_evento: {
             type: dataTypes.STRING(50),
             allowNull: false
-          }
+          },
+          id_categoria: dataTypes.INTEGER
 
     };
     let config = {
-        tableName: 'evento',
+        tableName: 'eventos',
         timestamps: false
     };
 
     const Evento = sequelize.define(alias, cols, config);
 
     Evento.associate = function(models){
+      Evento.belongsTo(models.Categoria, {
+            as:"categoria",
+            foreignKey:"id_categoria"
+        }),
         Evento.belongsToMany(models.Genero, {
             as: "eventos",
             through: "eveneto_genero",
-            foreingKey: "evento_id",
+            foreignKey: "evento_id",
             otherKey: "genero_id",
             timestamps: false
         }),
-        Evento.belongsTo(models.Carrito, {
+        Evento.hasMany(models.Carrito, {
             as: "evento_carrito",
-            foreingKey: "genero_id",
+            foreignKey: "genero_id",
         })
     };
 

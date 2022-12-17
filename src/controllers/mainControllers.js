@@ -3,18 +3,16 @@ const sequelize = db.sequelize;
 
 const mainController = {
     index : (req,res)=>{
-        // console.log("infoUser:Home", req.session.logged);
-        // console.log(db.usuarios);
-
-        db.Usuario.findAll()
-            .then(users => {
-                console.log(users.nombre);
-                res.render("home", {titlePage:"- Home"})
-            })
-            .catch(err =>{
-                res.send(err)
-            })
+        res.render("home", {titlePage:"- Home"})
+        // db.Genero.findAll()
+        //     .then(users => {
+        //         console.log(users);
+        //         res.render("home", {titlePage:"- Home"})
+        //     })
+        //     .catch(err =>{
+        //             res.send(err)
+        //     })
     }
 }
 
-module.exports = mainController;
+module.exports = mainController; 
