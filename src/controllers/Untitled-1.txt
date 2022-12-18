@@ -1,0 +1,5 @@
+/// edit p ///
+const productsId = req.params.id;
+        let editarProducto = products.filter((product)=> product.id == productsId )
+
+         res.render("products/edicionProducto", {editarProducto:editarProducto[0], titlePage:"- Edicion"});

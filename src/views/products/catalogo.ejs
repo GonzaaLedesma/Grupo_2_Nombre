@@ -4,12 +4,111 @@
   <body>
     <%- include('../partials/header') %>
     <main>
-      <% for( let i = 0; i < products.length; i++ ) { %>
-        <li>
-            <a href="/movies/detail/<%= products[i].id %>"><%= products[i].nombre_evento %></a>
-        </li>
-        <% } %>
-     
+      <!-- <div> -->
+        <% if(locals.adminLogin) {%> 
+          <div class="positionBoton">
+            <button class="botonCreacion"><a href="/administrador/creacion">Crear evento <i class="fa-solid fa-upload"></i></a></button>
+          </div>
+          <% } %> 
+      <!-- </div> -->
+      <!-------------------------PRIMERO----------- -->
+      <h2 class="titulosCategoria">ACTUALES</h2>
+      <div class="cajaCategoria">
+        <% products.filter(product => product.id_categoria ==
+        '1').forEach(product => { %>
+        <div class="card">
+          <img
+            src="/images/catalogo/<%= product.foto_evento%>"
+            class="card-img-top"
+            alt="ImgBand"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= product.nombre_evento%></h5>
+            <p class="card-text"><%= product.sede%></p>
+            <p class="card-text"><%= product.ubicacion%></p>
+            <p class="card-text">Participacion: <%= product.participacion%></p>
+            <p class="card-text card-date"><%= product.fecha%></p>
+            <a
+              href="/producto/detalles/<%= product.id%>"
+              class="btn btn-primary"
+              >Ir a detalles</a
+            >
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <!-------------------------SEGUNDO----------- -->
+      <h2 class="titulosCategoria">NUEVOS</h2>
+      <div class="cajaCategoria">
+        <% products.filter(product => product.id_categoria ==
+        '2').forEach(product => { %>
+        <div class="card">
+          <img
+            src="/images/catalogo/<%= product.foto_evento%>"
+            class="card-img-top"
+            alt="ImgBand"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= product.nombre_evento%></h5>
+            <p class="card-text"><%= product.sede%></p>
+            <p class="card-text"><%= product.ubicacion%></p>
+            <p class="card-text">Participacion: <%= product.participacion%></p>
+            <p class="card-text card-date"><%= product.fecha%></p>
+            <a
+              href="/producto/detalles/<%= product.id%>"
+              class="btn btn-primary"
+              >Ir a detalles</a
+            >
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <!-------------------------TERCERO----------- -->
+      <h2 class="titulosCategoria">PROXIMAMENTE</h2>
+      <div class="cajaCategoria">
+        <% products.filter(product => product.id_categoria ==
+        '3').forEach(product => { %>
+        <div class="card">
+          <img
+            src="/images/catalogo/<%= product.foto_evento%>"
+            class="card-img-top"
+            alt="ImgBand"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= product.nombre_evento%></h5>
+            <p class="card-text"><%= product.sede%></p>
+            <p class="card-text"><%= product.ubicacion%></p>
+            <p class="card-text">Participacion: <%= product.participacion%></p>
+            <p class="card-text card-date"><%= product.fecha%></p>
+            <a
+              href="/producto/detalles/<%= product.id%>"
+              class="btn btn-primary"
+              >Ir a detalles</a
+            >
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <!-------------------------CUARTO----------- -->
+      <h2 class="titulosCategoria">PASADOS</h2>
+      <div class="cajaCategoria">
+        <% products.filter(product => product.id_categoria ==
+        '4').forEach(product => { %>
+        <div class="card">
+          <img
+            src="/images/catalogo/<%= product.foto_evento%>"
+            class="card-img-top"
+            alt="ImgBand"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= product.nombre_evento%></h5>
+            <p class="card-text"><%= product.sede%></p>
+            <p class="card-text"><%= product.ubicacion%></p>
+            <p class="card-text card-date"><%= product.fecha%></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
       <!-------------------------QUINTO----------- -->
       <h2 class="titulosCategoria">SPONSOR</h2>
       <div class="cajaCategoria">

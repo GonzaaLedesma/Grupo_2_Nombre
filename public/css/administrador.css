@@ -15,7 +15,9 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+.colorCase{
+    color: rgb(173, 173, 0);;
+}
 .cajaAdmin label{
     color: rgb(173, 173, 0);;
     text-align: center;
@@ -29,7 +31,16 @@
     height: 50px;
     color: gray;
 }
-
+.categoriasCheckbox{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.categoriasCheckbox label{
+    display: flex;
+    color: rgb(173, 173, 0);;
+}
 
 .textArea{
     width: 50%;

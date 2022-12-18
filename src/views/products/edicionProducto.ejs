@@ -6,14 +6,14 @@
   <div class="divParaGradiant"></div>
     <main class="mainRegister">
         <form class="formularioAdmin" action="/administrador/<%= editarProducto.id %>?_method=PUT" class="form-box" method="POST" enctype="multipart/form-data">
-            <h1 class="form-title">Edicion de <%= editarProducto.nombre %></h1>
+            <h1 class="form-title">Edicion de <%= editarProducto.nombre_evento %></h1>
             <div class="cajaAdmin">
                 <label  for="Cambio-Evento">Evento</label>
-                <input required type="text"  name="nombre"  value="<%= editarProducto.nombre %>">
+                <input required type="text"  name="nombre"  value="<%= editarProducto.nombre_evento %>">
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Dia">Dia</label>
-                <input required type="text" name="dia" value="<%= editarProducto.dia %>" >
+                <input required type="text" name="dia" value="<%= editarProducto.fecha %>" >
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Ubicacion">Ubicacion</label>
@@ -29,11 +29,11 @@
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Dato-Capacidad">Capacidad</label>
-                <input required type="text" name="capacidad" value="<%= editarProducto.capacidad %>">
+                <input required type="text" name="capacidad" value="<%= editarProducto.capacidad_sede %>">
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Precio">Precio</label>
-                <input required type="number" name="price" value="<%= editarProducto.price %>">
+                <input required type="number" name="price" value="<%= editarProducto.precio %>">
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Horario">Horario</label>
@@ -42,23 +42,38 @@
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Categoria">Categoria</label>
                 <select class="opcionesCategoria" required name="categoria" id="categoria">
-                    <option value="<%= editarProducto.categoria %>"><%= editarProducto.categoria %></option> 
-                    <option  value="Actuales">Actuales</option> 
-                    <option  value="Nuevos">Nuevos</option> 
-                    <option  value="Proximos">Proximos</option> 
+                    <option value="<%= editarProducto.id_categoria %>"><%= editarProducto.id_categoria %></option> 
+                    <option  value="1">Actuales</option> 
+                    <option  value="2">Nuevos</option> 
+                    <option  value="3">Proximos</option> 
                 </select>
             </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-generoBanda">Genero de la Banda</label>
-                <select class="opcionesCategoria" required name="generoBanda">
-                    <option value="<%= editarProducto.generoBanda %>"><%= editarProducto.generoBanda %></option> 
-                    <option value="rock">Rock</option>
-                    <option value="hard rock">Hard Rock</option>
-                    <option value="pop">Pop</option>
-                    <option value="rock alternativo">Rock Alternativo</option>
-                    <option value="pop rock">Pop Rock</option>
-                    <option value="pop punk">Pop Punk</option>
-                </select>
+            <label class="colorCase" for="generoBanda">Genero de la Banda</label>
+            <div class="categoriasCheckbox"> 
+                <div>
+                    <label for="rock">Rock</label>
+                  <input type="checkbox" id="rock" name="generoBanda" value="1">
+                </div>
+                <div>
+                    <label for="hard-rock">Hard Rock</label>
+                  <input type="checkbox" id="hard-rock" name="generoBanda" value="2">
+                </div>
+                <div>
+                    <label for="pop">Pop</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="3">
+                </div>
+                <div>
+                    <label for="Rock Alternativo">Rock Alternativo</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="4">
+                </div>
+                <div>
+                    <label for="Pop Rock">Pop Rock</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="5">
+                </div>
+                <div>
+                    <label for="Pop Punk">Pop Punk</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="6">
+                </div>
             </div>
             <div class="cajaAdmin">
                 <label  for="Cambio-Descripcion-Evento">Descripcion del Evento</label>

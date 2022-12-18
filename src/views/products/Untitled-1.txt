@@ -2,7 +2,7 @@
         <div class="positionBoton">
           <button class="botonCreacion"><a href="/administrador/creacion">Crear evento <i class="fa-solid fa-upload"></i></a></button>
         </div>
-        <% } %> 
+ <% } %> 
       <% if(locals.userLogin) {%> 
         <h2 class="titulosCategoria">SEGUN TU GUSTO</h2>
         <div class="cajaCategoriaLogged">
@@ -35,7 +35,7 @@
 
          <h2 class="titulosCategoria">ACTUALES</h2>
       <div class="cajaCategoria">
-        <% products.filter(product => product.id_categoria: == '1').forEach(product => { %>
+        <% products.filter(product => product.id_categoria == '1').forEach(product => { %>
         <div class="card">
           <img
             src="/images/catalogo/<%= product.foto_evento%>"

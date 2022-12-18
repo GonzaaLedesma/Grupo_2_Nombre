@@ -1,3 +1,6 @@
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 const fs = require('fs');
 const path = require('path');
 
@@ -9,74 +12,76 @@ const administradorController = {
          res.render("products/creacionProducto", {titlePage:"- Creacion"});
     },
     edicion : (req,res)=>{
-        const productsId = req.params.id;
-        let editarProducto = products.filter((product)=> product.id == productsId )
-
-         res.render("products/edicionProducto", {editarProducto:editarProducto[0], titlePage:"- Edicion"});
+        db.Evento.findByPk(req.params.id)
+        .then(editarProducto => {
+            res.render("products/edicionProducto", {editarProducto , titlePage:"- Edicion"});
+        });
     },
     creacionPost : (req,res)=>{
         const fotoEvento = req.file;
-        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,generoBanda,descripcion,biografia} = req.body
-        let  newProduct = {
-            id : Date.now(),
-            nombre : nombre,
-            dia : dia,
+        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,descripcion,biografia,categoria,generoBanda} = req.body
+         db.Evento.create({
+            nombre_evento : nombre,
+            fecha: dia,
             ubicacion : ubicacion,
             sede : sede,
+            capacidad_sede : Number(capacidad),
+            precio : Number(price),
             participacion : participacion,
-            capacidad : Number(capacidad),
-            price : Number(price),
             horario : Number(horario),
-            categoria : categoria,
-            generoBanda: generoBanda,
             descripcion : descripcion,
             biografia : biografia,
-            fotoEvento : fotoEvento.filename
-        } 
-        
-        products.push(newProduct);
-        
-        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
-        
-        res.render('./products/catalogo', {products}); 
-        // res.redirect('products/catalogo'); 
+            foto_evento : fotoEvento.filename,
+            id_categoria:categoria,
+            eventosGenero:generoBanda
+        })
+        .then(evento=>{
+            return res.redirect("catalogo")
+        })
+        .catch(err =>{
+            res.send(err)
+        })        
    },
     edicionPut : (req,res)=>{
-        const productsId = req.params.id;
         const fotoEvento = req.file;
-        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,categoria,generoBanda,descripcion,biografia} = req.body;
-        products.forEach((products)=>{
-          if(products.id == productsId){
-                products.nombre = nombre,
-                products.dia = dia,
-                products.ubicacion = ubicacion,
-                products.sede = sede,
-                products.participacion = participacion,
-                products.capacidad = Number(capacidad),
-                products.price = Number(price),
-                products.horario = Number(horario),
-                products.categoria = categoria,
-                products.generoBanda = generoBanda,
-                products.descripcion = descripcion,
-                products.biografia = biografia
-                products.fotoEvento = fotoEvento.filename
-            }
+        const {nombre,dia,ubicacion,sede,participacion,capacidad,price,horario,descripcion,biografia,categoria,generoBanda} = req.body
+        db.Evento.update({
+           nombre_evento : nombre,
+           fecha: dia,
+           ubicacion : ubicacion,
+           sede : sede,
+           capacidad_sede : Number(capacidad),
+           precio : Number(price),
+           participacion : participacion,
+           horario : Number(horario),
+           descripcion : descripcion,
+           biografia : biografia,
+           foto_evento : fotoEvento.filename,
+           id_categoria:categoria,
+           eventosGenero:generoBanda
+       },
+       {
+        where: {
+            id : req.params.id
+        }
         })
-        // console.log("infoUser:AntesDeJSON", req.session.logged);
-        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' '));
-        // console.log("infoUser:DespuesDeJSON", req.session.logged);
-        
-        res.render('./products/catalogo', {products});
-        // console.log("infoUser:DespuesDeRENDER", req.session.logged);
-    
+       .then(evento=>{
+            return res.redirect("/")
+       })
+       .catch(err =>{
+           res.send(err)
+       })          
     },
     destroy : (req, res) => {
-        const id = req.params.id;
-        const filteredProducts = products.filter((products)=> products.id != id)
-        fs.writeFileSync(productsFilePath,JSON.stringify(filteredProducts, null, ' '));
-
-        res.redirect('/')
-	}
+        let eventoId = req.params.id;
+        db.Evento.destroy({
+            where:{id:eventoId},force:true
+        })
+        .then(()=>{
+            return res.redirect('/')
+        })
+        .catch(error => res.send(error))
+    }
 }
 
 module.exports = administradorController;

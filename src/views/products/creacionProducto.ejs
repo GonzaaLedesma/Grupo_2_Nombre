@@ -9,11 +9,11 @@
             <h1 class="form-title">Creacion De Evento</h1>
             <div class="cajaAdmin">
                 <label for="Nombre"></label>
-                <input required type="text"  name="nombre"  id="Nombre" placeholder="Nombre del Evento">
+                <input required type="text"  name="nombre" placeholder="Nombre del Evento">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Dia"></label>
-                <input required type="date" name="dia" id="Dia" >
+                <input required type="date" name="dia">
             </div>
             <div class="cajaAdmin"> 
                 <label for="Ubicacion"></label>
@@ -43,22 +43,37 @@
                 <label  for="Categoria">Categoria</label>
                 <select class="opcionesCategoria" required name="categoria" id="categoria">
                     <option  value="">Seleccione</option> 
-                    <option  value="Actuales">Actuales</option> 
-                    <option  value="Nuevos">Nuevos</option> 
-                    <option  value="Proximos">Proximos</option> 
+                    <option  value="1">Actuales</option> 
+                    <option  value="2">Nuevos</option> 
+                    <option  value="3">Proximos</option> 
                 </select>
             </div>
-            <div class="cajaAdmin"> 
-                <label  for="generoBanda">Genero de la Banda</label>
-                <select class="opcionesCategoria" required name="generoBanda">
-                    <option value="">Seleccione</option> 
-                    <option value="rock">Rock</option>
-                    <option value="hard rock">Hard Rock</option>
-                    <option value="pop">Pop</option>
-                    <option value="rock alternativo">Rock Alternativo</option>
-                    <option value="pop rock">Pop Rock</option>
-                    <option value="pop punk">Pop Punk</option>
-                </select>
+            <label class="colorCase" for="generoBanda">Genero de la Banda</label>
+            <div class="categoriasCheckbox"> 
+                <div>
+                    <label for="rock">Rock</label>
+                  <input type="checkbox" id="rock" name="generoBanda" value="1">
+                </div>
+                <div>
+                    <label for="hard-rock">Hard Rock</label>
+                  <input type="checkbox" id="hard-rock" name="generoBanda" value="2">
+                </div>
+                <div>
+                    <label for="pop">Pop</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="3">
+                </div>
+                <div>
+                    <label for="Rock Alternativo">Rock Alternativo</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="4">
+                </div>
+                <div>
+                    <label for="Pop Rock">Pop Rock</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="5">
+                </div>
+                <div>
+                    <label for="Pop Punk">Pop Punk</label>
+                  <input type="checkbox" id="pop" name="generoBanda" value="6">
+                </div>
             </div>
             <div class="cajaAdmin">
                 <label for="Descripcion-Evento">Descripcion del Evento</label>
