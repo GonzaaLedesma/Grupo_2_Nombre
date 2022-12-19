@@ -19,7 +19,8 @@ const productosController = {
       });
   },
   detalles: (req, res) => {
-    db.Evento.findByPk(req.params.id).then((detalle) => {
+    db.Evento.findByPk(req.params.id)
+    .then((detalle) => {
       res.render("products/detalleProducto", {
         detalle,
         titlePage: "- Detalles",

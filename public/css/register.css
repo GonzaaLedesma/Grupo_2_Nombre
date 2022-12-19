@@ -13,6 +13,9 @@
 .correcionCajasForm{
     width: 100%;
 }
+.correcionCajasForm label{
+    color: gold;
+}
 .correcionCajasForm input{
     width: 70%;
 }
@@ -41,6 +44,7 @@
 .form-title{
     color: #ffffff;
     font-weight: 500;
+    color: gold;
 }
 .cajaRegisterInput{
     border: 0;

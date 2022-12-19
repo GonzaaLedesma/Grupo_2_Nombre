@@ -18,11 +18,24 @@
                 class="cajaRegisterInput <%= locals.errors && errors.nombre ? 'errorBorder' : null %>"
                 type="text"
                 name="nombre"
-                placeholder="Nombre y apellido"
+                placeholder="Nombre"
                 value="<%= locals.oldData ? oldData.nombre : null %>"
             />
             <% if (locals.errors && errors.nombre) { %>
             <div class="errorTxt"><%= errors.nombre.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
+            <label for="apellido"></label>
+            <input
+                class="cajaRegisterInput <%= locals.errors && errors.apellido ? 'errorBorder' : null %>"
+                type="text"
+                name="apellido"
+                placeholder="Apellido"
+                value="<%= locals.oldData ? oldData.apellido : null %>"
+            />
+            <% if (locals.errors && errors.apellido) { %>
+            <div class="errorTxt"><%= errors.apellido.msg %></div>
             <% } %>
         </div>
         <div class="correcionCajasForm">
@@ -52,6 +65,18 @@
             <% } %>
         </div>
         <div class="correcionCajasForm">
+            <label for="contrasenia"></label>
+            <input
+                class="cajaRegisterInput <%= locals.errors && errors.contrasenia ? 'errorBorder' : null %>"
+                type="password"
+                name="contrasenia"
+                placeholder="Contraseña"
+            />
+            <% if (locals.errors && errors.contrasenia) { %>
+            <div class="errorTxt"><%= errors.contrasenia.msg %></div>
+            <% } %>
+        </div>
+        <div class="correcionCajasForm">
             <label for="pais"></label>
             <input
                 class="cajaRegisterInput <%= locals.errors && errors.pais ? 'errorBorder' : null %>"
@@ -65,42 +90,44 @@
             <% } %>
         </div>
         <div class="correcionCajasForm">
-            <label for="contrasenia"></label>
-            <input
-                class="cajaRegisterInput <%= locals.errors && errors.contrasenia ? 'errorBorder' : null %>"
-                type="password"
-                name="contrasenia"
-                placeholder="Contraseña"
-            />
-            <% if (locals.errors && errors.contrasenia) { %>
-            <div class="errorTxt"><%= errors.contrasenia.msg %></div>
-            <% } %>
-        </div>
-        <div class="correcionCajasForm">
             <label class="tituloRegisterCaja" for="genero">Gusto Favorito</label>
             <select
-                class="opcionesRegister <%= locals.errors && errors.gustosUsuario ? 'errorBorder' : null %>"
-                name="gustosUsuario"
+                class="opcionesRegister <%= locals.errors && errors.gustoFavorito ? 'errorBorder' : null %>"
+                name="gustoFavorito"
             >
                 <option value="">Seleccione</option>
-                <option value="rock" <%= locals.oldData && oldData.gustosUsuario  == "rock" ?'selected' : null %> >Rock</option>
-                <option value="hard rock" <%= locals.oldData && oldData.gustosUsuario  == "hard rock" ?'selected' : null %> >Hard Rock</option>
-                <option value="pop" <%= locals.oldData && oldData.gustosUsuario  == "pop" ?'selected' : null %>>Pop</option>
-                <option value="rock alternativo" <%= locals.oldData && oldData.gustosUsuario == "rock alternativo" ? 'selected' : null %>>Rock Alternativo</option>
-                <option value="pop rock" <%= locals.oldData && oldData.gustosUsuario == "pop rock" ? 'selected' : null %>>Pop Rock</option>
-                <option value="pop punk" <%= locals.oldData && oldData.gustosUsuario == "pop punk" ? 'selected' : null %>>Pop Punk</option>
+                <option value="1" <%= locals.oldData && oldData.gustoFavorito  == "1" ?'selected' : null %> >Rock</option>
+                <option value="2" <%= locals.oldData && oldData.gustoFavorito  == "2" ?'selected' : null %> >Hard Rock</option>
+                <option value="3" <%= locals.oldData && oldData.gustoFavorito  == "3" ?'selected' : null %>>Pop</option>
+                <option value="4" <%= locals.oldData && oldData.gustoFavorito == "4" ? 'selected' : null %>>Rock Alternativo</option>
+                <option value="5" <%= locals.oldData && oldData.gustoFavorito == "5" ? 'selected' : null %>>Pop Rock</option>
+                <option value="6" <%= locals.oldData && oldData.gustoFavorito == "6" ? 'selected' : null %>>Pop Punk</option>
             </select>
-            <% if (locals.errors && errors.gustosUsuario) { %>
-                <div class="errorTxt"><%= errors.gustosUsuario.msg %></div>
+            <% if (locals.errors && errors.gustoFavorito) { %>
+                <div class="errorTxt"><%= errors.gustoFavorito.msg %></div>
                 <% } %>
         </div>
+        <br>
         <div class="correcionCajasForm">
-            <label class="tituloRegisterCaja" for="genero">Genero</label>
+            <label class="tituloRegisterCaja" for="genero">Gusto Favorito</label>
+            <label><input type="checkbox" name="gustosUsuario" value="1" <%= locals.oldData && oldData.gustosUsuario =='1' ? 'checked' : null %> >Rock</label>
+            <label><input type="checkbox" name="gustosUsuario" value="2" <%= locals.oldData && oldData.gustosUsuario =='2' ? 'checked' : null %> >Hard-Rock</label>
+            <label><input type="checkbox" name="gustosUsuario" value="3" <%= locals.oldData && oldData.gustosUsuario =='3' ? 'checked' : null %> >Pop</label>
+            <label><input type="checkbox" name="gustosUsuario" value="4" <%= locals.oldData && oldData.gustosUsuario =='4' ? 'checked' : null %> >Rock-Alternativo</label>
+            <label><input type="checkbox" name="gustosUsuario" value="5" <%= locals.oldData && oldData.gustosUsuario =='5' ? 'checked' : null %> >Pop-Rock</label>
+            <label><input type="checkbox" name="gustosUsuario" value="6" <%= locals.oldData && oldData.gustosUsuario =='6' ? 'checked' : null %> >Pop-Punk</label>
+            <% if (locals.errors && errors.gustosUsuario) { %>
+              <div class="errorTxt"><%= errors.gustosUsuario.msg %></div>
+            <% } %>
+          </div>
+          <br>
+        <div class="correcionCajasForm">
+            <label class="tituloRegisterCaja" for="genero"></label>
             <select
                 class="opcionesRegister <%= locals.errors && errors.genero ? 'errorBorder' : null %>"
                 name="genero"
             >
-                <option value="">Seleccione</option>
+                <option value="">Seleccione su genero</option>
                 <option value="masculino" <%= locals.oldData && oldData.genero  == "masculino" ?'selected' : null %> >Masculino</option>
                 <option value="femenino" <%= locals.oldData && oldData.genero  == "femenino" ?'selected' : null %>>Femenino</option>
                 <option value="otros" <%= locals.oldData && oldData.genero == "otro" ? 'selected' : null %>>Otros</option>
@@ -110,6 +137,7 @@
             <% } %>
         </div>
         <div class="correcionCajasForm">
+            <br>
             <label for="infoUsuario" class="tituloRegisterCaja">Cuentanos sobre ti</label>
             <textarea
                 class="textAreaRegister <%= locals.errors && errors.infoUsuario ? 'errorBorder' : null %>"

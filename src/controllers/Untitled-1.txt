@@ -3,3 +3,103 @@ const productsId = req.params.id;
         let editarProducto = products.filter((product)=> product.id == productsId )
 
          res.render("products/edicionProducto", {editarProducto:editarProducto[0], titlePage:"- Edicion"});
+/////// edit u ///////
+registerProcess: (req, res) => {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      res.render("./users/register", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+    let buscarUsuario = usuario.findField("email", req.body.email);
+
+    if (buscarUsuario) {
+      return res.render("users/register", {
+        errors: {
+          email: {
+            msg: "Este email ya está registrado",
+          },
+        },
+        oldData: req.body,
+      });
+    }
+
+    let usarioCreado = {
+      ...req.body,
+      tipoUsuario: false,
+      contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+      imagen: req.file.filename,
+    };
+
+    let userCreated = usuario.create(usarioCreado);
+
+    return res.redirect("login");
+    },
+  ---------------------------------------------------------------------------------
+    registerProcess: async (req, res) => {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      res.render("./users/register", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+    try {
+      const user = await db.Ususario.findOne({
+        where: { email: req.body.email },
+      });
+      if (user) {
+        return res.render("users/register", {
+          errors: {
+            email: {
+              msg: "Este email ya está registrado",
+            },
+          },
+          oldData: req.body,
+        });
+      }
+      const imagen = req.file;
+      const {
+        nombre,
+        apellido,
+        nombreUsuario,
+        contrasenia,
+        email,
+        pais,
+        gustoFavorito,
+        gustosUsuario,
+        genero,
+        infoUsuario,
+      } = req.body;
+
+      db.Ususario.create( {
+        nombre:nombre,
+        apellido:apellido,
+        nombreUsuario:nombreUsuario,
+        contrasenia: bcryptjs.hashSync(contrasenia, 10),
+        email:email,
+        pais:pais,
+        genero_id_favorito:gustoFavorito,
+        generos:gustosUsuario,
+        genero:genero,
+        descripcion:infoUsuario,
+        tipoUsuario: false,
+        foto_perfil: imagen.filename,
+      });
+      return res.redirect("login");
+    } catch (error) {
+      console.error(error);
+      res.render("users/register", {
+        errors: {
+          error: {
+            msg: "Ocurrió un error al registrar el usuario",
+          },
+        },
+        oldData: req.body,
+      });
+    }
+    
+  },

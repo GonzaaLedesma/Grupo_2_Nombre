@@ -3,11 +3,13 @@ const { body } = require('express-validator');
 
 const validator = [
 	body('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
+	body('apellido').notEmpty().withMessage('Tienes que escribir un apellido'),
 	body('nombreUsuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
 	body('email')
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body('gustosUsuario').notEmpty().withMessage('Debes seleccionar uno'),
+    body('gustoFavorito').notEmpty().withMessage('Debes seleccionar un gusto favorito'),
+    body('gustosUsuario').notEmpty().withMessage('Debes seleccionar minimo uno'),
     body('genero').notEmpty().withMessage('Debes seleccionar uno'),
     body('infoUsuario').notEmpty().withMessage('Debes completar este campo'),
 	body('contrasenia').notEmpty().withMessage('Tienes que escribir una contraseña'),

@@ -45,7 +45,8 @@ module.exports = (sequelize, dataTypes) => {
           genero_id_favorito: dataTypes.INTEGER
     };
     let config = {
-        timestamps: false
+      tableName: 'usuarios',
+      timestamps: false
     };
 
     const Usuario= sequelize.define(alias, cols, config);

@@ -6,11 +6,11 @@
     <main class="mainPerfil">
       <div class="contenedorInfo">
         <div class="imgPerfil">
-          <img src="/images/Usuarios/<%= usuarioLogeado.imagen %>" />
+          <img src="/images/Usuarios/<%= usuarioLogeado.foto_perfil %>" />
         </div>
         <div class="infoNombre">
-          <h3 class="nombrePerfil"><%= usuarioLogeado.nombre %></h3>
-          <h5 class="usuarioPerfil">@<%= usuarioLogeado.nombreUsuario %></h5>
+          <h3 class="nombrePerfil"><%= usuarioLogeado.nombre %> <%= usuarioLogeado.apellido %></h3>
+          <h5 class="usuarioPerfil">@<%= usuarioLogeado.nombre_usuario %></h5>
           <div class="correcionPerfil">
             <h6 class="textPerfil">Estado Actual:</h6>
             <h6 class="textPerfil">Conectado</h6>
@@ -24,7 +24,21 @@
             <h5>Nombre:</h5>
             <p class="textP"><%= usuarioLogeado.nombre %></p>
             <h5>Gusto Favorito:</h5>
-            <p class="textP"><%= usuarioLogeado.gustosUsuario %></p>
+            <p id="textP">
+              <% if (usuarioLogeado.gustosUsuario == 1) {%>
+                rock
+                <% } else if (usuarioLogeado.gustosUsuario == 2) { %>
+                hard rock
+                <% } else if (usuarioLogeado.gustosUsuario == 3) { %>
+                pop
+                <% } else if (usuarioLogeado.gustosUsuario == 4) { %>
+                rock alternativo
+                <% } else if (usuarioLogeado.gustosUsuario == 5) { %>
+                pop rock
+                <% } else { %>
+                pop punk
+                <% } %>
+            </p>
           </div>
           <div>
             <h3>informacion Personal</h3>
@@ -33,7 +47,7 @@
             <h5>Genero:</h5>
             <p class="textP"><%= usuarioLogeado.genero %></p>
             <h5>Sobre mi:</h5>
-            <p class="textInfoPerfil"><%= usuarioLogeado.infoUsuario %></p>
+            <p class="textInfoPerfil"><%= usuarioLogeado.descripcion %></p>
           </div>
         </div>
       </div>
