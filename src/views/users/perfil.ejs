@@ -25,15 +25,15 @@
             <p class="textP"><%= usuarioLogeado.nombre %></p>
             <h5>Gusto Favorito:</h5>
             <p id="textP">
-              <% if (usuarioLogeado.gustosUsuario == 1) {%>
+              <% if (usuarioLogeado.genero_id_favorito == 1) {%>
                 rock
-                <% } else if (usuarioLogeado.gustosUsuario == 2) { %>
+                <% } else if (usuarioLogeado.genero_id_favorito == 2) { %>
                 hard rock
-                <% } else if (usuarioLogeado.gustosUsuario == 3) { %>
+                <% } else if (usuarioLogeado.genero_id_favorito == 3) { %>
                 pop
-                <% } else if (usuarioLogeado.gustosUsuario == 4) { %>
+                <% } else if (usuarioLogeado.genero_id_favorito == 4) { %>
                 rock alternativo
-                <% } else if (usuarioLogeado.gustosUsuario == 5) { %>
+                <% } else if (usuarioLogeado.genero_id_favorito == 5) { %>
                 pop rock
                 <% } else { %>
                 pop punk

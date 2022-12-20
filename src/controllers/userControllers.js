@@ -3,26 +3,20 @@ const sequelize = db.sequelize;
 const bcryptjs = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
 
-const fs = require("fs");
-const path = require("path");
-
-const usersFilePath = path.join(__dirname, "../data/users.json");
-const userList = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
 const userController = {
   register: (req, res) => {
     return res.render("users/register", { titlePage: "- Register" });
   },
   registerProcess: async (req, res) => {
     const errors = validationResult(req);
-  
+
     if (errors.errors.length > 0) {
       return res.render("./users/register", {
         errors: errors.mapped(),
         oldData: req.body,
       });
     }
-    
+
     const user = await db.Usuario.findOne({
       where: { email: req.body.email },
     });
@@ -36,7 +30,6 @@ const userController = {
         oldData: req.body,
       });
     }
-    const imagen = req.file;
     const {
       nombre,
       apellido,
@@ -49,7 +42,8 @@ const userController = {
       genero,
       infoUsuario,
     } = req.body;
-  
+    const imagen = req.file;
+
     await db.Usuario.create({
       nombre: nombre,
       apellido: apellido,
@@ -64,16 +58,17 @@ const userController = {
       tipoUsuario: false,
       foto_perfil: imagen.filename,
     });
+
     return res.redirect("login");
-  },  
+  },
   login: (req, res) => {
     return res.render("users/login", { titlePage: "- Login" });
   },
   loginProcess: async (req, res) => {
     let loginUser = await db.Usuario.findOne({
       where: {
-        email: req.body.email
-      }
+        email: req.body.email,
+      },
     });
     if (loginUser && loginUser.contrasenia) {
       let passwordCompare = bcryptjs.compareSync(
@@ -83,7 +78,7 @@ const userController = {
       if (passwordCompare) {
         delete loginUser.contrasenia;
         req.session.logged = loginUser;
-  
+
         if (req.body.recuerdame) {
           res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 15 });
         }
@@ -106,50 +101,56 @@ const userController = {
     });
   },
   perfil: (req, res) => {
+    console.log(req.session);
     return res.render("users/perfil", {
       usuarioLogeado: req.session.logged,
       titlePage: "- Perfil",
     });
   },
-  perfilEdicion: (req, res) => {
+  perfilEdicion: async (req, res) => {
     return res.render("users/edicionPerfil", {
       datosUsuario: req.session.logged,
       titlePage: "- Edicion Perfil",
     });
   },
   perfilPut: (req, res) => {
-    const imagen = req.file;
     const {
       nombre,
+      apellido,
       nombreUsuario,
-      email,
       pais,
+      email,
+      gustoFavorito,
       gustosUsuario,
       genero,
       infoUsuario,
     } = req.body;
-    let newUser = {};
-    userList.forEach((userFound) => {
-      if (userFound.email == email) {
-        (userFound.nombre = nombre),
-          (userFound.nombreUsuario = nombreUsuario),
-          (userFound.email = email),
-          (userFound.pais = pais),
-          (userFound.gustosUsuario = gustosUsuario),
-          (userFound.genero = genero),
-          (userFound.infoUsuario = infoUsuario);
-        userFound.imagen = imagen.filename;
-        newUser = userFound;
-      }
-    });
-    fs.writeFileSync(usersFilePath, JSON.stringify(userList, null, " "));
+    const imagen = req.file;
 
-    req.session.logged = newUser;
-
-    res.render("./users/login", {
-      usuarioLogeado: req.session.logged,
-      titlePage: "- Login",
-    });
+     db.Usuario.update({
+      nombre: nombre,
+      apellido: apellido,
+      nombre_usuario: nombreUsuario,
+      email: email,
+      genero_id_favorito: gustoFavorito,
+      genero: genero,
+      pais: pais,
+      descripcion: infoUsuario,
+      foto_perfil: imagen.filename,
+      generos: gustosUsuario,
+      tipoUsuario: false,
+    },
+    {
+      where: {
+          id : req.session.id    
+        }
+  })
+  .then((evento) => {
+    res.redirect("../perfil");
+  })
+  .catch((err) => {
+    res.send(err);
+  });
   },
   logout: (req, res) => {
     res.clearCookie("datosEmail");

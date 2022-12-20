@@ -1,23 +1,31 @@
-const usuario = require("../models/Users");
-function loggedMiddleware(req, res, next) {
-  	// console.log("infoUser:LoggedMIdlleware", req.session.logged);
-    res.locals.userLogin = false;
+const db = require("../database/models");
 
-    let cookieDatos = req.cookies.datosEmail;
-    let usuarioCookie = usuario.findField("email", cookieDatos);
+async function loggedMiddleware(req, res, next) {
+  res.locals.userLogin = false;
 
+  // Verificamos si existe la cookie 'datosEmail'
+  if (req.cookies.datosEmail) {
+    // Si existe, buscamos el usuario en la base de datos
+    const usuarioCookie = await db.Usuario.findOne({
+      where: {
+        email: req.cookies.datosEmail
+      }
+    });
+
+    // Si encontramos un usuario, guardamos sus datos en la variable res.locals.logged
     if (usuarioCookie) {
       res.locals.logged = usuarioCookie;
     }
+  }
 
-    if (req.session.logged) {
-      res.locals.userLogin = true;
-      res.locals.logged = req.session.logged;
-      userdetail = req.session.logged;
-    }
+  // Si existe la sesión 'logged', guardamos los datos del usuario en res.locals.logged
+  if (req.session.logged) {
+    res.locals.userLogin = true;
+    res.locals.logged = req.session.logged;
+    userdetail = req.session.logged;
+  }
 
-    next();
-  
+  next();
 }
 
 module.exports = loggedMiddleware;

@@ -96,9 +96,9 @@
                 name="gustoFavorito"
             >
                 <option value="">Seleccione</option>
-                <option value="1" <%= locals.oldData && oldData.gustoFavorito  == "1" ?'selected' : null %> >Rock</option>
-                <option value="2" <%= locals.oldData && oldData.gustoFavorito  == "2" ?'selected' : null %> >Hard Rock</option>
-                <option value="3" <%= locals.oldData && oldData.gustoFavorito  == "3" ?'selected' : null %>>Pop</option>
+                <option value="1" <%= locals.oldData && oldData.gustoFavorito == "1" ?'selected' : null %> >Rock</option>
+                <option value="2" <%= locals.oldData && oldData.gustoFavorito == "2" ?'selected' : null %> >Hard Rock</option>
+                <option value="3" <%= locals.oldData && oldData.gustoFavorito == "3" ?'selected' : null %>>Pop</option>
                 <option value="4" <%= locals.oldData && oldData.gustoFavorito == "4" ? 'selected' : null %>>Rock Alternativo</option>
                 <option value="5" <%= locals.oldData && oldData.gustoFavorito == "5" ? 'selected' : null %>>Pop Rock</option>
                 <option value="6" <%= locals.oldData && oldData.gustoFavorito == "6" ? 'selected' : null %>>Pop Punk</option>
@@ -109,7 +109,7 @@
         </div>
         <br>
         <div class="correcionCajasForm">
-            <label class="tituloRegisterCaja" for="genero">Gusto Favorito</label>
+            <label class="tituloRegisterCaja" for="genero">Gustos</label>
             <label><input type="checkbox" name="gustosUsuario" value="1" <%= locals.oldData && oldData.gustosUsuario =='1' ? 'checked' : null %> >Rock</label>
             <label><input type="checkbox" name="gustosUsuario" value="2" <%= locals.oldData && oldData.gustosUsuario =='2' ? 'checked' : null %> >Hard-Rock</label>
             <label><input type="checkbox" name="gustosUsuario" value="3" <%= locals.oldData && oldData.gustosUsuario =='3' ? 'checked' : null %> >Pop</label>
@@ -155,6 +155,7 @@
                     class="imagenPerfilRegister <%= locals.errors && errors.imagen ? 'errorBorder' : null %>"
                     type="file"
                     name="imagen"
+                    required
                 />
                 </div>
                 <% if (locals.errors && errors.imagen) { %>

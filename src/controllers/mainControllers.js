@@ -1,5 +1,5 @@
 const mainController = {
-    index: (req, res) => {
+    index: async (req, res) => {
       res.render("home", { titlePage: "- Home" })
   }
 }

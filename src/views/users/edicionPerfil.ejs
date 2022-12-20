@@ -22,12 +22,21 @@
           />
         </div>
         <div class="correcionCajasForm">
+          <label for="nombre"></label>
+          <input
+            class="cajaRegisterInput"
+            type="text"
+            name="apellido"
+            value="<%= datosUsuario.apellido  %>"
+          />
+        </div>
+        <div class="correcionCajasForm">
           <label for="nombreUsuario"></label>
           <input
             class="cajaRegisterInput"
             type="text"
             name="nombreUsuario"
-            value="<%= datosUsuario.nombreUsuario  %>"
+            value="<%= datosUsuario.nombre_usuario  %>"
           />
         </div>
         <div class="correcionCajasForm">
@@ -54,16 +63,27 @@
           >
           <select class="opcionesRegister" name="gustosUsuario">
             <option value="<%= datosUsuario.gustosUsuario  %>">
-              <%= datosUsuario.gustosUsuario %>
+              <%= datosUsuario.genero_id_favorito %>
             </option>
-            <option value="rock">Rock</option>
-            <option value="hard rock">Hard Rock</option>
-            <option value="pop">Pop</option>
-            <option value="rock alternativo">Rock Alternativo</option>
-            <option value="pop rock">Pop Rock</option>
-            <option value="pop punk">Pop Punk</option>
+            <option value="1">Rock</option>
+            <option value="2">Hard Rock</option>
+            <option value="3">Pop</option>
+            <option value="4">Rock Alternativo</option>
+            <option value="5">Pop Rock</option>
+            <option value="6">Pop Punk</option>
           </select>
         </div>
+        <br>
+        <div class="correcionCajasForm">
+            <label class="tituloRegisterCaja" for="genero">Nuevos Gustos</label>
+            <label><input type="checkbox" name="gustosUsuario" value="1" >Rock</label>
+            <label><input type="checkbox" name="gustosUsuario" value="2" >Hard-Rock</label>
+            <label><input type="checkbox" name="gustosUsuario" value="3" >Pop</label>
+            <label><input type="checkbox" name="gustosUsuario" value="4" >Rock-Alternativo</label>
+            <label><input type="checkbox" name="gustosUsuario" value="5" >Pop-Rock</label>
+            <label><input type="checkbox" name="gustosUsuario" value="6" >Pop-Punk</label>
+          </div>
+          <br>
         <div class="correcionCajasForm">
           <label class="tituloRegisterCaja" for="genero">Genero</label>
           <select class="opcionesRegister" name="genero">
@@ -81,14 +101,14 @@
             >Cuentanos sobre ti</label
           >
           <textarea class="textAreaRegister" name="infoUsuario">
-<%= datosUsuario.infoUsuario  %></textarea
+<%= datosUsuario.descripcion  %></textarea
           >
         </div>
         <div class="cajaAdmin">
           <label for="ImgEvento">
             <div class="label">Nueva foto de Perfil</div>
             <div>
-              <input class="imagenPerfilRegister" type="file" name="imagen" />
+              <input class="imagenPerfilRegister" type="file" name="imagen" required />
             </div>
           </label>
         </div>
