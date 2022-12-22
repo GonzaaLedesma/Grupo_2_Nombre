@@ -148,3 +148,80 @@ const Usuario = {
 
 
 module.exports = Usuario;
+----
+perfilPut: (req, res) => {
+    const {
+      nombre,
+      apellido,
+      nombreUsuario,
+      pais,
+      email,
+      gustoFavorito,
+      gustosUsuario,
+      genero,
+      infoUsuario,
+    } = req.body;
+    const imagen = req.file;
+
+     db.Usuario.update({
+      nombre: nombre,
+      apellido: apellido,
+      nombre_usuario: nombreUsuario,
+      email: email,
+      genero_id_favorito: gustoFavorito,
+      genero: genero,
+      pais: pais,
+      descripcion: infoUsuario,
+      foto_perfil: imagen.filename,
+      generos: gustosUsuario,
+      tipoUsuario: false,
+    },
+    {
+      where: {
+          email:email   
+        }
+  })
+  .then((evento) => {
+    res.redirect("../perfil");
+  })
+  .catch((err) => {
+    res.send(err);
+  });
+  },
+  ---
+   creacionPost: async(req, res) => {
+    console.log(req.body)
+    const fotoEvento = req.file;
+    const {
+      nombre,
+      dia,
+      ubicacion,
+      sede,
+      participacion,
+      capacidad,
+      price,
+      horario,
+      descripcion,
+      biografia,
+      categoria,
+      generoBanda,
+    } = req.body;
+    generoBanda.forEach(async(genero)=>{
+      await db.Evento.create({
+        nombre_evento: nombre,
+        fecha: dia,
+        ubicacion: ubicacion,
+        sede: sede,
+        capacidad_sede: Number(capacidad),
+        precio: Number(price),
+        participacion: participacion,
+        horario: Number(horario),
+        descripcion: descripcion,
+        biografia: biografia,
+        foto_evento: fotoEvento.filename,
+        id_categoria: categoria,
+        eventosGenero: genero,
+      })
+    })
+      return res.redirect("catalogo");
+  },

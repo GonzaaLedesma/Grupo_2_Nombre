@@ -1,14 +1,16 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'TipoUsuario'
+    let alias = 'Tipo_Usuario'
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
+        usurio_id: {
+            type: dataTypes.INTEGER,
+        },
         admin: {
             type: dataTypes.BOOLEAN,
-            defaultValue: false
         }
     };
     let config = {
@@ -16,14 +18,14 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
 
-    const TipoUsuario = sequelize.define(alias, cols, config);
+    const Tipo_Usuario = sequelize.define(alias, cols, config);
 
-    TipoUsuario.associate = function(models){
-        TipoUsuario.belongsTo(models.Usuario, {
+    Tipo_Usuario.associate = function(models){
+        Tipo_Usuario.belongsTo(models.Usuario, {
             as:"usuario",
             foreignKey:"usuario_id"
         })
     };
 
-    return TipoUsuario;
+    return Tipo_Usuario;
 }

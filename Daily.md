@@ -220,3 +220,29 @@
 
 - Revisamos el codigo y nos dimos cuenta de un error de nodemon.
 - El error se va a resolver con la implementasion de Base de datos.
+
+## Miercoles 14:
+
+- Realizamos una llamada en discord.
+- Realizamos el DER
+
+## Viernes 16:
+
+- Realizamos una llamada en discord.
+- Hicimos las tablas en la base de datos.
+- Realizamos un live share.
+- Hicimos los modelos en el codigo.
+
+## Sabado 17:
+
+- Comenzamos con el Crud.
+
+## Lunes 19:
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Hicimos el crud de Productos
+
+## Martes 20:
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Hicimos el crud de Usuarios

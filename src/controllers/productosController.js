@@ -2,29 +2,22 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 
 const productosController = {
-  catalogo: (req, res) => {
-    db.Evento.findAll({
+  catalogo: async (req, res) => {
+    const products = await db.Evento.findAll({
       include: [{ association: "eventosGenero" }],
       raw: false,
       nest: true,
-    })
-      .then((products) => {
-        return res.render("products/catalogo", {
-          products,
-          titlePage: "- Catalogo",
-        });
-      })
-      .catch((err) => {
-        res.send(err);
-      });
+    });
+    return res.render("products/catalogo", {
+      products,
+      titlePage: "- Catalogo",
+    });
   },
-  detalles: (req, res) => {
-    db.Evento.findByPk(req.params.id)
-    .then((detalle) => {
-      res.render("products/detalleProducto", {
-        detalle,
-        titlePage: "- Detalles",
-      });
+  detalles: async (req, res) => {
+    const detalle = await db.Evento.findByPk(req.params.id);
+    res.render("products/detalleProducto", {
+      detalle,
+      titlePage: "- Detalles",
     });
   },
   carrito: (req, res) => {

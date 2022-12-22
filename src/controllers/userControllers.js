@@ -44,7 +44,7 @@ const userController = {
     } = req.body;
     const imagen = req.file;
 
-    await db.Usuario.create({
+    const data = await db.Usuario.create({
       nombre: nombre,
       apellido: apellido,
       nombre_usuario: nombreUsuario,
@@ -52,11 +52,19 @@ const userController = {
       email: email,
       pais: pais,
       genero_id_favorito: gustoFavorito,
-      generos: gustosUsuario,
       genero: genero,
       descripcion: infoUsuario,
-      tipoUsuario: false,
       foto_perfil: imagen.filename,
+    });
+    gustosUsuario.forEach(async (genero) => {
+      await db.Usuario_Genero.create({
+        usuario_id: data.dataValues.id,
+        genero_id: genero,
+      });
+    });
+    await db.Tipo_Usuario.create({
+      usuario_id: data.dataValues.id,
+      admin: false,
     });
 
     return res.redirect("login");
@@ -113,44 +121,39 @@ const userController = {
       titlePage: "- Edicion Perfil",
     });
   },
-  perfilPut: (req, res) => {
+  perfilPut: async (req, res) => {
+    console.log("locals", res.locals);
+    console.log("bodyLog", req.body);
+    console.log("sessionLog", req.session);
     const {
       nombre,
       apellido,
       nombreUsuario,
       pais,
-      email,
-      gustoFavorito,
       gustosUsuario,
       genero,
       infoUsuario,
     } = req.body;
     const imagen = req.file;
+    const data = await db.Usuario.update(
+      {
+        nombre: nombre,
+        apellido: apellido,
+        nombre_usuario: nombreUsuario,
+        genero_id_favorito: gustosUsuario,
+        genero: genero,
+        pais: pais,
+        descripcion: infoUsuario,
+        foto_perfil: imagen.filename,
+      },
+      {
+        where: {
+          id: res.locals.logged.id,
+        },
+      }
+    );
 
-     db.Usuario.update({
-      nombre: nombre,
-      apellido: apellido,
-      nombre_usuario: nombreUsuario,
-      email: email,
-      genero_id_favorito: gustoFavorito,
-      genero: genero,
-      pais: pais,
-      descripcion: infoUsuario,
-      foto_perfil: imagen.filename,
-      generos: gustosUsuario,
-      tipoUsuario: false,
-    },
-    {
-      where: {
-          id : req.session.id    
-        }
-  })
-  .then((evento) => {
     res.redirect("../perfil");
-  })
-  .catch((err) => {
-    res.send(err);
-  });
   },
   logout: (req, res) => {
     res.clearCookie("datosEmail");

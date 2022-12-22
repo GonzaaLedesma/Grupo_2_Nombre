@@ -5,15 +5,14 @@ const administradorController = {
   creacion: (req, res) => {
     res.render("products/creacionProducto", { titlePage: "- Creacion" });
   },
-  edicion: (req, res) => {
-    db.Evento.findByPk(req.params.id).then((editarProducto) => {
-      res.render("products/edicionProducto", {
-        editarProducto,
-        titlePage: "- Edicion",
-      });
+  edicion: async (req, res) => {
+    const editarProducto = await db.Evento.findByPk(req.params.id);
+    res.render("products/edicionProducto", {
+      editarProducto,
+      titlePage: "- Edicion",
     });
   },
-  creacionPost: (req, res) => {
+  creacionPost: async (req, res) => {
     const fotoEvento = req.file;
     const {
       nombre,
@@ -29,7 +28,7 @@ const administradorController = {
       categoria,
       generoBanda,
     } = req.body;
-    db.Evento.create({
+    const data = await db.Evento.create({
       nombre_evento: nombre,
       fecha: dia,
       ubicacion: ubicacion,
@@ -42,16 +41,16 @@ const administradorController = {
       biografia: biografia,
       foto_evento: fotoEvento.filename,
       id_categoria: categoria,
-      eventosGenero: generoBanda,
-    })
-      .then((evento) => {
-        return res.redirect("catalogo");
-      })
-      .catch((err) => {
-        res.send(err);
+    });
+    generoBanda.forEach(async (genero) => {
+     await db.Evento_Genero.create({
+        evento_id: data.dataValues.id,
+        genero_id: genero,
       });
+    });
+    return res.redirect("/");
   },
-  edicionPut: (req, res) => {
+  edicionPut: async (req, res) => {
     const fotoEvento = req.file;
     const {
       nombre,
@@ -67,7 +66,7 @@ const administradorController = {
       categoria,
       generoBanda,
     } = req.body;
-    db.Evento.update(
+    await db.Evento.update(
       {
         nombre_evento: nombre,
         fecha: dia,
@@ -81,31 +80,41 @@ const administradorController = {
         biografia: biografia,
         foto_evento: fotoEvento.filename,
         id_categoria: categoria,
-        eventosGenero: generoBanda,
       },
       {
         where: {
           id: req.params.id,
         },
       }
-    )
-      .then((evento) => {
-        return res.redirect("/");
-      })
-      .catch((err) => {
-        res.send(err);
-      });
+    );
+    // generoBanda.forEach(async (genero) => {
+    //   await db.Evento_Genero.update(
+    //     {
+    //       evento_id: req.params.id,
+    //       genero_id: genero,
+    //     },
+    //     {
+    //       where: {
+    //         evento_id: req.params.id,
+    //       },
+    //     }
+    //   );
+    // });
+    return res.redirect("/");
   },
-  destroy: (req, res) => {
+  destroy: async (req, res) => {
     let eventoId = req.params.id;
-    db.Evento.destroy({
+    await db.Evento_Genero.destroy({
+      limit: 6,
+      where: { evento_id: eventoId },
+      force: true,
+      cascade: true,
+    });
+    await db.Evento.destroy({
       where: { id: eventoId },
       force: true,
-    })
-      .then(() => {
-        return res.redirect("/");
-      })
-      .catch((error) => res.send(error));
+    });
+    return res.redirect("/");
   },
 };
 
