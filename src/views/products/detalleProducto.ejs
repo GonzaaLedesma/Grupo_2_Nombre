@@ -1,68 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('../partials/head') %>
-<body>
+  <%- include('../partials/head') %>
+  <body>
     <%- include('../partials/header') %>
     <main>
-        <h2 class="nombreEvento1"><%= detalle.nombre_evento %> </h2>
-        <div class="cajaDetalles">
-                <div class="cajaImagen">
-                    <img class="imgTicket" src="/images/detallesProducto/ticket.jpg" alt="ticket">
-                    <div class="cajaDescripcionBanda">
-                    <p class="descripcionBanda"><%= detalle.biografia %></p>
-                </div>
-            </div>
-            <div class="cajaDescripcion">
-            <div>
-                <h2 class="nombreEvento2"><%= detalle.nombre_evento %></h2>
-                <div class="cajaDatos">
-                    <h3>Datos del Evento</h3>
-                    <p>Ubicacion: <%= detalle.ubicacion %>.</p>
-                    <p>Sede: <%= detalle.sede %>.</p>
-                    <p>Capacidad: <%= detalle.capacidad_sede %> personas.</p>
-                    <p>Precio: <%= detalle.precio %>$.</p>
-                    <p>Dia: <%= detalle.fecha %>.</p>
-                    <p>Horario: <%= detalle.horario %>hs.</p>
-                    <p>Participacion: <%= detalle.participacion %>.</p>
-                </div>
-                <div class="subDescripcion">
-                    <p><%= detalle.descripcion %></p> 
-                </div>
-                <div class="cajaPago">
-                    <div class="subCaja">
-                        <div class="cajaCantidad">
-                        </div>
-                        <h4>Cantidad</h4>
-                    </div>
-                    <div class="subCaja">
-                        <div class="cajaTotal"></div>
-                        <h4>Total</h4>
-                    </div>
-                </div>
-                <div>
-                    <label class="positionCondiciones"><input type="checkbox" name="terminos" value="terminos">He leido y acepto los "<a href="/usuario/terminosYCondiciones">Terminos y Condiciones</a>"</label>
-                </div>
-                <button class="botonPago" type="submit"><a href="/">Continuar a metodo de pago</a></button>
-                <% if(locals.adminLogin) {%> 
-                <div class="botonBarAdmin">
-                    <button class="botonFunctionAdmin"><a href="/administrador/edicion/<%= detalle.id %>">Editar</a></button>
-                    <form action="/administrador/<%= detalle.id %>?_method=DELETE" method="POST" >
-                        <button class="botonFunctionAdmin"><i class="fa-solid fa-trash"></i></button>
-                    </form>
-                </div>
-                <% } %> 
-                <div class="botonBarAdmin">
-                    <button class="botonFunctionAdmin"><a href="/administrador/edicion/<%= detalle.id %>">Editar</a></button>
-                    <form action="/administrador/<%= detalle.id %>?_method=DELETE" method="POST" >
-                        <button class="botonFunctionAdmin"><i class="fa-solid fa-trash"></i></button>
-                    </form>
-                </div>
-            </div>
+      <h2 class="nombreEvento1"><%= detalle.nombre_evento %></h2>
+      <div class="cajaDetalles">
+        <div class="cajaImagen">
+          <img
+            class="imgTicket"
+            src="/images/detallesProducto/ticket.jpg"
+            alt="ticket"
+          />
+          <div class="cajaDescripcionBanda">
+            <p class="descripcionBanda"><%= detalle.biografia %></p>
+          </div>
         </div>
-    </div>
-    <div class="bannerFooter">
-        <img src="/images/DetallesProducto/BannerDetallesProducto.jpg" alt="bannerFooter">
-    </div>
+        <div class="cajaDescripcion">
+          <div>
+            <h2 class="nombreEvento2"><%= detalle.nombre_evento %></h2>
+            <div class="cajaDatos">
+              <h3>Datos del Evento</h3>
+              <p>Ubicacion: <%= detalle.ubicacion %>.</p>
+              <p>Sede: <%= detalle.sede %>.</p>
+              <p>Capacidad: <%= detalle.capacidad_sede %> personas.</p>
+              <p>Precio: <%= detalle.precio %>$.</p>
+              <p>Dia: <%= detalle.fecha %>.</p>
+              <p>Horario: <%= detalle.horario %>hs.</p>
+              <p>Participacion: <%= detalle.participacion %>.</p>
+            </div>
+            <div class="subDescripcion">
+              <p><%= detalle.descripcion %></p>
+            </div>
+            <div class="cajaPago">
+              <div class="subCaja">
+                <div class="cajaCantidad"></div>
+                <h4>Cantidad</h4>
+              </div>
+              <div class="subCaja">
+                <div class="cajaTotal"></div>
+                <h4>Total</h4>
+              </div>
+            </div>
+            <div>
+              <label class="positionCondiciones"
+                ><input type="checkbox" name="terminos" value="terminos" />He
+                leido y acepto los "<a href="/usuario/terminosYCondiciones"
+                  >Terminos y Condiciones</a
+                >"</label
+              >
+            </div>
+            <button class="botonPago" type="submit">
+              <a href="/">Continuar a metodo de pago</a>
+            </button>
+            <% if(locals.adminLogin) {%>
+            <div class="botonBarAdmin">
+              <button class="botonFunctionAdmin">
+                <a href="/administrador/edicion/<%= detalle.id %>">Editar</a>
+              </button>
+              <form
+                action="/administrador/<%= detalle.id %>?_method=DELETE"
+                method="POST"
+              >
+                <button class="botonFunctionAdmin">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </form>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="bannerFooter">
+        <img
+          src="/images/DetallesProducto/BannerDetallesProducto.jpg"
+          alt="bannerFooter"
+        />
+      </div>
     </main>
     <%- include('../partials/footer') %>
   </body>

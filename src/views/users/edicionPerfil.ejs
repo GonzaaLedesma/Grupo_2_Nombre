@@ -39,15 +39,6 @@
             value="<%= datosUsuario.nombre_usuario  %>"
           />
         </div>
-        <!-- <div class="correcionCajasForm">
-          <label for="email"></label>
-          <input
-            class="cajaRegisterInput"
-            type="email"
-            name="email"
-            value=""
-          />
-        </div> -->
         <div class="correcionCajasForm">
           <label for="pais"></label>
           <input
@@ -61,8 +52,8 @@
           <label class="tituloRegisterCaja" for="gustosUsuario"
             >Tu Gusto Favorito</label
           >
-          <select class="opcionesRegister" name="gustosUsuario">
-            <option value="<%= datosUsuario.gustosUsuario  %>">
+          <select class="opcionesRegister" name="genero_id_favorito">
+            <option value="<%= datosUsuario.genero_id_favorito  %>">
               <%= datosUsuario.genero_id_favorito %>
             </option>
             <option value="1">Rock</option>
@@ -74,16 +65,6 @@
           </select>
         </div>
         <br>
-        <!-- <div class="correcionCajasForm">
-            <label class="tituloRegisterCaja" for="genero">Nuevos Gustos</label>
-            <label><input type="checkbox" name="gustosUsuario" value="1" >Rock</label>
-            <label><input type="checkbox" name="gustosUsuario" value="2" >Hard-Rock</label>
-            <label><input type="checkbox" name="gustosUsuario" value="3" >Pop</label>
-            <label><input type="checkbox" name="gustosUsuario" value="4" >Rock-Alternativo</label>
-            <label><input type="checkbox" name="gustosUsuario" value="5" >Pop-Rock</label>
-            <label><input type="checkbox" name="gustosUsuario" value="6" >Pop-Punk</label>
-          </div>
-          <br> -->
         <div class="correcionCajasForm">
           <label class="tituloRegisterCaja" for="genero">Genero</label>
           <select class="opcionesRegister" name="genero">
@@ -100,7 +81,7 @@
           <label for="infoUsuario" class="tituloRegisterCaja"
             >Cuentanos sobre ti</label
           >
-          <textarea class="textAreaRegister" name="infoUsuario">
+          <textarea class="textAreaRegister" name="descripcion">
 <%= datosUsuario.descripcion  %></textarea
           >
         </div>
@@ -108,7 +89,7 @@
           <label for="ImgEvento">
             <div class="label">Nueva foto de Perfil</div>
             <div>
-              <input class="imagenPerfilRegister" type="file" name="imagen" required />
+              <input class="imagenPerfilRegister" type="file" name="foto_perfil" required />
             </div>
           </label>
         </div>

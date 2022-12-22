@@ -2,9 +2,9 @@ function adminMiddleware(req, res, next) {
     if(!req.session.logged){
         return res.redirect('/');
     }
-    let userInLogin = req.session.logged
+    let userInLogin = req.session.loggedAdmin
     
-    if (userInLogin.tipoUsuario == false) {
+    if (userInLogin.admin == false) {
         return res.redirect('/');
 	}
 	next();

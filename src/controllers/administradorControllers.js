@@ -13,36 +13,36 @@ const administradorController = {
     });
   },
   creacionPost: async (req, res) => {
-    const fotoEvento = req.file;
+    const foto_evento = req.file;
     const {
-      nombre,
-      dia,
+      nombre_evento,
+      fecha,
       ubicacion,
       sede,
       participacion,
-      capacidad,
-      price,
+      capacidad_sede,
+      precio,
       horario,
       descripcion,
       biografia,
-      categoria,
-      generoBanda,
+      id_categoria,
+      evento_id,
     } = req.body;
     const data = await db.Evento.create({
-      nombre_evento: nombre,
-      fecha: dia,
+      nombre_evento: nombre_evento,
+      fecha: fecha,
       ubicacion: ubicacion,
       sede: sede,
-      capacidad_sede: Number(capacidad),
-      precio: Number(price),
+      capacidad_sede: Number(capacidad_sede),
+      precio: Number(precio),
       participacion: participacion,
-      horario: Number(horario),
+      horario: Number(horario + "0000"),
       descripcion: descripcion,
       biografia: biografia,
-      foto_evento: fotoEvento.filename,
-      id_categoria: categoria,
+      foto_evento: foto_evento.filename,
+      id_categoria: id_categoria,
     });
-    generoBanda.forEach(async (genero) => {
+    evento_id.forEach(async (genero) => {
      await db.Evento_Genero.create({
         evento_id: data.dataValues.id,
         genero_id: genero,
@@ -51,35 +51,34 @@ const administradorController = {
     return res.redirect("/");
   },
   edicionPut: async (req, res) => {
-    const fotoEvento = req.file;
+    const foto_evento = req.file;
     const {
-      nombre,
-      dia,
+      nombre_evento,
+      fecha,
       ubicacion,
       sede,
       participacion,
-      capacidad,
-      price,
+      capacidad_sede,
+      precio,
       horario,
       descripcion,
       biografia,
-      categoria,
-      generoBanda,
+      id_categoria,
     } = req.body;
     await db.Evento.update(
       {
-        nombre_evento: nombre,
-        fecha: dia,
+        nombre_evento: nombre_evento,
+        fecha: fecha,
         ubicacion: ubicacion,
         sede: sede,
-        capacidad_sede: Number(capacidad),
-        precio: Number(price),
+        capacidad_sede: Number(capacidad_sede),
+        precio: Number(precio),
         participacion: participacion,
-        horario: Number(horario),
+        // horario: Number((horario / 1000) + "0000"),
         descripcion: descripcion,
         biografia: biografia,
-        foto_evento: fotoEvento.filename,
-        id_categoria: categoria,
+        foto_evento: foto_evento.filename,
+        id_categoria: id_categoria,
       },
       {
         where: {

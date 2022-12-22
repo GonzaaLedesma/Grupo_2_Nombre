@@ -1,10 +1,10 @@
 function adminLoggedMiddleware(req, res, next) {
-    if(req.session.logged){
+    if(req.session.loggedAdmin){
         
         res.locals.adminLogin = false;
-        let userInLogin = req.session.logged
+        let userInLogin = req.session.loggedAdmin
 
-        if (userInLogin.tipoUsuario == true) {
+        if (userInLogin.admin == true) {
 
             res.locals.adminLogin = true;
         }

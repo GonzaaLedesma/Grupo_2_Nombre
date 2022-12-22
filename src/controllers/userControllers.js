@@ -33,30 +33,30 @@ const userController = {
     const {
       nombre,
       apellido,
-      nombreUsuario,
+      nombre_usuario,
       contrasenia,
       email,
       pais,
-      gustoFavorito,
-      gustosUsuario,
+      genero_id_favorito,
+      genero_id,
       genero,
-      infoUsuario,
+      descripcion,
     } = req.body;
-    const imagen = req.file;
+    const foto_perfil = req.file;
 
     const data = await db.Usuario.create({
       nombre: nombre,
       apellido: apellido,
-      nombre_usuario: nombreUsuario,
+      nombre_usuario: nombre_usuario,
       contrasenia: bcryptjs.hashSync(contrasenia, 10),
       email: email,
       pais: pais,
-      genero_id_favorito: gustoFavorito,
+      genero_id_favorito: genero_id_favorito,
       genero: genero,
-      descripcion: infoUsuario,
-      foto_perfil: imagen.filename,
+      descripcion: descripcion,
+      foto_perfil: foto_perfil.filename,
     });
-    gustosUsuario.forEach(async (genero) => {
+    genero_id.forEach(async (genero) => {
       await db.Usuario_Genero.create({
         usuario_id: data.dataValues.id,
         genero_id: genero,
@@ -78,6 +78,11 @@ const userController = {
         email: req.body.email,
       },
     });
+    let tipoUsuario = await db.Tipo_Usuario.findOne({
+      where: {
+        usuario_id: loginUser.id,
+      },
+    });
     if (loginUser && loginUser.contrasenia) {
       let passwordCompare = bcryptjs.compareSync(
         req.body.contrasenia,
@@ -86,6 +91,7 @@ const userController = {
       if (passwordCompare) {
         delete loginUser.contrasenia;
         req.session.logged = loginUser;
+        req.session.loggedAdmin = tipoUsuario;
 
         if (req.body.recuerdame) {
           res.cookie("datosEmail", req.body.email, { maxAge: 1000 * 60 * 15 });
@@ -128,23 +134,23 @@ const userController = {
     const {
       nombre,
       apellido,
-      nombreUsuario,
+      nombre_usuario,
       pais,
-      gustosUsuario,
+      genero_id_favorito,
       genero,
-      infoUsuario,
+      descripcion,
     } = req.body;
-    const imagen = req.file;
+    const foto_perfil = req.file;
     const data = await db.Usuario.update(
       {
         nombre: nombre,
         apellido: apellido,
-        nombre_usuario: nombreUsuario,
-        genero_id_favorito: gustosUsuario,
+        nombre_usuario: nombre_usuario,
+        genero_id_favorito: genero_id_favorito,
         genero: genero,
         pais: pais,
-        descripcion: infoUsuario,
-        foto_perfil: imagen.filename,
+        descripcion: descripcion,
+        foto_perfil: foto_perfil.filename,
       },
       {
         where: {

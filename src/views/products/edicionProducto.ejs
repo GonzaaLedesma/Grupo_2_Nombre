@@ -9,11 +9,11 @@
             <h1 class="form-title">Edicion de <%= editarProducto.nombre_evento %></h1>
             <div class="cajaAdmin">
                 <label  for="Cambio-Evento">Evento</label>
-                <input required type="text"  name="nombre"  value="<%= editarProducto.nombre_evento %>">
+                <input required type="text"  name="nombre_evento"  value="<%= editarProducto.nombre_evento %>">
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Dia">Dia</label>
-                <input required type="text" name="dia" value="<%= editarProducto.fecha %>" >
+                <input required type="text" name="fecha" value="<%= editarProducto.fecha %>" >
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Ubicacion">Ubicacion</label>
@@ -29,11 +29,11 @@
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Dato-Capacidad">Capacidad</label>
-                <input required type="text" name="capacidad" value="<%= editarProducto.capacidad_sede %>">
+                <input required type="text" name="capacidad_sede" value="<%= editarProducto.capacidad_sede %>">
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Precio">Precio</label>
-                <input required type="number" name="price" value="<%= editarProducto.precio %>">
+                <input required type="number" name="precio" value="<%= editarProducto.precio %>">
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Horario">Horario</label>
@@ -41,40 +41,13 @@
             </div>
             <div class="cajaAdmin"> 
                 <label  for="Cambio-Categoria">Categoria</label>
-                <select class="opcionesCategoria" required name="categoria" id="categoria">
+                <select class="opcionesCategoria" required name="id_categoria">
                     <option value="<%= editarProducto.id_categoria %>"><%= editarProducto.id_categoria %></option> 
                     <option  value="1">Actuales</option> 
                     <option  value="2">Nuevos</option> 
                     <option  value="3">Proximos</option> 
                 </select>
             </div>
-           <!--  <label class="colorCase" for="generoBanda">Genero de la Banda</label>
-            <div class="categoriasCheckbox"> 
-                <div>
-                    <label for="rock">Rock</label>
-                  <input type="checkbox" id="rock" name="generoBanda" value="1">
-                </div>
-                <div>
-                    <label for="hard-rock">Hard Rock</label>
-                  <input type="checkbox" id="hard-rock" name="generoBanda" value="2">
-                </div>
-                <div>
-                    <label for="pop">Pop</label>
-                  <input type="checkbox" id="pop" name="generoBanda" value="3">
-                </div>
-                <div>
-                    <label for="Rock Alternativo">Rock Alternativo</label>
-                  <input type="checkbox" id="pop" name="generoBanda" value="4">
-                </div>
-                <div>
-                    <label for="Pop Rock">Pop Rock</label>
-                  <input type="checkbox" id="pop" name="generoBanda" value="5">
-                </div>
-                <div>
-                    <label for="Pop Punk">Pop Punk</label>
-                  <input type="checkbox" id="pop" name="generoBanda" value="6">
-                </div>
-            </div> -->
             <div class="cajaAdmin">
                 <label  for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
                 <textarea class="textArea" name="descripcion" ><%= editarProducto.descripcion %></textarea>
@@ -86,7 +59,7 @@
             <div class="cajaAdmin">
                 <label  for="Cambio-ImgEvento">
                     <div class="label">Seleccione Foto de Evento</div>
-                    <div class="fotoEventoAdmin"><input type="file" name="fotoEvento" required></div>
+                    <div class="fotoEventoAdmin"><input type="file" name="foto_evento" required></div>
                 </label> 
             </div>
             <div class="cajaAdminSend">

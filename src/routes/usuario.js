@@ -19,13 +19,13 @@ router.post('/login',userController.loginProcess);
 
 router.get('/register', userMiddleware, userController.register);
 
-router.post('/register', upload.single('imagen'), validator, userController.registerProcess);
+router.post('/register', upload.single('foto_perfil'), validator, userController.registerProcess);
 
 router.get('/perfil' ,authMiddleware ,userController.perfil);
 
 router.get('/perfil/edicion' ,authMiddleware ,userController.perfilEdicion);
 
-router.put('/perfil/edicion' ,upload.single('imagen') ,userController.perfilPut);
+router.put('/perfil/edicion' ,upload.single('foto_perfil') ,userController.perfilPut);
 
 router.get('/cerrarSesion', userController.logout);
 

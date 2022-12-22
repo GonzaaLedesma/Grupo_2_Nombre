@@ -39,16 +39,16 @@
             <% } %>
         </div>
         <div class="correcionCajasForm">
-            <label for="nombreUsuario"></label>
+            <label for="nombre_usuario"></label>
             <input
-                class="cajaRegisterInput <%= locals.errors && errors.nombreUsuario ? 'errorBorder' : null %>"
+                class="cajaRegisterInput <%= locals.errors && errors.nombre_usuario ? 'errorBorder' : null %>"
                 type="text"
-                name="nombreUsuario"
+                name="nombre_usuario"
                 placeholder="Nombre de Usuario"
-                value="<%= locals.oldData ? oldData.nombreUsuario : null %>"
+                value="<%= locals.oldData ? oldData.nombre_usuario : null %>"
             />
-            <% if (locals.errors && errors.nombreUsuario) { %>
-            <div class="errorTxt"><%= errors.nombreUsuario.msg %></div>
+            <% if (locals.errors && errors.nombre_usuario) { %>
+            <div class="errorTxt"><%= errors.nombre_usuario.msg %></div>
           <% } %>
         </div>
         <div class="correcionCajasForm">
@@ -90,34 +90,34 @@
             <% } %>
         </div>
         <div class="correcionCajasForm">
-            <label class="tituloRegisterCaja" for="genero">Gusto Favorito</label>
+            <label class="tituloRegisterCaja" for="genero_id_favorito">Gusto Favorito</label>
             <select
-                class="opcionesRegister <%= locals.errors && errors.gustoFavorito ? 'errorBorder' : null %>"
-                name="gustoFavorito"
+                class="opcionesRegister <%= locals.errors && errors.genero_id_favorito ? 'errorBorder' : null %>"
+                name="genero_id_favorito"
             >
                 <option value="">Seleccione</option>
-                <option value="1" <%= locals.oldData && oldData.gustoFavorito == "1" ?'selected' : null %> >Rock</option>
-                <option value="2" <%= locals.oldData && oldData.gustoFavorito == "2" ?'selected' : null %> >Hard Rock</option>
-                <option value="3" <%= locals.oldData && oldData.gustoFavorito == "3" ?'selected' : null %>>Pop</option>
-                <option value="4" <%= locals.oldData && oldData.gustoFavorito == "4" ? 'selected' : null %>>Rock Alternativo</option>
-                <option value="5" <%= locals.oldData && oldData.gustoFavorito == "5" ? 'selected' : null %>>Pop Rock</option>
-                <option value="6" <%= locals.oldData && oldData.gustoFavorito == "6" ? 'selected' : null %>>Pop Punk</option>
+                <option value="1" <%= locals.oldData && oldData.genero_id_favorito == "1" ?'selected' : null %> >Rock</option>
+                <option value="2" <%= locals.oldData && oldData.genero_id_favorito == "2" ?'selected' : null %> >Hard Rock</option>
+                <option value="3" <%= locals.oldData && oldData.genero_id_favorito == "3" ?'selected' : null %>>Pop</option>
+                <option value="4" <%= locals.oldData && oldData.genero_id_favorito == "4" ? 'selected' : null %>>Rock Alternativo</option>
+                <option value="5" <%= locals.oldData && oldData.genero_id_favorito == "5" ? 'selected' : null %>>Pop Rock</option>
+                <option value="6" <%= locals.oldData && oldData.genero_id_favorito == "6" ? 'selected' : null %>>Pop Punk</option>
             </select>
-            <% if (locals.errors && errors.gustoFavorito) { %>
-                <div class="errorTxt"><%= errors.gustoFavorito.msg %></div>
+            <% if (locals.errors && errors.genero_id_favorito) { %>
+                <div class="errorTxt"><%= errors.genero_id_favorito.msg %></div>
                 <% } %>
         </div>
         <br>
         <div class="correcionCajasForm">
-            <label class="tituloRegisterCaja" for="genero">Gustos</label>
-            <label><input type="checkbox" name="gustosUsuario" value="1" <%= locals.oldData && oldData.gustosUsuario =='1' ? 'checked' : null %> >Rock</label>
-            <label><input type="checkbox" name="gustosUsuario" value="2" <%= locals.oldData && oldData.gustosUsuario =='2' ? 'checked' : null %> >Hard-Rock</label>
-            <label><input type="checkbox" name="gustosUsuario" value="3" <%= locals.oldData && oldData.gustosUsuario =='3' ? 'checked' : null %> >Pop</label>
-            <label><input type="checkbox" name="gustosUsuario" value="4" <%= locals.oldData && oldData.gustosUsuario =='4' ? 'checked' : null %> >Rock-Alternativo</label>
-            <label><input type="checkbox" name="gustosUsuario" value="5" <%= locals.oldData && oldData.gustosUsuario =='5' ? 'checked' : null %> >Pop-Rock</label>
-            <label><input type="checkbox" name="gustosUsuario" value="6" <%= locals.oldData && oldData.gustosUsuario =='6' ? 'checked' : null %> >Pop-Punk</label>
-            <% if (locals.errors && errors.gustosUsuario) { %>
-              <div class="errorTxt"><%= errors.gustosUsuario.msg %></div>
+            <label class="tituloRegisterCaja" for="genero_id">Gustos</label>
+            <label><input type="checkbox" name="genero_id" value="1" <%= locals.oldData && oldData.genero_id =='1' ? 'checked' : null %> >Rock</label>
+            <label><input type="checkbox" name="genero_id" value="2" <%= locals.oldData && oldData.genero_id =='2' ? 'checked' : null %> >Hard-Rock</label>
+            <label><input type="checkbox" name="genero_id" value="3" <%= locals.oldData && oldData.genero_id =='3' ? 'checked' : null %> >Pop</label>
+            <label><input type="checkbox" name="genero_id" value="4" <%= locals.oldData && oldData.genero_id =='4' ? 'checked' : null %> >Rock-Alternativo</label>
+            <label><input type="checkbox" name="genero_id" value="5" <%= locals.oldData && oldData.genero_id =='5' ? 'checked' : null %> >Pop-Rock</label>
+            <label><input type="checkbox" name="genero_id" value="6" <%= locals.oldData && oldData.genero_id =='6' ? 'checked' : null %> >Pop-Punk</label>
+            <% if (locals.errors && errors.genero_id) { %>
+              <div class="errorTxt"><%= errors.genero_id.msg %></div>
             <% } %>
           </div>
           <br>
@@ -138,28 +138,28 @@
         </div>
         <div class="correcionCajasForm">
             <br>
-            <label for="infoUsuario" class="tituloRegisterCaja">Cuentanos sobre ti</label>
+            <label for="descripcion" class="tituloRegisterCaja">Cuentanos sobre ti</label>
             <textarea
-                class="textAreaRegister <%= locals.errors && errors.infoUsuario ? 'errorBorder' : null %>"
-                name="infoUsuario"
-                ><%= locals.oldData ? oldData.infoUsuario  : null %></textarea>
-            <% if (locals.errors && errors.infoUsuario) { %>
-            <div class="errorTxt"><%= errors.infoUsuario.msg %></div>
+                class="textAreaRegister <%= locals.errors && errors.descripcion ? 'errorBorder' : null %>"
+                name="descripcion"
+                ><%= locals.oldData ? oldData.descripcion  : null %></textarea>
+            <% if (locals.errors && errors.descripcion) { %>
+            <div class="errorTxt"><%= errors.descripcion.msg %></div>
             <% } %>
         </div>
         <div class="cajaAdmin">
-            <label for="ImgEvento">
+            <label for="foto_perfil">
                 <div class="label">Seleccione una foto de Perfil</div>
                 <div>
                 <input
-                    class="imagenPerfilRegister <%= locals.errors && errors.imagen ? 'errorBorder' : null %>"
+                    class="imagenPerfilRegister <%= locals.errors && errors.foto_perfil ? 'errorBorder' : null %>"
                     type="file"
-                    name="imagen"
+                    name="foto_perfil"
                     required
                 />
                 </div>
-                <% if (locals.errors && errors.imagen) { %>
-                <div class="errorTxt"><%= errors.imagen.msg %></div>
+                <% if (locals.errors && errors.foto_perfil) { %>
+                <div class="errorTxt"><%= errors.foto_perfil.msg %></div>
                 <% } %>
             </label>
         </div>
