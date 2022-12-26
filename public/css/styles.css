@@ -16,7 +16,7 @@
   }
   
   .ButtonBox button{
-    border: solid 1px rgb(173, 173, 0);
+    border: solid 1px gold;
     background-color: #242c35;
     border-radius: 5px;
     color: white;
@@ -94,7 +94,7 @@
     display: none;
     } 
   .searchBar button{
-    border: 1px solid rgb(173, 173, 0);
+    border: 1px solid gold;
     color: white;
     background-color: #1c2631;
     border-radius: 4px;
@@ -102,7 +102,7 @@
 
   }
   .search{
-    border: 1px solid rgb(173, 173, 0);
+    border: 1px solid gold;
     text-align: center;
     font-size: 15px;
     border-radius: 4px;
@@ -147,16 +147,16 @@
     margin: auto;
     text-align: center;
     color: gold;
-    border-top: 1px solid rgb(173, 173, 0);
-    border-bottom: 1px solid rgb(173, 173, 0);
+    border-top: 1px solid gold;
+    border-bottom: 1px solid gold;
   }
 
  /* ----------Hover---------- */
  .header button:hover a{
-  color:rgb(173, 173, 0);
+  color:gold;
 }
 .ButtonBox button:hover a{
-  color:rgb(173, 173, 0);
+  color:gold;
 }
 .ButtonBox Button:hover {
   color:gold;
@@ -171,10 +171,10 @@
   color:gold !important;
 }
 .searchBar button:hover{
-  color:rgb(173, 173, 0);
+  color:gold;
 }
 .searchBarMin button:hover{
-  color:rgb(173, 173, 0);
+  color:gold;
 }
 #logotipo:hover{
   box-shadow: 0px 0px 15px rgb(100, 100, 100);
@@ -205,7 +205,7 @@
       top: 1px;
     }
     .searchBarMin button{
-      border: 1px solid rgb(173, 173, 0);
+      border: 1px solid gold;
       color: white;
       background-color: #1c2631;
       border-radius: 4px;

@@ -5,18 +5,14 @@ const productosController = {
   catalogo: async (req, res) => {
     const products = await db.Evento.findAll();
     if (req.session.logged) {
-      const genero_usuario = await db.Usuario_Genero.findAll({
-        // raw: false,
-        limit: 6,
-        where: {
-          usuario_id: req.session.logged.id,
-        },
+      const genero_evento = await db.Evento_Genero.findAll({
+        where:{
+          genero_id:userDetail.genero_id_favorito
+        }
       });
-      const genero_evento = await db.Evento_Genero.findAll();
-      console.log("HOLA", genero_usuario);
+      const dataValuesArray = genero_evento.map((item) => item.dataValues);     
       return res.render("products/catalogo", {
-        genero_usuario,
-        genero_evento,
+        dataValuesArray,
         products,
         titlePage: "- Catalogo",
       });

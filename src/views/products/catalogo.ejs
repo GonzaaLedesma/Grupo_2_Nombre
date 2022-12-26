@@ -4,13 +4,42 @@
   <body>
     <%- include('../partials/header') %>
     <main>
-      <!-- <div> -->
         <% if(locals.adminLogin) {%> 
           <div class="positionBoton">
             <button class="botonCreacion"><a href="/administrador/creacion">Crear evento <i class="fa-solid fa-upload"></i></a></button>
           </div>
           <% } %>
-      <!-- </div> -->
+      <!-------------------------Segun el gusto----------- -->
+      <% if(locals.userLogin) {%> 
+        <h2 class="titulosCategoria">SEGUN TU GUSTO</h2>
+        <div class="cajaCategoriaLogged">
+          <% dataValuesArray.forEach(item => { %>
+            <% products.filter(product => product.id == item.evento_id).forEach(product => { %>
+              <div class="card">
+                <img
+                  src="/images/catalogo/<%= product.foto_evento%>"
+                  class="card-img-top"
+                  alt="ImgBand"
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><%= product.nombre_evento%></h5>
+                  <p class="card-text"><%= product.sede%></p>
+                  <p class="card-text"><%= product.ubicacion%></p>
+                  <p class="card-text">Participacion: <%= product.participacion%></p>
+                  <p class="card-text card-date"><%= product.fecha%></p>
+                  <% if(product.id_categoria == 4){ %>
+                    <p class="card-text">NO SE ENCUENTRA DISPONIBLE</p>
+                  <% }else{ %>
+                    <a href="/producto/detalles/<%= product.id%>" class="btn btn-primary"
+                      >Ir a detalles</a>
+                  <% } %>
+                </div>
+              </div>
+            <% }) %>
+          <% }) %>
+        </div>
+
+        <% } %>
       <!-------------------------PRIMERO----------- -->
       <h2 class="titulosCategoria">ACTUALES</h2>
       <div class="cajaCategoria">
@@ -120,7 +149,7 @@
           />
           <div class="card-body">
             <h5 class="SponsorHREF">
-              <a href="https://www.coca-cola.com.ar">Coca Cola</a>
+              <a  href="https://www.coca-cola.com.ar">Coca Cola</a>
             </h5>
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>
@@ -134,7 +163,7 @@
           />
           <div class="card-body">
             <h5 class="SponsorHREF">
-              <a href="https://www.samsung.com">Samsung</a>
+              <a  href="https://www.samsung.com">Samsung</a>
             </h5>
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>
@@ -148,7 +177,7 @@
           />
           <div class="card-body">
             <h5 class="SponsorHREF">
-              <a href="https://www.toyota.com.ar">Toyota</a>
+              <a  href="https://www.toyota.com.ar">Toyota</a>
             </h5>
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>
@@ -162,7 +191,7 @@
           />
           <div class="card-body">
             <h5 class="SponsorHREF">
-              <a href="https://www.visa.com.ar">Visa</a>
+              <a  href="https://www.visa.com.ar">Visa</a>
             </h5>
             <p class="card-text">Acompañandonos Siempre</p>
             <p class="card-text card-date">Tel:2525 23552</p>

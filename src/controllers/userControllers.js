@@ -115,7 +115,6 @@ const userController = {
     });
   },
   perfil: (req, res) => {
-    console.log(req.session);
     return res.render("users/perfil", {
       usuarioLogeado: req.session.logged,
       titlePage: "- Perfil",
@@ -128,9 +127,6 @@ const userController = {
     });
   },
   perfilPut: async (req, res) => {
-    console.log("locals", res.locals);
-    console.log("bodyLog", req.body);
-    console.log("sessionLog", req.session);
     const {
       nombre,
       apellido,

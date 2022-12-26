@@ -22,7 +22,8 @@ async function loggedMiddleware(req, res, next) {
   if (req.session.logged) {
     res.locals.userLogin = true;
     res.locals.logged = req.session.logged;
-    userdetail = req.session.logged;
+    userDetail = req.session.logged;
+    console.log(userDetail)
   }
 
   next();

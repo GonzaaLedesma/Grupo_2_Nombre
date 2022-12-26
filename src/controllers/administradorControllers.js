@@ -42,13 +42,13 @@ const administradorController = {
       foto_evento: foto_evento.filename,
       id_categoria: id_categoria,
     });
-    evento_id.forEach(async (genero) => {
-     await db.Evento_Genero.create({
+    for (let i = 0; i < evento_id.length; i++) {
+      await db.Evento_Genero.create({
         evento_id: data.dataValues.id,
-        genero_id: genero,
+        genero_id: evento_id[i],
       });
-    });
-    return res.redirect("/");
+    }
+    return res.redirect("../producto/catalogo");
   },
   edicionPut: async (req, res) => {
     const foto_evento = req.file;
@@ -99,7 +99,7 @@ const administradorController = {
     //     }
     //   );
     // });
-    return res.redirect("/");
+    return res.redirect("../producto/catalogo");
   },
   destroy: async (req, res) => {
     let eventoId = req.params.id;
@@ -113,7 +113,7 @@ const administradorController = {
       where: { id: eventoId },
       force: true,
     });
-    return res.redirect("/");
+    return res.redirect("../producto/catalogo");
   },
 };
 
