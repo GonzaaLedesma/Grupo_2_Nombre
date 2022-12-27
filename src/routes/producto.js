@@ -10,6 +10,7 @@ router.get('/detalles/:id', productosController.detalles);
 router.get('/catalogo', productosController.catalogo);
 router.get('/carrito',authMiddleware ,productosController.carrito);
 router.get('/ayuda', productosController.ayuda);
+router.post('/busqueda', productosController.busqueda);
 
 module.exports = router;
 

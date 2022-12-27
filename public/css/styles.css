@@ -109,6 +109,30 @@
     background-color: #1c2631;
     color: white;
   }
+  .ajusteBusqueda{
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+  }
+  .completadoEspacio{
+    height: 61vh;
+  }
+  .notFound{
+    margin-top: 10%;
+    color: gold;
+    text-align: center;
+  }
+  .imgRick{
+    display: flex;
+    justify-content: center;
+  }
+  .rickClass{
+    border-radius: 20px;
+    width: 30%;
+
+  }
   /* --------------------footer---------------- */
   footer{
     background-color: #1c2631;
@@ -221,6 +245,9 @@
     }
   }
   @media (max-width: 995px){
+    .ajusteBusqueda{
+      width: 65%;
+    }
     .responsiveNav{
       justify-content: none;
     }
@@ -256,5 +283,11 @@
   .dropdown-menu{
     list-style: none !important;
 
+  }
+}
+@media (max-width: 415px){
+
+  .ajusteBusqueda{
+    width: 80%;
   }
 }
