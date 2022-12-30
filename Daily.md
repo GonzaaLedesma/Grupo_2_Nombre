@@ -238,11 +238,50 @@
 - Comenzamos con el Crud.
 
 ## Lunes 19:
+
 - Realizamos una llamada en discord.
 - Realizamos un live share.
 - Hicimos el crud de Productos
 
 ## Martes 20:
+
 - Realizamos una llamada en discord.
 - Realizamos un live share.
 - Hicimos el crud de Usuarios
+- Mejoramos la edicion de perfil.
+
+
+## Juevez 22:
+
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Cambiamos nombres de campos.
+- Corregimos el Crud completo.
+- Corregimos los returns
+
+## Lunes 26:
+
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Revisamos la DB.
+- Testeamos scripts 
+- Corregimos errores y arreglamos el css.
+
+## Miercoles 28:
+
+- Realizamos una llamada en discord.
+- Realizamos un live share.
+- Agregamos "segun nuestros gustos" al catalogo.
+- Mejoramos algunos detalles
+
+## Juevez 29:
+
+- Realizamos una llamada en discord.
+- Hablamos sobre el codigo.
+- Agregamos el carrito funcional.
+
+## Viernes 30
+
+- Cargamos los detalles del trabajo.
+- Agregamos los Scripts.
+- Agregamos el DER.
