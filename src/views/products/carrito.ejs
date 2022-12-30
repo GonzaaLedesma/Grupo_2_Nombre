@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('../partials/head') %>
-<body>
+  <%- include('../partials/head') %>
+  <body>
     <%- include('../partials/header') %>
-  <main class="correccionTamanioCarrito">
-    <div>
-      <h2 class="tituloCarritoPrimero">Carrito</h2>
-      <h3 class="tituloCarritoSegundo">Tickets agregados</h3>
+    <main class="correccionTamanioCarrito">
       <div class="CarritoProductoPrincipal">
         <div class="ticketIcon"><i class="fa-solid fa-ticket"></i></div>
         <div class="divCarrito">
@@ -22,64 +19,54 @@
           <p class="DiaCarritoTitulo">Dia</p>
         </div>
       </div>
-        <!-- ------------------------------- -->
-      <div class="CarritoProducto">
-        <div class="ticketIcon"><i class="fa-solid fa-ticket"></i></div>
-        <div class="divCarrito"> 
-          <p class="tituloCarrito">Foo Fighters</p>
+      <br />
+      <% for (let i = 0; i < carritoArray.length; i++) { %> <% const data =
+      eventoArray.find(evento => evento.id == carritoArray[i].evento_id) %>
+      <div class="CarritoProductoPrincipal">
+        <% if (carritoArray[i].activo == true) { %>
+        <div class="ticketIconComprado"><i class="fa-solid fa-ticket"></i></div>
+        <% }else{ %> 
+          <div class="ticketIconNoComprado"><i class="fa-solid fa-ticket"></i></div>
+        <% } %>
+        <div class="divCarrito">
+          <p class="tituloCarritoTitulo"><%= data.nombre_evento %></p>
         </div>
         <div class="divCarrito">
-          <p class="CantidadCarrito">5</p>
+          <p class="CantidadCarritoTitulo"><%= carritoArray[i].cantidad %></p>
         </div>
         <div class="divCarrito">
-          <p class="precioCarrito">7000$</p>
+          <p class="precioCarritoTitulo"><%= data.precio %>$</p>
         </div>
         <div class="divCarrito">
-          <p class="DiaCarrito">12 de Octubre</p>
+          <p class="DiaCarritoTitulo"><%= data.fecha %></p>
         </div>
-     </div>
-      <div class="CarritoProducto">
-        <div class="ticketIcon"><i class="fa-solid fa-ticket"></i></div>
-        <div class="divCarrito"> 
-          <p class="tituloCarrito">Foo Fighters</p>
-        </div>
-        <div class="divCarrito">
-          <p class="CantidadCarrito">5</p>
-        </div>
-        <div class="divCarrito">
-          <p class="precioCarrito">7000$</p>
-        </div>
-        <div class="divCarrito">
-          <p class="DiaCarrito">12 de Octubre</p>
-        </div>
-     </div>
-      <div class="CarritoProducto">
-        <div class="ticketIcon"><i class="fa-solid fa-ticket"></i></div>
-        <div class="divCarrito"> 
-          <p class="tituloCarrito">Foo Fighters</p>
-        </div>
-        <div class="divCarrito">
-          <p class="CantidadCarrito">5</p>
-        </div>
-        <div class="divCarrito">
-          <p class="precioCarrito">7000$</p>
-        </div>
-        <div class="divCarrito">
-          <p class="DiaCarrito">12 de Octubre</p>
-        </div>
-     </div>
-    <div class="botomBarCarrito">
+      </div>
+      <% } %>
+
+      <!-- ------------------------------- -->
+      <div class="botomBarCarrito">
         <div>
-            <button class="botonAddCarrito"><a href="/producto/catalogo"><i class="fa-solid fa-plus"></i></a></button>
+          <button class="botonAddCarrito">
+            <a href="/producto/catalogo"><i class="fa-solid fa-plus"></i></a>
+          </button>
         </div>
-        <div >
-            <button class="botonCompraCarrito" ><a href="/">Continuar</a></button>
+        <div>
+          <form action="/producto/carrito/<%= userDetail.id %>?_method=PUT" method="POST">
+            <button class="botonCompraCarrito">Continuar</button>
+          </form>
         </div>
-        <div >
-            <button class="botonBorrarCarrito"><i class="fa-solid fa-trash"></i></button>
+        <div>
+          <form
+            action="/producto/carrito/<%= userDetail.id %>?_method=DELETE"
+            method="POST"
+          >
+            <button class="botonBorrarCarrito">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </form>
         </div>
-    </div>
-  </main>
+      </div>
+    </main>
     <%- include('../partials/footer') %>
-</body>
+  </body>
 </html>

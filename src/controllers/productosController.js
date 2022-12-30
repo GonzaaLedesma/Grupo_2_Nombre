@@ -1,6 +1,4 @@
 const db = require("../database/models");
-// const sequelize = db.sequelize;
-// const Op =db.Sequelize.Op;
 const { Op } = require("sequelize");
 
 const productosController = {
@@ -31,9 +29,53 @@ const productosController = {
       titlePage: "- Detalles",
     });
   },
-  carrito: (req, res) => {
-    return res.render("products/carrito", { titlePage: "- Carrito" });
+  carrito: async (req, res) => {
+    const dataEvento = await db.Evento.findAll();
+    const dataCarrito = await db.Carrito.findAll({
+      where: {
+        usuario_id: res.locals.logged.id,
+      },
+    });
+    const eventoArray = dataEvento.map((item) => item.dataValues);
+    const carritoArray = dataCarrito.map((item) => item.dataValues);
+    return res.render("products/carrito", {
+      carritoArray,
+      eventoArray,
+      titlePage: "- Carrito",
+    });
   },
+  carritoAdd: async (req, res) => {
+    await db.Carrito.create({
+      usuario_id: res.locals.logged.id,
+      evento_id: req.params.id,
+      activo: false,
+      cantidad: req.body.cantidad,
+    });
+    return res.redirect("../../producto/carrito");
+  },
+  carritoDelete: async (req, res) => {
+    await db.Carrito.destroy({
+      where: {
+        usuario_id: req.params.id,
+        activo: false,
+      },
+    });
+    return res.redirect("../../producto/carrito");
+  },
+  carritoUpdate: async (req, res) => {
+    await db.Carrito.update(
+      {
+        activo: true,
+      },
+      {
+        where: {
+          usuario_id: req.params.id,
+        },
+      }
+    );
+    return res.redirect("../../producto/carrito");
+  },
+
   ayuda: (req, res) => {
     return res.render("products/ayuda", { titlePage: "- Ayuda" });
   },

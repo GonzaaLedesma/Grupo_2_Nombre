@@ -114,9 +114,16 @@ const userController = {
       },
     });
   },
-  perfil: (req, res) => {
+  perfil: async (req, res) => {
+    const gustos = await db.Usuario_Genero.findAll({
+      where: {
+        usuario_id: res.locals.logged.id
+      }
+    })
+    const gustosArray = gustos.map((item) => item.dataValues);
     return res.render("users/perfil", {
       usuarioLogeado: req.session.logged,
+      gustosArray,
       titlePage: "- Perfil",
     });
   },

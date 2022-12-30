@@ -70,24 +70,11 @@ body{
 .subCaja{
     display: flex;
     flex-direction: row;
-    margin: 10px;
 }
 .cajaPago{
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-.cajaCantidad{
-    border: solid 1px white;
-    width: 30px;
-    height:30px;
-    margin-right:5px;
-}
-.cajaTotal{
-    border: solid 1px white;
-    width: 60px;
-    height:30px;
-    margin-right:5px;
 }
 h4{
     color: white;
@@ -97,13 +84,34 @@ h4{
     margin: auto;
     margin-bottom: 5px;
     padding: 5px;
-    border: solid 1px rgb(173, 173, 0);
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 1px gold;
     background-color: #242c35;
     transition: 450ms;
-    border-radius: 10px;
-
 }
-.botonPago a{
+.cajaCantidad{
+    display: flex;
+    justify-content: center;
+}
+.cajaCantidad input{
+    border: 0;
+    background: none;
+    display: block;
+    padding: 10px;
+    border: 2px solid gold;
+    text-align: center;
+    width: 50%;
+    outline: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.cajaCantidad input:focus{
+    border-radius: 15px;
+    border-color: #ffffff;
+}
+.botonPago{
+    margin-top:20px ;
     text-decoration: none;
     color: white;
     transition: 450ms;
@@ -140,20 +148,39 @@ h4{
     color: white;
     transition: 450ms;
 }
+.botonFunctionAdminBorrar{
+    border:solid 1px rgb(190, 190, 0);
+    background-color: #242c35;   
+}
+.botonFunctionAdminBorrar a{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
+.botonFunctionAdminBorrar i{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
 /* ----------- */
 
 .botonFunctionAdmin:hover a{
-    color: rgb(190, 190, 0);
+    color: gold;
 }
 .botonFunctionAdmin:hover i{
-    color: rgb(190, 190, 0);
+    color: gold;
+}
+.botonFunctionAdminBorrar:hover a{
+    color: gold;
+}
+.botonFunctionAdminBorrar:hover i{
+    color: gold;
 }
 .botonPago:hover{
     background-color: #1c2631;
+    color: gold;
 }
-.botonPago:hover a{
-    color:gold;
-}
+
 .botonPago:hover button{
     border: solid 1px gold;
 }

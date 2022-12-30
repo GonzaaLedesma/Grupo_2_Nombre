@@ -74,7 +74,7 @@ module.exports = (sequelize, dataTypes) => {
       }),
       Evento.hasMany(models.Carrito, {
             as: "evento_carrito",
-            foreignKey: "genero_id",
+            foreignKey: "evento_id",
       })
     };
 

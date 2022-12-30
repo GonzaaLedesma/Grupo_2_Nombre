@@ -39,6 +39,24 @@
                 pop punk
                 <% } %>
             </p>
+            <h5>Gustos:</h5>
+            <p class="textP">
+              <% for (let i = 0; i < gustosArray.length; i++) { %>
+                <% if (gustosArray[i].genero_id == 1) {%>
+                  (rock)
+                  <% } else if (gustosArray[i].genero_id == 2) { %>
+                  (hard rock)
+                  <% } else if (gustosArray[i].genero_id == 3) { %>
+                  (pop)
+                  <% } else if (gustosArray[i].genero_id == 4) { %>
+                  (rock alternativo)
+                  <% } else if (gustosArray[i].genero_id == 5) { %>
+                  (pop rock)
+                  <% } else { %>
+                  (pop punk)
+                  <% } %>
+              <% } %>
+            </p>            
           </div>
           <div>
             <h3>informacion Personal</h3>

@@ -9,7 +9,10 @@ module.exports = (sequelize, dataTypes) => {
           activo: {
             type: dataTypes.BOOLEAN,
             defaultValue: false
-          }
+          },
+          cantidad : {
+            type : dataTypes.INTEGER,
+        }
     };
     let config = {
         tableName: 'carrito',

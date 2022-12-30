@@ -69,7 +69,7 @@ module.exports = (sequelize, dataTypes) => {
         }),
         Usuario.hasMany(models.Carrito, {
             as:"usuario_carrito",
-            foreignKey:"genero_id"
+            foreignKey:"evento_id"
         })
     };
 

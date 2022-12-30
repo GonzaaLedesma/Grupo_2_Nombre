@@ -32,27 +32,30 @@
             <div class="subDescripcion">
               <p><%= detalle.descripcion %></p>
             </div>
-            <div class="cajaPago">
-              <div class="subCaja">
-                <div class="cajaCantidad"></div>
-                <h4>Cantidad</h4>
+            <form action="/producto/carrito/<%= detalle.id %>" method="POST">
+              <div class="cajaPago">
+                  <div class="cajaCantidad">
+                    <label for="Cantidad"></label>
+                    <input
+                      required
+                      type="number"
+                      name="cantidad"
+                      placeholder="Cantidad"
+                    />
+                  </div>
               </div>
-              <div class="subCaja">
-                <div class="cajaTotal"></div>
-                <h4>Total</h4>
+              <div>
+                <label class="positionCondiciones"
+                  ><input type="checkbox" name="terminos" value="terminos" />He
+                  leido y acepto los "<a href="/usuario/terminosYCondiciones"
+                    >Terminos y Condiciones</a
+                  >"</label
+                >
               </div>
-            </div>
-            <div>
-              <label class="positionCondiciones"
-                ><input type="checkbox" name="terminos" value="terminos" />He
-                leido y acepto los "<a href="/usuario/terminosYCondiciones"
-                  >Terminos y Condiciones</a
-                >"</label
-              >
-            </div>
-            <button class="botonPago" type="submit">
-              <a href="/">Continuar a metodo de pago</a>
-            </button>
+              <button class="botonPago" type="submit">
+                Agregar al carrito
+              </button>
+            </form>
             <% if(locals.adminLogin) {%>
             <div class="botonBarAdmin">
               <button class="botonFunctionAdmin">
@@ -62,7 +65,7 @@
                 action="/administrador/<%= detalle.id %>?_method=DELETE"
                 method="POST"
               >
-                <button class="botonFunctionAdmin">
+                <button class="botonFunctionAdminBorrar">
                   <i class="fa-solid fa-trash"></i>
                 </button>
               </form>
@@ -77,6 +80,31 @@
           alt="bannerFooter"
         />
       </div>
+      <!-- <script>
+        window.addEventListener("load", function () {
+          const button = document.querySelector(".botonFunctionAdminBorrar");
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            Swal.fire({
+              title: "¿Estás seguro?",
+              text: "¡No podrás revertir esto!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Sí, ¡borrarlo!",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire(
+                  "¡Borrado!",
+                  "Tu archivo ha sido borrado.",
+                  "success"
+                );
+              }
+            });
+          });
+        });
+      </script> -->
     </main>
     <%- include('../partials/footer') %>
   </body>
