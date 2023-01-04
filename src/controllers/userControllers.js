@@ -161,7 +161,8 @@ const userController = {
         },
       }
     );
-
+    res.clearCookie("datosEmail");
+    req.session.destroy();
     res.redirect("../perfil");
   },
   logout: (req, res) => {
