@@ -50,3 +50,12 @@
 - Tomas Otero: Fue un sprint facil, estuvimos todos a la par y esperar a tener el mismo ritmo en el siguiente.
 
 - Josue Ferreira: Me senti muy conforme trabajando con mis compañeros tratando de aportar en todos los campos posibles. Espero poder mantener este mismo ritmo y actitud para lo que resta del curso.
+
+
+## retro sprint 6:
+
+ - Gonzalo Ledesma: En este sprint me senti mucho mas libre en cuanto al manejo del CRUD, fue sensillo realizarlo una vez q pudimos conectar todas las tablas de la DB con el proyecto y estoy muy conforme con el resultado.
+
+ - Matias Lanese: El sprint 6 parecia sencillo pero causo algunas dificultades que pudimos sacar adelante con mis compañeros, eso me motiva para seguir avanzando. Me siento muy conforme con el resultado parcial de la pagina hasta ahora, faltan mas temas por agregar pero a seguir adelante aprendiendo y plasmandolo en el proyecto.
+
+ - Tomas Otero: Me esta gustando el resultado de la pagina, este sprint fue mas facil de lo normal con la ayuda de mis compañeros. Con el equipo fue muy comodo y espero seguir asi con el siguiente sprint.

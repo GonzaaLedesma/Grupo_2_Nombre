@@ -52,12 +52,14 @@ body {
   flex-wrap: nowrap;
   margin: 8px;
   margin-right: 5px;
+  height: 420px;
   padding: 5px;
   margin-bottom: 5px;
   padding-bottom: 15px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 .cajaCategoriaLogged::-webkit-scrollbar {
   background: #1e2731;

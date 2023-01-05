@@ -62,6 +62,15 @@ const productosController = {
     });
     return res.redirect("../../producto/carrito");
   },
+  carritoDeleteRealizado: async (req, res) => {
+    await db.Carrito.destroy({
+      where: {
+        usuario_id: req.params.id,
+        activo: true,
+      },
+    });
+    return res.redirect("../../carrito");
+  },
   carritoUpdate: async (req, res) => {
     await db.Carrito.update(
       {

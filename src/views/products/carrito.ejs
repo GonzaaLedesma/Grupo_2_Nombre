@@ -50,14 +50,20 @@
             <a href="/producto/catalogo"><i class="fa-solid fa-plus"></i></a>
           </button>
         </div>
+       
         <div>
-          <form action="/producto/carrito/<%= userDetail.id %>?_method=PUT" method="POST">
-            <button class="botonCompraCarrito">Continuar</button>
+          <form
+            action="/producto/carrito/<%= userDetail.id %>?_method=DELETE"
+            method="POST"
+          >
+            <button class="botonBorrarCarritoRealizado">
+              <i class="fa-solid fa-trash"></i>
+            </button>
           </form>
         </div>
         <div>
           <form
-            action="/producto/carrito/<%= userDetail.id %>?_method=DELETE"
+            action="/producto/carrito/realizado/<%= userDetail.id %>?_method=DELETE"
             method="POST"
           >
             <button class="botonBorrarCarrito">
@@ -66,6 +72,11 @@
           </form>
         </div>
       </div>
+      <div class="divCompra">
+          <form action="/producto/carrito/<%= userDetail.id %>?_method=PUT" method="POST">
+            <button class="botonCompraCarrito">Comprar</button>
+          </form>
+        </div>
     </main>
     <%- include('../partials/footer') %>
   </body>

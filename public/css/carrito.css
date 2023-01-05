@@ -107,13 +107,27 @@
     transition: 450ms;
 }
 .botonBorrarCarrito{
-    border:solid 1px gold;
+    border:solid 1px green;
     background-color: #242c35;    
 }
 .botonBorrarCarrito i{
     text-decoration: none;
     color: white;
     transition: 450ms;
+}
+.botonBorrarCarritoRealizado{
+    border:solid 1px red;
+    background-color: #242c35;    
+}
+.botonBorrarCarritoRealizado i{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
+.divCompra{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 /* ----------hover--------- */
@@ -124,7 +138,13 @@
     color: gold;
 }
 .botonBorrarCarrito:hover i{
+    color: green;
+}
+.botonBorrarCarritoRealizado:hover{
     color: gold;
+}
+.botonBorrarCarritoRealizado:hover i{
+    color: red;
 }
 /* ------------ */
 @media (max-width: 450px){
