@@ -56,12 +56,13 @@ const userController = {
       descripcion: descripcion,
       foto_perfil: foto_perfil.filename,
     });
-    genero_id.forEach(async (genero) => {
+    for (let i = 0; i < genero_id.length; i++) {
+      const genero = genero_id[i];
       await db.Usuario_Genero.create({
         usuario_id: data.dataValues.id,
         genero_id: genero,
       });
-    });
+    }
     await db.Tipo_Usuario.create({
       usuario_id: data.dataValues.id,
       admin: false,
