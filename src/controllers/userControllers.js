@@ -79,6 +79,15 @@ const userController = {
         email: req.body.email,
       },
     });
+    if (!loginUser) {
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "No se encuentra este email en nuestra base de datos",
+          },
+        },
+      });
+    }
     let tipoUsuario = await db.Tipo_Usuario.findOne({
       where: {
         usuario_id: loginUser.id,
@@ -107,20 +116,13 @@ const userController = {
         },
       });
     }
-    return res.render("users/login", {
-      errors: {
-        email: {
-          msg: "No se encuentra este email en nuestra base de datos",
-        },
-      },
-    });
   },
   perfil: async (req, res) => {
     const gustos = await db.Usuario_Genero.findAll({
       where: {
-        usuario_id: res.locals.logged.id
-      }
-    })
+        usuario_id: res.locals.logged.id,
+      },
+    });
     const gustosArray = gustos.map((item) => item.dataValues);
     return res.render("users/perfil", {
       usuarioLogeado: req.session.logged,
