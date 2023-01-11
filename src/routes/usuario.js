@@ -19,7 +19,7 @@ router.post('/login',userController.loginProcess);
 
 router.get('/register', userMiddleware, userController.register);
 
-router.post('/register', upload.single('foto_perfil'), validator, userController.registerProcess);
+router.post('/register', upload.single('foto_perfil'), validator,  userController.registerProcess);
 
 router.get('/perfil' ,authMiddleware ,userController.perfil);
 

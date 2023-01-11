@@ -1,5 +1,7 @@
 const db = require("../database/models");
 const sequelize = db.sequelize;
+const { check, validationResult } = require("express-validator");
+
 
 const administradorController = {
   creacion: (req, res) => {
@@ -13,6 +15,33 @@ const administradorController = {
     });
   },
   creacionPost: async (req, res) => {
+    const errors = validationResult(req);
+
+    if (errors.errors.length > 0) {
+      return res.render("products/creacionProducto", {
+        errors: errors.mapped(),
+        oldData: req.body,
+      });
+    }
+    const event = await db.Evento.findOne({
+      where: { 
+        nombre_evento: req.body.nombre_evento,
+        fecha: req.body.fecha,
+       },
+    });
+    if (event) {
+      return res.render("products/creacionProducto", {
+        errors: {
+          nombre_evento: {
+            msg: "Este evento ya está registrado",
+          },
+          fecha: {
+            msg: "Este evento ya está registrado",
+          },
+        },
+        oldData: req.body,
+      });
+    }
     const foto_evento = req.file;
     const {
       nombre_evento,
@@ -51,6 +80,18 @@ const administradorController = {
     return res.redirect("../producto/catalogo");
   },
   edicionPut: async (req, res) => {
+    const errors = validationResult(req);
+    
+    console.log(errors)
+
+    if (errors.errors.length >= 1) {
+      const editarProducto = await db.Evento.findByPk(req.params.id);
+      return res.render("products/edicionProducto", {
+        editarProducto,
+        errors: errors.mapped(),
+        oldData: req.body,
+      });
+    }
     const foto_evento = req.file;
     const {
       nombre_evento,
@@ -74,7 +115,8 @@ const administradorController = {
         capacidad_sede: Number(capacidad_sede),
         precio: Number(precio),
         participacion: participacion,
-        // horario: Number((horario / 1000) + "0000"),
+        // horario: "",
+        // horario: Number(horario),
         descripcion: descripcion,
         biografia: biografia,
         foto_evento: foto_evento.filename,

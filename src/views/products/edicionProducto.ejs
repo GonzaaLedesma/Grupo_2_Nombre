@@ -1,72 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
   <%- include('../partials/head') %>
-<body>
-  <%- include('../partials/header') %>
-  <div class="divParaGradiant"></div>
+  <body>
+    <%- include('../partials/header') %>
+    <div class="divParaGradiant"></div>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="/administrador/<%= editarProducto.id %>?_method=PUT" class="form-box" method="POST" enctype="multipart/form-data">
-            <h1 class="form-title">Edicion de <%= editarProducto.nombre_evento %></h1>
-            <div class="cajaAdmin">
-                <label  for="Cambio-Evento">Evento</label>
-                <input required type="text"  name="nombre_evento"  value="<%= editarProducto.nombre_evento %>">
+      <form
+        class="formularioAdmin"
+        action="/administrador/<%= editarProducto.id %>?_method=PUT"
+        class="form-box"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <h1 class="form-title">
+          Edicion de <%= editarProducto.nombre_evento %>
+        </h1>
+        <div class="cajaAdmin">
+          <label for="Cambio-Evento">Evento</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.nombre_evento ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="nombre_evento"
+            value="<%= editarProducto.nombre_evento %>"
+          />
+          <% if (locals.errors && errors.nombre_evento) { %>
+            <div class="errorTxt"><%= errors.nombre_evento.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Dia">Dia</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.fecha ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="fecha"
+            value="<%= editarProducto.fecha %>"
+          />
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Ubicacion">Ubicacion</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.ubicacion ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="ubicacion"
+            value="<%= editarProducto.ubicacion %>"
+          />
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-sede">Sede</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.sede ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="sede"
+            value="<%= editarProducto.sede %>"
+          />
+        </div>
+        <div class="cajaAdmin">
+          <label for="Dato-Participacion">Participacion</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.participacion ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="participacion"
+            value="<%= editarProducto.participacion %>"
+          />
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Dato-Capacidad">Capacidad</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.capacidad_sede ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="capacidad_sede"
+            value="<%= editarProducto.capacidad_sede %>"
+          />
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Precio">Precio</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.precio ? 'errorBorderAdmin' : null %>"
+            type="number"
+            min="0"
+            name="precio"
+            value="<%= editarProducto.precio %>"
+          />
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Horario">Horario</label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.horario ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="horario"
+            value="<%= editarProducto.horario %>"
+          />
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Categoria">Categoria</label>
+          <select
+            class="opcionesCategoria <%= locals.errors && errors.id_categoria ? 'errorBorderAdmin' : null %>"
+            name="id_categoria"
+          >
+            <option value="<%= editarProducto.id_categoria %>">
+              <%= editarProducto.id_categoria %>
+            </option>
+            <option value="1">Actuales</option>
+            <option value="2">Nuevos</option>
+            <option value="3">Proximos</option>
+          </select>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
+          <textarea
+            class="textArea <%= locals.errors && errors.descripcion ? 'errorBorderAdmin' : null %>"
+            name="descripcion"
+          ><%= editarProducto.descripcion %></textarea
+          >
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-Biografia-Evento">Biografia Breve</label>
+          <textarea
+            class="textArea <%= locals.errors && errors.biografia ? 'errorBorderAdmin' : null %>"
+            name="biografia"
+          ><%= editarProducto.biografia %></textarea
+          >
+        </div>
+        <div class="cajaAdmin">
+          <label for="Cambio-ImgEvento">
+            <div class="label">Seleccione Foto de Evento</div>
+            <div class="fotoEventoAdmin">
+              <input
+                class="borderFotoEvento <%= locals.errors && errors.foto_evento ? 'errorBorderAdmin' : null %>"
+                type="file"
+                name="foto_evento"
+              />
             </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-Dia">Dia</label>
-                <input required type="text" name="fecha" value="<%= editarProducto.fecha %>" >
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-Ubicacion">Ubicacion</label>
-                <input required type="text" name="ubicacion" value="<%= editarProducto.ubicacion %>">
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-sede">Sede</label>
-                <input required type="text" name="sede" value="<%= editarProducto.sede %>">
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Dato-Participacion">Participacion</label>
-                <input required type="text" name="participacion" value="<%= editarProducto.participacion %>">
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-Dato-Capacidad">Capacidad</label>
-                <input required type="text" name="capacidad_sede" value="<%= editarProducto.capacidad_sede %>">
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-Precio">Precio</label>
-                <input required type="number" min="0" name="precio" value="<%= editarProducto.precio %>">
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-Horario">Horario</label>
-                <input required type="text" name="horario" value="<%= editarProducto.horario %>">
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Cambio-Categoria">Categoria</label>
-                <select class="opcionesCategoria" required name="id_categoria">
-                    <option value="<%= editarProducto.id_categoria %>"><%= editarProducto.id_categoria %></option> 
-                    <option  value="1">Actuales</option> 
-                    <option  value="2">Nuevos</option> 
-                    <option  value="3">Proximos</option> 
-                </select>
-            </div>
-            <div class="cajaAdmin">
-                <label  for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
-                <textarea class="textArea" name="descripcion" ><%= editarProducto.descripcion %></textarea>
-            </div>
-            <div class="cajaAdmin">
-                <label   for="Cambio-Biografia-Evento">Biografia Breve</label>
-                <textarea class="textArea" name="biografia" ><%= editarProducto.biografia %></textarea>
-            </div>
-            <div class="cajaAdmin">
-                <label  for="Cambio-ImgEvento">
-                    <div class="label">Seleccione Foto de Evento</div>
-                    <div class="fotoEventoAdmin"><input type="file" name="foto_evento" required></div>
-                </label> 
-            </div>
-            <div class="cajaAdminSend">
-                <button type="submit" value="editar">Enviar</button>
-            </div>
-        </form>
+          </label>
+        </div>
+        <div class="cajaAdminSend">
+          <button type="submit" value="editar">Enviar</button>
+        </div>
+      </form>
     </main>
     <%- include('../partials/footer') %>
-</body>
+  </body>
 </html>

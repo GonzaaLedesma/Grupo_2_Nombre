@@ -1,103 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
   <%- include('../partials/head') %>
-<body>
-  <%- include('../partials/header') %>
-  <div class="divParaGradiant"></div>
+  <body>
+    <%- include('../partials/header') %>
+    <div class="divParaGradiant"></div>
     <main class="mainRegister">
-        <form class="formularioAdmin" action="/administrador" method="POST" enctype="multipart/form-data" class="form-box">
-            <h1 class="form-title">Creacion De Evento</h1>
-            <div class="cajaAdmin">
-                <label for="Nombre"></label>
-                <input required type="text"  name="nombre_evento" placeholder="Nombre del Evento">
+      <form
+        class="formularioAdmin"
+        action="/administrador"
+        method="POST"
+        enctype="multipart/form-data"
+        class="form-box"
+      >
+        <h1 class="form-title">Creacion De Evento</h1>
+        <div class="cajaAdmin">
+          <label for="Nombre"></label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.nombre_evento ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="nombre_evento"
+            placeholder="Nombre del Evento"
+            value="<%= locals.oldData ? oldData.nombre_evento : null %>"
+          />
+          <% if (locals.errors && errors.nombre_evento) { %>
+          <div class="errorTxt"><%= errors.nombre_evento.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Dia"></label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.fecha ? 'errorBorderAdmin' : null %>"
+            type="date"
+            name="fecha"
+            value="<%= locals.oldData ? oldData.fecha : null %>"
+          />
+          <% if (locals.errors && errors.fecha) { %>
+          <div class="errorTxt"><%= errors.fecha.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Ubicacion"></label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.ubicacion ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="ubicacion"
+            placeholder="Ubicacion"
+            value="<%= locals.oldData ? oldData.ubicacion : null %>"
+          />
+          <% if (locals.errors && errors.ubicacion) { %>
+          <div class="errorTxt"><%= errors.ubicacion.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Sede"></label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.sede ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="sede"
+            placeholder="Sede"
+            value="<%= locals.oldData ? oldData.sede : null %>"
+          />
+          <% if (locals.errors && errors.sede) { %>
+          <div class="errorTxt"><%= errors.sede.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Participacion"></label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.participacion ? 'errorBorderAdmin' : null %>"
+            type="text"
+            name="participacion"
+            placeholder="Participacion especial"
+            value="<%= locals.oldData ? oldData.participacion : null %>"
+          />
+          <% if (locals.errors && errors.participacion) { %>
+          <div class="errorTxt"><%= errors.participacion.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Capacidad"></label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.capacidad_sede ? 'errorBorderAdmin' : null %>"
+            type="number"
+            min="0"
+            name="capacidad_sede"
+            placeholder="Capacidad de la sede"
+            value="<%= locals.oldData ? oldData.capacidad_sede : null %>"
+          />
+          <% if (locals.errors && errors.capacidad_sede) { %>
+          <div class="errorTxt"><%= errors.capacidad_sede.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Price"></label>
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.precio ? 'errorBorderAdmin' : null %>"
+            type="number"
+            min="0"
+            name="precio"
+            placeholder="Inserte Un Precio $$$"
+            value="<%= locals.oldData ? oldData.precio : null %>"
+          />
+          <% if (locals.errors && errors.precio) { %>
+          <div class="errorTxt"><%= errors.precio.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Horario"></label>
+          <!-- revisar number por date -->
+          <input
+            class="cajaAdminImput <%= locals.errors && errors.horario ? 'errorBorderAdmin' : null %>"
+            type="number"
+            min="0"
+            name="horario"
+            placeholder="Inserte un horario"
+            value="<%= locals.oldData ? oldData.horario : null %>"
+          />
+          <% if (locals.errors && errors.horario) { %>
+          <div class="errorTxt"><%= errors.horario.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Categoria">Categoria</label>
+          <select
+            class="opcionesCategoria <%= locals.errors && errors.id_categoria ? 'errorBorderAdmin' : null %>"
+            name="id_categoria"
+          >
+            <option value="">Seleccione</option>
+            <option value="1"<%= locals.oldData && oldData.id_categoria == "1" ?'selected' : null %>>Actuales</option>
+            <option value="2"<%= locals.oldData && oldData.id_categoria == "2" ?'selected' : null %>>Nuevos</option>
+            <option value="3"<%= locals.oldData && oldData.id_categoria == "3" ?'selected' : null %>>Proximos</option>
+          </select>
+          <% if (locals.errors && errors.id_categoria) { %>
+          <div class="errorTxt"><%= errors.id_categoria.msg %></div>
+          <% } %>
+        </div>
+        <label class="colorCase" for="evento_id">Genero del Evento</label>
+        <div class="categoriasCheckbox">
+          <div>
+            <label for="rock">Rock</label>
+            <input type="checkbox" id="rock" name="evento_id" value="1" />
+          </div>
+          <div>
+            <label for="hard-rock">Hard Rock</label>
+            <input type="checkbox" id="hard-rock" name="evento_id" value="2" />
+          </div>
+          <div>
+            <label for="pop">Pop</label>
+            <input type="checkbox" id="pop" name="evento_id" value="3" />
+          </div>
+          <div>
+            <label for="Rock Alternativo">Rock Alternativo</label>
+            <input type="checkbox" id="pop" name="evento_id" value="4" />
+          </div>
+          <div>
+            <label for="Pop Rock">Pop Rock</label>
+            <input type="checkbox" id="pop" name="evento_id" value="5" />
+          </div>
+          <div>
+            <label for="Pop Punk">Pop Punk</label>
+            <input type="checkbox" id="pop" name="evento_id" value="6" />
+          </div>
+        </div>
+        <% if (locals.errors && errors.evento_id) { %>
+        <div class="errorTxt"><%= errors.evento_id.msg %></div>
+        <% } %>
+        <div class="cajaAdmin">
+          <label for="Descripcion-Evento">Descripcion del Evento</label>
+          <textarea
+            class="textArea <%= locals.errors && errors.descripcion ? 'errorBorderAdmin' : null %>"
+            name="descripcion"
+            placeholder="Descripcion breve del evento y/o sobre el show principal"
+          ><%= locals.oldData ? oldData.descripcion  : null %></textarea>
+          <% if (locals.errors && errors.descripcion) { %>
+          <div class="errorTxt"><%= errors.descripcion.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="Biografia">Biografia Breve</label>
+          <textarea
+            class="textArea <%= locals.errors && errors.biografia ? 'errorBorderAdmin' : null %>"
+            name="biografia"
+            placeholder="Descripcion breve de la biografia de la banda/evento"
+          ><%= locals.oldData ? oldData.biografia  : null %></textarea>
+          <% if (locals.errors && errors.biografia) { %>
+          <div class="errorTxt"><%= errors.biografia.msg %></div>
+          <% } %>
+        </div>
+        <div class="cajaAdmin">
+          <label for="fotoEvento">
+            <div class="label">Seleccione Foto de Evento</div>
+            <div class="fotoEventoAdmin">
+              <input
+                class="borderFotoEvento <%= locals.errors && errors.foto_evento ? 'errorBorderAdmin' : null %>"
+                type="file"
+                name="foto_evento"
+              />
             </div>
-            <div class="cajaAdmin"> 
-                <label for="Dia"></label>
-                <input required type="date" name="fecha">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Ubicacion"></label>
-                <input required type="text" name="ubicacion"  placeholder="Ubicacion">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Sede"></label>
-                <input required type="text" name="sede" placeholder="Sede">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Participacion"></label>
-                <input required type="text" name="participacion" placeholder="Participacion especial">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Capacidad"></label>
-                <input required type="number" min="0" name="capacidad_sede" placeholder="Capacidad de la sede">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Price"></label>
-                <input required type="number" min="0" name="precio" placeholder="Inserte Un Precio $$$">
-            </div>
-            <div class="cajaAdmin"> 
-                <label for="Horario"></label>
-                <!-- revisar number por date -->
-                <input required type="number" min="0" name="horario" placeholder="Inserte un horario">
-            </div>
-            <div class="cajaAdmin"> 
-                <label  for="Categoria">Categoria</label>
-                <select class="opcionesCategoria" required name="id_categoria">
-                    <option  value="">Seleccione</option> 
-                    <option  value="1">Actuales</option> 
-                    <option  value="2">Nuevos</option> 
-                    <option  value="3">Proximos</option> 
-                </select>
-            </div>
-            <label class="colorCase" for="evento_id">Genero de la Banda</label>
-            <div class="categoriasCheckbox"> 
-                <div>
-                    <label for="rock">Rock</label>
-                  <input type="checkbox" id="rock" name="evento_id" value="1">
-                </div>
-                <div>
-                    <label for="hard-rock">Hard Rock</label>
-                  <input type="checkbox" id="hard-rock" name="evento_id" value="2">
-                </div>
-                <div>
-                    <label for="pop">Pop</label>
-                  <input type="checkbox" id="pop" name="evento_id" value="3">
-                </div>
-                <div>
-                    <label for="Rock Alternativo">Rock Alternativo</label>
-                  <input type="checkbox" id="pop" name="evento_id" value="4">
-                </div>
-                <div>
-                    <label for="Pop Rock">Pop Rock</label>
-                  <input type="checkbox" id="pop" name="evento_id" value="5">
-                </div>
-                <div>
-                    <label for="Pop Punk">Pop Punk</label>
-                  <input type="checkbox" id="pop" name="evento_id" value="6">
-                </div>
-            </div>
-            <div class="cajaAdmin">
-                <label for="Descripcion-Evento">Descripcion del Evento</label>
-                <textarea class="textArea" required name="descripcion" placeholder="Descripcion breve del evento y/o sobre el show principal"></textarea>
-            </div>
-            <div class="cajaAdmin">
-                <label for="Biografia">Biografia Breve</label>
-                <textarea class="textArea" required name="biografia" placeholder="Descripcion breve de la biografia de la banda/evento"></textarea>
-            </div>
-            <div class="cajaAdmin">
-                <label for="fotoEvento">
-                    <div class="label">Seleccione Foto de Evento</div>
-                    <div class="fotoEventoAdmin"><input required type="file" name="foto_evento" required></div>
-                </label>
-            </div>
-            <div class="cajaAdminSend">
-                <button type="submit">Enviar</button>
-            </div>
-            <div class="cajaAdminSend">
-                <button type="reset"><h6>Borrar</h6></button>
-            </div>
-        </form>
+            <% if (locals.errors && errors.foto_evento) { %>
+            <div class="errorTxt"><%= errors.foto_evento.msg %></div>
+            <% } %>
+          </label>
+        </div>
+        <div class="cajaAdminSend">
+          <button type="submit">Enviar</button>
+        </div>
+        <div class="cajaAdminSend">
+          <button type="reset"><h6>Borrar</h6></button>
+        </div>
+      </form>
     </main>
     <%- include('../partials/footer') %>
-</body>
+  </body>
 </html>

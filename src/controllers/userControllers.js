@@ -74,6 +74,15 @@ const userController = {
     return res.render("users/login", { titlePage: "- Login" });
   },
   loginProcess: async (req, res) => {
+    if(req.body.email == ''){
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "Ingrese un email",
+          },
+        },
+      });
+    }
     let loginUser = await db.Usuario.findOne({
       where: {
         email: req.body.email,

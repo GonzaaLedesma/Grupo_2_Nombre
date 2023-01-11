@@ -155,7 +155,7 @@
                     class="imagenPerfilRegister <%= locals.errors && errors.foto_perfil ? 'errorBorder' : null %>"
                     type="file"
                     name="foto_perfil"
-                    required
+                    
                 />
                 </div>
                 <% if (locals.errors && errors.foto_perfil) { %>
@@ -164,7 +164,6 @@
             </label>
         </div>
         <div class="cajaSendRegister">
-            <% console.log(locals.oldData) %> 
           <button class="botonSumit" type="submit">Enviar</button>
         </div>
       </form>
