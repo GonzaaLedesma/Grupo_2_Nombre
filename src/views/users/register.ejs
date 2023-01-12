@@ -5,22 +5,22 @@
     <%- include('../partials/header') %>
     <div class="divParaGradiant"></div>
     <main class="mainRegister">
-      <form
-        action="/usuario/register"
-        method="POST"
-        class="form-box"
+        <form class="form-box" id="myForm"
+        onsubmit='return validateForm()' 
+        action="/usuario/register" 
+        method="POST" 
         enctype="multipart/form-data"
-      >
+        >
         <h1 class="form-title">Registro</h1>
+        <div class="errorTxt"></div>
         <div class="correcionCajasForm">
             <label for="nombre"></label>
-            <input
-                class="cajaRegisterInput <%= locals.errors && errors.nombre ? 'errorBorder' : null %>"
-                type="text"
-                name="nombre"
-                placeholder="Nombre"
-                value="<%= locals.oldData ? oldData.nombre : null %>"
-            />
+            <input 
+                class="cajaRegisterInput <%= locals.errors && errors.nombre ? 'errorBorder' : null %>" 
+                type="text" id="nombre" 
+                name="nombre" 
+                placeholder="Nombre" 
+                value="<%= locals.oldData ? oldData.nombre : null %>"/>
             <% if (locals.errors && errors.nombre) { %>
             <div class="errorTxt"><%= errors.nombre.msg %></div>
             <% } %>
@@ -116,6 +116,7 @@
             <label><input type="checkbox" name="genero_id" value="4" <%= locals.oldData && oldData.genero_id =='4' ? 'checked' : null %> >Rock-Alternativo</label>
             <label><input type="checkbox" name="genero_id" value="5" <%= locals.oldData && oldData.genero_id =='5' ? 'checked' : null %> >Pop-Rock</label>
             <label><input type="checkbox" name="genero_id" value="6" <%= locals.oldData && oldData.genero_id =='6' ? 'checked' : null %> >Pop-Punk</label>
+            <div class="texAviso"></div>
             <% if (locals.errors && errors.genero_id) { %>
               <div class="errorTxt"><%= errors.genero_id.msg %></div>
             <% } %>
@@ -155,7 +156,6 @@
                     class="imagenPerfilRegister <%= locals.errors && errors.foto_perfil ? 'errorBorder' : null %>"
                     type="file"
                     name="foto_perfil"
-                    
                 />
                 </div>
                 <% if (locals.errors && errors.foto_perfil) { %>
@@ -163,10 +163,12 @@
                 <% } %>
             </label>
         </div>
+        <div class="avisoErrorTxt"></div>
         <div class="cajaSendRegister">
           <button class="botonSumit" type="submit">Enviar</button>
         </div>
       </form>
+      <script src="/js/register.js"></script>
     </main>
     <%- include('../partials/footer') %>
   </body>

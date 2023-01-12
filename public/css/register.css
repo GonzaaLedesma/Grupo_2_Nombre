@@ -145,8 +145,17 @@
 .errorTxt{
    color: #D6000B; 
 }
+.avisoErrorTxt{
+   color: #D6000B; 
+}
 .errorBorder{
     border: 2px solid #D6000B; 
+}
+.goodBorder{
+    border: 2px solid #19d600; 
+}
+.texAviso{
+    color: #19d600; 
 }
   /* #D6000B */
   @media ( max-width: 800px) {
