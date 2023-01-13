@@ -142,6 +142,39 @@
     border: 2px solid gold;
     background: #191919;
 }
+.errorTxtNombre{
+   color: #D6000B; 
+}
+.errorTxtApellido{
+   color: #D6000B; 
+}
+.errorTxtUsuario{
+   color: #D6000B; 
+}
+.errorTxtEmail{
+   color: #D6000B; 
+}
+.errorTxtContrasenia{
+   color: #D6000B; 
+}
+.errorTxtPais{
+   color: #D6000B; 
+}
+.errorTxtGeneroFav{
+   color: #D6000B; 
+}
+.errorTxtGeneros{
+   color: #D6000B; 
+}
+.errorTxtIdentidadGenero{
+   color: #D6000B; 
+}
+.errorTxtDescripcion{
+   color: #D6000B; 
+}
+.errorTxtFotoPerfil{
+   color: #D6000B; 
+}
 .errorTxt{
    color: #D6000B; 
 }

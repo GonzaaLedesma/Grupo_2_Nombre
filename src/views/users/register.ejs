@@ -12,7 +12,6 @@
         enctype="multipart/form-data"
         >
         <h1 class="form-title">Registro</h1>
-        <div class="errorTxt"></div>
         <div class="correcionCajasForm">
             <label for="nombre"></label>
             <input 
@@ -21,6 +20,7 @@
                 name="nombre" 
                 placeholder="Nombre" 
                 value="<%= locals.oldData ? oldData.nombre : null %>"/>
+                <div class="errorTxtNombre"></div>
             <% if (locals.errors && errors.nombre) { %>
             <div class="errorTxt"><%= errors.nombre.msg %></div>
             <% } %>
@@ -34,6 +34,7 @@
                 placeholder="Apellido"
                 value="<%= locals.oldData ? oldData.apellido : null %>"
             />
+            <div class="errorTxtApellido"></div>
             <% if (locals.errors && errors.apellido) { %>
             <div class="errorTxt"><%= errors.apellido.msg %></div>
             <% } %>
@@ -47,6 +48,7 @@
                 placeholder="Nombre de Usuario"
                 value="<%= locals.oldData ? oldData.nombre_usuario : null %>"
             />
+            <div class="errorTxtUsuario"></div>
             <% if (locals.errors && errors.nombre_usuario) { %>
             <div class="errorTxt"><%= errors.nombre_usuario.msg %></div>
           <% } %>
@@ -60,6 +62,7 @@
                 placeholder="E-mail"
                 value="<%= locals.oldData ? oldData.email : null %>"
             />
+            <div class="errorTxtEmail"></div>
             <% if (locals.errors && errors.email) { %>
             <div class="errorTxt"><%= errors.email.msg %></div>
             <% } %>
@@ -72,6 +75,7 @@
                 name="contrasenia"
                 placeholder="Contraseña"
             />
+            <div class="errorTxtContrasenia"></div>
             <% if (locals.errors && errors.contrasenia) { %>
             <div class="errorTxt"><%= errors.contrasenia.msg %></div>
             <% } %>
@@ -85,6 +89,7 @@
                 placeholder="Pais en el que resides"
                 value="<%= locals.oldData ? oldData.pais : null %>"
             />
+            <div class="errorTxtPais"></div>
             <% if (locals.errors && errors.pais) { %>
             <div class="errorTxt"><%= errors.pais.msg %></div>
             <% } %>
@@ -103,6 +108,7 @@
                 <option value="5" <%= locals.oldData && oldData.genero_id_favorito == "5" ? 'selected' : null %>>Pop Rock</option>
                 <option value="6" <%= locals.oldData && oldData.genero_id_favorito == "6" ? 'selected' : null %>>Pop Punk</option>
             </select>
+            <div class="errorTxtGeneroFav"></div>
             <% if (locals.errors && errors.genero_id_favorito) { %>
                 <div class="errorTxt"><%= errors.genero_id_favorito.msg %></div>
                 <% } %>
@@ -117,6 +123,7 @@
             <label><input type="checkbox" name="genero_id" value="5" <%= locals.oldData && oldData.genero_id =='5' ? 'checked' : null %> >Pop-Rock</label>
             <label><input type="checkbox" name="genero_id" value="6" <%= locals.oldData && oldData.genero_id =='6' ? 'checked' : null %> >Pop-Punk</label>
             <div class="texAviso"></div>
+            <div class="errorTxtGeneros"></div>
             <% if (locals.errors && errors.genero_id) { %>
               <div class="errorTxt"><%= errors.genero_id.msg %></div>
             <% } %>
@@ -133,6 +140,7 @@
                 <option value="femenino" <%= locals.oldData && oldData.genero  == "femenino" ?'selected' : null %>>Femenino</option>
                 <option value="otros" <%= locals.oldData && oldData.genero == "otro" ? 'selected' : null %>>Otros</option>
             </select>
+            <div class="errorTxtIdentidadGenero"></div>
             <% if (locals.errors && errors.genero) { %>
             <div class="errorTxt"><%= errors.genero.msg %></div>
             <% } %>
@@ -144,6 +152,7 @@
                 class="textAreaRegister <%= locals.errors && errors.descripcion ? 'errorBorder' : null %>"
                 name="descripcion"
                 ><%= locals.oldData ? oldData.descripcion  : null %></textarea>
+                <div class="errorTxtDescripcion"></div>
             <% if (locals.errors && errors.descripcion) { %>
             <div class="errorTxt"><%= errors.descripcion.msg %></div>
             <% } %>
@@ -158,6 +167,7 @@
                     name="foto_perfil"
                 />
                 </div>
+                <div class="errorTxtFotoPerfil"></div>
                 <% if (locals.errors && errors.foto_perfil) { %>
                 <div class="errorTxt"><%= errors.foto_perfil.msg %></div>
                 <% } %>
