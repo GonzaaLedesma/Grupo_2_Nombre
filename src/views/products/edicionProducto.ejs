@@ -6,7 +6,8 @@
     <div class="divParaGradiant"></div>
     <main class="mainRegister">
       <form
-        class="formularioAdmin"
+        class="formularioAdmin" id="myFormProduct"
+        onsubmit='return validateForm()' 
         action="/administrador/<%= editarProducto.id %>?_method=PUT"
         class="form-box"
         method="POST"
@@ -23,10 +24,8 @@
             name="nombre_evento"
             value="<%= editarProducto.nombre_evento %>"
           />
-          <% if (locals.errors && errors.nombre_evento) { %>
-            <div class="errorTxt"><%= errors.nombre_evento.msg %></div>
-          <% } %>
         </div>
+        <div class="errorTxtNombreEvento"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Dia">Dia</label>
           <input
@@ -36,6 +35,7 @@
             value="<%= editarProducto.fecha %>"
           />
         </div>
+        <div class="errorTxtFecha"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Ubicacion">Ubicacion</label>
           <input
@@ -45,6 +45,7 @@
             value="<%= editarProducto.ubicacion %>"
           />
         </div>
+        <div class="errorTxtUbicacion"></div>
         <div class="cajaAdmin">
           <label for="Cambio-sede">Sede</label>
           <input
@@ -54,6 +55,7 @@
             value="<%= editarProducto.sede %>"
           />
         </div>
+        <div class="errorTxtSede"></div>
         <div class="cajaAdmin">
           <label for="Dato-Participacion">Participacion</label>
           <input
@@ -63,6 +65,7 @@
             value="<%= editarProducto.participacion %>"
           />
         </div>
+        <div class="errorTxtParticipacion"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Dato-Capacidad">Capacidad</label>
           <input
@@ -72,6 +75,7 @@
             value="<%= editarProducto.capacidad_sede %>"
           />
         </div>
+        <div class="errorTxtCapacidad"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Precio">Precio</label>
           <input
@@ -82,15 +86,17 @@
             value="<%= editarProducto.precio %>"
           />
         </div>
+        <div class="errorTxtPrecio"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Horario">Horario</label>
           <input
             class="cajaAdminImput <%= locals.errors && errors.horario ? 'errorBorderAdmin' : null %>"
-            type="text"
+            type="time"
             name="horario"
             value="<%= editarProducto.horario %>"
           />
         </div>
+        <div class="errorTxtHorario"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Categoria">Categoria</label>
           <select
@@ -105,6 +111,7 @@
             <option value="3">Proximos</option>
           </select>
         </div>
+        <div class="errorTxtCategoria"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Descripcion-Evento">Descripcion del Evento</label>
           <textarea
@@ -113,6 +120,7 @@
           ><%= editarProducto.descripcion %></textarea
           >
         </div>
+        <div class="errorTxtDescripcionEvento"></div>
         <div class="cajaAdmin">
           <label for="Cambio-Biografia-Evento">Biografia Breve</label>
           <textarea
@@ -121,6 +129,7 @@
           ><%= editarProducto.biografia %></textarea
           >
         </div>
+        <div class="errorTxtBiografia"></div>
         <div class="cajaAdmin">
           <label for="Cambio-ImgEvento">
             <div class="label">Seleccione Foto de Evento</div>
@@ -131,12 +140,15 @@
                 name="foto_evento"
               />
             </div>
+            <div class="errorTxtFotoEvento"></div>
           </label>
         </div>
+        <div class="avisoErrorTxt"></div>
         <div class="cajaAdminSend">
           <button type="submit" value="editar">Enviar</button>
         </div>
       </form>
+      <script src="/js/edicionProducto.js"></script>
     </main>
     <%- include('../partials/footer') %>
   </body>

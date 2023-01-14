@@ -28,8 +28,8 @@ const validacionCreacion = [
   body("horario")
     .notEmpty()
     .withMessage("Tienes que indicar un horario para el evento")
-    .isLength({ max: 2 })
-    .withMessage("Horario invalido maximo 2 caracteres"),
+    .isLength({ max: 10 })
+    .withMessage("Horario invalido maximo 10 caracteres"),
   body("id_categoria")
     .notEmpty()
     .withMessage("Tienes que indicar una categoria para el evento"),

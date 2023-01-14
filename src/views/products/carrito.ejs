@@ -43,7 +43,7 @@
       </div>
       <% } %>
 
-      <!-- ------------------------------- -->
+//  
       <div class="botomBarCarrito">
         <div>
           <button class="botonAddCarrito">
@@ -61,22 +61,13 @@
             </button>
           </form>
         </div>
-        <div>
-          <form
-            action="/producto/carrito/realizado/<%= userDetail.id %>?_method=DELETE"
-            method="POST"
-          >
-            <button class="botonBorrarCarrito">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </form>
-        </div>
+        
       </div>
       <div class="divCompra">
           <form action="/producto/carrito/<%= userDetail.id %>?_method=PUT" method="POST">
             <button class="botonCompraCarrito">Comprar</button>
           </form>
-        </div>
+      </div>
     </main>
     <%- include('../partials/footer') %>
   </body>

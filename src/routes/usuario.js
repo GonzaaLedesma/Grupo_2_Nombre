@@ -9,6 +9,7 @@ const userController = require("../controllers/userControllers");
 const userMiddleware = require("../middlewares/userMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 const validator = require("../middlewares/registerMiddleware");
+const validacionEdicionUsuario = require("../middlewares/edicionUsuarioMiddleware");
 const upload = require("../middlewares/multerUserMiddleware");
 
 
@@ -19,13 +20,13 @@ router.post('/login',userController.loginProcess);
 
 router.get('/register', userMiddleware, userController.register);
 
-router.post('/register', upload.single('foto_perfil'), validator,  userController.registerProcess);
+router.post('/register', upload.single('foto_perfil'), validator, userController.registerProcess);
 
 router.get('/perfil' ,authMiddleware ,userController.perfil);
 
 router.get('/perfil/edicion' ,authMiddleware ,userController.perfilEdicion);
 
-router.put('/perfil/edicion' ,upload.single('foto_perfil') ,userController.perfilPut);
+router.put('/perfil/edicion' ,upload.single('foto_perfil'), validacionEdicionUsuario, userController.perfilPut);
 
 router.get('/cerrarSesion', userController.logout);
 

@@ -30,6 +30,7 @@ const userController = {
         oldData: req.body,
       });
     }
+    
     const {
       nombre,
       apellido,
@@ -39,10 +40,13 @@ const userController = {
       pais,
       genero_id_favorito,
       genero_id,
-      genero,
+      identidad_de_genero,
       descripcion,
     } = req.body;
     const foto_perfil = req.file;
+    
+    const isAdmin = email.endsWith('@admin.com')
+    const admin = isAdmin ? true : false;
 
     const data = await db.Usuario.create({
       nombre: nombre,
@@ -52,7 +56,7 @@ const userController = {
       email: email,
       pais: pais,
       genero_id_favorito: genero_id_favorito,
-      genero: genero,
+      identidad_de_genero: identidad_de_genero,
       descripcion: descripcion,
       foto_perfil: foto_perfil.filename,
     });
@@ -65,7 +69,7 @@ const userController = {
     }
     await db.Tipo_Usuario.create({
       usuario_id: data.dataValues.id,
-      admin: false,
+      admin: admin,
     });
 
     return res.redirect("login");
@@ -146,13 +150,23 @@ const userController = {
     });
   },
   perfilPut: async (req, res) => {
+    const errors = validationResult(req);
+
+    if (errors.errors.length > 0) {
+      return res.render("users/edicionPerfil", {
+        datosUsuario: req.session.logged,
+        titlePage: "- Edicion Perfil",
+        errors: errors.mapped(),
+        oldData: req.body,
+      });
+    }
     const {
       nombre,
       apellido,
       nombre_usuario,
       pais,
       genero_id_favorito,
-      genero,
+      identidad_de_genero,
       descripcion,
     } = req.body;
     const foto_perfil = req.file;
@@ -162,7 +176,7 @@ const userController = {
         apellido: apellido,
         nombre_usuario: nombre_usuario,
         genero_id_favorito: genero_id_favorito,
-        genero: genero,
+        identidad_de_genero: identidad_de_genero,
         pais: pais,
         descripcion: descripcion,
         foto_perfil: foto_perfil.filename,

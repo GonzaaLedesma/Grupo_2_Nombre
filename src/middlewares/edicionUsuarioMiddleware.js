@@ -1,7 +1,7 @@
 const path = require("path");
 const { body } = require("express-validator");
 
-const validacionProducto = [
+const validacionEdicionUsuario = [
   body("nombre")
     .notEmpty()
     .withMessage("Tienes que escribir un nombre")
@@ -16,39 +16,19 @@ const validacionProducto = [
     .notEmpty()
     .withMessage("Tienes que escribir un nombre de usuario")
     .isLength({ max: 14 })
-    .withMessage(
-      "El nombre de usuario debe contar como maximo con 14 caracteres"
-    ),
-  body("email")
+    .withMessage("El nombre de usuario debe contar como maximo con 14 caracteres"),
+  body("pais")
     .notEmpty()
-    .withMessage("Tienes que escribir un correo electrónico")
-    .bail()
-    .isEmail()
-    .withMessage("Debes escribir un formato de correo válido"),
+    .withMessage("Tienes que elegir un país"),
   body("genero_id_favorito")
     .notEmpty()
     .withMessage("Debes seleccionar un gusto favorito"),
-  body("genero_id")
-    .notEmpty()
-    .withMessage("Debes seleccionar minimo uno"),
   body("identidad_de_genero")
     .notEmpty()
     .withMessage("Debes seleccionar uno"),
   body("descripcion")
     .notEmpty()
     .withMessage("Debes completar este campo"),
-  body("contrasenia")
-    .notEmpty()
-    .withMessage("Tienes que escribir una contraseña")
-    .isLength({ min: 8 })
-    .withMessage("La contrasenia debe contar con un minimo 8 caracteres")
-    .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
-    )
-    .withMessage(
-      "La contraseña deberá tener letras mayúsculas, minúsculas, un número y un carácter especial"
-    ),
-  body("pais").notEmpty().withMessage("Tienes que elegir un país"),
   body("foto_perfil").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpeg", ".jpg", ".png", ".gif", ".webp"];
@@ -70,4 +50,4 @@ const validacionProducto = [
   }),
 ];
 
-module.exports = validacionProducto;
+module.exports = validacionEdicionUsuario;

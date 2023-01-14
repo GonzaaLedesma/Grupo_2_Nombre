@@ -285,3 +285,33 @@
 - Cargamos los detalles del trabajo.
 - Agregamos los Scripts.
 - Agregamos el DER.
+
+## Sabado 7:
+
+- Realizamos una llamada en discord.
+- Hablamos sobre el codigo.
+- Revisamos errores y corregimos codigo.
+
+## Martes 10:
+
+- Realizamos una llamada en discord.
+- Hicimos un liveshare.
+- Comenzamos el Sprint 7.
+- Revisamos los middlewares realizados.
+- Hicimos la validacion por front del registro.
+
+## Juevez 12
+
+- Realizamos una llamada en discord.
+- Hicimos un liveshare.
+- Hicimos la validacion por front del preducto y edicion.
+- Agregamos los middlewares.
+
+## Sabado 14
+
+- Realizamos una llamada en discord.
+- Hicimos un liveshare.
+- Hicimos la validacion por front de edicion de perfil
+- Agregamos los middlewares.
+- Corregimos errores y cosas del tablero pendientes.
+- Actualizamos el script de DB.

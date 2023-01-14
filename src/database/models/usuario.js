@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(55),
             allowNull: false
           },
-          genero: {
+          identidad_de_genero: {
             type: dataTypes.STRING(55),
             allowNull: false
           },

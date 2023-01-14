@@ -36,10 +36,13 @@
     flex-direction: row;
     margin: auto;
     justify-content: space-evenly;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .categoriasCheckbox label{
     display: flex;
     color: gold;
+    flex-direction: column;
 }
 
 .textArea{
@@ -109,3 +112,59 @@
 .errorBorderAdmin{
     border: 2px solid #D6000B; 
 }
+
+.errorTxtNombreEvento{
+    color: #D6000B; 
+ }
+ .errorTxtFecha{
+    color: #D6000B; 
+ }
+ .errorTxtUbicacion{
+    color: #D6000B; 
+ }
+ .errorTxtSede{
+    color: #D6000B; 
+ }
+ .errorTxtParticipacion{
+    color: #D6000B; 
+ }
+ .errorTxtCapacidad{
+    color: #D6000B; 
+ }
+ .errorTxtPrecio{
+    color: #D6000B; 
+ }
+ .errorTxtHorario{
+    color: #D6000B; 
+ }
+ .errorTxtCategoria{
+    color: #D6000B; 
+ }
+ .errorTxtGeneroEvento{
+    color: #D6000B; 
+ }
+ .errorTxtDescripcionEvento{
+    color: #D6000B; 
+ }
+ .errorTxtBiografia{
+    color: #D6000B; 
+ }
+ .errorTxtFotoEvento{
+    color: #D6000B; 
+ }
+ /*  */
+ .errorTxt{
+    color: #D6000B; 
+ }
+ .avisoErrorTxt{
+    color: #D6000B; 
+ }
+ .errorBorder{
+     border: 2px solid #D6000B; 
+ }
+ .goodBorder{
+     border: 2px solid #19d600; 
+ }
+ .textAviso{
+     color: #19d600; 
+ }

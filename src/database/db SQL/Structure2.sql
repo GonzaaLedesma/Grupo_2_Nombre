@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `carrito` (
   KEY `evento_id` (`evento_id`),
   CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
   CONSTRAINT `carrito_ibfk_2` FOREIGN KEY (`evento_id`) REFERENCES `eventos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 
 -- La exportación de datos fue deseleccionada.
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `eventos` (
   PRIMARY KEY (`id`),
   KEY `id_categoria` (`id_categoria`),
   CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
 
 -- La exportación de datos fue deseleccionada.
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `evento_genero` (
   KEY `genero_id` (`genero_id`),
   CONSTRAINT `evento_genero_ibfk_1` FOREIGN KEY (`evento_id`) REFERENCES `eventos` (`id`),
   CONSTRAINT `evento_genero_ibfk_2` FOREIGN KEY (`genero_id`) REFERENCES `generos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4;
 
 -- La exportación de datos fue deseleccionada.
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   PRIMARY KEY (`id`),
   KEY `usuario_id` (`usuario_id`),
   CONSTRAINT `tipo_usuario_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
 -- La exportación de datos fue deseleccionada.
 
@@ -110,14 +110,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `contrasenia` varchar(100) NOT NULL,
   `email` varchar(55) NOT NULL,
   `genero_id_favorito` int(11) NOT NULL,
-  `genero` varchar(55) NOT NULL,
+  `identidad_de_genero` varchar(55) NOT NULL,
   `pais` varchar(55) NOT NULL,
   `descripcion` varchar(500) NOT NULL,
   `foto_perfil` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `genero_id_favorito` (`genero_id_favorito`),
   CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`genero_id_favorito`) REFERENCES `generos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 
 -- La exportación de datos fue deseleccionada.
 
@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `usuario_genero` (
   KEY `genero_id` (`genero_id`),
   CONSTRAINT `usuario_genero_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
   CONSTRAINT `usuario_genero_ibfk_2` FOREIGN KEY (`genero_id`) REFERENCES `generos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4;
 
 -- La exportación de datos fue deseleccionada.
 

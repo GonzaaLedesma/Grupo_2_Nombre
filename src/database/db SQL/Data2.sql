@@ -14,22 +14,21 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Volcando datos para la tabla ticket_house.carrito: ~2 rows (aproximadamente)
-DELETE FROM `carrito`;
+-- Volcando datos para la tabla ticket_house.carrito: ~4 rows (aproximadamente)
 INSERT INTO `carrito` (`id`, `usuario_id`, `evento_id`, `activo`, `cantidad`) VALUES
 	(5, 1, 13, 1, 5),
-	(7, 25, 9, 1, 5);
+	(7, 25, 9, 1, 5),
+	(14, 17, 9, 1, 5),
+	(15, 17, 2, 0, 5);
 
 -- Volcando datos para la tabla ticket_house.categorias: ~4 rows (aproximadamente)
-DELETE FROM `categorias`;
 INSERT INTO `categorias` (`id`, `nombre`) VALUES
 	(1, 'Actuales'),
 	(2, 'Nuevos'),
 	(3, 'Proximos'),
 	(4, 'Pasados');
 
--- Volcando datos para la tabla ticket_house.eventos: ~24 rows (aproximadamente)
-DELETE FROM `eventos`;
+-- Volcando datos para la tabla ticket_house.eventos: ~25 rows (aproximadamente)
 INSERT INTO `eventos` (`id`, `nombre_evento`, `fecha`, `id_categoria`, `ubicacion`, `sede`, `capacidad_sede`, `precio`, `participacion`, `horario`, `descripcion`, `biografia`, `foto_evento`) VALUES
 	(1, 'The Weezer', '2022-10-22', 1, 'Los Angeles', '(Disney Concert Hall)', 100000, 7000, 'OneRepublic, Halsey y mas', '19:00:00', 'Los legendarios rockeros Weezer reimaginan su último álbum más los clásicos con la Orquesta Filarmónica de Los Ángeles. Grabado y capturado en el imponente Disney Hall. Disponible para VOD ahora', 'Weezer es una banda estadounidense de rock alternativo y power pop formada en Los Ángeles, California en 1992. La banda ha lanzado nueve álbumes y vendido más de 10 millones de álbumes en los EE. UU.', 'Weezer.jpg'),
 	(2, 'Foo Fighters', '2022-10-12', 1, 'Praga', '(Gran Estadio Strahov)', 60000, 32000, 'Guns N Roses, U2 y Bon Jovi', '14:00:00', 'La banda de rock estadounidense Foo Fighters ofreció el primero de dos conciertos en homenaje a su difunto baterista Taylor Hawkins', 'La banda Foo Fighters se formó en 1994 en Seattle, EEUU. Es una banda de rock alternativo fundada por el ex-batería de Nirvana: Dave Grohl. El grupo actualmente está formado por Pat Smear, Nate Mendel, Taylor Hawkins, Chris Shiflett y Rami Jaffee.', 'FooFighters.jpg'),
@@ -54,10 +53,11 @@ INSERT INTO `eventos` (`id`, `nombre_evento`, `fecha`, `id_categoria`, `ubicacio
 	(22, 'Tokio Hotel', '2022-11-16', 2, 'Sydney, Australia', '(Qudos Bank Arena)', 10000, 10000, 'Avril Lavigne', '10:00:00', 'El 26 de mayo de 2022, la banda lanzó una nueva canción llamada “When we were younger” con fotos desde sus inicios hasta la actualidad, y así recordar que los cuatro integrantes están juntos desde el 2001.', 'Los gemelos Tom y Bill fueron alentados musicalmente por su padrastro Gordon Trümper, guitarrista aficionado. En una aparición en el año 1995 en su ciudad natal, Magdeburgo, Gustav Schäfer y Georg Listing los vieron tocar con teclados en vez de con bajo y', 'tokio.jpg'),
 	(23, 'Fall Out Boy', '2022-10-26', 3, 'Los Angeles', '(Disney concerts Hall)', 40000, 7000, 'The Story So Far, Nirvana', '19:00:00', 'Fall Out Boy, tocara su ultimo disco Mania, junto con sus mas famosos hits como por ejemplo the phoenix, Immortals, Dance, Dance y muchos más', 'Fall Out Boy fue formado a principios de 2001 por Joe Trohman y Pete Wentz. Los dos habían tocado en varias bandas del área de Chicago y decidieron que querían iniciar una banda más parecida a las que escuchaban en su infancia y adolescencia, tales como G', 'fall-out-boy.jpg'),
 	(24, 'Simple Plan', '2022-11-26', 3, 'Bukit Jalil', '(Estadio Nacional Bukit Jalil)', 10000, 25000, 'Chady Awad', '22:00:00', 'El 15 de marzo de 2022, la banda anunció el lanzamiento de su próximo sexto álbum de estudio, Harder Than It Looks, con el lanzamiento de su nuevo sencillo Congratulations. Su nuevo álbum se lanzó el 15 de Noviembre de 2022.', 'Simple Plan es una banda de rock, canadiense. La banda fue formada en 1999 por Pierre Bouvier Jeff Stinco y Chuck Comeau. Han lanzado seis álbumes de estudio, los mas destacados fueron: No Pads, No Helmets... Just Balls (2002), Still Not Getting Any... (2', 'Simple-Plan.jpg'),
-	(37, 'Metalica', '2022-12-30', 2, 'Cordoba', 'Estadio el Sol', 50000, 10000, 'Linkin Park', '20:00:00', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'group-1672086718535.png');
+	(37, 'Metalica', '2022-12-30', 2, 'Cordoba', 'Estadio el Sol', 50000, 10000, 'Linkin Park', '20:00:00', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'group-1672086718535.png'),
+	(50, 'U2', '2023-01-25', 3, 'Tilburg, Netherlands', '(Veemarktstraat)', 50000, 10000, 'Catfish and The Bottlemen y Green Day', '12:00:00', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'u2.jpg'),
+	(51, 'Coldplay', '2023-01-24', 2, 'Brazilia', 'Campo do Brazil', 50000, 4000, 'Ed Sheeran', '11:00:00', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'group-1673736417405.jpg');
 
--- Volcando datos para la tabla ticket_house.evento_genero: ~49 rows (aproximadamente)
-DELETE FROM `evento_genero`;
+-- Volcando datos para la tabla ticket_house.evento_genero: ~51 rows (aproximadamente)
 INSERT INTO `evento_genero` (`id`, `evento_id`, `genero_id`) VALUES
 	(1, 1, 1),
 	(2, 1, 3),
@@ -107,10 +107,14 @@ INSERT INTO `evento_genero` (`id`, `evento_id`, `genero_id`) VALUES
 	(46, 24, 2),
 	(47, 24, 4),
 	(58, 37, 2),
-	(59, 37, 4);
+	(59, 37, 4),
+	(74, 50, 4),
+	(75, 50, 5),
+	(76, 51, 3),
+	(77, 51, 5),
+	(78, 51, 6);
 
 -- Volcando datos para la tabla ticket_house.generos: ~6 rows (aproximadamente)
-DELETE FROM `generos`;
 INSERT INTO `generos` (`id`, `nombre`) VALUES
 	(1, 'rock'),
 	(2, 'hard rock'),
@@ -119,8 +123,7 @@ INSERT INTO `generos` (`id`, `nombre`) VALUES
 	(5, 'pop rock'),
 	(6, 'pop punk');
 
--- Volcando datos para la tabla ticket_house.tipo_usuario: ~10 rows (aproximadamente)
-DELETE FROM `tipo_usuario`;
+-- Volcando datos para la tabla ticket_house.tipo_usuario: ~12 rows (aproximadamente)
 INSERT INTO `tipo_usuario` (`id`, `usuario_id`, `admin`) VALUES
 	(1, 1, 1),
 	(3, 2, 1),
@@ -131,24 +134,26 @@ INSERT INTO `tipo_usuario` (`id`, `usuario_id`, `admin`) VALUES
 	(16, 22, 0),
 	(17, 23, 1),
 	(18, 24, 0),
-	(19, 25, 0);
+	(19, 25, 0),
+	(20, 26, 1),
+	(21, 27, 0);
 
--- Volcando datos para la tabla ticket_house.usuarios: ~10 rows (aproximadamente)
-DELETE FROM `usuarios`;
-INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `nombre_usuario`, `contrasenia`, `email`, `genero_id_favorito`, `genero`, `pais`, `descripcion`, `foto_perfil`) VALUES
-	(1, 'Gonzalo', 'Ledesma', 'Gonza', '$2a$10$KqimxNV3Mtr8ZFFaXajKSu.kPfSMQQoyR/LYsUEYWjCJqXqdcgdae', 'gonza@admin.com', 1, 'masculino', 'Argentina', 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin', 'User-1669397644203.jpg'),
-	(2, 'Matias', 'Lanese', 'Mati', '$2a$10$KqimxNV3Mtr8ZFFaXajKSu.kPfSMQQoyR/LYsUEYWjCJqXqdcgdae', 'mati@admin.com', 1, 'masculino', 'Argentina', 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin', 'User-1669397644203.jpg'),
-	(17, 'Juan Visitantess', 'Juanss', 'Juan', '$2a$10$NJE73tycIm6acJyHTfnHleHt/lYNUp4eqdIO/X1cCVzerKf5HkZUG', 'juan@gmail.com', 4, 'otros', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'User-1669397644203.jpg'),
-	(19, 'Tomas', 'Otero', 'Tomi', '$2a$10$XGfMeRi46096HW7NElz0bev92YGZMIzkkZ68rA/t5.XAMfgUgdiYu', 'tomi@admin.com', 6, 'masculino', 'Argentina', 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin', 'User-1671739553338.webp'),
-	(20, 'Emiliano', 'Visitante', 'Numero 5', '$2a$10$2.2rK5BZff/HFE22AR8nQuYmrhE4jV8OAE.baiiQ2cGYfEbr2qs9.', 'emi@gmail.com', 5, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'User-1672357436242.jpg'),
-	(21, 'Ivan', 'Visitante', 'Ibai', '$2a$10$.uCIeJNCV456wghU8DZxkOYOVy1WwQ5GuHzLi60E1Nz.TR6wJA8Yy', 'ivan@gmail.com', 2, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'User-1672357995895.jpg'),
-	(22, 'Jony', 'Visitante', 'Joni', '$2a$10$nsOlwBmbRP8DQGsBgCHMneoX.myA7xL8It9SGBkD7B/saqNshfMbq', 'joni@gmail.com', 3, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'User-1672358090833.jpg'),
-	(23, 'Josue', 'Ferreira', 'Josue', '$2a$10$AzSJ067kT2532EISjtE6n.CulSvB8WElezvkUrjUpgkvR6Gf20ceq', 'josue@admin.com', 4, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'User-1672358233325.webp'),
-	(24, 'Ana', 'Visitante', 'Anana', '$2a$10$orfOA5tuSEIng4l0MTwJ1.xB6GsBHdvVSWRCacfAKc29nCPCcK/b6', 'ana@gmail.com', 5, 'femenino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'User-1672358329219.jpg'),
-	(25, 'Helicoptero', 'Apache', 'Helicopter', '$2a$10$NRUrpO2O6nvzGbbK4wPGLuEPiF3henn5rawKHycuDQ6DTyC7LQYmS', 'heli@gmail.com', 4, 'otros', 'Brazil', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'User-1672358432955.jpg');
+-- Volcando datos para la tabla ticket_house.usuarios: ~12 rows (aproximadamente)
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `nombre_usuario`, `contrasenia`, `email`, `genero_id_favorito`, `identidad_de_genero`, `pais`, `descripcion`, `foto_perfil`) VALUES
+	(1, 'Gonzalo', 'Ledesma', 'Gonza', '$2a$10$KqimxNV3Mtr8ZFFaXajKSu.kPfSMQQoyR/LYsUEYWjCJqXqdcgdae', 'gonza@admin.com', 1, 'masculino', 'Argentina', 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin', 'luke.webp'),
+	(2, 'Matias', 'Lanese', 'Mati', '$2a$10$KqimxNV3Mtr8ZFFaXajKSu.kPfSMQQoyR/LYsUEYWjCJqXqdcgdae', 'mati@admin.com', 1, 'masculino', 'Argentina', 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin', 'mando.webp'),
+	(17, 'Juan Visitantess', 'Juanss', 'Juan', '$2a$10$NJE73tycIm6acJyHTfnHleHt/lYNUp4eqdIO/X1cCVzerKf5HkZUG', 'juan@gmail.com', 4, 'otros', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'mando.webp'),
+	(19, 'Tomas', 'Otero', 'Tomi', '$2a$10$XGfMeRi46096HW7NElz0bev92YGZMIzkkZ68rA/t5.XAMfgUgdiYu', 'tomi@admin.com', 6, 'masculino', 'Argentina', 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin', 'anakin.webp'),
+	(20, 'Emiliano', 'Visitante', 'Numero 5', '$2a$10$2.2rK5BZff/HFE22AR8nQuYmrhE4jV8OAE.baiiQ2cGYfEbr2qs9.', 'emi@gmail.com', 5, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'anakin.webp'),
+	(21, 'Ivan', 'Visitante', 'Ibai', '$2a$10$.uCIeJNCV456wghU8DZxkOYOVy1WwQ5GuHzLi60E1Nz.TR6wJA8Yy', 'ivan@gmail.com', 2, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'yoda.jpg'),
+	(22, 'Jony', 'Visitante', 'Joni', '$2a$10$nsOlwBmbRP8DQGsBgCHMneoX.myA7xL8It9SGBkD7B/saqNshfMbq', 'joni@gmail.com', 3, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'yoda.jpg'),
+	(23, 'Josue', 'Ferreira', 'Josue', '$2a$10$AzSJ067kT2532EISjtE6n.CulSvB8WElezvkUrjUpgkvR6Gf20ceq', 'josue@admin.com', 4, 'masculino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'mando.webp'),
+	(24, 'Ana', 'Visitante', 'Anana', '$2a$10$orfOA5tuSEIng4l0MTwJ1.xB6GsBHdvVSWRCacfAKc29nCPCcK/b6', 'ana@gmail.com', 5, 'femenino', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'luke.webp'),
+	(25, 'Helicoptero', 'Apache', 'Helicopter', '$2a$10$NRUrpO2O6nvzGbbK4wPGLuEPiF3henn5rawKHycuDQ6DTyC7LQYmS', 'heli@gmail.com', 4, 'otros', 'Brazil', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'apache.jpg'),
+	(26, 'Visitante Admin', 'Test Admin', 'Admin Test', '$2a$10$lQQCNsOfSgnnY.c8lUFNxejz5r6WBAigmhj/S4WEwErUBgDJ0uRNe', 'testAdmin@admin.com', 4, 'Otros', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'yoda.jpg'),
+	(27, 'Test User', 'User Visitante', 'User Visitante', '$2a$10$8Zu1G/R/G/UBvRxdN1FPxu8R3dq10E8e4Qz.j3lUNZzC0BUBjWT56', 'testUser@gmail.com', 6, 'Otros', 'Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'luke.webp');
 
--- Volcando datos para la tabla ticket_house.usuario_genero: ~33 rows (aproximadamente)
-DELETE FROM `usuario_genero`;
+-- Volcando datos para la tabla ticket_house.usuario_genero: ~38 rows (aproximadamente)
 INSERT INTO `usuario_genero` (`id`, `usuario_id`, `genero_id`) VALUES
 	(1, 1, 1),
 	(2, 1, 3),
@@ -182,7 +187,12 @@ INSERT INTO `usuario_genero` (`id`, `usuario_id`, `genero_id`) VALUES
 	(45, 25, 2),
 	(46, 25, 4),
 	(47, 25, 5),
-	(48, 25, 6);
+	(48, 25, 6),
+	(49, 26, 4),
+	(50, 26, 5),
+	(51, 27, 2),
+	(52, 27, 3),
+	(53, 27, 6);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
