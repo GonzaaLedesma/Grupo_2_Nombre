@@ -315,3 +315,7 @@
 - Agregamos los middlewares.
 - Corregimos errores y cosas del tablero pendientes.
 - Actualizamos el script de DB.
+
+## Juevez 19:
+
+- Retoques en el Css del trabajo.

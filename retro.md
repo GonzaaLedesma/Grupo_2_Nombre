@@ -24,7 +24,7 @@
 
 - Matías Lanese: En este sprint creo haberme organizado un poco mejor con los tiempo y poder debido a ello ayudar con mi aporte al grupo en lo que era necesario. Creo que generamos un buen ritmo pero que se puede perder muy rapido, tratar que eso no suceda.
 
-- Gonzalo Ledesma: En este sprint me senti capaz de resolver cualquier problema senti un buen ritmo de trabajo y pude ver los errores con mejor claridad, siento que no deberia estar siempre encima del trabajo porque a veces me siento superado por lo que puede llegar a ser en un fututo tengo en mente muchos de los punto a mejorar y quiero que este sea mucho mejor de lo q es  hoy por eso insisti tanto en ese cambio de apariencia. Estoy conforme con nuestro proyecto.
+- Gonzalo Ledesma: En este sprint me senti capaz de resolver cualquier problema senti un buen ritmo de trabajo y pude ver los errores con mejor claridad, siento que no deberia estar siempre encima del trabajo porque a veces me siento superado por lo que puede llegar a ser en un fututo tengo en mente muchos de los punto a mejorar y quiero que este sea mucho mejor de lo que es hoy por eso insisti tanto en ese cambio de apariencia. Estoy conforme con nuestro proyecto.
 
 - Tomas Otero: Organizar el tiempo, mantenerme al tanto.
 
@@ -59,3 +59,8 @@
  - Matias Lanese: El sprint 6 parecia sencillo pero causo algunas dificultades que pudimos sacar adelante con mis compañeros, eso me motiva para seguir avanzando. Me siento muy conforme con el resultado parcial de la pagina hasta ahora, faltan mas temas por agregar pero a seguir adelante aprendiendo y plasmandolo en el proyecto.
 
  - Tomas Otero: Me esta gustando el resultado de la pagina, este sprint fue mas facil de lo normal con la ayuda de mis compañeros. Con el equipo fue muy comodo y espero seguir asi con el siguiente sprint.
+
+
+ ## retro sprint 7:
+
+ - Gonzalo Ledesma: Conforme con el avance del trabajo, las validaciones fueron sencillas de realizar. Deberia revisar mas la estructura del trabajo, deberia dejar de agregar mas cosas al trabajo, creo que como esta esta perfecto.

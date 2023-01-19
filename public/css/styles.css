@@ -117,10 +117,10 @@
     margin: auto;
   }
   .completadoEspacio{
-    height: 61vh;
+    height: 70vh;
   }
   .notFound{
-    margin-top: 10%;
+    margin-top: 6%;
     color: gold;
     text-align: center;
   }
@@ -130,8 +130,7 @@
   }
   .rickClass{
     border-radius: 20px;
-    width: 30%;
-
+    width: 40vw;
   }
   /* --------------------footer---------------- */
   footer{
@@ -214,6 +213,9 @@
     }
   }
   @media (max-width: 1200px) {
+    .correcionNav{
+      flex-wrap: wrap;
+    }
     .searchBar{
       display: none;
     }
@@ -283,6 +285,10 @@
   .dropdown-menu{
     list-style: none !important;
 
+  }
+  .rickClass{
+    border-radius: 20px;
+    width: 70vw;
   }
 }
 @media (max-width: 415px){
