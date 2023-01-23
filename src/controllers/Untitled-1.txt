@@ -1,0 +1,89 @@
+const db = require("../database/models");
+
+const apiController = {
+  products: (req, res) => {
+    Promise.all([
+      db.Evento.count(),
+      db.Evento.findAll(),
+      db.Evento.findAndCountAll({ where: { id_categoria: 1 } }),
+      db.Evento.findAndCountAll({ where: { id_categoria: 2 } }),
+      db.Evento.findAndCountAll({ where: { id_categoria: 3 } }),
+      db.Evento.findAndCountAll({ where: { id_categoria: 4 } }),
+    ])
+      .then(([count, products, countActuales, countNuevos, countProximos, countPasados]) => {
+        const productsWithDetail = products.map((product) => {
+          product.detail = `http://localhost:3000/api/productos/${product.id}`;
+          return product;
+        });
+        res.status(200).json({
+          count,
+          countActuales,
+          countNuevos,
+          countProximos,
+          countPasados,
+          products: productsWithDetail,
+        });
+      })
+      .catch((error) => {
+        res.status(500).json({ error });
+      });
+  },
+  oneProduct: (req, res) => {
+    db.Evento.findByPk(req.params.id)
+      .then((product) => {
+        if (product) {
+          product.detail = `http://localhost:3000/api/productos/${product.id}`;
+          res.status(200).json({ product });
+        } else {
+          res.status(404).json({ message: "Product not found" });
+        }
+      })
+      .catch((error) => {
+        res.status(500).json({ error });
+      });
+  },
+};
+module.exports = apiController;
+
+----------
+ oneProduct: async (req, res) => {
+    try {
+      // Obtener producto específico
+      const product = await db.Evento.findByPk(req.params.id, {
+        include: [
+          {
+            model: db.EventosGeneros,
+            as: 'generos',
+            include: [
+              {
+                model: db.Genero,
+                as: 'genero'
+              }
+            ]
+          }
+        ]
+      });
+      // Construir objeto literal
+      const productData = {
+        id: product.id,
+        nombre_evento: product.nombre_evento,
+        fecha: product.fecha,
+        ubicacion: product.ubicacion,
+        sede: product.sede,
+        capacidad_sede: product.capacidad_sede,
+        precio: product.precio,
+        participacion: product.participacion,
+        horario: product.horario,
+        descripcion: product.descripcion,
+        biografia: product.biografia,
+        generos: product.generos,
+        foto_evento: `http://localhost:3000/images/${product.foto_evento}`,
+        id_categoria: product.id_categoria
+      };
+
+      // Devolver objeto literal en la respuesta
+      res.status(200).json({ product: productData });
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  },

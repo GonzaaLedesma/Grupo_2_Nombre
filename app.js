@@ -6,6 +6,7 @@ const rutasUsuario = require("./src/routes/usuario");
 const rutasProductos = require("./src/routes/producto");
 const rutasMain = require("./src/routes/main");
 const rutasAdministrador = require("./src/routes/administrador");
+const rutasApi = require("./src/routes/api");
 const session = require("express-session");
 const cookies = require('cookie-parser');
 
@@ -45,6 +46,8 @@ app.use("/usuario", rutasUsuario);
 app.use("/producto", rutasProductos);
 
 app.use("/administrador", rutasAdministrador);
+
+app.use("/api", rutasApi);
 
 app.set("view engine", "ejs");
 
