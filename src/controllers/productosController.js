@@ -90,6 +90,14 @@ const productosController = {
   },
   busqueda: async (req, res) => {
     let data = req.body.busqueda;
+    if (data == "" || data == " ") {
+      const dataArray = []
+      return res.render("products/busqueda", {
+        dataArray,
+        data,
+        titlePage: "- Resultados",
+      });
+    }
     const products = await db.Evento.findAll({
       where: {
         nombre_evento: { [Op.like]: `%${data}%` },
@@ -99,7 +107,8 @@ const productosController = {
     console.log(dataArray);
     return res.render("products/busqueda", {
       dataArray,
-      titlePage: "- Resultado",
+      data,
+      titlePage: "- Resultados",
     });
   },
 };

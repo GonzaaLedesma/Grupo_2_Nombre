@@ -35,8 +35,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(methodOverride("_method"));
 
-app.listen(3000, () => {
-  console.log("Servidor en puerto 3000");
+app.listen(3001, () => {
+  console.log("Servidor en puerto 3001");
 });
 
 app.use("/", rutasMain);

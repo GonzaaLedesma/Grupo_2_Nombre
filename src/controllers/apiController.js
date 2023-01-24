@@ -7,7 +7,7 @@ const apiController = {
     const productsWithDetail = products.map((product) => {
       return {
         ...product,
-        detail: `http://localhost:3000/api/productos/${product.id}`,
+        detail: `http://localhost:3001/api/productos/${product.id}`,
       };
     });
 
@@ -89,7 +89,7 @@ const apiController = {
         horario: product.horario,
         descripcion: product.descripcion,
         biografia: product.biografia,
-        foto_evento: `http://localhost:3000/images/${product.foto_evento}`,
+        foto_evento: `http://localhost:3001/images/${product.foto_evento}`,
         id_categoria: product.id_categoria,
       };
       // Devolver objeto literal en la respuesta
@@ -104,7 +104,7 @@ const apiController = {
     const usuarioWithDetail = usuario.map((usuario) => {
       return {
         ...usuario,
-        detail: `http://localhost:3000/api/usuarios/${usuario.id}`,
+        detail: `http://localhost:3001/api/usuarios/${usuario.id}`,
       };
     });
     res.status(200).json({
@@ -124,7 +124,7 @@ const apiController = {
         identidad_de_genero: usuario.identidad_de_genero,
         pais: usuario.pais,
         descripcion: usuario.descripcion,
-        foto_perfil: `http://localhost:3000/images/${usuario.foto_perfil}`,
+        foto_perfil: `http://localhost:3001/images/${usuario.foto_perfil}`,
       };
       res.status(200).json({ usuario: userData });
     } catch (error) {
