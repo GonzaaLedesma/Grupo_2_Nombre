@@ -10,4 +10,6 @@ router.get('/productos/:id', apiController.oneProduct)
 router.get('/usuarios', apiController.users)
 router.get('/usuarios/:id', apiController.oneUser)
 
+router.get('/carrito', apiController.dataCart)
+
 module.exports = router;

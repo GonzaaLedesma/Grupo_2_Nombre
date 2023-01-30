@@ -9,6 +9,8 @@ const rutasAdministrador = require("./src/routes/administrador");
 const rutasApi = require("./src/routes/api");
 const session = require("express-session");
 const cookies = require('cookie-parser');
+const cors = require('cors')
+
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
@@ -24,7 +26,8 @@ app.use(
     saveUninitialized: false,
   })
 );
-
+app.use(cors())
+// app.options('*', cors());
 
 app.use(cookies());
 

@@ -1,10 +1,10 @@
 .mainPerfil{
     margin: auto;
     margin-top: 40px;
-    background-color: #1f2730;
+    background-color: #171d24;
     border-radius: 20px;
     width: 90%;
-    height: 90vh;
+    height: 100%;
     border: 0.5px solid gold;
 }
 .contenedorInfo{
@@ -84,13 +84,12 @@
 
     }
 }
-@media (min-width: 915px) {
+@media (min-width: 995px) {
     .mainPerfil{
         margin: auto;
-        margin-top: 40px;
-        background-color: #1f2730;
+        margin-top: 30px;
         width: 55%;
-        height: 93vh;
+        height: 100%;
     }
     .imgPerfil img{
         width: 400px;
@@ -124,3 +123,26 @@
         width: 50vw;
     }
   }
+
+  /* .imgPerfil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(50deg, darkblue, gold, darkblue, darkblue, gold, darkblue, darkblue);
+    background-size: 600%;
+    border-radius: 9px;
+    filter: blur(8px);
+    animation: glowing 50s linear infinite;
+  }
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 250% 0;
+    }
+  } */
