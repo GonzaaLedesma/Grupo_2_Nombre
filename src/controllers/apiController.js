@@ -14,7 +14,6 @@ const apiController = {
         }
       };
     });
-    
     const countActuales = await db.Evento.findAndCountAll({
       where: {
         id_categoria: 1,
