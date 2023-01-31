@@ -11,7 +11,7 @@ const apiController = {
           ...product.dataValues,
           detail: `http://localhost:3001/api/productos/${product.id}`,
           img: `http://localhost:3001/images/Catalogo/${product.foto_evento}`,
-        }
+        },
       };
     });
     const countActuales = await db.Evento.findAndCountAll({
@@ -52,32 +52,32 @@ const apiController = {
         },
       });
       const dataValuesArray = generos.map((item) => item.dataValues);
-      const arrayGeneros = dataValuesArray.map(item => {
-        let genero = ''
+      const arrayGeneros = dataValuesArray.map((item) => {
+        let genero = "";
         switch (item.genero_id) {
-            case 1:
-                genero = 'rock'
-                break
-            case 2:
-                genero = 'hard rock'
-                break
-            case 3:
-                genero = 'pop'
-                break
-            case 4:
-                genero = 'rock alternativo'
-                break
-            case 5:
-                genero = 'pop rock'
-                break
-            case 6:
-                genero = 'pop punk'
-                break
-            default:
-                genero = 'unknown'
+          case 1:
+            genero = "rock";
+            break;
+          case 2:
+            genero = "hard rock";
+            break;
+          case 3:
+            genero = "pop";
+            break;
+          case 4:
+            genero = "rock alternativo";
+            break;
+          case 5:
+            genero = "pop rock";
+            break;
+          case 6:
+            genero = "pop punk";
+            break;
+          default:
+            genero = "unknown";
         }
-        return { ...item, genero }
-    });
+        return { ...item, genero };
+      });
       const productData = {
         id: product.id,
         nombre_evento: product.nombre_evento,
@@ -108,10 +108,10 @@ const apiController = {
           ...usuario.dataValues,
           detail: `http://localhost:3001/api/usuarios/${usuario.id}`,
           foto_perfil: `http://localhost:3001/images/Usuarios/${usuario.foto_perfil}`,
-        }
+        },
       };
     });
-    
+
     const countRock = await db.Usuario.findAndCountAll({
       where: {
         genero_id_favorito: 1,
@@ -176,10 +176,15 @@ const apiController = {
     try {
       const count = await db.Carrito.findAndCountAll();
       const carrito = await db.Carrito.findAll();
-      res.status(200).json({ 
+      const carrito5Ventas = await db.Carrito.findAll({
+        limit: 5,
+        order: [["id", "DESC"]],
+      });
+      res.status(200).json({
         count,
-        carrito
-       });
+        carrito,
+        carrito5Ventas,
+      });
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
