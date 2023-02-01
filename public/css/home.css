@@ -38,6 +38,7 @@ body {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 .tarjetaCategoriaHome {
   padding: 0.5rem;
@@ -50,7 +51,7 @@ body {
   min-width: 280px !important;
   transition: all 0.5s;
   max-width: 310px;
-  height: 30vh;
+  height: 290px;
 }
 .botonCajaCateg {
   margin: auto;
