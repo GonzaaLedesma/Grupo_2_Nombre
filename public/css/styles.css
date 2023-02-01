@@ -253,8 +253,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     color: white;
+    text-decoration: none;
     padding: 5px 15% 0 15%; 
     margin-bottom:0 !important;
+  }
+  #helpList a{
+    color: white;
+    text-decoration: none;
   }
   .itemFooter{
     padding: 2px;
