@@ -177,6 +177,9 @@ const apiController = {
       const count = await db.Carrito.findAndCountAll();
       const carrito = await db.Carrito.findAll();
       const carrito5Ventas = await db.Carrito.findAll({
+        where:{
+          activo:true
+        },
         limit: 5,
         order: [["id", "DESC"]],
       });
