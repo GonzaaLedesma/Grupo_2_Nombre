@@ -2,6 +2,12 @@
     font-family: "Roboto Condensed", sans-serif;
     box-sizing: border-box;
   }
+  html::-webkit-scrollbar {
+    background: #1e2731;
+  }
+  html::-webkit-scrollbar-thumb {
+    background: rgb(94, 94, 94);
+  }
   p {
     font-size: 12px;
   }
