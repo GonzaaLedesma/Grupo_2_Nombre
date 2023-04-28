@@ -19,6 +19,28 @@ const productosController = {
     ayuda : (req,res)=>{
         return res.render("products/ayuda", {titlePage:"- Ayuda"});
     },
+    busqueda: async (req, res) => {
+        const data = req.body.busqueda.trim(); // elimina espacios en blanco del principio y final de la cadena de búsqueda
+        if (!data) {
+          const dataArray = [];
+          return res.render("products/busqueda", {
+            dataArray,
+            data,
+            titlePage: "- Resultados",
+          });
+        }
+        const filteredProducts = products.filter((product) => {
+          const name = product.nombre.toLowerCase(); // asegúrate de que la propiedad 'nombre' del objeto tenga letras minúsculas para que la búsqueda no sea sensible a mayúsculas y minúsculas
+          return name.includes(data.toLowerCase());
+        });
+        
+        return res.render("products/busqueda", {
+          dataArray: filteredProducts,
+          data,
+          titlePage: "- Resultados",
+        });
+      }
+      
 }
 
 module.exports = productosController;

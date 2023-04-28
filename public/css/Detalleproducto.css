@@ -70,24 +70,11 @@ body{
 .subCaja{
     display: flex;
     flex-direction: row;
-    margin: 10px;
 }
 .cajaPago{
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-.cajaCantidad{
-    border: solid 1px white;
-    width: 30px;
-    height:30px;
-    margin-right:5px;
-}
-.cajaTotal{
-    border: solid 1px white;
-    width: 60px;
-    height:30px;
-    margin-right:5px;
 }
 h4{
     color: white;
@@ -97,13 +84,34 @@ h4{
     margin: auto;
     margin-bottom: 5px;
     padding: 5px;
-    border: solid 1px rgb(173, 173, 0);
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 1px gold;
     background-color: #242c35;
     transition: 450ms;
-    border-radius: 10px;
-
 }
-.botonPago a{
+.cajaCantidad{
+    display: flex;
+    justify-content: center;
+}
+.cajaCantidad input{
+    border: 0;
+    background: none;
+    display: block;
+    padding: 10px;
+    border: 2px solid gold;
+    text-align: center;
+    width: 120px;
+    outline: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.cajaCantidad input:focus{
+    border-radius: 15px;
+    border-color: #ffffff;
+}
+.botonPago{
+    margin-top:20px ;
     text-decoration: none;
     color: white;
     transition: 450ms;
@@ -125,6 +133,7 @@ h4{
     flex-direction: row;
     justify-content: space-around;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .botonFunctionAdmin{
     border:solid 1px rgb(190, 190, 0);
@@ -140,20 +149,39 @@ h4{
     color: white;
     transition: 450ms;
 }
+.botonFunctionAdminBorrar{
+    border:solid 1px rgb(190, 190, 0);
+    background-color: #242c35;   
+}
+.botonFunctionAdminBorrar a{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
+.botonFunctionAdminBorrar i{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
 /* ----------- */
 
 .botonFunctionAdmin:hover a{
-    color: rgb(190, 190, 0);
+    color: gold;
 }
 .botonFunctionAdmin:hover i{
-    color: rgb(190, 190, 0);
+    color: gold;
+}
+.botonFunctionAdminBorrar:hover a{
+    color: gold;
+}
+.botonFunctionAdminBorrar:hover i{
+    color: gold;
 }
 .botonPago:hover{
     background-color: #1c2631;
+    color: gold;
 }
-.botonPago:hover a{
-    color:gold;
-}
+
 .botonPago:hover button{
     border: solid 1px gold;
 }
@@ -161,13 +189,13 @@ h4{
 @media (min-width: 1100px) {
     .cajaDetalles{
         display: flex;
-        height: 50vh;
+        height: 51vh;
     }
     .imgTicket{
         display: flex;
         margin: auto;
         width: 90%;
-        padding-top: 50px;
+        padding-top: 30px;
     }
     .cajaDescripcionBanda{
         display: flex;
@@ -178,28 +206,28 @@ h4{
         font-size: 20px;
         text-align: center;
     }
-    .cajaImagen{
-        width: 50%;
-    }
-    .cajaDescripcion{
-        width: 50%;
-    }
+
     .bannerFooter{
         display: flex;
-        margin: auto;
-        width: 100%;
+        justify-content: flex-end;
+        position: inherit ;
+        top: 30px;
     }
     .bannerFooter img{
         margin: auto;
         padding: 10px;
         border-radius: 50px;
         width: 85%;
-        height: 28vh;
         border: solid 1px white;
-        margin-top: 125px;
+        margin-top: 10pc;
     }
   } 
   
+  @media (max-width: 1280px){
+    .bannerFooter img{
+        margin-top: 20pc;
+    }
+}
   @media (min-width: 1550px){
     .imgTicket{
         width: 70%;

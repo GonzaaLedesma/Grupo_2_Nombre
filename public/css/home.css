@@ -21,7 +21,7 @@ body {
   margin-top: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  color: rgb(190, 190, 0);
+  color: gold;
   background-color: #242c35;
   border-top: solid 2px rgb(19, 19, 19);
   border-bottom: solid 2px rgb(19, 19, 19);
@@ -38,6 +38,7 @@ body {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 .tarjetaCategoriaHome {
   padding: 0.5rem;
@@ -45,19 +46,19 @@ body {
   font-size: 1.2rem;
   text-align: center;
   border-radius: 10px;
-  border: solid 1px rgb(190, 190, 0);
+  border: solid 1px orange;
   scroll-snap-align: center;
   min-width: 280px !important;
   transition: all 0.5s;
   max-width: 310px;
-  height: 30vh;
+  height: 290px;
 }
 .botonCajaCateg {
   margin: auto;
   border-radius: 15px;
-  border: solid 1px rgb(190, 190, 0);
+  border: solid 1px orange;
   background-color: #1c2631;
-  color: white;
+  color: orange;
   width: 100px;
   height: 60px;
   transition: 450ms;
@@ -135,13 +136,13 @@ body {
 /* ------Hover------ */
 .tituloSuperior:hover {
   box-shadow: 0px 0px 15px rgb(100, 100, 100);
-  border-top: solid 2px rgb(15, 167, 255);
-  border-bottom: solid 2px rgb(15, 167, 255);
+  border-top: solid 2px rgb(100, 100, 100);
+  border-bottom: solid 2px rgb(100, 100, 100);
 }
 .tituloInferior:hover {
   box-shadow: 0px 0px 15px rgb(100, 100, 100);
-  border-top: solid 2px rgb(15, 167, 255);
-  border-bottom: solid 2px rgb(15, 167, 255);
+  border-top: solid 2px rgb(100, 100, 100);
+  border-bottom: solid 2px rgb(100, 100, 100);
 }
 
 .tarjetaCategoriaHome:hover .botonCajaCateg {
@@ -161,7 +162,7 @@ body {
 }
 .tarjetaCategoriaHome:hover .descripcionCateg p {
   font-size: 20px;
-  color: rgb(190, 190, 0);
+  color: gold;
   text-align: center;
 }
 /* ------Hover fin------ */

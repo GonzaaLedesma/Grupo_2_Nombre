@@ -21,12 +21,41 @@
     background-color: #3b4046;
     margin: 5px 0px 5px 0px;
 }
-.ticketIcon i{
+.ticketIcon{
     font-size: 50px;
-    color:rgb(190, 190, 0);
+    color: gold;
 }
-.CarritoProductoPrincipal p{
-    color:rgb(190, 190, 0);
+.ticketIconComprado i{
+    font-size: 50px;
+    color:green;
+}
+.ticketIconNoComprado i{
+    font-size: 50px;
+    color:red;
+}
+.tituloCarritoTitulo{
+    color:rgb(255, 251, 210);
+    font-size: 25px;
+    margin-top: 1rem;
+    width: 20vw;
+    text-align: center;
+}
+.CantidadCarritoTitulo{
+    color:gold;
+    font-size: 25px;
+    margin-top: 1rem;
+    width: 20vw;
+    text-align: center;
+}
+.precioCarritoTitulo{
+    color:gold;
+    font-size: 25px;
+    margin-top: 1rem;
+    width: 20vw;
+    text-align: center;
+}
+.DiaCarritoTitulo{
+    color:gold;
     font-size: 25px;
     margin-top: 1rem;
     width: 20vw;
@@ -48,8 +77,8 @@
     text-align: center;
 }
 .divCarrito{
-    border-left:solid 2px rgb(190, 190, 0);
-    border-right:solid 2px rgb(190, 190, 0);
+    border-left:solid 2px gold;
+    border-right:solid 2px gold;
 }
 .botomBarCarrito{
     display: flex;
@@ -58,7 +87,7 @@
     margin-top: 10px;
 }
 .botonAddCarrito{
-    border:solid 1px rgb(190, 190, 0);
+    border:solid 1px gold;
     background-color: #242c35;
 }
 .botonAddCarrito a{
@@ -66,18 +95,19 @@
     transition: 450ms;
 }
 .botonCompraCarrito{
-    border:solid 1px rgb(190, 190, 0);
+    border:solid 1px gold;
     background-color: #242c35; 
     position: relative;
     top: 15px;   
+    border-radius: 5px;
 }
-.botonCompraCarrito a{
+.botonCompraCarrito{
     text-decoration: none;
     color: white;
     transition: 450ms;
 }
 .botonBorrarCarrito{
-    border:solid 1px rgb(190, 190, 0);
+    border:solid 1px green;
     background-color: #242c35;    
 }
 .botonBorrarCarrito i{
@@ -85,21 +115,46 @@
     color: white;
     transition: 450ms;
 }
+.botonBorrarCarritoRealizado{
+    border:solid 1px red;
+    background-color: #242c35;    
+}
+.botonBorrarCarritoRealizado i{
+    text-decoration: none;
+    color: white;
+    transition: 450ms;
+}
+.divCompra{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
 
 /* ----------hover--------- */
 .botonAddCarrito:hover a{
-    color: rgb(190, 190, 0);
+    color: gold;
 }
-.botonCompraCarrito:hover a{
-    color: rgb(190, 190, 0);
+.botonCompraCarrito:hover{
+    color: gold;
 }
 .botonBorrarCarrito:hover i{
-    color: rgb(190, 190, 0);
+    color: green;
+}
+.botonBorrarCarritoRealizado:hover{
+    color: gold;
+}
+.botonBorrarCarritoRealizado:hover i{
+    color: red;
 }
 /* ------------ */
 @media (max-width: 450px){
-
-    .ticketIcon i{
+    .ticketIcon{
+        font-size: 30px;
+    }
+    .ticketIconComprado i{
+        font-size: 30px;
+    }
+    .ticketIconNoComprado i{
         font-size: 30px;
     }
     .CarritoProductoPrincipal p{

@@ -13,6 +13,9 @@
 .correcionCajasForm{
     width: 100%;
 }
+.correcionCajasForm label{
+    color: gold;
+}
 .correcionCajasForm input{
     width: 70%;
 }
@@ -41,6 +44,7 @@
 .form-title{
     color: #ffffff;
     font-weight: 500;
+    color: gold;
 }
 .cajaRegisterInput{
     border: 0;
@@ -48,7 +52,7 @@
     display: block;
     margin: 20px auto;
     padding: 14px 10px;
-    border: 2px solid rgb(173, 173, 0);
+    border: 2px solid gold;
     text-align: center;
     border-radius: 24px;
     outline: none;
@@ -119,7 +123,7 @@
     width: 50%;
     border-radius: 7px;
     background: #191919;
-    border: 2px solid rgb(173, 173, 0);
+    border: 2px solid gold;
     height: 50px;
     color: gray;
 }
@@ -127,7 +131,7 @@
     width: 50%;
     text-align: center;
     color: white;
-    border: 2px solid rgb(173, 173, 0);
+    border: 2px solid gold;
     background: #191919;
     border-radius: 5px;
     margin-top: 15px;
@@ -135,14 +139,56 @@
 .imagenPerfilRegister{
     text-align: center;
     color: white;
-    border: 2px solid rgb(173, 173, 0);
+    border: 2px solid gold;
     background: #191919;
+}
+.errorTxtNombre{
+   color: #D6000B; 
+}
+.errorTxtApellido{
+   color: #D6000B; 
+}
+.errorTxtUsuario{
+   color: #D6000B; 
+}
+.errorTxtEmail{
+   color: #D6000B; 
+}
+.errorTxtContrasenia{
+   color: #D6000B; 
+}
+.errorTxtPais{
+   color: #D6000B; 
+}
+.errorTxtGeneroFav{
+   color: #D6000B; 
+}
+.errorTxtGeneros{
+   color: #D6000B; 
+}
+.errorTxtIdentidadGenero{
+   color: #D6000B; 
+}
+.errorTxtDescripcion{
+   color: #D6000B; 
+}
+.errorTxtFotoPerfil{
+   color: #D6000B; 
 }
 .errorTxt{
    color: #D6000B; 
 }
+.avisoErrorTxt{
+   color: #D6000B; 
+}
 .errorBorder{
     border: 2px solid #D6000B; 
+}
+.goodBorder{
+    border: 2px solid #19d600; 
+}
+.textAviso{
+    color: #19d600; 
 }
   /* #D6000B */
   @media ( max-width: 800px) {

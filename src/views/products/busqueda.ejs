@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <h1 class="contenedorTituloBusqueda"><i>Estos son los resultados de </i>"<%= data %>"</h1>
+      <div class="contenedorBusquedas">
+        <% if(locals.dataArray.length > 0) { %>
+          <% dataArray.forEach(data =>{ %> 
+            <div class="ajusteBusqueda">
+              <div class="cardBusqueda">
+                <img
+                src="/images/catalogo/<%= data.fotoEvento%>"
+                class="card-img-top"
+                alt="ImgBand"
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><%= data.nombre%></h5>
+                  <p class="card-text"><%= data.sede%></p>
+                  <p class="card-text"><%= data.ubicacion%></p>
+                  <p class="card-text">Participacion: <%= data.participacion%></p>
+                  <p class="card-text card-date"><%= data.fecha%></p>
+                  <% if(data.id_categoria == 4){ %>
+                    <p class="card-text">NO SE ENCUENTRA DISPONIBLE</p>
+                    <% }else{ %>
+                      <a href="/producto/detalles/<%= data.id%>" class="btn btn-primary"
+                        >Ir a detalles</a>
+                        <% } %>
+                      </div>
+                    </div>
+                  </div>
+                  <% }) %> 
+                  <% } else { %>
+                    <div class="completadoEspacio">
+            <h3 class="notFound"><i> No se encontro nada...</i></h3>   
+            <div class="imgRick">
+                <img class="rickClass" src="/images/rick.gif" alt="never gonna give you up">
+              </div>
+        </div>
+      </div>
+        
+      <% } %>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
