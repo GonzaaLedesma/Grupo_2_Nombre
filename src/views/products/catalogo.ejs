@@ -65,7 +65,7 @@
         <% products.filter(product => product.categoria == 'Nuevos').forEach(product => { %>
           <div class="card">
             <img
-              src="/images/catalogo/<%= product.fotoEvento ? product.fotoEvento : 'not-Img.jpg'%>"
+              src="/images/catalogo/<%= product.fotoEvento%>"
               class="card-img-top"
               alt="ImgBand"
             />
